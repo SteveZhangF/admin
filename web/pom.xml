@@ -1,0 +1,84 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <parent>
+        <artifactId>oncore-consulting</artifactId>
+        <groupId>com.oncore</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>oncore-consulting-web</artifactId>
+    <packaging>war</packaging>
+    <name>oncore-consulting-web Maven Webapp</name>
+    <url>http://maven.apache.org</url>
+    <dependencies>
+        <dependency>
+            <groupId>com.oncore</groupId>
+            <artifactId>oncore-consulting-common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.oncore</groupId>
+            <artifactId>oncore-consulting-user</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.oncore</groupId>
+            <artifactId>oncore-consulting-database-management</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.oncore</groupId>
+            <artifactId>oncore-consulting-template-management</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>com.oncore</groupId>-->
+            <!--<artifactId>oncore-consulting-auth</artifactId>-->
+            <!--<version>1.0-SNAPSHOT</version>-->
+        <!--</dependency>-->
+    </dependencies>
+    <profiles>
+        <profile>
+            <id>development</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <profiles.active>development</profiles.active>
+            </properties>
+        </profile>
+        <profile>
+            <id>test</id>
+            <properties>
+                <profiles.active>test</profiles.active>
+            </properties>
+        </profile>
+        <profile>
+            <id>production</id>
+            <properties>
+                <profiles.active>production</profiles.active>
+            </properties>
+        </profile>
+    </profiles>
+    <build>
+        <finalName>oncore-consulting-web</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>9.2.8.v20150217</version>
+            </plugin>
+        </plugins>
+        <resources>
+            <!--
+                Placeholders that are found from the files located in the configured resource
+                directories are replaced with the property values found from the profile
+                specific configuration file.
+            -->
+            <resource>
+                <filtering>true</filtering>
+                <directory>src/main/resources</directory>
+            </resource>
+        </resources>
+    </build>
+</project>
