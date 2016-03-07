@@ -21,5 +21,6 @@
     <!-- component scan package -->
     <!-- open aop autoproxy -->
     <aop:aspectj-autoproxy/>
+    <bean class="org.springframework.scripting.support.ScriptFactoryPostProcessor"/>
 
 </beans>

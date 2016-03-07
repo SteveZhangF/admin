@@ -5,6 +5,8 @@ import freemarker.template.Configuration;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
 import freemarker.template.TemplateExceptionHandler;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 
@@ -18,13 +20,23 @@ import java.util.Map;
  */
 public abstract class FileCreator<T> {
 
-
+    Log log = LogFactory.getLog(FileCreator.class);
     protected Configuration configuration;
 
     CommonConfigure commonConfigure;
 
     public FileCreator(CommonConfigure commonConfigure){
         this.commonConfigure = commonConfigure;
+
+    }
+
+    public abstract File getDestination(T t) throws IOException;
+
+    protected abstract Template getTemplate();
+
+    protected abstract Map getElementRoot(T t);
+
+    public File createFile(T t) throws IOException, TemplateException {
         if (configuration == null) {
             configuration = new Configuration();
             File file = new File(commonConfigure.getBaseDir() + "/" + commonConfigure.getTemplateBasePath());
@@ -35,22 +47,12 @@ public abstract class FileCreator<T> {
             try {
                 configuration.setDirectoryForTemplateLoading(file);
             } catch (IOException e) {
+                log.error("setting freemarker configuration error");
                 e.printStackTrace();
             }
             configuration.setDefaultEncoding("UTF-8");
             configuration.setTemplateExceptionHandler(TemplateExceptionHandler.RETHROW_HANDLER);
         }
-
-    }
-
-    public abstract File getDestination(T t) throws IOException;
-
-    protected abstract Template getTemplate();
-
-    protected abstract Map getElementRoot(T t);
-
-    public void createFile(T t) throws IOException, TemplateException {
-
 
         File file = getDestination(t);
         Template template = getTemplate();
@@ -59,6 +61,7 @@ public abstract class FileCreator<T> {
         template.process(root, fileWriter);
         fileWriter.flush();
         fileWriter.close();
-
+        log.info("created file at "+ file.getAbsolutePath());
+        return file;
     }
 }

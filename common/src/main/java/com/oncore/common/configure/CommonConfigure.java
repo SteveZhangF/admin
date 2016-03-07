@@ -25,6 +25,15 @@ public class CommonConfigure {
     private String templateBasePath;
     @Value("${create_table_thread_number}")
     private int create_table_thread_number;
+    @Value("${template.hibernate_mapping_file}")
+    private String template_hibernate_mapping_file;
+
+    @Value("${generated_file_destination.hibernate_mapping_file}")
+    private String generated_file_destination_hibernate_mapping_file;
+    @Value("${generated_file_destination.groovy_dao_file}")
+    private String generated_file_destination_groovy_dao_file;
+    @Value("${template.template_groovy_dao_file}")
+    private String template_groovy_dao_file;
 
     public int getCreate_table_thread_number() {
         return create_table_thread_number;
@@ -42,11 +51,7 @@ public class CommonConfigure {
         this.templateBasePath = templateBasePath;
     }
 
-    @Value("${template.hibernate_mapping_file}")
-    private String template_hibernate_mapping_file;
 
-    @Value("${generated_file_destination.hibernate_mapping_file}")
-    private String generated_file_destination_hibernate_mapping_file;
 
     public String getBaseDir() {
         if(baseDir == null){
@@ -74,5 +79,21 @@ public class CommonConfigure {
 
     public void setGenerated_file_destination_hibernate_mapping_file(String generated_file_destination_hibernate_mapping_file) {
         this.generated_file_destination_hibernate_mapping_file = generated_file_destination_hibernate_mapping_file;
+    }
+
+    public String getTemplate_groovy_dao_file() {
+        return template_groovy_dao_file;
+    }
+
+    public void setTemplate_groovy_dao_file(String template_groovy_dao_file) {
+        this.template_groovy_dao_file = template_groovy_dao_file;
+    }
+
+    public String getGenerated_file_destination_groovy_dao_file() {
+        return generated_file_destination_groovy_dao_file;
+    }
+
+    public void setGenerated_file_destination_groovy_dao_file(String generated_file_destination_groovy_dao_file) {
+        this.generated_file_destination_groovy_dao_file = generated_file_destination_groovy_dao_file;
     }
 }

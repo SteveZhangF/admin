@@ -1,0 +1,10 @@
+
+    drop table if exists newenddtity_1457319015405
+
+    create table newenddtity_1457319015405 (
+        id bigint not null auto_increment,
+        name varchar(8),
+        userId varchar(255),
+        deleted bit,
+        primary key (id)
+    )

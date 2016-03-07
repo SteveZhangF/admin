@@ -3,6 +3,8 @@ package com.oncore.data.file;
 import com.oncore.common.configure.CommonConfigure;
 import com.oncore.common.model.TableElement;
 import freemarker.template.Template;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -16,7 +18,7 @@ import java.util.Map;
  */
 @Component("hibernateMappingFileCreator")
 public class HibernateMappingFileCreator extends FileCreator<TableElement> {
-
+    Log log = LogFactory.getLog(HibernateMappingFileCreator.class);
     @Autowired
     public HibernateMappingFileCreator(CommonConfigure commonConfigure) {
         super(commonConfigure);
@@ -24,17 +26,17 @@ public class HibernateMappingFileCreator extends FileCreator<TableElement> {
 
     @Override
     public File getDestination(TableElement t) throws IOException {
-        File file = new File(commonConfigure.getGenerated_file_destination_hibernate_mapping_file() + "/" + t.getHbmPath());
+        File file = new File(commonConfigure.getBaseDir()+"/"+commonConfigure.getGenerated_file_destination_hibernate_mapping_file() + "/" + t.getHbmPath());
         if (!file.exists()) {
             file.mkdirs();
         }
         String mappingFileName = t.getName() + ".xml";
-        file = new File(commonConfigure.getGenerated_file_destination_hibernate_mapping_file() + "/" + t.getHbmPath() + "/" + mappingFileName);
+        file = new File(commonConfigure.getBaseDir()+"/"+commonConfigure.getGenerated_file_destination_hibernate_mapping_file() + "/" + t.getHbmPath() + "/" + mappingFileName);
         if (file.exists()) {
             file.delete();
         }
         file.createNewFile();
-        System.out.println(file.getAbsolutePath());
+        log.info("created hibernate mapping file for "+t.getName()+" at " +file.getAbsolutePath());
         return file;
     }
 
@@ -44,7 +46,7 @@ public class HibernateMappingFileCreator extends FileCreator<TableElement> {
             Template template = configuration.getTemplate(commonConfigure.getTemplate_hibernate_mapping_file());
             return template;
         } catch (IOException e) {
-            e.printStackTrace();
+            log.info("reading hibernate mapping template file error");
             return null;
         }
 

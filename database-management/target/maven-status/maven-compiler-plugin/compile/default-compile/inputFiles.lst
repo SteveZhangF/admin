@@ -1,3 +1,7 @@
+/Users/steve/oncore-consulting/database-management/src/main/java/com/oncore/data/GroovyFactory.java
+/Users/steve/oncore-consulting/database-management/src/main/java/com/oncore/data/file/GroovyFileCreator.java
 /Users/steve/oncore-consulting/database-management/src/main/java/com/oncore/data/file/HibernateMappingFileCreator.java
+/Users/steve/oncore-consulting/database-management/src/main/java/com/oncore/data/file/uploader/UpLoader.java
+/Users/steve/oncore-consulting/database-management/src/main/java/com/oncore/data/file/downloader/DownLoader.java
 /Users/steve/oncore-consulting/database-management/src/main/java/com/oncore/data/file/FileCreator.java
 /Users/steve/oncore-consulting/database-management/src/main/java/com/oncore/data/TableBuilder.java
