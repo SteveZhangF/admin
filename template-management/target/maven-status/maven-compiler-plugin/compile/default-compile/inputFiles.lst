@@ -1,4 +1,5 @@
 /Users/steve/oncore-consulting/template-management/src/main/java/com/oncore/template/dao/FieldDao.java
+/Users/steve/oncore-consulting/template-management/src/main/java/com/oncore/template/helper/ReportGenerator.java
 /Users/steve/oncore-consulting/template-management/src/main/java/com/oncore/template/transfd/file_element/folder/CreateRootFolderRequest.java
 /Users/steve/oncore-consulting/template-management/src/main/java/com/oncore/template/dao/ReportFieldDao.java
 /Users/steve/oncore-consulting/template-management/src/main/java/com/oncore/template/transfd/entities/CreateEntityRequest.java
@@ -60,6 +61,7 @@
 /Users/steve/oncore-consulting/template-management/src/main/java/com/oncore/template/service/ModuleService.java
 /Users/steve/oncore-consulting/template-management/src/main/java/com/oncore/template/transfd/customizedRecord/CustomizedRecordType.java
 /Users/steve/oncore-consulting/template-management/src/main/java/com/oncore/template/model/file/FileElement.java
+/Users/steve/oncore-consulting/template-management/src/main/java/com/oncore/template/helper/ReportGroovyFileCreator.java
 /Users/steve/oncore-consulting/template-management/src/main/java/com/oncore/template/dao/FolderDaoImpl.java
 /Users/steve/oncore-consulting/template-management/src/main/java/com/oncore/template/transfd/module/CreateModuleRequest.java
 /Users/steve/oncore-consulting/template-management/src/main/java/com/oncore/template/transfd/module/ModuleTreeResponse.java

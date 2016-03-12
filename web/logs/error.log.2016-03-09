@@ -1,0 +1,88 @@
+2016-03-09 15:03:36  [ qtp809860628-18:207321 ] - [ ERROR ]  can't find module id=40288085527fe9770152800405650000
+2016-03-09 16:03:37  [ qtp452015229-18:2308873 ] - [ ERROR ]  An SQLException was provoked by the following failure: java.lang.InterruptedException
+2016-03-09 16:03:37  [ qtp452015229-17:2308877 ] - [ ERROR ]  An SQLException was provoked by the following failure: java.lang.InterruptedException
+2016-03-09 16:03:37  [ qtp452015229-14:2308878 ] - [ ERROR ]  An SQLException was provoked by the following failure: java.lang.InterruptedException
+2016-03-09 16:03:37  [ qtp452015229-19:2308873 ] - [ ERROR ]  An SQLException was provoked by the following failure: java.lang.InterruptedException
+2016-03-09 21:35:53  [ qtp452015229-20:890533 ] - [ ERROR ]  An SQLException was provoked by the following failure: java.lang.InterruptedException
+2016-03-09 21:35:53  [ qtp452015229-14:890608 ] - [ ERROR ]  An SQLException was provoked by the following failure: java.lang.InterruptedException
+2016-03-09 21:47:48  [ pool-4-thread-11:246999 ] - [ ERROR ]  HHH000319: Could not get database metadata
+java.sql.SQLException: An SQLException was provoked by the following failure: java.lang.InterruptedException
+	at com.mchange.v2.sql.SqlUtils.toSQLException(SqlUtils.java:118)
+	at com.mchange.v2.sql.SqlUtils.toSQLException(SqlUtils.java:77)
+	at com.mchange.v2.sql.SqlUtils.toSQLException(SqlUtils.java:74)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool.checkoutPooledConnection(C3P0PooledConnectionPool.java:694)
+	at com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource.getConnection(AbstractPoolBackedDataSource.java:140)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:139)
+	at org.hibernate.tool.hbm2ddl.SuppliedConnectionProviderConnectionHelper.prepare(SuppliedConnectionProviderConnectionHelper.java:51)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:194)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:178)
+	at com.oncore.data.TableBuilder$TableCreatorRunner.createTable(TableBuilder.java:160)
+	at com.oncore.data.TableBuilder$TableCreatorRunner.run(TableBuilder.java:124)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.InterruptedException
+	at java.lang.Object.wait(Native Method)
+	at com.mchange.v2.resourcepool.BasicResourcePool.awaitAvailable(BasicResourcePool.java:1465)
+	at com.mchange.v2.resourcepool.BasicResourcePool.prelimCheckoutResource(BasicResourcePool.java:644)
+	at com.mchange.v2.resourcepool.BasicResourcePool.checkoutResource(BasicResourcePool.java:554)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool.checkoutAndMarkConnectionInUse(C3P0PooledConnectionPool.java:758)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool.checkoutPooledConnection(C3P0PooledConnectionPool.java:685)
+	... 12 more
+2016-03-09 21:55:47  [ pool-4-thread-11:346589 ] - [ ERROR ]  HHH000319: Could not get database metadata
+java.sql.SQLException: An SQLException was provoked by the following failure: java.lang.InterruptedException
+	at com.mchange.v2.sql.SqlUtils.toSQLException(SqlUtils.java:118)
+	at com.mchange.v2.sql.SqlUtils.toSQLException(SqlUtils.java:77)
+	at com.mchange.v2.sql.SqlUtils.toSQLException(SqlUtils.java:74)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool.checkoutPooledConnection(C3P0PooledConnectionPool.java:694)
+	at com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource.getConnection(AbstractPoolBackedDataSource.java:140)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:139)
+	at org.hibernate.tool.hbm2ddl.SuppliedConnectionProviderConnectionHelper.prepare(SuppliedConnectionProviderConnectionHelper.java:51)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:194)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:178)
+	at com.oncore.data.TableBuilder$TableCreatorRunner.createTable(TableBuilder.java:160)
+	at com.oncore.data.TableBuilder$TableCreatorRunner.run(TableBuilder.java:124)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.InterruptedException
+	at java.lang.Object.wait(Native Method)
+	at com.mchange.v2.resourcepool.BasicResourcePool.awaitAvailable(BasicResourcePool.java:1465)
+	at com.mchange.v2.resourcepool.BasicResourcePool.prelimCheckoutResource(BasicResourcePool.java:644)
+	at com.mchange.v2.resourcepool.BasicResourcePool.checkoutResource(BasicResourcePool.java:554)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool.checkoutAndMarkConnectionInUse(C3P0PooledConnectionPool.java:758)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool.checkoutPooledConnection(C3P0PooledConnectionPool.java:685)
+	... 12 more
+2016-03-09 21:55:47  [ pool-4-thread-11:346610 ] - [ ERROR ]  HHH000299: Could not complete schema update
+java.sql.SQLException: An SQLException was provoked by the following failure: java.lang.InterruptedException
+	at com.mchange.v2.sql.SqlUtils.toSQLException(SqlUtils.java:118)
+	at com.mchange.v2.sql.SqlUtils.toSQLException(SqlUtils.java:77)
+	at com.mchange.v2.sql.SqlUtils.toSQLException(SqlUtils.java:74)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool.checkoutPooledConnection(C3P0PooledConnectionPool.java:694)
+	at com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource.getConnection(AbstractPoolBackedDataSource.java:140)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:139)
+	at org.hibernate.tool.hbm2ddl.SuppliedConnectionProviderConnectionHelper.prepare(SuppliedConnectionProviderConnectionHelper.java:51)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:194)
+	at org.hibernate.tool.hbm2ddl.SchemaUpdate.execute(SchemaUpdate.java:178)
+	at com.oncore.data.TableBuilder$TableCreatorRunner.createTable(TableBuilder.java:160)
+	at com.oncore.data.TableBuilder$TableCreatorRunner.run(TableBuilder.java:124)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.InterruptedException
+	at java.lang.Object.wait(Native Method)
+	at com.mchange.v2.resourcepool.BasicResourcePool.awaitAvailable(BasicResourcePool.java:1465)
+	at com.mchange.v2.resourcepool.BasicResourcePool.prelimCheckoutResource(BasicResourcePool.java:644)
+	at com.mchange.v2.resourcepool.BasicResourcePool.checkoutResource(BasicResourcePool.java:554)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool.checkoutAndMarkConnectionInUse(C3P0PooledConnectionPool.java:758)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool.checkoutPooledConnection(C3P0PooledConnectionPool.java:685)
+	... 12 more
+2016-03-09 21:55:47  [ qtp452015229-14:346591 ] - [ ERROR ]  An SQLException was provoked by the following failure: java.lang.InterruptedException
+2016-03-09 21:55:47  [ qtp452015229-13:346591 ] - [ ERROR ]  An SQLException was provoked by the following failure: java.lang.InterruptedException
+2016-03-09 21:55:47  [ qtp452015229-19:346590 ] - [ ERROR ]  An SQLException was provoked by the following failure: java.lang.InterruptedException

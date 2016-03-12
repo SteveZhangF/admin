@@ -11,8 +11,6 @@ package com.oncore.template.transfd.file_element.folder;
 
 import com.oncore.template.transfd.ElementRequest;
 
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
@@ -20,8 +18,6 @@ import javax.xml.bind.annotation.XmlRootElement;
  */
 @XmlRootElement
 public class CreateRootFolderRequest extends ElementRequest {
-    @NotNull
-    @Valid
     private String moduleId;
 
     public String getModuleId() {

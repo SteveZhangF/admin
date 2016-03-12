@@ -1,5 +1,6 @@
 package com.oncore.common.groovy;
 
+import java.sql.SQLException;
 import java.util.List;
 import java.util.Map;
 
@@ -9,9 +10,9 @@ import java.util.Map;
  *
  */
 public interface GBaseDao {
-    boolean insert(Map params, String userId);
-    Map get(int id, String userId);
-    boolean update(int id, Map params, String userId);
-    boolean delete(int id, String userId);
-    List list(String userId);
+    boolean insert(Map params, String userId)  throws SQLException;
+    Map get(int id, String userId)  throws SQLException ;
+    boolean update(int id, Map params, String userId)  throws SQLException ;
+    boolean delete(int id, String userId)  throws SQLException ;
+    List list(String userId)  throws SQLException ;
 }

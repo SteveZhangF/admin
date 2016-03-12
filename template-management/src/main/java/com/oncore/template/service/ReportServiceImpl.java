@@ -1,15 +1,16 @@
 package com.oncore.template.service;
 
-import com.oncore.common.exception.BadRequestException;
+import com.oncore.data.TableBuilder;
+import com.oncore.data.file.ReportTemplateBuilder;
+import com.oncore.data.file.downloader.DownLoader;
 import com.oncore.template.dao.FieldDao;
 import com.oncore.template.dao.ReportDao;
 import com.oncore.template.dao.ReportFieldDao;
 import com.oncore.template.exception.ElementNotFoundException;
-import com.oncore.template.model.Field;
+import com.oncore.template.helper.ReportGenerator;
 import com.oncore.template.model.file.Report;
 import com.oncore.template.model.file.ReportField;
 import com.oncore.template.transfd.report.CreateReportRequest;
-import com.oncore.template.transfd.report.ReportFieldRequest;
 import com.oncore.template.transfd.report.ReportResponse;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -18,6 +19,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.validation.Validator;
+import java.io.IOException;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -38,58 +40,129 @@ public class ReportServiceImpl extends BaseGenericServiceImpl<Report, String> im
     }
 
 
-
     @Autowired
     ReportDao reportDao;
     @Autowired
     ReportFieldDao reportFieldDao;
     @Autowired
     FieldDao fieldDao;
+    @Autowired
+    TableBuilder tableBuilder;
+    @Autowired
+    ReportTemplateBuilder reportTemplateBuilder;
 
+    @Autowired
+    DownLoader downLoader;
 
     @Override
-    public ReportResponse createReportFromRequest(CreateReportRequest reportRequest) {
+    protected void validate(Object request) {
+        super.validate(request);
+    }
+
+    @Override
+    public void delete(Report entity) {
+        reportDao.delete(entity);
+    }
+
+    @Override
+    public Report get(String id) {
+        return reportDao.get(id);
+    }
+
+    @Override
+    public Report load(String id) {
+        return reportDao.load(id);
+    }
+
+    @Override
+    public List<Report> loadAll() {
+
+        return reportDao.loadAll();
+    }
+
+    @Override
+    public void save(Report entity) {
+        reportDao.save(entity);
+    }
+
+    @Override
+    public void saveOrUpdate(Report entity) {
+        reportDao.saveOrUpdate(entity);
+    }
+
+    @Override
+    public void update(Report entity) {
+        reportDao.update(entity);
+    }
+
+    @Override
+    public Report buildReport(Report report,String content) {
+
+        return null;
+    }
+
+    @Autowired
+    ReportGenerator reportGenerator;
+
+    @Override
+    public ReportResponse createReportFromRequest(String folderId, CreateReportRequest reportRequest) {
         validate(reportRequest);
         Long now = new Date().getTime();
         Report report = new Report();
         String tableName = "report_" + reportRequest.getName() + "_" + now;
         report.setTableName(tableName);
-        report.setHbmPath(report.getName() + "/" + report.getTableName());
         report.setName(reportRequest.getName());
+        report.setHbmPath(report.getName() + "/" + report.getTableName());
         report.setDescription(reportRequest.getDescription());
         report.setDeleted(false);
-
+        report.setFolderId(folderId);
         report.setContent(reportRequest.getContent());
 
 
-        for (ReportFieldRequest fieldRequest : reportRequest.getFields()) {
-            ReportField field = new ReportField();
-            field.setName(fieldRequest.getName());
-            field.setDescription(fieldRequest.getDescription());
-            field.setLength(fieldRequest.getLength());
-            field.setFieldType(fieldRequest.getFieldType());
-            field.setIfNull(fieldRequest.isIfNull());
-            field.setIsRelatedField(fieldRequest.isRelatedField());
-            if (fieldRequest.isRelatedField() ) {
-                Field relatedField = null;
-                if(fieldRequest.getRelatedField() == null || (relatedField =fieldDao.get(fieldRequest.getRelatedField())) == null){
-                    throw new BadRequestException("related field can not be null or not found");
-                }
-                field.setRelatedField(relatedField);
-            }
-            report.addField(field);
-        }
+//        for (ReportFieldRequest fieldRequest : reportRequest.getFields()) {
+//            ReportField field = new ReportField();
+//            field.setName(fieldRequest.getName());
+//            field.setDescription(fieldRequest.getDescription());
+//            field.setLength(fieldRequest.getLength());
+//            field.setFieldType(fieldRequest.getFieldType());
+//            field.setIfNull(fieldRequest.isIfNull());
+//            field.setIsRelatedField(fieldRequest.isRelatedField());
+//            if (fieldRequest.isRelatedField() ) {
+//                Field relatedField = null;
+//                if(fieldRequest.getRelatedField() == null || (relatedField =fieldDao.get(fieldRequest.getRelatedField())) == null){
+//                    throw new BadRequestException("related field can not be null or not found");
+//                }
+//                field.setRelatedField(relatedField);
+//            }
+//            report.addField(field);
+//        }
+//        reportDao.save(report);
         reportDao.save(report);
-        for (ReportField field : report.getFields()) {
-            field.setDeleted(false);
-            field.setReport(report);
-            reportFieldDao.save(field);
+        reportGenerator.parseHTML(report,report.getContent());
+
+//        for (ReportField field : report.getFields()) {
+//            field.setDeleted(false);
+//            field.setReport(report);
+//            reportFieldDao.save(field);
+//        }
+        try {
+            ReportField field = new ReportField();
+            field.setName("generated");
+            field.setFieldType("boolean");
+            report.addField(field);
+            tableBuilder.createMappingFile(report);
+        } catch (InterruptedException e) {
+            logger.error(e.getMessage());
         }
-//TODO
-//        iTableCreator.createTable(report);
+        String targetName = report.getTableName();
+        reportTemplateBuilder.uploadReport(reportTemplateBuilder.new ReportElement(targetName, report.getContent()));
         ReportResponse reportResponse = new ReportResponse(report);
-   //TODO     reportResponse.setContent(reportTemplateFileMaker.getGeneratedReportTemplatePath(report));
         return reportResponse;
+    }
+
+    @Override
+    public String getReportTableName(String id) {
+        return reportDao.getReportTableName(id);
     }
 
     @Override
@@ -105,8 +178,14 @@ public class ReportServiceImpl extends BaseGenericServiceImpl<Report, String> im
             throw new ElementNotFoundException("report");
         }
         logger.info("found report id=" + report.getId() + " name=" + report.getName());
+        String content = null;
+        try {
+            content = downLoader.getReportContent(report.getTableName());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        report.setContent(content);
         ReportResponse reportResponse = new ReportResponse(report);
-    //TODO    reportResponse.setContent(reportTemplateFileMaker.getGeneratedReportTemplatePath(report));
         return reportResponse;
     }
 
@@ -128,9 +207,11 @@ public class ReportServiceImpl extends BaseGenericServiceImpl<Report, String> im
     public List<Report> listReportsUnderFolder(String folderId) {
         Map<String, Object> map = new HashMap<>();
         map.put("deleted", false);
-        map.put("folderId",folderId);
+        map.put("folderId", folderId);
         String[] fields = new String[]{"id", "name", "createTime", "updateTime", "description", "hbmPath", "tableName"};
         List reports = reportDao.getListbyFieldAndParams(fields, map);
         return reports;
     }
+
+
 }

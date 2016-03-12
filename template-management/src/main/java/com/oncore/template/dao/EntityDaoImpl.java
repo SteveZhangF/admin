@@ -90,7 +90,17 @@ public class EntityDaoImpl extends HibernateBaseGenericDaoImpl<Entity, String> i
 
     @Override
     public List<Entity> loadAll() {
-        return super.loadAll();
+        Session session = getSessionFactory().getCurrentSession();
+        Query query = session.createQuery("select  entity from Entity as entity where entity.deleted=false  ");
+        List<Entity> entityList = query.list();
+
+        for (Entity e : entityList) {
+            Query query1 = session.createQuery("select field from Field as field where field.entity=:id and field.deleted=false");
+            query1.setString("id", e.getId());
+            List<Field> fields = query1.list();
+            e.setFields(fields);
+        }
+        return entityList;
     }
 
     @Override

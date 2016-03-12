@@ -18,6 +18,7 @@ com/oncore/template/transfd/customizedRecord/CustomizedRecordType.class
 com/oncore/template/dao/ReportFieldDao.class
 com/oncore/template/exception/CustomExceptionInterceptor.class
 com/oncore/template/dao/ModuleDao.class
+com/oncore/template/helper/ReportGroovyFileCreator.class
 com/oncore/template/Tes.class
 com/oncore/template/transfd/report/ReportFieldRequest.class
 com/oncore/template/transfd/file_element/folder/FolderResponse.class
@@ -46,6 +47,7 @@ com/oncore/template/service/BaseGenericServiceImpl.class
 com/oncore/template/service/ReportServiceImpl.class
 com/oncore/template/dao/ReportDao.class
 com/oncore/template/transfd/entities/EntityResponse.class
+com/oncore/template/helper/ReportGenerator.class
 com/oncore/template/controller/ReportResource.class
 com/oncore/template/dao/FieldDaoImpl.class
 com/oncore/template/dao/EntityDaoImpl.class

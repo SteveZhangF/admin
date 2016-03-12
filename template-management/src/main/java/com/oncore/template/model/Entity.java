@@ -45,6 +45,11 @@ public class Entity extends Element implements TableElement {
         return fields;
     }
 
+    @Override
+    public boolean isReport() {
+        return false;
+    }
+
     public void setFields(List<Field> fields) {
         this.fields = fields;
     }

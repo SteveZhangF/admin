@@ -1,0 +1,1231 @@
+2016-03-07 01:05:53  [ main:64344 ] - [ INFO ]  FrameworkServlet 'spring-dispatcher': initialization started
+2016-03-07 01:05:53  [ main:64351 ] - [ INFO ]  Refreshing WebApplicationContext for namespace 'spring-dispatcher-servlet': startup date [Mon Mar 07 01:05:53 EST 2016]; parent: Root WebApplicationContext
+2016-03-07 01:05:53  [ main:64352 ] - [ INFO ]  Loading XML bean definitions from ServletContext resource [/WEB-INF/spring-context.xml]
+2016-03-07 01:05:53  [ main:64403 ] - [ INFO ]  Loading XML bean definitions from URL [jar:file:/Users/steve/.m2/repository/com/oncore/oncore-consulting-template-management/1.0-SNAPSHOT/oncore-consulting-template-management-1.0-SNAPSHOT.jar!/spring-context-template-management.xml]
+2016-03-07 01:05:53  [ main:64457 ] - [ INFO ]  Loading XML bean definitions from URL [jar:file:/Users/steve/.m2/repository/com/oncore/oncore-consulting-common/1.0-SNAPSHOT/oncore-consulting-common-1.0-SNAPSHOT.jar!/spring/spring-context-common.xml]
+2016-03-07 01:05:53  [ main:64488 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring/spring-hibernate.xml]
+2016-03-07 01:05:53  [ main:64508 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring/spring-mvc.xml]
+2016-03-07 01:05:53  [ main:64543 ] - [ INFO ]  Loading XML bean definitions from URL [jar:file:/Users/steve/.m2/repository/com/oncore/oncore-consulting-database-management/1.0-SNAPSHOT/oncore-consulting-database-management-1.0-SNAPSHOT.jar!/spring/spring-context-data-management.xml]
+2016-03-07 01:05:53  [ main:64612 ] - [ INFO ]  Loading properties file from class path resource [properties/hibernate-development.properties]
+2016-03-07 01:05:53  [ main:64614 ] - [ INFO ]  Loading properties file from class path resource [properties/app-development.properties]
+2016-03-07 01:05:53  [ main:64626 ] - [ INFO ]  JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-03-07 01:05:53  [ main:64740 ] - [ INFO ]  Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 1hge13g9fm3vrps30ljkt|71139e77, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceSynchronousCheckins -> false, forceUseNamedDriverClass -> false, identityToken -> 1hge13g9fm3vrps30ljkt|71139e77, idleConnectionTestPeriod -> 0, initialPoolSize -> 1, jdbcUrl -> jdbc:mysql://localhost:3306/hibt, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 1, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 40, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 1, numHelperThreads -> 3, preferredTestQuery -> null, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+2016-03-07 01:06:22  [ C3P0PooledConnectionPoolManager[identityToken->1hge13g9fm3vrps30ljkt|3f36e8d1]-HelperThread-#1:93414 ] - [ WARN ]  com.mchange.v2.resourcepool.BasicResourcePool$ScatteredAcquireTask@bbeb507 -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (30). Last acquisition attempt exception: 
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.GeneratedConstructorAccessor17.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:408)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1137)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:356)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2504)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2541)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2323)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:832)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:46)
+	at sun.reflect.GeneratedConstructorAccessor19.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:408)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:417)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:344)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:175)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:220)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:206)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:203)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1138)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquireAndDecrementPendingAcquiresWithinLockOnSuccess(BasicResourcePool.java:1125)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$700(BasicResourcePool.java:44)
+	at com.mchange.v2.resourcepool.BasicResourcePool$ScatteredAcquireTask.run(BasicResourcePool.java:1870)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:696)
+Caused by: java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:244)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:258)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:306)
+	... 20 more
+2016-03-07 01:06:22  [ C3P0PooledConnectionPoolManager[identityToken->1hge13g9fm3vrps30ljkt|3f36e8d1]-HelperThread-#1:93430 ] - [ WARN ]  Having failed to acquire a resource, com.mchange.v2.resourcepool.BasicResourcePool@5eabff6b is interrupting all Threads waiting on a resource to check out. Will try again in response to new client requests.
+2016-03-07 01:06:22  [ C3P0PooledConnectionPoolManager[identityToken->1hge13g9fm3vrps30ljkt|3f36e8d1]-HelperThread-#2:93414 ] - [ WARN ]  com.mchange.v2.resourcepool.BasicResourcePool$ScatteredAcquireTask@51fbea91 -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (30). Last acquisition attempt exception: 
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.GeneratedConstructorAccessor17.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:408)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1137)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:356)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2504)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2541)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2323)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:832)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:46)
+	at sun.reflect.GeneratedConstructorAccessor19.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:408)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:417)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:344)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:175)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:220)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:206)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:203)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1138)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquireAndDecrementPendingAcquiresWithinLockOnSuccess(BasicResourcePool.java:1125)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$700(BasicResourcePool.java:44)
+	at com.mchange.v2.resourcepool.BasicResourcePool$ScatteredAcquireTask.run(BasicResourcePool.java:1870)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:696)
+Caused by: java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:244)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:258)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:306)
+	... 20 more
+2016-03-07 01:06:22  [ C3P0PooledConnectionPoolManager[identityToken->1hge13g9fm3vrps30ljkt|3f36e8d1]-HelperThread-#2:93456 ] - [ WARN ]  Having failed to acquire a resource, com.mchange.v2.resourcepool.BasicResourcePool@5eabff6b is interrupting all Threads waiting on a resource to check out. Will try again in response to new client requests.
+2016-03-07 01:06:22  [ C3P0PooledConnectionPoolManager[identityToken->1hge13g9fm3vrps30ljkt|3f36e8d1]-HelperThread-#0:93414 ] - [ WARN ]  com.mchange.v2.resourcepool.BasicResourcePool$ScatteredAcquireTask@515169ac -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (30). Last acquisition attempt exception: 
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.GeneratedConstructorAccessor17.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:408)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1137)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:356)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2504)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2541)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2323)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:832)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:46)
+	at sun.reflect.GeneratedConstructorAccessor19.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:408)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:417)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:344)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:175)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:220)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:206)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:203)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1138)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquireAndDecrementPendingAcquiresWithinLockOnSuccess(BasicResourcePool.java:1125)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$700(BasicResourcePool.java:44)
+	at com.mchange.v2.resourcepool.BasicResourcePool$ScatteredAcquireTask.run(BasicResourcePool.java:1870)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:696)
+Caused by: java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:244)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:258)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:306)
+	... 20 more
+2016-03-07 01:06:22  [ C3P0PooledConnectionPoolManager[identityToken->1hge13g9fm3vrps30ljkt|3f36e8d1]-HelperThread-#0:93471 ] - [ WARN ]  Having failed to acquire a resource, com.mchange.v2.resourcepool.BasicResourcePool@5eabff6b is interrupting all Threads waiting on a resource to check out. Will try again in response to new client requests.
+2016-03-07 01:06:22  [ C3P0PooledConnectionPoolManager[identityToken->1hge13g9fm3vrps30ljkt|3f36e8d1]-HelperThread-#1:93432 ] - [ WARN ]  com.mchange.v2.resourcepool.BasicResourcePool$ScatteredAcquireTask@41227fd7 -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (30). Last acquisition attempt exception: 
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.GeneratedConstructorAccessor17.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:408)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1137)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:356)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2504)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2541)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2323)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:832)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:46)
+	at sun.reflect.GeneratedConstructorAccessor19.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:408)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:417)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:344)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:175)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:220)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:206)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:203)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1138)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquireAndDecrementPendingAcquiresWithinLockOnSuccess(BasicResourcePool.java:1125)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$700(BasicResourcePool.java:44)
+	at com.mchange.v2.resourcepool.BasicResourcePool$ScatteredAcquireTask.run(BasicResourcePool.java:1870)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:696)
+Caused by: java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:244)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:258)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:306)
+	... 20 more
+2016-03-07 01:06:22  [ C3P0PooledConnectionPoolManager[identityToken->1hge13g9fm3vrps30ljkt|3f36e8d1]-HelperThread-#1:93476 ] - [ WARN ]  Having failed to acquire a resource, com.mchange.v2.resourcepool.BasicResourcePool@5eabff6b is interrupting all Threads waiting on a resource to check out. Will try again in response to new client requests.
+2016-03-07 01:06:23  [ C3P0PooledConnectionPoolManager[identityToken->1hge13g9fm3vrps30ljkt|71139e77]-HelperThread-#2:94875 ] - [ WARN ]  com.mchange.v2.resourcepool.BasicResourcePool$ScatteredAcquireTask@5adbe2a1 -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (30). Last acquisition attempt exception: 
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.GeneratedConstructorAccessor17.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:408)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1137)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:356)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2504)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2541)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2323)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:832)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:46)
+	at sun.reflect.GeneratedConstructorAccessor19.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:408)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:417)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:344)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:175)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:220)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:206)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:203)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1138)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquireAndDecrementPendingAcquiresWithinLockOnSuccess(BasicResourcePool.java:1125)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$700(BasicResourcePool.java:44)
+	at com.mchange.v2.resourcepool.BasicResourcePool$ScatteredAcquireTask.run(BasicResourcePool.java:1870)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:696)
+Caused by: java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:244)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:258)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:306)
+	... 20 more
+2016-03-07 01:06:23  [ C3P0PooledConnectionPoolManager[identityToken->1hge13g9fm3vrps30ljkt|71139e77]-HelperThread-#2:94876 ] - [ WARN ]  Having failed to acquire a resource, com.mchange.v2.resourcepool.BasicResourcePool@10745a02 is interrupting all Threads waiting on a resource to check out. Will try again in response to new client requests.
+2016-03-07 01:06:23  [ C3P0PooledConnectionPoolManager[identityToken->1hge13g9fm3vrps30ljkt|71139e77]-HelperThread-#1:94875 ] - [ WARN ]  com.mchange.v2.resourcepool.BasicResourcePool$ScatteredAcquireTask@67480399 -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (30). Last acquisition attempt exception: 
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.GeneratedConstructorAccessor17.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:408)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1137)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:356)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2504)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2541)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2323)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:832)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:46)
+	at sun.reflect.GeneratedConstructorAccessor19.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:408)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:417)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:344)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:175)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:220)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:206)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:203)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1138)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquireAndDecrementPendingAcquiresWithinLockOnSuccess(BasicResourcePool.java:1125)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$700(BasicResourcePool.java:44)
+	at com.mchange.v2.resourcepool.BasicResourcePool$ScatteredAcquireTask.run(BasicResourcePool.java:1870)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:696)
+Caused by: java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:244)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:258)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:306)
+	... 20 more
+2016-03-07 01:06:23  [ C3P0PooledConnectionPoolManager[identityToken->1hge13g9fm3vrps30ljkt|71139e77]-HelperThread-#1:94879 ] - [ WARN ]  Having failed to acquire a resource, com.mchange.v2.resourcepool.BasicResourcePool@10745a02 is interrupting all Threads waiting on a resource to check out. Will try again in response to new client requests.
+2016-03-07 01:06:23  [ C3P0PooledConnectionPoolManager[identityToken->1hge13g9fm3vrps30ljkt|71139e77]-HelperThread-#0:94875 ] - [ WARN ]  com.mchange.v2.resourcepool.BasicResourcePool$ScatteredAcquireTask@40fcec8d -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (30). Last acquisition attempt exception: 
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.GeneratedConstructorAccessor17.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:408)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1137)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:356)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2504)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2541)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2323)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:832)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:46)
+	at sun.reflect.GeneratedConstructorAccessor19.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:408)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:417)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:344)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:175)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:220)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:206)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:203)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1138)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquireAndDecrementPendingAcquiresWithinLockOnSuccess(BasicResourcePool.java:1125)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$700(BasicResourcePool.java:44)
+	at com.mchange.v2.resourcepool.BasicResourcePool$ScatteredAcquireTask.run(BasicResourcePool.java:1870)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:696)
+Caused by: java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:244)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:258)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:306)
+	... 20 more
+2016-03-07 01:06:23  [ C3P0PooledConnectionPoolManager[identityToken->1hge13g9fm3vrps30ljkt|71139e77]-HelperThread-#0:94903 ] - [ WARN ]  Having failed to acquire a resource, com.mchange.v2.resourcepool.BasicResourcePool@10745a02 is interrupting all Threads waiting on a resource to check out. Will try again in response to new client requests.
+2016-03-07 01:06:23  [ C3P0PooledConnectionPoolManager[identityToken->1hge13g9fm3vrps30ljkt|71139e77]-HelperThread-#2:94880 ] - [ WARN ]  com.mchange.v2.resourcepool.BasicResourcePool$ScatteredAcquireTask@15211db1 -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (30). Last acquisition attempt exception: 
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.GeneratedConstructorAccessor17.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:408)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1137)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:356)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2504)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2541)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2323)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:832)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:46)
+	at sun.reflect.GeneratedConstructorAccessor19.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:408)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:417)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:344)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:175)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:220)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:206)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:203)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1138)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquireAndDecrementPendingAcquiresWithinLockOnSuccess(BasicResourcePool.java:1125)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$700(BasicResourcePool.java:44)
+	at com.mchange.v2.resourcepool.BasicResourcePool$ScatteredAcquireTask.run(BasicResourcePool.java:1870)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:696)
+Caused by: java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:244)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:258)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:306)
+	... 20 more
+2016-03-07 01:06:23  [ C3P0PooledConnectionPoolManager[identityToken->1hge13g9fm3vrps30ljkt|71139e77]-HelperThread-#2:94912 ] - [ WARN ]  Having failed to acquire a resource, com.mchange.v2.resourcepool.BasicResourcePool@10745a02 is interrupting all Threads waiting on a resource to check out. Will try again in response to new client requests.
+2016-03-07 01:06:23  [ main:94877 ] - [ WARN ]  HHH000342: Could not obtain connection to query metadata : Connections could not be acquired from the underlying database!
+2016-03-07 01:06:23  [ main:94913 ] - [ INFO ]  HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2016-03-07 01:06:23  [ main:94914 ] - [ INFO ]  HHH000422: Disabling contextual LOB creation as connection was null
+2016-03-07 01:06:23  [ main:94941 ] - [ INFO ]  HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-03-07 01:06:23  [ main:94942 ] - [ INFO ]  HHH000397: Using ASTQueryTranslatorFactory
+2016-03-07 01:06:23  [ main:95053 ] - [ INFO ]  HHH000228: Running hbm2ddl schema update
+2016-03-07 01:06:23  [ main:95054 ] - [ INFO ]  HHH000102: Fetching database metadata
+2016-03-07 01:06:45  [ main:116289 ] - [ INFO ]  HHH000396: Updating schema
+2016-03-07 01:06:45  [ main:116324 ] - [ INFO ]  HHH000261: Table found: hibt.element
+2016-03-07 01:06:45  [ main:116324 ] - [ INFO ]  HHH000037: Columns: [createtime, deleted, module_id, name, description, id, updatetime]
+2016-03-07 01:06:45  [ main:116326 ] - [ INFO ]  HHH000108: Foreign keys: []
+2016-03-07 01:06:45  [ main:116326 ] - [ INFO ]  HHH000126: Indexes: [primary]
+2016-03-07 01:06:45  [ main:116338 ] - [ INFO ]  HHH000261: Table found: hibt.entity
+2016-03-07 01:06:45  [ main:116338 ] - [ INFO ]  HHH000037: Columns: [createtime, deleted, module_id, name, description, id, updatetime, tablename, hbmpath]
+2016-03-07 01:06:45  [ main:116339 ] - [ INFO ]  HHH000108: Foreign keys: []
+2016-03-07 01:06:45  [ main:116339 ] - [ INFO ]  HHH000126: Indexes: [primary]
+2016-03-07 01:06:45  [ main:116351 ] - [ INFO ]  HHH000261: Table found: hibt.field
+2016-03-07 01:06:45  [ main:116352 ] - [ INFO ]  HHH000037: Columns: [createtime, deleted, module_id, name, length, description, ifnull, id, updatetime, fieldtype, entity_id]
+2016-03-07 01:06:45  [ main:116353 ] - [ INFO ]  HHH000108: Foreign keys: [fk_o596lc80ccb1rgvhnoku4fdo9]
+2016-03-07 01:06:45  [ main:116354 ] - [ INFO ]  HHH000126: Indexes: [fk_o596lc80ccb1rgvhnoku4fdo9, primary]
+2016-03-07 01:06:45  [ main:116365 ] - [ INFO ]  HHH000261: Table found: hibt.file_element
+2016-03-07 01:06:45  [ main:116366 ] - [ INFO ]  HHH000037: Columns: [createtime, deleted, module_id, parentfoldid, name, description, id, updatetime]
+2016-03-07 01:06:45  [ main:116366 ] - [ INFO ]  HHH000108: Foreign keys: []
+2016-03-07 01:06:45  [ main:116367 ] - [ INFO ]  HHH000126: Indexes: [primary]
+2016-03-07 01:06:45  [ main:116378 ] - [ INFO ]  HHH000261: Table found: hibt.folder_file_element
+2016-03-07 01:06:45  [ main:116379 ] - [ INFO ]  HHH000037: Columns: [createtime, deleted, module_id, parentfoldid, depth, name, description, id, updatetime]
+2016-03-07 01:06:45  [ main:116380 ] - [ INFO ]  HHH000108: Foreign keys: []
+2016-03-07 01:06:45  [ main:116381 ] - [ INFO ]  HHH000126: Indexes: [primary]
+2016-03-07 01:06:45  [ main:116391 ] - [ INFO ]  HHH000261: Table found: hibt.module
+2016-03-07 01:06:45  [ main:116393 ] - [ INFO ]  HHH000037: Columns: [createtime, deleted, module_id, name, description, id, updatetime]
+2016-03-07 01:06:45  [ main:116394 ] - [ INFO ]  HHH000108: Foreign keys: []
+2016-03-07 01:06:45  [ main:116395 ] - [ INFO ]  HHH000126: Indexes: [primary]
+2016-03-07 01:06:45  [ main:116411 ] - [ INFO ]  HHH000261: Table found: hibt.report_field
+2016-03-07 01:06:45  [ main:116412 ] - [ INFO ]  HHH000037: Columns: [createtime, length, description, relatedfield_id, fieldtype, deleted, module_id, report_id, name, ifnull, id, updatetime, isrelatedfield]
+2016-03-07 01:06:45  [ main:116412 ] - [ INFO ]  HHH000108: Foreign keys: [fk_qmru8iktsptb9m0nt6a5kj7yr, fk_t5oxbvi73rrwmoroikmhldvg9]
+2016-03-07 01:06:45  [ main:116413 ] - [ INFO ]  HHH000126: Indexes: [fk_qmru8iktsptb9m0nt6a5kj7yr, fk_t5oxbvi73rrwmoroikmhldvg9, primary]
+2016-03-07 01:06:45  [ main:116432 ] - [ INFO ]  HHH000261: Table found: hibt.report_file_element
+2016-03-07 01:06:45  [ main:116433 ] - [ INFO ]  HHH000037: Columns: [createtime, parentfoldid, currentversion, description, folderid, hbmpath, deleted, module_id, name, id, updatetime, tablename, templatepath]
+2016-03-07 01:06:45  [ main:116434 ] - [ INFO ]  HHH000108: Foreign keys: []
+2016-03-07 01:06:45  [ main:116435 ] - [ INFO ]  HHH000126: Indexes: [primary]
+2016-03-07 01:06:45  [ main:116436 ] - [ INFO ]  HHH000232: Schema update complete
+2016-03-07 01:06:45  [ main:116473 ] - [ INFO ]  running GroovyFactory...
+2016-03-07 01:06:45  [ main:116474 ] - [ INFO ]  setting application context...
+2016-03-07 01:06:45  [ main:116515 ] - [ INFO ]  Using DataSource [com.mchange.v2.c3p0.ComboPooledDataSource[ identityToken -> 1hge13g9fm3vrps30ljkt|71139e77, dataSourceName -> 1hge13g9fm3vrps30ljkt|71139e77 ]] of Hibernate SessionFactory for HibernateTransactionManager
+2016-03-07 01:06:45  [ main:116525 ] - [ INFO ]  Mapped "{[/admin/entities/{id}],methods=[DELETE],produces=[application/json]}" onto public org.springframework.http.ResponseEntity com.oncore.template.controller.EntityResource.delete(java.lang.String)
+2016-03-07 01:06:45  [ main:116526 ] - [ INFO ]  Mapped "{[/admin/entities/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.entities.EntityResponse> com.oncore.template.controller.EntityResource.getEntities()
+2016-03-07 01:06:45  [ main:116527 ] - [ INFO ]  Mapped "{[/admin/entities/{id}],methods=[GET],produces=[application/json]}" onto public com.oncore.template.transfd.entities.EntityResponse com.oncore.template.controller.EntityResource.getEntity(java.lang.String)
+2016-03-07 01:06:45  [ main:116527 ] - [ INFO ]  Mapped "{[/admin/entities/{id}],methods=[PUT],produces=[application/json]}" onto public com.oncore.template.transfd.entities.EntityResponse com.oncore.template.controller.EntityResource.updateEntity(com.oncore.template.transfd.entities.UpdateEntityRequest)
+2016-03-07 01:06:45  [ main:116529 ] - [ INFO ]  Mapped "{[/admin/folders/{id}],methods=[GET],produces=[application/json]}" onto public com.oncore.template.transfd.file_element.folder.FolderResponse com.oncore.template.controller.FolderResource.getFolder(java.lang.String)
+2016-03-07 01:06:45  [ main:116537 ] - [ INFO ]  Mapped "{[/admin/folders/{parent_id}/sub_folder/],methods=[POST],produces=[application/json]}" onto public com.oncore.template.transfd.file_element.folder.FolderResponse com.oncore.template.controller.FolderResource.createSubFolderToParent(java.lang.String,org.springframework.security.core.context.SecurityContextHolder,com.oncore.template.transfd.file_element.folder.CreateFolderToParentFolderRequest)
+2016-03-07 01:06:45  [ main:116538 ] - [ INFO ]  Mapped "{[/admin/folders/{parent_id}/sub_folder/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.file_element.folder.FolderResponse> com.oncore.template.controller.FolderResource.getChildFoldersUnderParentFolder(java.lang.String)
+2016-03-07 01:06:45  [ main:116540 ] - [ INFO ]  Mapped "{[/admin/folders/{folderId}/reports/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.report.ReportResponse> com.oncore.template.controller.FolderResource.getReportsUnderFolder(java.lang.String)
+2016-03-07 01:06:45  [ main:116542 ] - [ INFO ]  Mapped "{[/admin/folders/{id}/],methods=[PUT],produces=[application/json]}" onto public com.oncore.template.transfd.file_element.folder.FolderResponse com.oncore.template.controller.FolderResource.updateFolder(java.lang.String,com.oncore.template.transfd.file_element.folder.UpdateFolderRequest)
+2016-03-07 01:06:45  [ main:116543 ] - [ INFO ]  Mapped "{[/admin/modules/{id}/],methods=[GET],produces=[application/json]}" onto public com.oncore.template.transfd.module.ModuleResponse com.oncore.template.controller.ModuleResource.getModule(java.lang.String)
+2016-03-07 01:06:45  [ main:116544 ] - [ INFO ]  Mapped "{[/admin/modules/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.module.ModuleResponse> com.oncore.template.controller.ModuleResource.getModules()
+2016-03-07 01:06:45  [ main:116544 ] - [ INFO ]  Mapped "{[/admin/modules/{id}/],methods=[PUT],produces=[application/json]}" onto public com.oncore.template.transfd.module.ModuleResponse com.oncore.template.controller.ModuleResource.updateModule(java.lang.String,com.oncore.template.transfd.module.CreateModuleRequest)
+2016-03-07 01:06:45  [ main:116545 ] - [ INFO ]  Mapped "{[/admin/modules/],methods=[POST],produces=[application/json]}" onto public com.oncore.template.transfd.module.ModuleResponse com.oncore.template.controller.ModuleResource.createModule(com.oncore.template.transfd.module.CreateModuleRequest)
+2016-03-07 01:06:45  [ main:116545 ] - [ INFO ]  Mapped "{[/admin/modules/{id}/entities/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.entities.EntityResponse> com.oncore.template.controller.ModuleResource.getEntitiesOfModule(java.lang.String)
+2016-03-07 01:06:45  [ main:116546 ] - [ INFO ]  Mapped "{[/admin/modules/{id}/folders/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.file_element.folder.FolderResponse> com.oncore.template.controller.ModuleResource.getFoldersOfModule(java.lang.String)
+2016-03-07 01:06:45  [ main:116546 ] - [ INFO ]  Mapped "{[/admin/modules/{id}/folders/],methods=[POST],produces=[application/json]}" onto public com.oncore.template.transfd.file_element.folder.FolderResponse com.oncore.template.controller.ModuleResource.createFolderUnderModule(java.lang.String,com.oncore.template.transfd.file_element.folder.CreateRootFolderRequest)
+2016-03-07 01:06:45  [ main:116547 ] - [ INFO ]  Mapped "{[/admin/modules/{id}/entities/],methods=[POST],produces=[application/json]}" onto public com.oncore.template.transfd.entities.EntityResponse com.oncore.template.controller.ModuleResource.createEntityUnderModule(java.lang.String,com.oncore.template.transfd.entities.CreateEntityRequest)
+2016-03-07 01:06:45  [ main:116549 ] - [ INFO ]  Mapped "{[/admin/modules/{id}/tree/],methods=[GET],produces=[application/json]}" onto public com.oncore.template.transfd.module.ModuleTreeResponse com.oncore.template.controller.ModuleResource.getModuleTree(java.lang.String)
+2016-03-07 01:06:45  [ main:116551 ] - [ INFO ]  Mapped "{[/admin/reports/{id}/],methods=[DELETE],produces=[application/json]}" onto public org.springframework.http.ResponseEntity com.oncore.template.controller.ReportResource.delete(java.lang.String)
+2016-03-07 01:06:45  [ main:116554 ] - [ INFO ]  Mapped "{[/admin/reports/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.report.ReportResponse> com.oncore.template.controller.ReportResource.getReports()
+2016-03-07 01:06:45  [ main:116555 ] - [ INFO ]  Mapped "{[/admin/reports/],methods=[POST],produces=[application/json]}" onto public com.oncore.template.transfd.report.ReportResponse com.oncore.template.controller.ReportResource.createReport(com.oncore.template.transfd.report.CreateReportRequest)
+2016-03-07 01:06:45  [ main:116556 ] - [ INFO ]  Mapped "{[/admin/reports/{id}/],methods=[GET],produces=[application/json]}" onto public com.oncore.template.transfd.report.ReportResponse com.oncore.template.controller.ReportResource.gerReport(java.lang.String)
+2016-03-07 01:06:45  [ main:116605 ] - [ INFO ]  Looking for @ControllerAdvice: WebApplicationContext for namespace 'spring-dispatcher-servlet': startup date [Mon Mar 07 01:05:53 EST 2016]; parent: Root WebApplicationContext
+2016-03-07 01:06:45  [ main:116643 ] - [ INFO ]  Looking for @ControllerAdvice: WebApplicationContext for namespace 'spring-dispatcher-servlet': startup date [Mon Mar 07 01:05:53 EST 2016]; parent: Root WebApplicationContext
+2016-03-07 01:06:45  [ main:116666 ] - [ INFO ]  Detected @ExceptionHandler methods in commonExceptionHandler
+2016-03-07 01:06:45  [ main:116728 ] - [ INFO ]  FrameworkServlet 'spring-dispatcher': initialization completed in 52380 ms
+2016-03-07 01:08:12  [ qtp953528583-16:203182 ] - [ INFO ]  found module id=4028818c534a8b6c01534a97c7ff0002 name=1111111111111111111111
+2016-03-07 01:17:12  [ qtp953528583-15:744159 ] - [ INFO ]  found module id=4028818c534a8b6c01534a97c7ff0002 name=1111111111111111111111
+2016-03-07 01:18:57  [ qtp953528583-15:849017 ] - [ INFO ]  found module id=4028818c534a8b6c01534a97c7ff0002 name=1111111111111111111111
+2016-03-07 01:19:37  [ qtp953528583-19:888642 ] - [ INFO ]  found module id=4028818c534a8b6c01534a97c7ff0002 name=1111111111111111111111
+2016-03-07 01:26:35  [ qtp953528583-16:1306960 ] - [ INFO ]  found module id=4028818c534a8b6c01534a97c7ff0002 name=1111111111111111111111
+2016-03-07 01:28:14  [ qtp953528583-16:1405466 ] - [ INFO ]  found module id=4028818c534a8b6c01534a97c7ff0002 name=1111111111111111111111
+2016-03-07 01:35:29  [ qtp953528583-17:1840967 ] - [ INFO ]  found module id=4028818c534a8b6c01534a97c7ff0002 name=1111111111111111111111
+2016-03-07 01:36:21  [ qtp953528583-14:1892986 ] - [ INFO ]  found module id=4028818c534a8b6c01534a97c7ff0002 name=1111111111111111111111
+2016-03-07 01:41:05  [ qtp953528583-14:2176641 ] - [ INFO ]  found module id=4028818c534a8b6c01534a97c7ff0002 name=1111111111111111111111
+2016-03-07 01:41:20  [ qtp953528583-19:2191809 ] - [ INFO ]  saving Module 1233
+2016-03-07 01:41:20  [ qtp953528583-19:2191820 ] - [ INFO ]  save Module 1233 success
+2016-03-07 01:41:23  [ qtp953528583-16:2195171 ] - [ INFO ]  saving Module 1233
+2016-03-07 01:41:24  [ qtp953528583-16:2195172 ] - [ INFO ]  save Module 1233 success
+2016-03-07 01:41:24  [ qtp953528583-14:2195987 ] - [ INFO ]  saving Module 1233
+2016-03-07 01:41:24  [ qtp953528583-14:2195988 ] - [ INFO ]  save Module 1233 success
+2016-03-07 01:41:25  [ qtp953528583-17:2196499 ] - [ INFO ]  saving Module 1233
+2016-03-07 01:41:25  [ qtp953528583-17:2196500 ] - [ INFO ]  save Module 1233 success
+2016-03-07 01:41:25  [ qtp953528583-16:2196508 ] - [ INFO ]  saving Module 1233
+2016-03-07 01:41:25  [ qtp953528583-16:2196509 ] - [ INFO ]  save Module 1233 success
+2016-03-07 01:41:25  [ qtp953528583-15:2196521 ] - [ INFO ]  saving Module 1233
+2016-03-07 01:41:25  [ qtp953528583-15:2196522 ] - [ INFO ]  save Module 1233 success
+2016-03-07 01:41:26  [ qtp953528583-16:2197735 ] - [ INFO ]  saving Module 1233
+2016-03-07 01:41:26  [ qtp953528583-16:2197736 ] - [ INFO ]  save Module 1233 success
+2016-03-07 01:41:26  [ qtp953528583-15:2197736 ] - [ INFO ]  saving Module 1233
+2016-03-07 01:41:26  [ qtp953528583-15:2197738 ] - [ INFO ]  save Module 1233 success
+2016-03-07 01:41:26  [ qtp953528583-14:2197740 ] - [ INFO ]  saving Module 1233
+2016-03-07 01:41:26  [ qtp953528583-14:2197740 ] - [ INFO ]  save Module 1233 success
+2016-03-07 01:41:26  [ qtp953528583-15:2197932 ] - [ INFO ]  saving Module 1233
+2016-03-07 01:41:26  [ qtp953528583-15:2197932 ] - [ INFO ]  save Module 1233 success
+2016-03-07 01:41:27  [ qtp953528583-19:2198863 ] - [ INFO ]  saving Module 1233
+2016-03-07 01:41:27  [ qtp953528583-19:2198864 ] - [ INFO ]  save Module 1233 success
+2016-03-07 01:41:29  [ qtp953528583-16:2200600 ] - [ INFO ]  saving Module 1233
+2016-03-07 01:41:29  [ qtp953528583-16:2200601 ] - [ INFO ]  save Module 1233 success
+2016-03-07 01:42:17  [ qtp953528583-19:2248742 ] - [ INFO ]  found module id=4028818c534a8b6c01534a97c7ff0002 name=1111111111111111111111
+2016-03-07 01:42:46  [ qtp953528583-14:2277208 ] - [ INFO ]  saving Module dddaaawwwwdd
+2016-03-07 01:42:46  [ qtp953528583-14:2277209 ] - [ INFO ]  save Module dddaaawwwwdd success
+2016-03-07 01:42:56  [ qtp953528583-17:2287748 ] - [ INFO ]  saving Module dddaaawwwwdd
+2016-03-07 01:42:56  [ qtp953528583-17:2287749 ] - [ INFO ]  save Module dddaaawwwwdd success
+2016-03-07 01:42:57  [ qtp953528583-15:2288557 ] - [ INFO ]  saving Module dddaaawwwwdd
+2016-03-07 01:42:57  [ qtp953528583-15:2288558 ] - [ INFO ]  save Module dddaaawwwwdd success
+2016-03-07 01:42:59  [ qtp953528583-19:2290303 ] - [ INFO ]  saving Module dddaaawwwwdd
+2016-03-07 01:42:59  [ qtp953528583-19:2290304 ] - [ INFO ]  save Module dddaaawwwwdd success
+2016-03-07 01:42:59  [ qtp953528583-16:2290810 ] - [ INFO ]  saving Module dddaaawwwwdd
+2016-03-07 01:42:59  [ qtp953528583-16:2290811 ] - [ INFO ]  save Module dddaaawwwwdd success
+2016-03-07 01:42:59  [ qtp953528583-15:2290816 ] - [ INFO ]  saving Module dddaaawwwwdd
+2016-03-07 01:42:59  [ qtp953528583-15:2290817 ] - [ INFO ]  save Module dddaaawwwwdd success
+2016-03-07 01:42:59  [ qtp953528583-14:2290818 ] - [ INFO ]  saving Module dddaaawwwwdd
+2016-03-07 01:42:59  [ qtp953528583-14:2290818 ] - [ INFO ]  save Module dddaaawwwwdd success
+2016-03-07 01:43:00  [ qtp953528583-14:2291241 ] - [ INFO ]  saving Module dddaaawwwwdd
+2016-03-07 01:43:00  [ qtp953528583-14:2291241 ] - [ INFO ]  save Module dddaaawwwwdd success
+2016-03-07 01:43:00  [ qtp953528583-14:2292052 ] - [ INFO ]  saving Module dddaaawwwwdd
+2016-03-07 01:43:00  [ qtp953528583-19:2292052 ] - [ INFO ]  saving Module dddaaawwwwdd
+2016-03-07 01:43:00  [ qtp953528583-19:2292053 ] - [ INFO ]  save Module dddaaawwwwdd success
+2016-03-07 01:43:00  [ qtp953528583-15:2292052 ] - [ INFO ]  saving Module dddaaawwwwdd
+2016-03-07 01:43:00  [ qtp953528583-15:2292054 ] - [ INFO ]  save Module dddaaawwwwdd success
+2016-03-07 01:43:00  [ qtp953528583-16:2292052 ] - [ INFO ]  saving Module dddaaawwwwdd
+2016-03-07 01:43:00  [ qtp953528583-16:2292055 ] - [ INFO ]  save Module dddaaawwwwdd success
+2016-03-07 01:43:00  [ qtp953528583-14:2292052 ] - [ INFO ]  save Module dddaaawwwwdd success
+2016-03-07 01:45:32  [ qtp953528583-19:2443188 ] - [ INFO ]  found module id=4028818c534a8b6c01534a97c7ff0002 name=1111111111111111111111
+2016-03-07 01:45:43  [ qtp953528583-15:2454453 ] - [ INFO ]  saving Module dddaaawwwwdd
+2016-03-07 01:45:43  [ qtp953528583-15:2454454 ] - [ INFO ]  save Module dddaaawwwwdd success
+2016-03-07 01:45:55  [ qtp953528583-65:2466967 ] - [ INFO ]  found module id=4028818c534a595101534a596ca20000 name=dddaaawwwwdd
+2016-03-07 01:46:10  [ qtp953528583-19:2481695 ] - [ INFO ]  saving Module qqqqqqqqqqqqqqqqq
+2016-03-07 01:46:10  [ qtp953528583-19:2481695 ] - [ INFO ]  save Module qqqqqqqqqqqqqqqqq success
+2016-03-07 01:49:23  [ qtp953528583-17:2674202 ] - [ INFO ]  found module id=4028818c534a595101534a596ca20000 name=dddaaawwwwdd
+2016-03-07 01:49:35  [ qtp953528583-19:2686712 ] - [ INFO ]  saving Module dddaaawwwwdd
+2016-03-07 01:49:35  [ qtp953528583-19:2686713 ] - [ INFO ]  save Module dddaaawwwwdd success
+2016-03-07 01:50:48  [ qtp953528583-17:2759506 ] - [ INFO ]  found module id=4028818c534a595101534a596ca20000 name=dddaaawwwwdd
+2016-03-07 01:51:14  [ qtp953528583-15:2785693 ] - [ INFO ]  saving Module laddd
+2016-03-07 01:51:14  [ qtp953528583-15:2785695 ] - [ INFO ]  save Module laddd success
+2016-03-07 01:55:12  [ qtp953528583-14:3023290 ] - [ INFO ]  found module id=4028818c534a595101534a596ca20000 name=dddaaawwwwdd
+2016-03-07 01:57:29  [ qtp953528583-14:3160920 ] - [ INFO ]  found module id=4028818c534a595101534a596ca20000 name=dddaaawwwwdd
+2016-03-07 02:02:00  [ qtp953528583-15:3431625 ] - [ INFO ]  found module id=4028818c534fae1201534fd814da001b name=laddd
+2016-03-07 02:10:12  [ qtp953528583-19:3923604 ] - [ INFO ]  found module id=4028818c534a595101534a596ca20000 name=dddaaawwwwdd
+2016-03-07 02:12:37  [ qtp953528583-14:4069118 ] - [ INFO ]  found module id=4028818c534a595101534a596ca20000 name=dddaaawwwwdd
+2016-03-07 02:14:21  [ qtp953528583-17:4172433 ] - [ INFO ]  saving Module 111111
+2016-03-07 02:14:21  [ qtp953528583-17:4172435 ] - [ INFO ]  save Module 111111 success
+2016-03-07 02:17:55  [ qtp953528583-15:4386345 ] - [ INFO ]  found module id=4028818c534a595101534a596ca20000 name=dddaaawwwwdd
+2016-03-07 02:20:14  [ qtp953528583-19:4525977 ] - [ INFO ]  found module id=4028818c534a8b6c01534a97c7ff0002 name=1111111111111111111111
+2016-03-07 02:24:44  [ qtp953528583-19:4795950 ] - [ INFO ]  found module id=4028818c534a595101534a596ca20000 name=dddaaawwwwdd
+2016-03-07 02:32:14  [ qtp953528583-19:5245999 ] - [ INFO ]  found module id=4028818c534a595101534a596ca20000 name=dddaaawwwwdd
+2016-03-07 02:34:07  [ qtp953528583-17:5358955 ] - [ INFO ]  found module id=4028818c534a595101534a596ca20000 name=dddaaawwwwdd
+2016-03-07 02:36:53  [ qtp953528583-65:5524731 ] - [ INFO ]  found module id=4028818c534a595101534a596ca20000 name=dddaaawwwwdd
+2016-03-07 02:40:20  [ qtp953528583-17:5731787 ] - [ INFO ]  found module id=4028818c534a595101534a596ca20000 name=dddaaawwwwdd
+2016-03-07 02:44:12  [ qtp953528583-65:5963929 ] - [ INFO ]  found module id=4028818c534a595101534a596ca20000 name=dddaaawwwwdd
+2016-03-07 02:50:20  [ qtp953528583-15:6331860 ] - [ INFO ]  found module id=4028818c534a595101534a596ca20000 name=dddaaawwwwdd
+2016-03-07 03:01:37  [ qtp953528583-19:7008570 ] - [ INFO ]  found module id=4028818c534a595101534a596ca20000 name=dddaaawwwwdd
+2016-03-07 03:04:13  [ qtp953528583-14:7164370 ] - [ INFO ]  found module id=4028818c534a595101534a596ca20000 name=dddaaawwwwdd
+2016-03-07 03:04:56  [ qtp953528583-14:7207276 ] - [ INFO ]  found module id=4028818c534a595101534a596ca20000 name=dddaaawwwwdd
+2016-03-07 03:05:08  [ qtp953528583-65:7220075 ] - [ INFO ]  found module id=4028818c534a595101534a596ca20000 name=dddaaawwwwdd
+2016-03-07 03:05:14  [ qtp953528583-19:7225612 ] - [ INFO ]  found module id=4028818c534a595101534a596ca20000 name=dddaaawwwwdd
+2016-03-07 03:06:54  [ qtp953528583-14:7325868 ] - [ INFO ]  found module id=4028818c534a595101534a596ca20000 name=dddaaawwwwdd
+2016-03-07 03:13:40  [ qtp953528583-65:7731710 ] - [ INFO ]  found module id=4028818c534a595101534a596ca20000 name=dddaaawwwwdd
+2016-03-07 03:18:32  [ qtp953528583-15:8023725 ] - [ INFO ]  found module id=4028818c534a595101534a596ca20000 name=dddaaawwwwdd
+2016-03-07 03:21:35  [ qtp953528583-14:8206403 ] - [ INFO ]  found module id=4028818c534a595101534a596ca20000 name=dddaaawwwwdd
+2016-03-07 03:29:19  [ qtp953528583-65:8670884 ] - [ INFO ]  found module id=4028818c534a595101534a596ca20000 name=dddaaawwwwdd
+2016-03-07 03:34:08  [ qtp953528583-19:8959969 ] - [ INFO ]  found module id=4028818c534a595101534a596ca20000 name=dddaaawwwwdd
+2016-03-07 03:35:31  [ qtp953528583-19:9042608 ] - [ INFO ]  found module id=4028818c534a595101534a596ca20000 name=dddaaawwwwdd
+2016-03-07 03:37:06  [ qtp953528583-15:9137230 ] - [ INFO ]  found module id=4028818c534a595101534a596ca20000 name=dddaaawwwwdd
+2016-03-07 03:39:00  [ qtp953528583-15:9251911 ] - [ INFO ]  found module id=4028818c534a595101534a596ca20000 name=dddaaawwwwdd
+2016-03-07 03:40:33  [ qtp953528583-14:9344981 ] - [ INFO ]  found module id=4028818c534a595101534a596ca20000 name=dddaaawwwwdd
+2016-03-07 03:40:50  [ qtp953528583-65:9362084 ] - [ INFO ]  found module id=4028818c534a595101534a596ca20000 name=dddaaawwwwdd
+2016-03-07 03:43:26  [ qtp953528583-15:9517227 ] - [ INFO ]  found module id=4028818c534a595101534a596ca20000 name=dddaaawwwwdd
+2016-03-07 03:51:15  [ qtp953528583-14:9986928 ] - [ INFO ]  found module id=4028818c534a595101534a596ca20000 name=dddaaawwwwdd
+2016-03-07 03:51:44  [ qtp953528583-19:10015498 ] - [ INFO ]  found module id=4028818c534a595101534a596ca20000 name=dddaaawwwwdd
+2016-03-07 03:52:02  [ qtp953528583-15:10033729 ] - [ INFO ]  found module id=4028818c534a595101534a596ca20000 name=dddaaawwwwdd
+2016-03-07 03:53:49  [ qtp953528583-15:10140332 ] - [ INFO ]  found module id=4028818c534a595101534a596ca20000 name=dddaaawwwwdd
+2016-03-07 03:55:13  [ qtp953528583-14:10224910 ] - [ INFO ]  found module id=4028818c534a595101534a596ca20000 name=dddaaawwwwdd
+2016-03-07 03:57:53  [ qtp953528583-14:10384868 ] - [ INFO ]  found module id=4028818c534a595101534a596ca20000 name=dddaaawwwwdd
+2016-03-07 03:59:06  [ qtp953528583-19:10457871 ] - [ INFO ]  found module id=4028818c534a595101534a596ca20000 name=dddaaawwwwdd
+2016-03-07 04:02:17  [ qtp953528583-14:10648636 ] - [ INFO ]  found module id=4028818c534a595101534a596ca20000 name=dddaaawwwwdd
+2016-03-07 04:03:19  [ qtp953528583-17:10711108 ] - [ INFO ]  found module id=4028818c534a595101534a596ca20000 name=dddaaawwwwdd
+2016-03-07 04:04:04  [ qtp953528583-15:10755552 ] - [ INFO ]  found module id=4028818c534a595101534a596ca20000 name=dddaaawwwwdd
+2016-03-07 04:07:40  [ qtp953528583-65:10972029 ] - [ INFO ]  found module id=4028818c534a595101534a596ca20000 name=dddaaawwwwdd
+2016-03-07 13:57:18  [ Thread-1:46349698 ] - [ INFO ]  Closing WebApplicationContext for namespace 'spring-dispatcher-servlet': startup date [Mon Mar 07 01:05:53 EST 2016]; parent: Root WebApplicationContext
+2016-03-07 13:57:53  [ main:4068 ] - [ INFO ]  FrameworkServlet 'spring-dispatcher': initialization started
+2016-03-07 13:57:53  [ main:4073 ] - [ INFO ]  Refreshing WebApplicationContext for namespace 'spring-dispatcher-servlet': startup date [Mon Mar 07 13:57:53 EST 2016]; parent: Root WebApplicationContext
+2016-03-07 13:57:53  [ main:4075 ] - [ INFO ]  Loading XML bean definitions from ServletContext resource [/WEB-INF/spring-context.xml]
+2016-03-07 13:57:53  [ main:4093 ] - [ INFO ]  Loading XML bean definitions from URL [jar:file:/Users/steve/.m2/repository/com/oncore/oncore-consulting-template-management/1.0-SNAPSHOT/oncore-consulting-template-management-1.0-SNAPSHOT.jar!/spring-context-template-management.xml]
+2016-03-07 13:57:53  [ main:4137 ] - [ INFO ]  Loading XML bean definitions from URL [jar:file:/Users/steve/.m2/repository/com/oncore/oncore-consulting-common/1.0-SNAPSHOT/oncore-consulting-common-1.0-SNAPSHOT.jar!/spring/spring-context-common.xml]
+2016-03-07 13:57:53  [ main:4165 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring/spring-hibernate.xml]
+2016-03-07 13:57:53  [ main:4202 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring/spring-mvc.xml]
+2016-03-07 13:57:53  [ main:4231 ] - [ INFO ]  Loading XML bean definitions from URL [jar:file:/Users/steve/.m2/repository/com/oncore/oncore-consulting-database-management/1.0-SNAPSHOT/oncore-consulting-database-management-1.0-SNAPSHOT.jar!/spring/spring-context-data-management.xml]
+2016-03-07 13:57:53  [ main:4335 ] - [ INFO ]  Loading properties file from class path resource [properties/hibernate-development.properties]
+2016-03-07 13:57:53  [ main:4336 ] - [ INFO ]  Loading properties file from class path resource [properties/app-development.properties]
+2016-03-07 13:57:53  [ main:4338 ] - [ INFO ]  JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-03-07 13:57:53  [ main:4431 ] - [ INFO ]  Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 2sa00u9fmvhupmpjq200|7ecb9e17, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceSynchronousCheckins -> false, forceUseNamedDriverClass -> false, identityToken -> 2sa00u9fmvhupmpjq200|7ecb9e17, idleConnectionTestPeriod -> 0, initialPoolSize -> 1, jdbcUrl -> jdbc:mysql://localhost:3306/hibt, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 1, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 40, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 1, numHelperThreads -> 3, preferredTestQuery -> null, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+2016-03-07 13:57:53  [ main:4447 ] - [ INFO ]  HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2016-03-07 13:57:53  [ main:4467 ] - [ INFO ]  HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-03-07 13:57:53  [ main:4467 ] - [ INFO ]  HHH000397: Using ASTQueryTranslatorFactory
+2016-03-07 13:57:53  [ main:4552 ] - [ INFO ]  HHH000228: Running hbm2ddl schema update
+2016-03-07 13:57:53  [ main:4553 ] - [ INFO ]  HHH000102: Fetching database metadata
+2016-03-07 13:57:53  [ main:4554 ] - [ INFO ]  HHH000396: Updating schema
+2016-03-07 13:57:53  [ main:4564 ] - [ INFO ]  HHH000261: Table found: hibt.element
+2016-03-07 13:57:53  [ main:4564 ] - [ INFO ]  HHH000037: Columns: [createtime, deleted, module_id, name, description, id, updatetime]
+2016-03-07 13:57:53  [ main:4565 ] - [ INFO ]  HHH000108: Foreign keys: []
+2016-03-07 13:57:53  [ main:4565 ] - [ INFO ]  HHH000126: Indexes: [primary]
+2016-03-07 13:57:53  [ main:4575 ] - [ INFO ]  HHH000261: Table found: hibt.entity
+2016-03-07 13:57:53  [ main:4576 ] - [ INFO ]  HHH000037: Columns: [createtime, deleted, module_id, name, description, id, updatetime, tablename, hbmpath]
+2016-03-07 13:57:53  [ main:4576 ] - [ INFO ]  HHH000108: Foreign keys: []
+2016-03-07 13:57:53  [ main:4577 ] - [ INFO ]  HHH000126: Indexes: [primary]
+2016-03-07 13:57:53  [ main:4589 ] - [ INFO ]  HHH000261: Table found: hibt.field
+2016-03-07 13:57:53  [ main:4591 ] - [ INFO ]  HHH000037: Columns: [createtime, deleted, module_id, name, length, description, ifnull, id, updatetime, fieldtype, entity_id]
+2016-03-07 13:57:53  [ main:4593 ] - [ INFO ]  HHH000108: Foreign keys: [fk_o596lc80ccb1rgvhnoku4fdo9]
+2016-03-07 13:57:53  [ main:4603 ] - [ INFO ]  HHH000126: Indexes: [fk_o596lc80ccb1rgvhnoku4fdo9, primary]
+2016-03-07 13:57:53  [ main:4627 ] - [ INFO ]  HHH000261: Table found: hibt.file_element
+2016-03-07 13:57:53  [ main:4628 ] - [ INFO ]  HHH000037: Columns: [createtime, deleted, module_id, parentfoldid, name, description, id, updatetime]
+2016-03-07 13:57:53  [ main:4629 ] - [ INFO ]  HHH000108: Foreign keys: []
+2016-03-07 13:57:53  [ main:4629 ] - [ INFO ]  HHH000126: Indexes: [primary]
+2016-03-07 13:57:53  [ main:4657 ] - [ INFO ]  HHH000261: Table found: hibt.folder_file_element
+2016-03-07 13:57:53  [ main:4659 ] - [ INFO ]  HHH000037: Columns: [createtime, deleted, module_id, parentfoldid, depth, name, description, id, updatetime]
+2016-03-07 13:57:53  [ main:4660 ] - [ INFO ]  HHH000108: Foreign keys: []
+2016-03-07 13:57:53  [ main:4660 ] - [ INFO ]  HHH000126: Indexes: [primary]
+2016-03-07 13:57:53  [ main:4671 ] - [ INFO ]  HHH000261: Table found: hibt.module
+2016-03-07 13:57:53  [ main:4671 ] - [ INFO ]  HHH000037: Columns: [createtime, deleted, module_id, name, description, id, updatetime]
+2016-03-07 13:57:53  [ main:4672 ] - [ INFO ]  HHH000108: Foreign keys: []
+2016-03-07 13:57:53  [ main:4674 ] - [ INFO ]  HHH000126: Indexes: [primary]
+2016-03-07 13:57:53  [ main:4684 ] - [ INFO ]  HHH000261: Table found: hibt.report_field
+2016-03-07 13:57:53  [ main:4685 ] - [ INFO ]  HHH000037: Columns: [createtime, length, description, relatedfield_id, fieldtype, deleted, module_id, report_id, name, ifnull, id, updatetime, isrelatedfield]
+2016-03-07 13:57:53  [ main:4685 ] - [ INFO ]  HHH000108: Foreign keys: [fk_qmru8iktsptb9m0nt6a5kj7yr, fk_t5oxbvi73rrwmoroikmhldvg9]
+2016-03-07 13:57:53  [ main:4687 ] - [ INFO ]  HHH000126: Indexes: [fk_qmru8iktsptb9m0nt6a5kj7yr, fk_t5oxbvi73rrwmoroikmhldvg9, primary]
+2016-03-07 13:57:53  [ main:4700 ] - [ INFO ]  HHH000261: Table found: hibt.report_file_element
+2016-03-07 13:57:53  [ main:4701 ] - [ INFO ]  HHH000037: Columns: [createtime, parentfoldid, currentversion, description, folderid, hbmpath, deleted, module_id, name, id, updatetime, tablename, templatepath]
+2016-03-07 13:57:53  [ main:4702 ] - [ INFO ]  HHH000108: Foreign keys: []
+2016-03-07 13:57:53  [ main:4702 ] - [ INFO ]  HHH000126: Indexes: [primary]
+2016-03-07 13:57:53  [ main:4703 ] - [ INFO ]  HHH000232: Schema update complete
+2016-03-07 13:57:53  [ main:4733 ] - [ INFO ]  running GroovyFactory...
+2016-03-07 13:57:53  [ main:4734 ] - [ INFO ]  setting application context...
+2016-03-07 13:57:53  [ main:4781 ] - [ INFO ]  Using DataSource [com.mchange.v2.c3p0.ComboPooledDataSource[ identityToken -> 2sa00u9fmvhupmpjq200|7ecb9e17, dataSourceName -> 2sa00u9fmvhupmpjq200|7ecb9e17 ]] of Hibernate SessionFactory for HibernateTransactionManager
+2016-03-07 13:57:53  [ main:4793 ] - [ INFO ]  Mapped "{[/admin/entities/{id}],methods=[DELETE],produces=[application/json]}" onto public org.springframework.http.ResponseEntity com.oncore.template.controller.EntityResource.delete(java.lang.String)
+2016-03-07 13:57:53  [ main:4794 ] - [ INFO ]  Mapped "{[/admin/entities/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.entities.EntityResponse> com.oncore.template.controller.EntityResource.getEntities()
+2016-03-07 13:57:53  [ main:4794 ] - [ INFO ]  Mapped "{[/admin/entities/{id}],methods=[GET],produces=[application/json]}" onto public com.oncore.template.transfd.entities.EntityResponse com.oncore.template.controller.EntityResource.getEntity(java.lang.String)
+2016-03-07 13:57:53  [ main:4794 ] - [ INFO ]  Mapped "{[/admin/entities/{id}],methods=[PUT],produces=[application/json]}" onto public com.oncore.template.transfd.entities.EntityResponse com.oncore.template.controller.EntityResource.updateEntity(com.oncore.template.transfd.entities.UpdateEntityRequest)
+2016-03-07 13:57:53  [ main:4798 ] - [ INFO ]  Mapped "{[/admin/folders/{id}],methods=[GET],produces=[application/json]}" onto public com.oncore.template.transfd.file_element.folder.FolderResponse com.oncore.template.controller.FolderResource.getFolder(java.lang.String)
+2016-03-07 13:57:53  [ main:4800 ] - [ INFO ]  Mapped "{[/admin/folders/{parent_id}/sub_folder/],methods=[POST],produces=[application/json]}" onto public com.oncore.template.transfd.file_element.folder.FolderResponse com.oncore.template.controller.FolderResource.createSubFolderToParent(java.lang.String,org.springframework.security.core.context.SecurityContextHolder,com.oncore.template.transfd.file_element.folder.CreateFolderToParentFolderRequest)
+2016-03-07 13:57:53  [ main:4801 ] - [ INFO ]  Mapped "{[/admin/folders/{parent_id}/sub_folder/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.file_element.folder.FolderResponse> com.oncore.template.controller.FolderResource.getChildFoldersUnderParentFolder(java.lang.String)
+2016-03-07 13:57:53  [ main:4802 ] - [ INFO ]  Mapped "{[/admin/folders/{folderId}/reports/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.report.ReportResponse> com.oncore.template.controller.FolderResource.getReportsUnderFolder(java.lang.String)
+2016-03-07 13:57:53  [ main:4803 ] - [ INFO ]  Mapped "{[/admin/folders/{id}/],methods=[PUT],produces=[application/json]}" onto public com.oncore.template.transfd.file_element.folder.FolderResponse com.oncore.template.controller.FolderResource.updateFolder(java.lang.String,com.oncore.template.transfd.file_element.folder.UpdateFolderRequest)
+2016-03-07 13:57:53  [ main:4806 ] - [ INFO ]  Mapped "{[/admin/modules/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.module.ModuleResponse> com.oncore.template.controller.ModuleResource.getModules()
+2016-03-07 13:57:53  [ main:4806 ] - [ INFO ]  Mapped "{[/admin/modules/{id}/],methods=[GET],produces=[application/json]}" onto public com.oncore.template.transfd.module.ModuleResponse com.oncore.template.controller.ModuleResource.getModule(java.lang.String)
+2016-03-07 13:57:53  [ main:4839 ] - [ INFO ]  Mapped "{[/admin/modules/],methods=[POST],produces=[application/json]}" onto public com.oncore.template.transfd.module.ModuleResponse com.oncore.template.controller.ModuleResource.createModule(com.oncore.template.transfd.module.CreateModuleRequest)
+2016-03-07 13:57:53  [ main:4840 ] - [ INFO ]  Mapped "{[/admin/modules/{id}/],methods=[PUT],produces=[application/json]}" onto public com.oncore.template.transfd.module.ModuleResponse com.oncore.template.controller.ModuleResource.updateModule(java.lang.String,com.oncore.template.transfd.module.CreateModuleRequest)
+2016-03-07 13:57:53  [ main:4840 ] - [ INFO ]  Mapped "{[/admin/modules/{id}/entities/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.entities.EntityResponse> com.oncore.template.controller.ModuleResource.getEntitiesOfModule(java.lang.String)
+2016-03-07 13:57:53  [ main:4841 ] - [ INFO ]  Mapped "{[/admin/modules/{id}/folders/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.file_element.folder.FolderResponse> com.oncore.template.controller.ModuleResource.getFoldersOfModule(java.lang.String)
+2016-03-07 13:57:53  [ main:4843 ] - [ INFO ]  Mapped "{[/admin/modules/{id}/folders/],methods=[POST],produces=[application/json]}" onto public com.oncore.template.transfd.file_element.folder.FolderResponse com.oncore.template.controller.ModuleResource.createFolderUnderModule(java.lang.String,com.oncore.template.transfd.file_element.folder.CreateRootFolderRequest)
+2016-03-07 13:57:53  [ main:4845 ] - [ INFO ]  Mapped "{[/admin/modules/{id}/entities/],methods=[POST],produces=[application/json]}" onto public com.oncore.template.transfd.entities.EntityResponse com.oncore.template.controller.ModuleResource.createEntityUnderModule(java.lang.String,com.oncore.template.transfd.entities.CreateEntityRequest)
+2016-03-07 13:57:53  [ main:4846 ] - [ INFO ]  Mapped "{[/admin/modules/{id}/tree/],methods=[GET],produces=[application/json]}" onto public com.oncore.template.transfd.module.ModuleTreeResponse com.oncore.template.controller.ModuleResource.getModuleTree(java.lang.String)
+2016-03-07 13:57:53  [ main:4848 ] - [ INFO ]  Mapped "{[/admin/reports/{id}/],methods=[DELETE],produces=[application/json]}" onto public org.springframework.http.ResponseEntity com.oncore.template.controller.ReportResource.delete(java.lang.String)
+2016-03-07 13:57:53  [ main:4848 ] - [ INFO ]  Mapped "{[/admin/reports/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.report.ReportResponse> com.oncore.template.controller.ReportResource.getReports()
+2016-03-07 13:57:53  [ main:4882 ] - [ INFO ]  Mapped "{[/admin/reports/],methods=[POST],produces=[application/json]}" onto public com.oncore.template.transfd.report.ReportResponse com.oncore.template.controller.ReportResource.createReport(com.oncore.template.transfd.report.CreateReportRequest)
+2016-03-07 13:57:53  [ main:4883 ] - [ INFO ]  Mapped "{[/admin/reports/{id}/],methods=[GET],produces=[application/json]}" onto public com.oncore.template.transfd.report.ReportResponse com.oncore.template.controller.ReportResource.gerReport(java.lang.String)
+2016-03-07 13:57:53  [ main:4918 ] - [ INFO ]  Looking for @ControllerAdvice: WebApplicationContext for namespace 'spring-dispatcher-servlet': startup date [Mon Mar 07 13:57:53 EST 2016]; parent: Root WebApplicationContext
+2016-03-07 13:57:53  [ main:4946 ] - [ INFO ]  Looking for @ControllerAdvice: WebApplicationContext for namespace 'spring-dispatcher-servlet': startup date [Mon Mar 07 13:57:53 EST 2016]; parent: Root WebApplicationContext
+2016-03-07 13:57:53  [ main:4971 ] - [ INFO ]  Detected @ExceptionHandler methods in commonExceptionHandler
+2016-03-07 13:57:54  [ main:5036 ] - [ INFO ]  FrameworkServlet 'spring-dispatcher': initialization completed in 965 ms
+2016-03-07 13:59:13  [ qtp65982709-18:84962 ] - [ WARN ]  No mapping found for HTTP request with URI [/user/entities/4028818c534d542801534d5443070000/] in DispatcherServlet with name 'spring-dispatcher'
+2016-03-07 14:04:14  [ Thread-1:385296 ] - [ INFO ]  Closing WebApplicationContext for namespace 'spring-dispatcher-servlet': startup date [Mon Mar 07 13:57:53 EST 2016]; parent: Root WebApplicationContext
+2016-03-07 14:07:04  [ main:3946 ] - [ INFO ]  FrameworkServlet 'spring-dispatcher': initialization started
+2016-03-07 14:07:04  [ main:3953 ] - [ INFO ]  Refreshing WebApplicationContext for namespace 'spring-dispatcher-servlet': startup date [Mon Mar 07 14:07:04 EST 2016]; parent: Root WebApplicationContext
+2016-03-07 14:07:04  [ main:3954 ] - [ INFO ]  Loading XML bean definitions from ServletContext resource [/WEB-INF/spring-context.xml]
+2016-03-07 14:07:04  [ main:3990 ] - [ INFO ]  Loading XML bean definitions from URL [jar:file:/Users/steve/.m2/repository/com/oncore/oncore-consulting-template-management/1.0-SNAPSHOT/oncore-consulting-template-management-1.0-SNAPSHOT.jar!/spring-context-template-management.xml]
+2016-03-07 14:07:04  [ main:4046 ] - [ INFO ]  Loading XML bean definitions from URL [jar:file:/Users/steve/.m2/repository/com/oncore/oncore-consulting-common/1.0-SNAPSHOT/oncore-consulting-common-1.0-SNAPSHOT.jar!/spring/spring-context-common.xml]
+2016-03-07 14:07:04  [ main:4068 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring/spring-hibernate.xml]
+2016-03-07 14:07:04  [ main:4095 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring/spring-mvc.xml]
+2016-03-07 14:07:04  [ main:4125 ] - [ INFO ]  Loading XML bean definitions from URL [jar:file:/Users/steve/.m2/repository/com/oncore/oncore-consulting-database-management/1.0-SNAPSHOT/oncore-consulting-database-management-1.0-SNAPSHOT.jar!/spring/spring-context-data-management.xml]
+2016-03-07 14:07:05  [ main:4165 ] - [ INFO ]  Loading XML bean definitions from URL [jar:file:/Users/steve/.m2/repository/com/oncore/oncore-consulting-user/1.0-SNAPSHOT/oncore-consulting-user-1.0-SNAPSHOT.jar!/spring/spring-context-user.xml]
+2016-03-07 14:07:05  [ main:4230 ] - [ INFO ]  Loading properties file from class path resource [properties/hibernate-development.properties]
+2016-03-07 14:07:05  [ main:4232 ] - [ INFO ]  Loading properties file from class path resource [properties/app-development.properties]
+2016-03-07 14:07:05  [ main:4234 ] - [ INFO ]  JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-03-07 14:07:05  [ main:4329 ] - [ INFO ]  Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 2sa00u9fmvtokp522v7z|70a24f9, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceSynchronousCheckins -> false, forceUseNamedDriverClass -> false, identityToken -> 2sa00u9fmvtokp522v7z|70a24f9, idleConnectionTestPeriod -> 0, initialPoolSize -> 1, jdbcUrl -> jdbc:mysql://localhost:3306/hibt, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 1, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 40, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 1, numHelperThreads -> 3, preferredTestQuery -> null, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+2016-03-07 14:07:05  [ main:4352 ] - [ INFO ]  HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2016-03-07 14:07:05  [ main:4409 ] - [ INFO ]  HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-03-07 14:07:05  [ main:4410 ] - [ INFO ]  HHH000397: Using ASTQueryTranslatorFactory
+2016-03-07 14:07:05  [ main:4502 ] - [ INFO ]  HHH000228: Running hbm2ddl schema update
+2016-03-07 14:07:05  [ main:4503 ] - [ INFO ]  HHH000102: Fetching database metadata
+2016-03-07 14:07:05  [ main:4504 ] - [ INFO ]  HHH000396: Updating schema
+2016-03-07 14:07:05  [ main:4512 ] - [ INFO ]  HHH000261: Table found: hibt.element
+2016-03-07 14:07:05  [ main:4512 ] - [ INFO ]  HHH000037: Columns: [createtime, deleted, module_id, name, description, id, updatetime]
+2016-03-07 14:07:05  [ main:4513 ] - [ INFO ]  HHH000108: Foreign keys: []
+2016-03-07 14:07:05  [ main:4513 ] - [ INFO ]  HHH000126: Indexes: [primary]
+2016-03-07 14:07:05  [ main:4523 ] - [ INFO ]  HHH000261: Table found: hibt.entity
+2016-03-07 14:07:05  [ main:4524 ] - [ INFO ]  HHH000037: Columns: [createtime, deleted, module_id, name, description, id, updatetime, tablename, hbmpath]
+2016-03-07 14:07:05  [ main:4526 ] - [ INFO ]  HHH000108: Foreign keys: []
+2016-03-07 14:07:05  [ main:4529 ] - [ INFO ]  HHH000126: Indexes: [primary]
+2016-03-07 14:07:05  [ main:4538 ] - [ INFO ]  HHH000261: Table found: hibt.field
+2016-03-07 14:07:05  [ main:4539 ] - [ INFO ]  HHH000037: Columns: [createtime, deleted, module_id, name, length, description, ifnull, id, updatetime, fieldtype, entity_id]
+2016-03-07 14:07:05  [ main:4540 ] - [ INFO ]  HHH000108: Foreign keys: [fk_o596lc80ccb1rgvhnoku4fdo9]
+2016-03-07 14:07:05  [ main:4545 ] - [ INFO ]  HHH000126: Indexes: [fk_o596lc80ccb1rgvhnoku4fdo9, primary]
+2016-03-07 14:07:05  [ main:4562 ] - [ INFO ]  HHH000261: Table found: hibt.file_element
+2016-03-07 14:07:05  [ main:4562 ] - [ INFO ]  HHH000037: Columns: [createtime, deleted, module_id, parentfoldid, name, description, id, updatetime]
+2016-03-07 14:07:05  [ main:4563 ] - [ INFO ]  HHH000108: Foreign keys: []
+2016-03-07 14:07:05  [ main:4564 ] - [ INFO ]  HHH000126: Indexes: [primary]
+2016-03-07 14:07:05  [ main:4575 ] - [ INFO ]  HHH000261: Table found: hibt.folder_file_element
+2016-03-07 14:07:05  [ main:4576 ] - [ INFO ]  HHH000037: Columns: [createtime, deleted, module_id, parentfoldid, depth, name, description, id, updatetime]
+2016-03-07 14:07:05  [ main:4577 ] - [ INFO ]  HHH000108: Foreign keys: []
+2016-03-07 14:07:05  [ main:4578 ] - [ INFO ]  HHH000126: Indexes: [primary]
+2016-03-07 14:07:05  [ main:4596 ] - [ INFO ]  HHH000261: Table found: hibt.module
+2016-03-07 14:07:05  [ main:4597 ] - [ INFO ]  HHH000037: Columns: [createtime, deleted, module_id, name, description, id, updatetime]
+2016-03-07 14:07:05  [ main:4597 ] - [ INFO ]  HHH000108: Foreign keys: []
+2016-03-07 14:07:05  [ main:4598 ] - [ INFO ]  HHH000126: Indexes: [primary]
+2016-03-07 14:07:05  [ main:4616 ] - [ INFO ]  HHH000261: Table found: hibt.report_field
+2016-03-07 14:07:05  [ main:4617 ] - [ INFO ]  HHH000037: Columns: [createtime, length, description, relatedfield_id, fieldtype, deleted, module_id, report_id, name, ifnull, id, updatetime, isrelatedfield]
+2016-03-07 14:07:05  [ main:4617 ] - [ INFO ]  HHH000108: Foreign keys: [fk_qmru8iktsptb9m0nt6a5kj7yr, fk_t5oxbvi73rrwmoroikmhldvg9]
+2016-03-07 14:07:05  [ main:4618 ] - [ INFO ]  HHH000126: Indexes: [fk_qmru8iktsptb9m0nt6a5kj7yr, fk_t5oxbvi73rrwmoroikmhldvg9, primary]
+2016-03-07 14:07:05  [ main:4629 ] - [ INFO ]  HHH000261: Table found: hibt.report_file_element
+2016-03-07 14:07:05  [ main:4630 ] - [ INFO ]  HHH000037: Columns: [createtime, parentfoldid, currentversion, description, folderid, hbmpath, deleted, module_id, name, id, updatetime, tablename, templatepath]
+2016-03-07 14:07:05  [ main:4631 ] - [ INFO ]  HHH000108: Foreign keys: []
+2016-03-07 14:07:05  [ main:4633 ] - [ INFO ]  HHH000126: Indexes: [primary]
+2016-03-07 14:07:05  [ main:4635 ] - [ INFO ]  HHH000232: Schema update complete
+2016-03-07 14:07:05  [ main:4677 ] - [ INFO ]  running GroovyFactory...
+2016-03-07 14:07:05  [ main:4678 ] - [ INFO ]  setting application context...
+2016-03-07 14:07:05  [ main:4722 ] - [ INFO ]  Using DataSource [com.mchange.v2.c3p0.ComboPooledDataSource[ identityToken -> 2sa00u9fmvtokp522v7z|70a24f9, dataSourceName -> 2sa00u9fmvtokp522v7z|70a24f9 ]] of Hibernate SessionFactory for HibernateTransactionManager
+2016-03-07 14:07:05  [ main:4735 ] - [ INFO ]  Mapped "{[/admin/entities/{id}],methods=[DELETE],produces=[application/json]}" onto public org.springframework.http.ResponseEntity com.oncore.template.controller.EntityResource.delete(java.lang.String)
+2016-03-07 14:07:05  [ main:4736 ] - [ INFO ]  Mapped "{[/admin/entities/{id}],methods=[PUT],produces=[application/json]}" onto public com.oncore.template.transfd.entities.EntityResponse com.oncore.template.controller.EntityResource.updateEntity(com.oncore.template.transfd.entities.UpdateEntityRequest)
+2016-03-07 14:07:05  [ main:4736 ] - [ INFO ]  Mapped "{[/admin/entities/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.entities.EntityResponse> com.oncore.template.controller.EntityResource.getEntities()
+2016-03-07 14:07:05  [ main:4737 ] - [ INFO ]  Mapped "{[/admin/entities/{id}],methods=[GET],produces=[application/json]}" onto public com.oncore.template.transfd.entities.EntityResponse com.oncore.template.controller.EntityResource.getEntity(java.lang.String)
+2016-03-07 14:07:05  [ main:4738 ] - [ INFO ]  Mapped "{[/admin/folders/{id}],methods=[GET],produces=[application/json]}" onto public com.oncore.template.transfd.file_element.folder.FolderResponse com.oncore.template.controller.FolderResource.getFolder(java.lang.String)
+2016-03-07 14:07:05  [ main:4739 ] - [ INFO ]  Mapped "{[/admin/folders/{parent_id}/sub_folder/],methods=[POST],produces=[application/json]}" onto public com.oncore.template.transfd.file_element.folder.FolderResponse com.oncore.template.controller.FolderResource.createSubFolderToParent(java.lang.String,org.springframework.security.core.context.SecurityContextHolder,com.oncore.template.transfd.file_element.folder.CreateFolderToParentFolderRequest)
+2016-03-07 14:07:05  [ main:4740 ] - [ INFO ]  Mapped "{[/admin/folders/{folderId}/reports/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.report.ReportResponse> com.oncore.template.controller.FolderResource.getReportsUnderFolder(java.lang.String)
+2016-03-07 14:07:05  [ main:4742 ] - [ INFO ]  Mapped "{[/admin/folders/{parent_id}/sub_folder/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.file_element.folder.FolderResponse> com.oncore.template.controller.FolderResource.getChildFoldersUnderParentFolder(java.lang.String)
+2016-03-07 14:07:05  [ main:4744 ] - [ INFO ]  Mapped "{[/admin/folders/{id}/],methods=[PUT],produces=[application/json]}" onto public com.oncore.template.transfd.file_element.folder.FolderResponse com.oncore.template.controller.FolderResource.updateFolder(java.lang.String,com.oncore.template.transfd.file_element.folder.UpdateFolderRequest)
+2016-03-07 14:07:05  [ main:4745 ] - [ INFO ]  Mapped "{[/admin/modules/{id}/],methods=[GET],produces=[application/json]}" onto public com.oncore.template.transfd.module.ModuleResponse com.oncore.template.controller.ModuleResource.getModule(java.lang.String)
+2016-03-07 14:07:05  [ main:4746 ] - [ INFO ]  Mapped "{[/admin/modules/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.module.ModuleResponse> com.oncore.template.controller.ModuleResource.getModules()
+2016-03-07 14:07:05  [ main:4746 ] - [ INFO ]  Mapped "{[/admin/modules/],methods=[POST],produces=[application/json]}" onto public com.oncore.template.transfd.module.ModuleResponse com.oncore.template.controller.ModuleResource.createModule(com.oncore.template.transfd.module.CreateModuleRequest)
+2016-03-07 14:07:05  [ main:4766 ] - [ INFO ]  Mapped "{[/admin/modules/{id}/],methods=[PUT],produces=[application/json]}" onto public com.oncore.template.transfd.module.ModuleResponse com.oncore.template.controller.ModuleResource.updateModule(java.lang.String,com.oncore.template.transfd.module.CreateModuleRequest)
+2016-03-07 14:07:05  [ main:4766 ] - [ INFO ]  Mapped "{[/admin/modules/{id}/entities/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.entities.EntityResponse> com.oncore.template.controller.ModuleResource.getEntitiesOfModule(java.lang.String)
+2016-03-07 14:07:05  [ main:4767 ] - [ INFO ]  Mapped "{[/admin/modules/{id}/folders/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.file_element.folder.FolderResponse> com.oncore.template.controller.ModuleResource.getFoldersOfModule(java.lang.String)
+2016-03-07 14:07:05  [ main:4768 ] - [ INFO ]  Mapped "{[/admin/modules/{id}/folders/],methods=[POST],produces=[application/json]}" onto public com.oncore.template.transfd.file_element.folder.FolderResponse com.oncore.template.controller.ModuleResource.createFolderUnderModule(java.lang.String,com.oncore.template.transfd.file_element.folder.CreateRootFolderRequest)
+2016-03-07 14:07:05  [ main:4770 ] - [ INFO ]  Mapped "{[/admin/modules/{id}/entities/],methods=[POST],produces=[application/json]}" onto public com.oncore.template.transfd.entities.EntityResponse com.oncore.template.controller.ModuleResource.createEntityUnderModule(java.lang.String,com.oncore.template.transfd.entities.CreateEntityRequest)
+2016-03-07 14:07:05  [ main:4771 ] - [ INFO ]  Mapped "{[/admin/modules/{id}/tree/],methods=[GET],produces=[application/json]}" onto public com.oncore.template.transfd.module.ModuleTreeResponse com.oncore.template.controller.ModuleResource.getModuleTree(java.lang.String)
+2016-03-07 14:07:05  [ main:4773 ] - [ INFO ]  Mapped "{[/admin/reports/{id}/],methods=[DELETE],produces=[application/json]}" onto public org.springframework.http.ResponseEntity com.oncore.template.controller.ReportResource.delete(java.lang.String)
+2016-03-07 14:07:05  [ main:4774 ] - [ INFO ]  Mapped "{[/admin/reports/],methods=[POST],produces=[application/json]}" onto public com.oncore.template.transfd.report.ReportResponse com.oncore.template.controller.ReportResource.createReport(com.oncore.template.transfd.report.CreateReportRequest)
+2016-03-07 14:07:05  [ main:4774 ] - [ INFO ]  Mapped "{[/admin/reports/{id}/],methods=[GET],produces=[application/json]}" onto public com.oncore.template.transfd.report.ReportResponse com.oncore.template.controller.ReportResource.gerReport(java.lang.String)
+2016-03-07 14:07:05  [ main:4775 ] - [ INFO ]  Mapped "{[/admin/reports/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.report.ReportResponse> com.oncore.template.controller.ReportResource.getReports()
+2016-03-07 14:07:05  [ main:4777 ] - [ INFO ]  Mapped "{[/user/entities/{entity_id}/],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity com.oncore.user.controller.UserEntityController.listEntities(java.lang.String)
+2016-03-07 14:07:05  [ main:4792 ] - [ INFO ]  Mapped "{[/user/entities/{entity_id}/],methods=[POST],produces=[application/json]}" onto public org.springframework.http.ResponseEntity com.oncore.user.controller.UserEntityController.insertEntity(java.lang.String,java.util.Map)
+2016-03-07 14:07:05  [ main:4836 ] - [ INFO ]  Looking for @ControllerAdvice: WebApplicationContext for namespace 'spring-dispatcher-servlet': startup date [Mon Mar 07 14:07:04 EST 2016]; parent: Root WebApplicationContext
+2016-03-07 14:07:05  [ main:4865 ] - [ INFO ]  Looking for @ControllerAdvice: WebApplicationContext for namespace 'spring-dispatcher-servlet': startup date [Mon Mar 07 14:07:04 EST 2016]; parent: Root WebApplicationContext
+2016-03-07 14:07:05  [ main:4895 ] - [ INFO ]  Detected @ExceptionHandler methods in commonExceptionHandler
+2016-03-07 14:07:05  [ main:4953 ] - [ INFO ]  FrameworkServlet 'spring-dispatcher': initialization completed in 1003 ms
+2016-03-07 14:20:19  [ Thread-1:798690 ] - [ INFO ]  Closing WebApplicationContext for namespace 'spring-dispatcher-servlet': startup date [Mon Mar 07 14:07:04 EST 2016]; parent: Root WebApplicationContext
+2016-03-07 14:21:22  [ pool-1-thread-5:4065 ] - [ INFO ]  created hibernate mapping file for newenddtity at /Users/steve/oncore-consulting/web/src/main/webapp/destination/mapping/newenddtity/newenddtity_1457297682725/newenddtity.xml
+2016-03-07 14:21:22  [ pool-1-thread-11:4065 ] - [ INFO ]  created hibernate mapping file for newenddtity at /Users/steve/oncore-consulting/web/src/main/webapp/destination/mapping/newenddtity/newenddtity_1457297982604/newenddtity.xml
+2016-03-07 14:21:22  [ pool-1-thread-8:4064 ] - [ INFO ]  created hibernate mapping file for newenddtity at /Users/steve/oncore-consulting/web/src/main/webapp/destination/mapping/newenddtity/newenddtity_1457297888881/newenddtity.xml
+2016-03-07 14:21:22  [ pool-1-thread-14:4064 ] - [ INFO ]  created hibernate mapping file for newenddtity at /Users/steve/oncore-consulting/web/src/main/webapp/destination/mapping/newenddtity/newenddtity_1457298650621/newenddtity.xml
+2016-03-07 14:21:22  [ pool-1-thread-2:4064 ] - [ INFO ]  created hibernate mapping file for newenddtity at /Users/steve/oncore-consulting/web/src/main/webapp/destination/mapping/newenddtity/newenddtity_1457291281138/newenddtity.xml
+2016-03-07 14:21:23  [ main:4236 ] - [ INFO ]  FrameworkServlet 'spring-dispatcher': initialization started
+2016-03-07 14:21:23  [ main:4241 ] - [ INFO ]  Refreshing WebApplicationContext for namespace 'spring-dispatcher-servlet': startup date [Mon Mar 07 14:21:23 EST 2016]; parent: Root WebApplicationContext
+2016-03-07 14:21:23  [ main:4242 ] - [ INFO ]  Loading XML bean definitions from ServletContext resource [/WEB-INF/spring-context.xml]
+2016-03-07 14:21:23  [ main:4275 ] - [ INFO ]  Loading XML bean definitions from URL [jar:file:/Users/steve/.m2/repository/com/oncore/oncore-consulting-template-management/1.0-SNAPSHOT/oncore-consulting-template-management-1.0-SNAPSHOT.jar!/spring-context-template-management.xml]
+2016-03-07 14:21:23  [ main:4348 ] - [ INFO ]  Loading XML bean definitions from URL [jar:file:/Users/steve/.m2/repository/com/oncore/oncore-consulting-common/1.0-SNAPSHOT/oncore-consulting-common-1.0-SNAPSHOT.jar!/spring/spring-context-common.xml]
+2016-03-07 14:21:23  [ main:4387 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring/spring-hibernate.xml]
+2016-03-07 14:21:23  [ main:4416 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring/spring-mvc.xml]
+2016-03-07 14:21:23  [ main:4446 ] - [ INFO ]  Loading XML bean definitions from URL [jar:file:/Users/steve/.m2/repository/com/oncore/oncore-consulting-database-management/1.0-SNAPSHOT/oncore-consulting-database-management-1.0-SNAPSHOT.jar!/spring/spring-context-data-management.xml]
+2016-03-07 14:21:23  [ main:4480 ] - [ INFO ]  Loading XML bean definitions from URL [jar:file:/Users/steve/.m2/repository/com/oncore/oncore-consulting-user/1.0-SNAPSHOT/oncore-consulting-user-1.0-SNAPSHOT.jar!/spring/spring-context-user.xml]
+2016-03-07 14:21:23  [ main:4548 ] - [ INFO ]  Loading properties file from class path resource [properties/hibernate-development.properties]
+2016-03-07 14:21:23  [ main:4549 ] - [ INFO ]  Loading properties file from class path resource [properties/app-development.properties]
+2016-03-07 14:21:23  [ main:4552 ] - [ INFO ]  JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-03-07 14:21:23  [ main:4651 ] - [ INFO ]  Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 2sa00u9fmwc2jlclrxao|5158a9f7, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceSynchronousCheckins -> false, forceUseNamedDriverClass -> false, identityToken -> 2sa00u9fmwc2jlclrxao|5158a9f7, idleConnectionTestPeriod -> 0, initialPoolSize -> 1, jdbcUrl -> jdbc:mysql://localhost:3306/hibt, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 1, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 40, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 1, numHelperThreads -> 3, preferredTestQuery -> null, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+2016-03-07 14:21:23  [ main:4665 ] - [ INFO ]  HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2016-03-07 14:21:23  [ main:4683 ] - [ INFO ]  HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-03-07 14:21:23  [ main:4683 ] - [ INFO ]  HHH000397: Using ASTQueryTranslatorFactory
+2016-03-07 14:21:23  [ main:4793 ] - [ INFO ]  HHH000228: Running hbm2ddl schema update
+2016-03-07 14:21:23  [ main:4794 ] - [ INFO ]  HHH000102: Fetching database metadata
+2016-03-07 14:21:23  [ main:4795 ] - [ INFO ]  HHH000396: Updating schema
+2016-03-07 14:21:23  [ main:4811 ] - [ INFO ]  HHH000261: Table found: hibt.element
+2016-03-07 14:21:23  [ main:4813 ] - [ INFO ]  HHH000037: Columns: [createtime, deleted, module_id, name, description, id, updatetime]
+2016-03-07 14:21:23  [ main:4815 ] - [ INFO ]  HHH000108: Foreign keys: []
+2016-03-07 14:21:23  [ main:4816 ] - [ INFO ]  HHH000126: Indexes: [primary]
+2016-03-07 14:21:23  [ main:4828 ] - [ INFO ]  HHH000261: Table found: hibt.entity
+2016-03-07 14:21:23  [ main:4829 ] - [ INFO ]  HHH000037: Columns: [createtime, deleted, module_id, name, description, id, updatetime, tablename, hbmpath]
+2016-03-07 14:21:23  [ main:4830 ] - [ INFO ]  HHH000108: Foreign keys: []
+2016-03-07 14:21:23  [ main:4830 ] - [ INFO ]  HHH000126: Indexes: [primary]
+2016-03-07 14:21:23  [ main:4838 ] - [ INFO ]  HHH000261: Table found: hibt.field
+2016-03-07 14:21:23  [ main:4839 ] - [ INFO ]  HHH000037: Columns: [createtime, deleted, module_id, name, length, description, ifnull, id, updatetime, fieldtype, entity_id]
+2016-03-07 14:21:23  [ main:4840 ] - [ INFO ]  HHH000108: Foreign keys: [fk_o596lc80ccb1rgvhnoku4fdo9]
+2016-03-07 14:21:23  [ main:4840 ] - [ INFO ]  HHH000126: Indexes: [fk_o596lc80ccb1rgvhnoku4fdo9, primary]
+2016-03-07 14:21:23  [ main:4856 ] - [ INFO ]  HHH000261: Table found: hibt.file_element
+2016-03-07 14:21:23  [ main:4858 ] - [ INFO ]  HHH000037: Columns: [createtime, deleted, module_id, parentfoldid, name, description, id, updatetime]
+2016-03-07 14:21:23  [ main:4859 ] - [ INFO ]  HHH000108: Foreign keys: []
+2016-03-07 14:21:23  [ main:4859 ] - [ INFO ]  HHH000126: Indexes: [primary]
+2016-03-07 14:21:23  [ main:4869 ] - [ INFO ]  HHH000261: Table found: hibt.folder_file_element
+2016-03-07 14:21:23  [ main:4870 ] - [ INFO ]  HHH000037: Columns: [createtime, deleted, module_id, parentfoldid, depth, name, description, id, updatetime]
+2016-03-07 14:21:23  [ main:4871 ] - [ INFO ]  HHH000108: Foreign keys: []
+2016-03-07 14:21:23  [ main:4871 ] - [ INFO ]  HHH000126: Indexes: [primary]
+2016-03-07 14:21:23  [ main:4879 ] - [ INFO ]  HHH000261: Table found: hibt.module
+2016-03-07 14:21:23  [ main:4879 ] - [ INFO ]  HHH000037: Columns: [createtime, deleted, module_id, name, description, id, updatetime]
+2016-03-07 14:21:23  [ main:4880 ] - [ INFO ]  HHH000108: Foreign keys: []
+2016-03-07 14:21:23  [ main:4880 ] - [ INFO ]  HHH000126: Indexes: [primary]
+2016-03-07 14:21:23  [ main:4888 ] - [ INFO ]  HHH000261: Table found: hibt.report_field
+2016-03-07 14:21:23  [ main:4896 ] - [ INFO ]  HHH000037: Columns: [createtime, length, description, relatedfield_id, fieldtype, deleted, module_id, report_id, name, ifnull, id, updatetime, isrelatedfield]
+2016-03-07 14:21:23  [ main:4898 ] - [ INFO ]  HHH000108: Foreign keys: [fk_qmru8iktsptb9m0nt6a5kj7yr, fk_t5oxbvi73rrwmoroikmhldvg9]
+2016-03-07 14:21:23  [ main:4899 ] - [ INFO ]  HHH000126: Indexes: [fk_qmru8iktsptb9m0nt6a5kj7yr, fk_t5oxbvi73rrwmoroikmhldvg9, primary]
+2016-03-07 14:21:23  [ main:4909 ] - [ INFO ]  HHH000261: Table found: hibt.report_file_element
+2016-03-07 14:21:23  [ main:4910 ] - [ INFO ]  HHH000037: Columns: [createtime, parentfoldid, currentversion, description, folderid, hbmpath, deleted, module_id, name, id, updatetime, tablename, templatepath]
+2016-03-07 14:21:23  [ main:4910 ] - [ INFO ]  HHH000108: Foreign keys: []
+2016-03-07 14:21:23  [ main:4911 ] - [ INFO ]  HHH000126: Indexes: [primary]
+2016-03-07 14:21:23  [ main:4912 ] - [ INFO ]  HHH000232: Schema update complete
+2016-03-07 14:21:23  [ main:4935 ] - [ INFO ]  running GroovyFactory...
+2016-03-07 14:21:23  [ main:4936 ] - [ INFO ]  setting application context...
+2016-03-07 14:21:23  [ main:4976 ] - [ INFO ]  Using DataSource [com.mchange.v2.c3p0.ComboPooledDataSource[ identityToken -> 2sa00u9fmwc2jlclrxao|5158a9f7, dataSourceName -> 2sa00u9fmwc2jlclrxao|5158a9f7 ]] of Hibernate SessionFactory for HibernateTransactionManager
+2016-03-07 14:21:23  [ main:4987 ] - [ INFO ]  Mapped "{[/admin/entities/{id}],methods=[DELETE],produces=[application/json]}" onto public org.springframework.http.ResponseEntity com.oncore.template.controller.EntityResource.delete(java.lang.String)
+2016-03-07 14:21:23  [ main:4987 ] - [ INFO ]  Mapped "{[/admin/entities/{id}],methods=[PUT],produces=[application/json]}" onto public com.oncore.template.transfd.entities.EntityResponse com.oncore.template.controller.EntityResource.updateEntity(com.oncore.template.transfd.entities.UpdateEntityRequest)
+2016-03-07 14:21:23  [ main:4988 ] - [ INFO ]  Mapped "{[/admin/entities/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.entities.EntityResponse> com.oncore.template.controller.EntityResource.getEntities()
+2016-03-07 14:21:23  [ main:4988 ] - [ INFO ]  Mapped "{[/admin/entities/{id}],methods=[GET],produces=[application/json]}" onto public com.oncore.template.transfd.entities.EntityResponse com.oncore.template.controller.EntityResource.getEntity(java.lang.String)
+2016-03-07 14:21:23  [ main:4996 ] - [ INFO ]  Mapped "{[/admin/folders/{id}],methods=[GET],produces=[application/json]}" onto public com.oncore.template.transfd.file_element.folder.FolderResponse com.oncore.template.controller.FolderResource.getFolder(java.lang.String)
+2016-03-07 14:21:23  [ main:4996 ] - [ INFO ]  Mapped "{[/admin/folders/{parent_id}/sub_folder/],methods=[POST],produces=[application/json]}" onto public com.oncore.template.transfd.file_element.folder.FolderResponse com.oncore.template.controller.FolderResource.createSubFolderToParent(java.lang.String,org.springframework.security.core.context.SecurityContextHolder,com.oncore.template.transfd.file_element.folder.CreateFolderToParentFolderRequest)
+2016-03-07 14:21:23  [ main:4997 ] - [ INFO ]  Mapped "{[/admin/folders/{folderId}/reports/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.report.ReportResponse> com.oncore.template.controller.FolderResource.getReportsUnderFolder(java.lang.String)
+2016-03-07 14:21:23  [ main:4998 ] - [ INFO ]  Mapped "{[/admin/folders/{parent_id}/sub_folder/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.file_element.folder.FolderResponse> com.oncore.template.controller.FolderResource.getChildFoldersUnderParentFolder(java.lang.String)
+2016-03-07 14:21:23  [ main:5000 ] - [ INFO ]  Mapped "{[/admin/folders/{id}/],methods=[PUT],produces=[application/json]}" onto public com.oncore.template.transfd.file_element.folder.FolderResponse com.oncore.template.controller.FolderResource.updateFolder(java.lang.String,com.oncore.template.transfd.file_element.folder.UpdateFolderRequest)
+2016-03-07 14:21:23  [ main:5002 ] - [ INFO ]  Mapped "{[/admin/modules/{id}/],methods=[GET],produces=[application/json]}" onto public com.oncore.template.transfd.module.ModuleResponse com.oncore.template.controller.ModuleResource.getModule(java.lang.String)
+2016-03-07 14:21:23  [ main:5003 ] - [ INFO ]  Mapped "{[/admin/modules/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.module.ModuleResponse> com.oncore.template.controller.ModuleResource.getModules()
+2016-03-07 14:21:23  [ main:5004 ] - [ INFO ]  Mapped "{[/admin/modules/],methods=[POST],produces=[application/json]}" onto public com.oncore.template.transfd.module.ModuleResponse com.oncore.template.controller.ModuleResource.createModule(com.oncore.template.transfd.module.CreateModuleRequest)
+2016-03-07 14:21:23  [ main:5005 ] - [ INFO ]  Mapped "{[/admin/modules/{id}/],methods=[PUT],produces=[application/json]}" onto public com.oncore.template.transfd.module.ModuleResponse com.oncore.template.controller.ModuleResource.updateModule(java.lang.String,com.oncore.template.transfd.module.CreateModuleRequest)
+2016-03-07 14:21:23  [ main:5007 ] - [ INFO ]  Mapped "{[/admin/modules/{id}/entities/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.entities.EntityResponse> com.oncore.template.controller.ModuleResource.getEntitiesOfModule(java.lang.String)
+2016-03-07 14:21:23  [ main:5007 ] - [ INFO ]  Mapped "{[/admin/modules/{id}/folders/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.file_element.folder.FolderResponse> com.oncore.template.controller.ModuleResource.getFoldersOfModule(java.lang.String)
+2016-03-07 14:21:23  [ main:5008 ] - [ INFO ]  Mapped "{[/admin/modules/{id}/folders/],methods=[POST],produces=[application/json]}" onto public com.oncore.template.transfd.file_element.folder.FolderResponse com.oncore.template.controller.ModuleResource.createFolderUnderModule(java.lang.String,com.oncore.template.transfd.file_element.folder.CreateRootFolderRequest)
+2016-03-07 14:21:23  [ main:5008 ] - [ INFO ]  Mapped "{[/admin/modules/{id}/entities/],methods=[POST],produces=[application/json]}" onto public com.oncore.template.transfd.entities.EntityResponse com.oncore.template.controller.ModuleResource.createEntityUnderModule(java.lang.String,com.oncore.template.transfd.entities.CreateEntityRequest)
+2016-03-07 14:21:23  [ main:5062 ] - [ INFO ]  Mapped "{[/admin/modules/{id}/tree/],methods=[GET],produces=[application/json]}" onto public com.oncore.template.transfd.module.ModuleTreeResponse com.oncore.template.controller.ModuleResource.getModuleTree(java.lang.String)
+2016-03-07 14:21:23  [ main:5065 ] - [ INFO ]  Mapped "{[/admin/reports/{id}/],methods=[DELETE],produces=[application/json]}" onto public org.springframework.http.ResponseEntity com.oncore.template.controller.ReportResource.delete(java.lang.String)
+2016-03-07 14:21:23  [ main:5066 ] - [ INFO ]  Mapped "{[/admin/reports/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.report.ReportResponse> com.oncore.template.controller.ReportResource.getReports()
+2016-03-07 14:21:23  [ main:5067 ] - [ INFO ]  Mapped "{[/admin/reports/],methods=[POST],produces=[application/json]}" onto public com.oncore.template.transfd.report.ReportResponse com.oncore.template.controller.ReportResource.createReport(com.oncore.template.transfd.report.CreateReportRequest)
+2016-03-07 14:21:23  [ main:5068 ] - [ INFO ]  Mapped "{[/admin/reports/{id}/],methods=[GET],produces=[application/json]}" onto public com.oncore.template.transfd.report.ReportResponse com.oncore.template.controller.ReportResource.gerReport(java.lang.String)
+2016-03-07 14:21:23  [ main:5070 ] - [ INFO ]  Mapped "{[/user/entities/{entity_id}/],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity com.oncore.user.controller.UserEntityController.listEntities(java.lang.String)
+2016-03-07 14:21:23  [ main:5070 ] - [ INFO ]  Mapped "{[/user/entities/{entity_id}/],methods=[POST],produces=[application/json]}" onto public org.springframework.http.ResponseEntity com.oncore.user.controller.UserEntityController.insertEntity(java.lang.String,java.util.Map)
+2016-03-07 14:21:23  [ main:5099 ] - [ INFO ]  Looking for @ControllerAdvice: WebApplicationContext for namespace 'spring-dispatcher-servlet': startup date [Mon Mar 07 14:21:23 EST 2016]; parent: Root WebApplicationContext
+2016-03-07 14:21:23  [ main:5124 ] - [ INFO ]  Looking for @ControllerAdvice: WebApplicationContext for namespace 'spring-dispatcher-servlet': startup date [Mon Mar 07 14:21:23 EST 2016]; parent: Root WebApplicationContext
+2016-03-07 14:21:23  [ main:5156 ] - [ INFO ]  Detected @ExceptionHandler methods in commonExceptionHandler
+2016-03-07 14:21:23  [ main:5168 ] - [ INFO ]  start init entity tables...
+2016-03-07 14:21:24  [ main:5184 ] - [ INFO ]  initing entity newenddtity_1457291281138...
+2016-03-07 14:21:24  [ main:5185 ] - [ INFO ]  initing entity newenddtity_1457297682725...
+2016-03-07 14:21:24  [ main:5185 ] - [ INFO ]  initing entity newenddtity_1457297888881...
+2016-03-07 14:21:24  [ pool-2-thread-5:5185 ] - [ INFO ]  created hibernate mapping file for newenddtity at /Users/steve/oncore-consulting/web/src/main/webapp/destination/mapping/newenddtity/newenddtity_1457297682725/newenddtity.xml
+2016-03-07 14:21:24  [ pool-2-thread-2:5185 ] - [ INFO ]  created hibernate mapping file for newenddtity at /Users/steve/oncore-consulting/web/src/main/webapp/destination/mapping/newenddtity/newenddtity_1457291281138/newenddtity.xml
+2016-03-07 14:21:24  [ pool-2-thread-8:5186 ] - [ INFO ]  created hibernate mapping file for newenddtity at /Users/steve/oncore-consulting/web/src/main/webapp/destination/mapping/newenddtity/newenddtity_1457297888881/newenddtity.xml
+2016-03-07 14:21:24  [ main:5186 ] - [ INFO ]  initing entity newenddtity_1457297982604...
+2016-03-07 14:21:24  [ main:5198 ] - [ INFO ]  initing entity newenddtity_1457298650621...
+2016-03-07 14:21:24  [ pool-2-thread-11:5198 ] - [ INFO ]  created hibernate mapping file for newenddtity at /Users/steve/oncore-consulting/web/src/main/webapp/destination/mapping/newenddtity/newenddtity_1457297982604/newenddtity.xml
+2016-03-07 14:21:24  [ pool-2-thread-14:5199 ] - [ INFO ]  created hibernate mapping file for newenddtity at /Users/steve/oncore-consulting/web/src/main/webapp/destination/mapping/newenddtity/newenddtity_1457298650621/newenddtity.xml
+2016-03-07 14:21:24  [ main:5199 ] - [ INFO ]  initing entity newenddtity_1457298994151...
+2016-03-07 14:21:24  [ main:5200 ] - [ INFO ]  initing entity newenddtity_1457299172444...
+2016-03-07 14:21:24  [ main:5200 ] - [ INFO ]  initing entity newenddtity_1457299353317...
+2016-03-07 14:21:24  [ main:5200 ] - [ INFO ]  initing entity newenddtity_1457299549309...
+2016-03-07 14:21:24  [ main:5201 ] - [ INFO ]  initing entity newenddtity_1457300692441...
+2016-03-07 14:21:24  [ main:5201 ] - [ INFO ]  initing entity newenddtity_1457307535157...
+2016-03-07 14:21:24  [ main:5202 ] - [ INFO ]  initing entity newenddtity_1457307733454...
+2016-03-07 14:21:24  [ main:5202 ] - [ INFO ]  initing entity newenddtity_1457307941100...
+2016-03-07 14:21:24  [ main:5203 ] - [ INFO ]  initing entity newenddtity_1457308125302...
+2016-03-07 14:21:24  [ main:5203 ] - [ INFO ]  initing entity newenddtity_1457308192578...
+2016-03-07 14:21:24  [ main:5235 ] - [ INFO ]  initing entity newenddtity_1457308470875...
+2016-03-07 14:21:24  [ main:5236 ] - [ INFO ]  initing entity newenddtity_1457310998866...
+2016-03-07 14:21:24  [ main:5237 ] - [ INFO ]  initing entity newenddtity_1457311344212...
+2016-03-07 14:21:24  [ main:5237 ] - [ INFO ]  initing entity newenddtity_1457313402746...
+2016-03-07 14:21:24  [ main:5237 ] - [ INFO ]  initing entity newenddtity_1457313492801...
+2016-03-07 14:21:24  [ main:5238 ] - [ INFO ]  initing entity newenddtity_1457314728465...
+2016-03-07 14:21:24  [ main:5238 ] - [ INFO ]  initing entity newenddtity_1457315072649...
+2016-03-07 14:21:24  [ main:5238 ] - [ INFO ]  initing entity newenddtity_1457315224642...
+2016-03-07 14:21:24  [ main:5238 ] - [ INFO ]  initing entity newenddtity_1457315555694...
+2016-03-07 14:21:24  [ main:5239 ] - [ INFO ]  initing entity newenddtity_1457315742563...
+2016-03-07 14:21:24  [ main:5240 ] - [ INFO ]  initing entity newenddtity_1457315851342...
+2016-03-07 14:21:24  [ main:5241 ] - [ INFO ]  initing entity newenddtity_1457316142838...
+2016-03-07 14:21:24  [ main:5243 ] - [ INFO ]  initing entity newenddtity_1457316220723...
+2016-03-07 14:21:24  [ main:5244 ] - [ INFO ]  initing entity newenddtity_1457317625630...
+2016-03-07 14:21:24  [ main:5244 ] - [ INFO ]  initing entity newenddtity_1457318160467...
+2016-03-07 14:21:24  [ main:5245 ] - [ INFO ]  initing entity newenddtity_1457318495795...
+2016-03-07 14:21:24  [ main:5246 ] - [ INFO ]  initing entity newenddtity_1457319015405...
+2016-03-07 14:21:24  [ main:5247 ] - [ INFO ]  initing entity newenddtity_1457319127137...
+2016-03-07 14:21:24  [ main:5304 ] - [ INFO ]  FrameworkServlet 'spring-dispatcher': initialization completed in 1067 ms
+2016-03-07 14:25:54  [ Thread-1:275318 ] - [ INFO ]  Closing WebApplicationContext for namespace 'spring-dispatcher-servlet': startup date [Mon Mar 07 14:21:23 EST 2016]; parent: Root WebApplicationContext
+2016-03-07 14:26:06  [ pool-1-thread-11:3932 ] - [ INFO ]  created hibernate mapping file for newenddtity at /Users/steve/oncore-consulting/web/src/main/webapp/destination/mapping/newenddtity/newenddtity_1457297982604/newenddtity.xml
+2016-03-07 14:26:06  [ pool-1-thread-5:3937 ] - [ INFO ]  created hibernate mapping file for newenddtity at /Users/steve/oncore-consulting/web/src/main/webapp/destination/mapping/newenddtity/newenddtity_1457297682725/newenddtity.xml
+2016-03-07 14:26:06  [ pool-1-thread-2:3933 ] - [ INFO ]  created hibernate mapping file for newenddtity at /Users/steve/oncore-consulting/web/src/main/webapp/destination/mapping/newenddtity/newenddtity_1457291281138/newenddtity.xml
+2016-03-07 14:26:06  [ pool-1-thread-14:3936 ] - [ INFO ]  created hibernate mapping file for newenddtity at /Users/steve/oncore-consulting/web/src/main/webapp/destination/mapping/newenddtity/newenddtity_1457298650621/newenddtity.xml
+2016-03-07 14:26:06  [ pool-1-thread-8:3932 ] - [ INFO ]  created hibernate mapping file for newenddtity at /Users/steve/oncore-consulting/web/src/main/webapp/destination/mapping/newenddtity/newenddtity_1457297888881/newenddtity.xml
+2016-03-07 14:26:06  [ main:4024 ] - [ INFO ]  FrameworkServlet 'spring-dispatcher': initialization started
+2016-03-07 14:26:06  [ main:4029 ] - [ INFO ]  Refreshing WebApplicationContext for namespace 'spring-dispatcher-servlet': startup date [Mon Mar 07 14:26:06 EST 2016]; parent: Root WebApplicationContext
+2016-03-07 14:26:06  [ main:4031 ] - [ INFO ]  Loading XML bean definitions from ServletContext resource [/WEB-INF/spring-context.xml]
+2016-03-07 14:26:06  [ main:4055 ] - [ INFO ]  Loading XML bean definitions from URL [jar:file:/Users/steve/.m2/repository/com/oncore/oncore-consulting-template-management/1.0-SNAPSHOT/oncore-consulting-template-management-1.0-SNAPSHOT.jar!/spring-context-template-management.xml]
+2016-03-07 14:26:06  [ main:4167 ] - [ INFO ]  Loading XML bean definitions from URL [jar:file:/Users/steve/.m2/repository/com/oncore/oncore-consulting-common/1.0-SNAPSHOT/oncore-consulting-common-1.0-SNAPSHOT.jar!/spring/spring-context-common.xml]
+2016-03-07 14:26:06  [ main:4215 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring/spring-hibernate.xml]
+2016-03-07 14:26:06  [ main:4245 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring/spring-mvc.xml]
+2016-03-07 14:26:06  [ main:4279 ] - [ INFO ]  Loading XML bean definitions from URL [jar:file:/Users/steve/.m2/repository/com/oncore/oncore-consulting-database-management/1.0-SNAPSHOT/oncore-consulting-database-management-1.0-SNAPSHOT.jar!/spring/spring-context-data-management.xml]
+2016-03-07 14:26:07  [ main:4350 ] - [ INFO ]  Loading XML bean definitions from URL [jar:file:/Users/steve/.m2/repository/com/oncore/oncore-consulting-user/1.0-SNAPSHOT/oncore-consulting-user-1.0-SNAPSHOT.jar!/spring/spring-context-user.xml]
+2016-03-07 14:26:07  [ main:4412 ] - [ INFO ]  Loading properties file from class path resource [properties/hibernate-development.properties]
+2016-03-07 14:26:07  [ main:4412 ] - [ INFO ]  Loading properties file from class path resource [properties/app-development.properties]
+2016-03-07 14:26:07  [ main:4416 ] - [ INFO ]  JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-03-07 14:26:07  [ main:4517 ] - [ INFO ]  Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 2sa00u9fmwi5k8cw3jqw|7c8f047a, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceSynchronousCheckins -> false, forceUseNamedDriverClass -> false, identityToken -> 2sa00u9fmwi5k8cw3jqw|7c8f047a, idleConnectionTestPeriod -> 0, initialPoolSize -> 1, jdbcUrl -> jdbc:mysql://localhost:3306/hibt, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 1, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 40, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 1, numHelperThreads -> 3, preferredTestQuery -> null, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+2016-03-07 14:26:07  [ main:4530 ] - [ INFO ]  HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2016-03-07 14:26:07  [ main:4548 ] - [ INFO ]  HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-03-07 14:26:07  [ main:4550 ] - [ INFO ]  HHH000397: Using ASTQueryTranslatorFactory
+2016-03-07 14:26:07  [ main:4667 ] - [ INFO ]  HHH000228: Running hbm2ddl schema update
+2016-03-07 14:26:07  [ main:4668 ] - [ INFO ]  HHH000102: Fetching database metadata
+2016-03-07 14:26:07  [ main:4672 ] - [ INFO ]  HHH000396: Updating schema
+2016-03-07 14:26:07  [ main:4683 ] - [ INFO ]  HHH000261: Table found: hibt.element
+2016-03-07 14:26:07  [ main:4684 ] - [ INFO ]  HHH000037: Columns: [createtime, deleted, module_id, name, description, id, updatetime]
+2016-03-07 14:26:07  [ main:4685 ] - [ INFO ]  HHH000108: Foreign keys: []
+2016-03-07 14:26:07  [ main:4685 ] - [ INFO ]  HHH000126: Indexes: [primary]
+2016-03-07 14:26:07  [ main:4694 ] - [ INFO ]  HHH000261: Table found: hibt.entity
+2016-03-07 14:26:07  [ main:4695 ] - [ INFO ]  HHH000037: Columns: [createtime, deleted, module_id, name, description, id, updatetime, tablename, hbmpath]
+2016-03-07 14:26:07  [ main:4695 ] - [ INFO ]  HHH000108: Foreign keys: []
+2016-03-07 14:26:07  [ main:4696 ] - [ INFO ]  HHH000126: Indexes: [primary]
+2016-03-07 14:26:07  [ main:4708 ] - [ INFO ]  HHH000261: Table found: hibt.field
+2016-03-07 14:26:07  [ main:4709 ] - [ INFO ]  HHH000037: Columns: [createtime, deleted, module_id, name, length, description, ifnull, id, updatetime, fieldtype, entity_id]
+2016-03-07 14:26:07  [ main:4710 ] - [ INFO ]  HHH000108: Foreign keys: [fk_o596lc80ccb1rgvhnoku4fdo9]
+2016-03-07 14:26:07  [ main:4711 ] - [ INFO ]  HHH000126: Indexes: [fk_o596lc80ccb1rgvhnoku4fdo9, primary]
+2016-03-07 14:26:07  [ main:4720 ] - [ INFO ]  HHH000261: Table found: hibt.file_element
+2016-03-07 14:26:07  [ main:4721 ] - [ INFO ]  HHH000037: Columns: [createtime, deleted, module_id, parentfoldid, name, description, id, updatetime]
+2016-03-07 14:26:07  [ main:4722 ] - [ INFO ]  HHH000108: Foreign keys: []
+2016-03-07 14:26:07  [ main:4723 ] - [ INFO ]  HHH000126: Indexes: [primary]
+2016-03-07 14:26:07  [ main:4732 ] - [ INFO ]  HHH000261: Table found: hibt.folder_file_element
+2016-03-07 14:26:07  [ main:4733 ] - [ INFO ]  HHH000037: Columns: [createtime, deleted, module_id, parentfoldid, depth, name, description, id, updatetime]
+2016-03-07 14:26:07  [ main:4734 ] - [ INFO ]  HHH000108: Foreign keys: []
+2016-03-07 14:26:07  [ main:4737 ] - [ INFO ]  HHH000126: Indexes: [primary]
+2016-03-07 14:26:07  [ main:4749 ] - [ INFO ]  HHH000261: Table found: hibt.module
+2016-03-07 14:26:07  [ main:4749 ] - [ INFO ]  HHH000037: Columns: [createtime, deleted, module_id, name, description, id, updatetime]
+2016-03-07 14:26:07  [ main:4750 ] - [ INFO ]  HHH000108: Foreign keys: []
+2016-03-07 14:26:07  [ main:4750 ] - [ INFO ]  HHH000126: Indexes: [primary]
+2016-03-07 14:26:07  [ main:4759 ] - [ INFO ]  HHH000261: Table found: hibt.report_field
+2016-03-07 14:26:07  [ main:4760 ] - [ INFO ]  HHH000037: Columns: [createtime, length, description, relatedfield_id, fieldtype, deleted, module_id, report_id, name, ifnull, id, updatetime, isrelatedfield]
+2016-03-07 14:26:07  [ main:4760 ] - [ INFO ]  HHH000108: Foreign keys: [fk_qmru8iktsptb9m0nt6a5kj7yr, fk_t5oxbvi73rrwmoroikmhldvg9]
+2016-03-07 14:26:07  [ main:4761 ] - [ INFO ]  HHH000126: Indexes: [fk_qmru8iktsptb9m0nt6a5kj7yr, fk_t5oxbvi73rrwmoroikmhldvg9, primary]
+2016-03-07 14:26:07  [ main:4776 ] - [ INFO ]  HHH000261: Table found: hibt.report_file_element
+2016-03-07 14:26:07  [ main:4777 ] - [ INFO ]  HHH000037: Columns: [createtime, parentfoldid, currentversion, description, folderid, hbmpath, deleted, module_id, name, id, updatetime, tablename, templatepath]
+2016-03-07 14:26:07  [ main:4779 ] - [ INFO ]  HHH000108: Foreign keys: []
+2016-03-07 14:26:07  [ main:4779 ] - [ INFO ]  HHH000126: Indexes: [primary]
+2016-03-07 14:26:07  [ main:4781 ] - [ INFO ]  HHH000232: Schema update complete
+2016-03-07 14:26:07  [ main:4813 ] - [ INFO ]  running GroovyFactory...
+2016-03-07 14:26:07  [ main:4814 ] - [ INFO ]  setting application context...
+2016-03-07 14:26:07  [ main:4862 ] - [ INFO ]  Using DataSource [com.mchange.v2.c3p0.ComboPooledDataSource[ identityToken -> 2sa00u9fmwi5k8cw3jqw|7c8f047a, dataSourceName -> 2sa00u9fmwi5k8cw3jqw|7c8f047a ]] of Hibernate SessionFactory for HibernateTransactionManager
+2016-03-07 14:26:07  [ main:4873 ] - [ INFO ]  Mapped "{[/admin/entities/{id}],methods=[DELETE],produces=[application/json]}" onto public org.springframework.http.ResponseEntity com.oncore.template.controller.EntityResource.delete(java.lang.String)
+2016-03-07 14:26:07  [ main:4874 ] - [ INFO ]  Mapped "{[/admin/entities/{id}],methods=[PUT],produces=[application/json]}" onto public com.oncore.template.transfd.entities.EntityResponse com.oncore.template.controller.EntityResource.updateEntity(com.oncore.template.transfd.entities.UpdateEntityRequest)
+2016-03-07 14:26:07  [ main:4874 ] - [ INFO ]  Mapped "{[/admin/entities/{id}],methods=[GET],produces=[application/json]}" onto public com.oncore.template.transfd.entities.EntityResponse com.oncore.template.controller.EntityResource.getEntity(java.lang.String)
+2016-03-07 14:26:07  [ main:4876 ] - [ INFO ]  Mapped "{[/admin/entities/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.entities.EntityResponse> com.oncore.template.controller.EntityResource.getEntities()
+2016-03-07 14:26:07  [ main:4878 ] - [ INFO ]  Mapped "{[/admin/folders/{id}],methods=[GET],produces=[application/json]}" onto public com.oncore.template.transfd.file_element.folder.FolderResponse com.oncore.template.controller.FolderResource.getFolder(java.lang.String)
+2016-03-07 14:26:07  [ main:4880 ] - [ INFO ]  Mapped "{[/admin/folders/{parent_id}/sub_folder/],methods=[POST],produces=[application/json]}" onto public com.oncore.template.transfd.file_element.folder.FolderResponse com.oncore.template.controller.FolderResource.createSubFolderToParent(java.lang.String,org.springframework.security.core.context.SecurityContextHolder,com.oncore.template.transfd.file_element.folder.CreateFolderToParentFolderRequest)
+2016-03-07 14:26:07  [ main:4881 ] - [ INFO ]  Mapped "{[/admin/folders/{folderId}/reports/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.report.ReportResponse> com.oncore.template.controller.FolderResource.getReportsUnderFolder(java.lang.String)
+2016-03-07 14:26:07  [ main:4882 ] - [ INFO ]  Mapped "{[/admin/folders/{parent_id}/sub_folder/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.file_element.folder.FolderResponse> com.oncore.template.controller.FolderResource.getChildFoldersUnderParentFolder(java.lang.String)
+2016-03-07 14:26:07  [ main:4922 ] - [ INFO ]  Mapped "{[/admin/folders/{id}/],methods=[PUT],produces=[application/json]}" onto public com.oncore.template.transfd.file_element.folder.FolderResponse com.oncore.template.controller.FolderResource.updateFolder(java.lang.String,com.oncore.template.transfd.file_element.folder.UpdateFolderRequest)
+2016-03-07 14:26:07  [ main:4926 ] - [ INFO ]  Mapped "{[/admin/modules/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.module.ModuleResponse> com.oncore.template.controller.ModuleResource.getModules()
+2016-03-07 14:26:07  [ main:4927 ] - [ INFO ]  Mapped "{[/admin/modules/{id}/],methods=[GET],produces=[application/json]}" onto public com.oncore.template.transfd.module.ModuleResponse com.oncore.template.controller.ModuleResource.getModule(java.lang.String)
+2016-03-07 14:26:07  [ main:4927 ] - [ INFO ]  Mapped "{[/admin/modules/],methods=[POST],produces=[application/json]}" onto public com.oncore.template.transfd.module.ModuleResponse com.oncore.template.controller.ModuleResource.createModule(com.oncore.template.transfd.module.CreateModuleRequest)
+2016-03-07 14:26:07  [ main:4928 ] - [ INFO ]  Mapped "{[/admin/modules/{id}/],methods=[PUT],produces=[application/json]}" onto public com.oncore.template.transfd.module.ModuleResponse com.oncore.template.controller.ModuleResource.updateModule(java.lang.String,com.oncore.template.transfd.module.CreateModuleRequest)
+2016-03-07 14:26:07  [ main:4928 ] - [ INFO ]  Mapped "{[/admin/modules/{id}/entities/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.entities.EntityResponse> com.oncore.template.controller.ModuleResource.getEntitiesOfModule(java.lang.String)
+2016-03-07 14:26:07  [ main:4964 ] - [ INFO ]  Mapped "{[/admin/modules/{id}/folders/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.file_element.folder.FolderResponse> com.oncore.template.controller.ModuleResource.getFoldersOfModule(java.lang.String)
+2016-03-07 14:26:07  [ main:4965 ] - [ INFO ]  Mapped "{[/admin/modules/{id}/folders/],methods=[POST],produces=[application/json]}" onto public com.oncore.template.transfd.file_element.folder.FolderResponse com.oncore.template.controller.ModuleResource.createFolderUnderModule(java.lang.String,com.oncore.template.transfd.file_element.folder.CreateRootFolderRequest)
+2016-03-07 14:26:07  [ main:4965 ] - [ INFO ]  Mapped "{[/admin/modules/{id}/entities/],methods=[POST],produces=[application/json]}" onto public com.oncore.template.transfd.entities.EntityResponse com.oncore.template.controller.ModuleResource.createEntityUnderModule(java.lang.String,com.oncore.template.transfd.entities.CreateEntityRequest)
+2016-03-07 14:26:07  [ main:4966 ] - [ INFO ]  Mapped "{[/admin/modules/{id}/tree/],methods=[GET],produces=[application/json]}" onto public com.oncore.template.transfd.module.ModuleTreeResponse com.oncore.template.controller.ModuleResource.getModuleTree(java.lang.String)
+2016-03-07 14:26:07  [ main:4969 ] - [ INFO ]  Mapped "{[/admin/reports/{id}/],methods=[DELETE],produces=[application/json]}" onto public org.springframework.http.ResponseEntity com.oncore.template.controller.ReportResource.delete(java.lang.String)
+2016-03-07 14:26:07  [ main:4971 ] - [ INFO ]  Mapped "{[/admin/reports/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.report.ReportResponse> com.oncore.template.controller.ReportResource.getReports()
+2016-03-07 14:26:07  [ main:4972 ] - [ INFO ]  Mapped "{[/admin/reports/],methods=[POST],produces=[application/json]}" onto public com.oncore.template.transfd.report.ReportResponse com.oncore.template.controller.ReportResource.createReport(com.oncore.template.transfd.report.CreateReportRequest)
+2016-03-07 14:26:07  [ main:4973 ] - [ INFO ]  Mapped "{[/admin/reports/{id}/],methods=[GET],produces=[application/json]}" onto public com.oncore.template.transfd.report.ReportResponse com.oncore.template.controller.ReportResource.gerReport(java.lang.String)
+2016-03-07 14:26:07  [ main:4974 ] - [ INFO ]  Mapped "{[/user/entities/{entity_id}/],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity com.oncore.user.controller.UserEntityController.listEntities(java.lang.String)
+2016-03-07 14:26:07  [ main:5006 ] - [ INFO ]  Mapped "{[/user/entities/{entity_id}/],methods=[POST],produces=[application/json]}" onto public org.springframework.http.ResponseEntity com.oncore.user.controller.UserEntityController.insertEntity(java.lang.String,java.util.Map)
+2016-03-07 14:26:07  [ main:5047 ] - [ INFO ]  Looking for @ControllerAdvice: WebApplicationContext for namespace 'spring-dispatcher-servlet': startup date [Mon Mar 07 14:26:06 EST 2016]; parent: Root WebApplicationContext
+2016-03-07 14:26:07  [ main:5078 ] - [ INFO ]  Looking for @ControllerAdvice: WebApplicationContext for namespace 'spring-dispatcher-servlet': startup date [Mon Mar 07 14:26:06 EST 2016]; parent: Root WebApplicationContext
+2016-03-07 14:26:07  [ main:5106 ] - [ INFO ]  Detected @ExceptionHandler methods in commonExceptionHandler
+2016-03-07 14:26:07  [ main:5116 ] - [ INFO ]  start init entity tables...
+2016-03-07 14:26:07  [ main:5132 ] - [ INFO ]  initing entity newenddtity_1457291281138...
+2016-03-07 14:26:07  [ main:5132 ] - [ INFO ]  initing entity newenddtity_1457297682725...
+2016-03-07 14:26:07  [ pool-2-thread-2:5133 ] - [ INFO ]  created hibernate mapping file for newenddtity at /Users/steve/oncore-consulting/web/src/main/webapp/destination/mapping/newenddtity/newenddtity_1457291281138/newenddtity.xml
+2016-03-07 14:26:07  [ pool-2-thread-5:5134 ] - [ INFO ]  created hibernate mapping file for newenddtity at /Users/steve/oncore-consulting/web/src/main/webapp/destination/mapping/newenddtity/newenddtity_1457297682725/newenddtity.xml
+2016-03-07 14:26:07  [ main:5135 ] - [ INFO ]  initing entity newenddtity_1457297888881...
+2016-03-07 14:26:07  [ main:5140 ] - [ INFO ]  initing entity newenddtity_1457297982604...
+2016-03-07 14:26:07  [ pool-2-thread-8:5141 ] - [ INFO ]  created hibernate mapping file for newenddtity at /Users/steve/oncore-consulting/web/src/main/webapp/destination/mapping/newenddtity/newenddtity_1457297888881/newenddtity.xml
+2016-03-07 14:26:07  [ main:5142 ] - [ INFO ]  initing entity newenddtity_1457298650621...
+2016-03-07 14:26:07  [ pool-2-thread-11:5142 ] - [ INFO ]  created hibernate mapping file for newenddtity at /Users/steve/oncore-consulting/web/src/main/webapp/destination/mapping/newenddtity/newenddtity_1457297982604/newenddtity.xml
+2016-03-07 14:26:07  [ pool-2-thread-14:5142 ] - [ INFO ]  created hibernate mapping file for newenddtity at /Users/steve/oncore-consulting/web/src/main/webapp/destination/mapping/newenddtity/newenddtity_1457298650621/newenddtity.xml
+2016-03-07 14:26:07  [ main:5142 ] - [ INFO ]  initing entity newenddtity_1457298994151...
+2016-03-07 14:26:07  [ main:5146 ] - [ INFO ]  initing entity newenddtity_1457299172444...
+2016-03-07 14:26:07  [ main:5147 ] - [ INFO ]  initing entity newenddtity_1457299353317...
+2016-03-07 14:26:07  [ main:5148 ] - [ INFO ]  initing entity newenddtity_1457299549309...
+2016-03-07 14:26:07  [ main:5149 ] - [ INFO ]  initing entity newenddtity_1457300692441...
+2016-03-07 14:26:07  [ main:5151 ] - [ INFO ]  initing entity newenddtity_1457307535157...
+2016-03-07 14:26:07  [ main:5151 ] - [ INFO ]  initing entity newenddtity_1457307733454...
+2016-03-07 14:26:07  [ main:5151 ] - [ INFO ]  initing entity newenddtity_1457307941100...
+2016-03-07 14:26:07  [ main:5152 ] - [ INFO ]  initing entity newenddtity_1457308125302...
+2016-03-07 14:26:07  [ main:5152 ] - [ INFO ]  initing entity newenddtity_1457308192578...
+2016-03-07 14:26:07  [ main:5153 ] - [ INFO ]  initing entity newenddtity_1457308470875...
+2016-03-07 14:26:07  [ main:5154 ] - [ INFO ]  initing entity newenddtity_1457310998866...
+2016-03-07 14:26:07  [ main:5154 ] - [ INFO ]  initing entity newenddtity_1457311344212...
+2016-03-07 14:26:07  [ main:5154 ] - [ INFO ]  initing entity newenddtity_1457313402746...
+2016-03-07 14:26:07  [ main:5154 ] - [ INFO ]  initing entity newenddtity_1457313492801...
+2016-03-07 14:26:07  [ main:5183 ] - [ INFO ]  initing entity newenddtity_1457314728465...
+2016-03-07 14:26:07  [ main:5183 ] - [ INFO ]  initing entity newenddtity_1457315072649...
+2016-03-07 14:26:07  [ main:5184 ] - [ INFO ]  initing entity newenddtity_1457315224642...
+2016-03-07 14:26:07  [ main:5184 ] - [ INFO ]  initing entity newenddtity_1457315555694...
+2016-03-07 14:26:07  [ main:5185 ] - [ INFO ]  initing entity newenddtity_1457315742563...
+2016-03-07 14:26:07  [ main:5185 ] - [ INFO ]  initing entity newenddtity_1457315851342...
+2016-03-07 14:26:07  [ main:5185 ] - [ INFO ]  initing entity newenddtity_1457316142838...
+2016-03-07 14:26:07  [ main:5186 ] - [ INFO ]  initing entity newenddtity_1457316220723...
+2016-03-07 14:26:07  [ main:5186 ] - [ INFO ]  initing entity newenddtity_1457317625630...
+2016-03-07 14:26:07  [ main:5188 ] - [ INFO ]  initing entity newenddtity_1457318160467...
+2016-03-07 14:26:07  [ main:5189 ] - [ INFO ]  initing entity newenddtity_1457318495795...
+2016-03-07 14:26:07  [ main:5190 ] - [ INFO ]  initing entity newenddtity_1457319015405...
+2016-03-07 14:26:07  [ main:5191 ] - [ INFO ]  initing entity newenddtity_1457319127137...
+2016-03-07 14:26:07  [ main:5240 ] - [ INFO ]  FrameworkServlet 'spring-dispatcher': initialization completed in 1216 ms
+2016-03-07 14:30:34  [ Thread-1:271893 ] - [ INFO ]  Closing WebApplicationContext for namespace 'spring-dispatcher-servlet': startup date [Mon Mar 07 14:26:06 EST 2016]; parent: Root WebApplicationContext
+2016-03-07 14:30:47  [ pool-1-thread-11:3781 ] - [ INFO ]  created hibernate mapping file for newenddtity at /Users/steve/oncore-consulting/web/src/main/webapp/destination/mapping/newenddtity/newenddtity_1457297982604/newenddtity.xml
+2016-03-07 14:30:47  [ pool-1-thread-8:3782 ] - [ INFO ]  created hibernate mapping file for newenddtity at /Users/steve/oncore-consulting/web/src/main/webapp/destination/mapping/newenddtity/newenddtity_1457297888881/newenddtity.xml
+2016-03-07 14:30:47  [ pool-1-thread-2:3782 ] - [ INFO ]  created hibernate mapping file for newenddtity at /Users/steve/oncore-consulting/web/src/main/webapp/destination/mapping/newenddtity/newenddtity_1457291281138/newenddtity.xml
+2016-03-07 14:30:47  [ pool-1-thread-5:3782 ] - [ INFO ]  created hibernate mapping file for newenddtity at /Users/steve/oncore-consulting/web/src/main/webapp/destination/mapping/newenddtity/newenddtity_1457297682725/newenddtity.xml
+2016-03-07 14:30:47  [ pool-1-thread-14:3781 ] - [ INFO ]  created hibernate mapping file for newenddtity at /Users/steve/oncore-consulting/web/src/main/webapp/destination/mapping/newenddtity/newenddtity_1457298650621/newenddtity.xml
+2016-03-07 14:30:47  [ main:3873 ] - [ INFO ]  FrameworkServlet 'spring-dispatcher': initialization started
+2016-03-07 14:30:47  [ main:3876 ] - [ INFO ]  Refreshing WebApplicationContext for namespace 'spring-dispatcher-servlet': startup date [Mon Mar 07 14:30:47 EST 2016]; parent: Root WebApplicationContext
+2016-03-07 14:30:47  [ main:3877 ] - [ INFO ]  Loading XML bean definitions from ServletContext resource [/WEB-INF/spring-context.xml]
+2016-03-07 14:30:47  [ main:3919 ] - [ INFO ]  Loading XML bean definitions from URL [jar:file:/Users/steve/.m2/repository/com/oncore/oncore-consulting-template-management/1.0-SNAPSHOT/oncore-consulting-template-management-1.0-SNAPSHOT.jar!/spring-context-template-management.xml]
+2016-03-07 14:30:47  [ main:3964 ] - [ INFO ]  Loading XML bean definitions from URL [jar:file:/Users/steve/.m2/repository/com/oncore/oncore-consulting-common/1.0-SNAPSHOT/oncore-consulting-common-1.0-SNAPSHOT.jar!/spring/spring-context-common.xml]
+2016-03-07 14:30:47  [ main:4000 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring/spring-hibernate.xml]
+2016-03-07 14:30:47  [ main:4021 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring/spring-mvc.xml]
+2016-03-07 14:30:47  [ main:4074 ] - [ INFO ]  Loading XML bean definitions from URL [jar:file:/Users/steve/.m2/repository/com/oncore/oncore-consulting-database-management/1.0-SNAPSHOT/oncore-consulting-database-management-1.0-SNAPSHOT.jar!/spring/spring-context-data-management.xml]
+2016-03-07 14:30:47  [ main:4097 ] - [ INFO ]  Loading XML bean definitions from URL [jar:file:/Users/steve/.m2/repository/com/oncore/oncore-consulting-user/1.0-SNAPSHOT/oncore-consulting-user-1.0-SNAPSHOT.jar!/spring/spring-context-user.xml]
+2016-03-07 14:30:47  [ main:4174 ] - [ INFO ]  Loading properties file from class path resource [properties/hibernate-development.properties]
+2016-03-07 14:30:47  [ main:4174 ] - [ INFO ]  Loading properties file from class path resource [properties/app-development.properties]
+2016-03-07 14:30:47  [ main:4179 ] - [ INFO ]  JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-03-07 14:30:47  [ main:4290 ] - [ INFO ]  Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 2sa00u9fmwo69qls1rpf|1f60824e, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceSynchronousCheckins -> false, forceUseNamedDriverClass -> false, identityToken -> 2sa00u9fmwo69qls1rpf|1f60824e, idleConnectionTestPeriod -> 0, initialPoolSize -> 1, jdbcUrl -> jdbc:mysql://localhost:3306/hibt, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 1, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 40, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 1, numHelperThreads -> 3, preferredTestQuery -> null, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+2016-03-07 14:30:47  [ main:4312 ] - [ INFO ]  HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2016-03-07 14:30:47  [ main:4358 ] - [ INFO ]  HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-03-07 14:30:47  [ main:4360 ] - [ INFO ]  HHH000397: Using ASTQueryTranslatorFactory
+2016-03-07 14:30:47  [ main:4449 ] - [ INFO ]  HHH000228: Running hbm2ddl schema update
+2016-03-07 14:30:47  [ main:4450 ] - [ INFO ]  HHH000102: Fetching database metadata
+2016-03-07 14:30:47  [ main:4452 ] - [ INFO ]  HHH000396: Updating schema
+2016-03-07 14:30:48  [ main:4476 ] - [ INFO ]  HHH000261: Table found: hibt.element
+2016-03-07 14:30:48  [ main:4477 ] - [ INFO ]  HHH000037: Columns: [createtime, deleted, module_id, name, description, id, updatetime]
+2016-03-07 14:30:48  [ main:4478 ] - [ INFO ]  HHH000108: Foreign keys: []
+2016-03-07 14:30:48  [ main:4481 ] - [ INFO ]  HHH000126: Indexes: [primary]
+2016-03-07 14:30:48  [ main:4493 ] - [ INFO ]  HHH000261: Table found: hibt.entity
+2016-03-07 14:30:48  [ main:4493 ] - [ INFO ]  HHH000037: Columns: [createtime, deleted, module_id, name, description, id, updatetime, tablename, hbmpath]
+2016-03-07 14:30:48  [ main:4495 ] - [ INFO ]  HHH000108: Foreign keys: []
+2016-03-07 14:30:48  [ main:4496 ] - [ INFO ]  HHH000126: Indexes: [primary]
+2016-03-07 14:30:48  [ main:4512 ] - [ INFO ]  HHH000261: Table found: hibt.field
+2016-03-07 14:30:48  [ main:4514 ] - [ INFO ]  HHH000037: Columns: [createtime, deleted, module_id, name, length, description, ifnull, id, updatetime, fieldtype, entity_id]
+2016-03-07 14:30:48  [ main:4514 ] - [ INFO ]  HHH000108: Foreign keys: [fk_o596lc80ccb1rgvhnoku4fdo9]
+2016-03-07 14:30:48  [ main:4516 ] - [ INFO ]  HHH000126: Indexes: [fk_o596lc80ccb1rgvhnoku4fdo9, primary]
+2016-03-07 14:30:48  [ main:4527 ] - [ INFO ]  HHH000261: Table found: hibt.file_element
+2016-03-07 14:30:48  [ main:4529 ] - [ INFO ]  HHH000037: Columns: [createtime, deleted, module_id, parentfoldid, name, description, id, updatetime]
+2016-03-07 14:30:48  [ main:4530 ] - [ INFO ]  HHH000108: Foreign keys: []
+2016-03-07 14:30:48  [ main:4531 ] - [ INFO ]  HHH000126: Indexes: [primary]
+2016-03-07 14:30:48  [ main:4544 ] - [ INFO ]  HHH000261: Table found: hibt.folder_file_element
+2016-03-07 14:30:48  [ main:4546 ] - [ INFO ]  HHH000037: Columns: [createtime, deleted, module_id, parentfoldid, depth, name, description, id, updatetime]
+2016-03-07 14:30:48  [ main:4547 ] - [ INFO ]  HHH000108: Foreign keys: []
+2016-03-07 14:30:48  [ main:4548 ] - [ INFO ]  HHH000126: Indexes: [primary]
+2016-03-07 14:30:48  [ main:4562 ] - [ INFO ]  HHH000261: Table found: hibt.module
+2016-03-07 14:30:48  [ main:4562 ] - [ INFO ]  HHH000037: Columns: [createtime, deleted, module_id, name, description, id, updatetime]
+2016-03-07 14:30:48  [ main:4563 ] - [ INFO ]  HHH000108: Foreign keys: []
+2016-03-07 14:30:48  [ main:4565 ] - [ INFO ]  HHH000126: Indexes: [primary]
+2016-03-07 14:30:48  [ main:4580 ] - [ INFO ]  HHH000261: Table found: hibt.report_field
+2016-03-07 14:30:48  [ main:4581 ] - [ INFO ]  HHH000037: Columns: [createtime, length, description, relatedfield_id, fieldtype, deleted, module_id, report_id, name, ifnull, id, updatetime, isrelatedfield]
+2016-03-07 14:30:48  [ main:4581 ] - [ INFO ]  HHH000108: Foreign keys: [fk_qmru8iktsptb9m0nt6a5kj7yr, fk_t5oxbvi73rrwmoroikmhldvg9]
+2016-03-07 14:30:48  [ main:4582 ] - [ INFO ]  HHH000126: Indexes: [fk_qmru8iktsptb9m0nt6a5kj7yr, fk_t5oxbvi73rrwmoroikmhldvg9, primary]
+2016-03-07 14:30:48  [ main:4594 ] - [ INFO ]  HHH000261: Table found: hibt.report_file_element
+2016-03-07 14:30:48  [ main:4595 ] - [ INFO ]  HHH000037: Columns: [createtime, parentfoldid, currentversion, description, folderid, hbmpath, deleted, module_id, name, id, updatetime, tablename, templatepath]
+2016-03-07 14:30:48  [ main:4597 ] - [ INFO ]  HHH000108: Foreign keys: []
+2016-03-07 14:30:48  [ main:4598 ] - [ INFO ]  HHH000126: Indexes: [primary]
+2016-03-07 14:30:48  [ main:4599 ] - [ INFO ]  HHH000232: Schema update complete
+2016-03-07 14:30:48  [ main:4632 ] - [ INFO ]  running GroovyFactory...
+2016-03-07 14:30:48  [ main:4632 ] - [ INFO ]  setting application context...
+2016-03-07 14:30:48  [ main:4669 ] - [ INFO ]  Using DataSource [com.mchange.v2.c3p0.ComboPooledDataSource[ identityToken -> 2sa00u9fmwo69qls1rpf|1f60824e, dataSourceName -> 2sa00u9fmwo69qls1rpf|1f60824e ]] of Hibernate SessionFactory for HibernateTransactionManager
+2016-03-07 14:30:48  [ main:4680 ] - [ INFO ]  Mapped "{[/admin/entities/{id}],methods=[DELETE],produces=[application/json]}" onto public org.springframework.http.ResponseEntity com.oncore.template.controller.EntityResource.delete(java.lang.String)
+2016-03-07 14:30:48  [ main:4681 ] - [ INFO ]  Mapped "{[/admin/entities/{id}],methods=[PUT],produces=[application/json]}" onto public com.oncore.template.transfd.entities.EntityResponse com.oncore.template.controller.EntityResource.updateEntity(com.oncore.template.transfd.entities.UpdateEntityRequest)
+2016-03-07 14:30:48  [ main:4681 ] - [ INFO ]  Mapped "{[/admin/entities/{id}],methods=[GET],produces=[application/json]}" onto public com.oncore.template.transfd.entities.EntityResponse com.oncore.template.controller.EntityResource.getEntity(java.lang.String)
+2016-03-07 14:30:48  [ main:4682 ] - [ INFO ]  Mapped "{[/admin/entities/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.entities.EntityResponse> com.oncore.template.controller.EntityResource.getEntities()
+2016-03-07 14:30:48  [ main:4686 ] - [ INFO ]  Mapped "{[/admin/folders/{parent_id}/sub_folder/],methods=[POST],produces=[application/json]}" onto public com.oncore.template.transfd.file_element.folder.FolderResponse com.oncore.template.controller.FolderResource.createSubFolderToParent(java.lang.String,org.springframework.security.core.context.SecurityContextHolder,com.oncore.template.transfd.file_element.folder.CreateFolderToParentFolderRequest)
+2016-03-07 14:30:48  [ main:4686 ] - [ INFO ]  Mapped "{[/admin/folders/{id}],methods=[GET],produces=[application/json]}" onto public com.oncore.template.transfd.file_element.folder.FolderResponse com.oncore.template.controller.FolderResource.getFolder(java.lang.String)
+2016-03-07 14:30:48  [ main:4687 ] - [ INFO ]  Mapped "{[/admin/folders/{parent_id}/sub_folder/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.file_element.folder.FolderResponse> com.oncore.template.controller.FolderResource.getChildFoldersUnderParentFolder(java.lang.String)
+2016-03-07 14:30:48  [ main:4689 ] - [ INFO ]  Mapped "{[/admin/folders/{folderId}/reports/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.report.ReportResponse> com.oncore.template.controller.FolderResource.getReportsUnderFolder(java.lang.String)
+2016-03-07 14:30:48  [ main:4690 ] - [ INFO ]  Mapped "{[/admin/folders/{id}/],methods=[PUT],produces=[application/json]}" onto public com.oncore.template.transfd.file_element.folder.FolderResponse com.oncore.template.controller.FolderResource.updateFolder(java.lang.String,com.oncore.template.transfd.file_element.folder.UpdateFolderRequest)
+2016-03-07 14:30:48  [ main:4695 ] - [ INFO ]  Mapped "{[/admin/modules/{id}/],methods=[GET],produces=[application/json]}" onto public com.oncore.template.transfd.module.ModuleResponse com.oncore.template.controller.ModuleResource.getModule(java.lang.String)
+2016-03-07 14:30:48  [ main:4696 ] - [ INFO ]  Mapped "{[/admin/modules/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.module.ModuleResponse> com.oncore.template.controller.ModuleResource.getModules()
+2016-03-07 14:30:48  [ main:4708 ] - [ INFO ]  Mapped "{[/admin/modules/{id}/folders/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.file_element.folder.FolderResponse> com.oncore.template.controller.ModuleResource.getFoldersOfModule(java.lang.String)
+2016-03-07 14:30:48  [ main:4709 ] - [ INFO ]  Mapped "{[/admin/modules/{id}/folders/],methods=[POST],produces=[application/json]}" onto public com.oncore.template.transfd.file_element.folder.FolderResponse com.oncore.template.controller.ModuleResource.createFolderUnderModule(java.lang.String,com.oncore.template.transfd.file_element.folder.CreateRootFolderRequest)
+2016-03-07 14:30:48  [ main:4710 ] - [ INFO ]  Mapped "{[/admin/modules/{id}/entities/],methods=[POST],produces=[application/json]}" onto public com.oncore.template.transfd.entities.EntityResponse com.oncore.template.controller.ModuleResource.createEntityUnderModule(java.lang.String,com.oncore.template.transfd.entities.CreateEntityRequest)
+2016-03-07 14:30:48  [ main:4710 ] - [ INFO ]  Mapped "{[/admin/modules/{id}/tree/],methods=[GET],produces=[application/json]}" onto public com.oncore.template.transfd.module.ModuleTreeResponse com.oncore.template.controller.ModuleResource.getModuleTree(java.lang.String)
+2016-03-07 14:30:48  [ main:4711 ] - [ INFO ]  Mapped "{[/admin/modules/],methods=[POST],produces=[application/json]}" onto public com.oncore.template.transfd.module.ModuleResponse com.oncore.template.controller.ModuleResource.createModule(com.oncore.template.transfd.module.CreateModuleRequest)
+2016-03-07 14:30:48  [ main:4712 ] - [ INFO ]  Mapped "{[/admin/modules/{id}/],methods=[PUT],produces=[application/json]}" onto public com.oncore.template.transfd.module.ModuleResponse com.oncore.template.controller.ModuleResource.updateModule(java.lang.String,com.oncore.template.transfd.module.CreateModuleRequest)
+2016-03-07 14:30:48  [ main:4713 ] - [ INFO ]  Mapped "{[/admin/modules/{id}/entities/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.entities.EntityResponse> com.oncore.template.controller.ModuleResource.getEntitiesOfModule(java.lang.String)
+2016-03-07 14:30:48  [ main:4715 ] - [ INFO ]  Mapped "{[/admin/reports/{id}/],methods=[DELETE],produces=[application/json]}" onto public org.springframework.http.ResponseEntity com.oncore.template.controller.ReportResource.delete(java.lang.String)
+2016-03-07 14:30:48  [ main:4717 ] - [ INFO ]  Mapped "{[/admin/reports/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.report.ReportResponse> com.oncore.template.controller.ReportResource.getReports()
+2016-03-07 14:30:48  [ main:4718 ] - [ INFO ]  Mapped "{[/admin/reports/],methods=[POST],produces=[application/json]}" onto public com.oncore.template.transfd.report.ReportResponse com.oncore.template.controller.ReportResource.createReport(com.oncore.template.transfd.report.CreateReportRequest)
+2016-03-07 14:30:48  [ main:4743 ] - [ INFO ]  Mapped "{[/admin/reports/{id}/],methods=[GET],produces=[application/json]}" onto public com.oncore.template.transfd.report.ReportResponse com.oncore.template.controller.ReportResource.gerReport(java.lang.String)
+2016-03-07 14:30:48  [ main:4745 ] - [ INFO ]  Mapped "{[/user/entities/{entity_id}/],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity com.oncore.user.controller.UserEntityController.listEntities(java.lang.String)
+2016-03-07 14:30:48  [ main:4745 ] - [ INFO ]  Mapped "{[/user/entities/{entity_id}/],methods=[POST],produces=[application/json]}" onto public org.springframework.http.ResponseEntity com.oncore.user.controller.UserEntityController.insertEntity(java.lang.String,java.util.Map)
+2016-03-07 14:30:48  [ main:4784 ] - [ INFO ]  Looking for @ControllerAdvice: WebApplicationContext for namespace 'spring-dispatcher-servlet': startup date [Mon Mar 07 14:30:47 EST 2016]; parent: Root WebApplicationContext
+2016-03-07 14:30:48  [ main:4814 ] - [ INFO ]  Looking for @ControllerAdvice: WebApplicationContext for namespace 'spring-dispatcher-servlet': startup date [Mon Mar 07 14:30:47 EST 2016]; parent: Root WebApplicationContext
+2016-03-07 14:30:48  [ main:4847 ] - [ INFO ]  Detected @ExceptionHandler methods in commonExceptionHandler
+2016-03-07 14:30:48  [ main:4864 ] - [ INFO ]  start init entity tables...
+2016-03-07 14:30:48  [ main:4887 ] - [ INFO ]  initing entity newenddtity_1457291281138...
+2016-03-07 14:30:48  [ main:4888 ] - [ INFO ]  initing entity newenddtity_1457297682725...
+2016-03-07 14:30:48  [ main:4889 ] - [ INFO ]  initing entity newenddtity_1457297888881...
+2016-03-07 14:30:48  [ pool-2-thread-2:4889 ] - [ INFO ]  created hibernate mapping file for newenddtity at /Users/steve/oncore-consulting/web/src/main/webapp/destination/mapping/newenddtity/newenddtity_1457291281138/newenddtity.xml
+2016-03-07 14:30:48  [ pool-2-thread-5:4889 ] - [ INFO ]  created hibernate mapping file for newenddtity at /Users/steve/oncore-consulting/web/src/main/webapp/destination/mapping/newenddtity/newenddtity_1457297682725/newenddtity.xml
+2016-03-07 14:30:48  [ main:4893 ] - [ INFO ]  initing entity newenddtity_1457297982604...
+2016-03-07 14:30:48  [ pool-2-thread-8:4893 ] - [ INFO ]  created hibernate mapping file for newenddtity at /Users/steve/oncore-consulting/web/src/main/webapp/destination/mapping/newenddtity/newenddtity_1457297888881/newenddtity.xml
+2016-03-07 14:30:48  [ main:4894 ] - [ INFO ]  initing entity newenddtity_1457298650621...
+2016-03-07 14:30:48  [ pool-2-thread-11:4894 ] - [ INFO ]  created hibernate mapping file for newenddtity at /Users/steve/oncore-consulting/web/src/main/webapp/destination/mapping/newenddtity/newenddtity_1457297982604/newenddtity.xml
+2016-03-07 14:30:48  [ pool-2-thread-14:4897 ] - [ INFO ]  created hibernate mapping file for newenddtity at /Users/steve/oncore-consulting/web/src/main/webapp/destination/mapping/newenddtity/newenddtity_1457298650621/newenddtity.xml
+2016-03-07 14:30:48  [ main:4898 ] - [ INFO ]  initing entity newenddtity_1457298994151...
+2016-03-07 14:30:48  [ main:4900 ] - [ INFO ]  initing entity newenddtity_1457299172444...
+2016-03-07 14:30:48  [ main:4900 ] - [ INFO ]  initing entity newenddtity_1457299353317...
+2016-03-07 14:30:48  [ main:4901 ] - [ INFO ]  initing entity newenddtity_1457299549309...
+2016-03-07 14:30:48  [ main:4901 ] - [ INFO ]  initing entity newenddtity_1457300692441...
+2016-03-07 14:30:48  [ main:4902 ] - [ INFO ]  initing entity newenddtity_1457307535157...
+2016-03-07 14:30:48  [ main:4902 ] - [ INFO ]  initing entity newenddtity_1457307733454...
+2016-03-07 14:30:48  [ main:4902 ] - [ INFO ]  initing entity newenddtity_1457307941100...
+2016-03-07 14:30:48  [ main:4904 ] - [ INFO ]  initing entity newenddtity_1457308125302...
+2016-03-07 14:30:48  [ main:4905 ] - [ INFO ]  initing entity newenddtity_1457308192578...
+2016-03-07 14:30:48  [ main:4912 ] - [ INFO ]  initing entity newenddtity_1457308470875...
+2016-03-07 14:30:48  [ main:4915 ] - [ INFO ]  initing entity newenddtity_1457310998866...
+2016-03-07 14:30:48  [ main:4916 ] - [ INFO ]  initing entity newenddtity_1457311344212...
+2016-03-07 14:30:48  [ main:4928 ] - [ INFO ]  initing entity newenddtity_1457313402746...
+2016-03-07 14:30:48  [ main:4929 ] - [ INFO ]  initing entity newenddtity_1457313492801...
+2016-03-07 14:30:48  [ main:4929 ] - [ INFO ]  initing entity newenddtity_1457314728465...
+2016-03-07 14:30:48  [ main:4930 ] - [ INFO ]  initing entity newenddtity_1457315072649...
+2016-03-07 14:30:48  [ main:4930 ] - [ INFO ]  initing entity newenddtity_1457315224642...
+2016-03-07 14:30:48  [ main:4931 ] - [ INFO ]  initing entity newenddtity_1457315555694...
+2016-03-07 14:30:48  [ main:4932 ] - [ INFO ]  initing entity newenddtity_1457315742563...
+2016-03-07 14:30:48  [ main:4934 ] - [ INFO ]  initing entity newenddtity_1457315851342...
+2016-03-07 14:30:48  [ main:4934 ] - [ INFO ]  initing entity newenddtity_1457316142838...
+2016-03-07 14:30:48  [ main:4934 ] - [ INFO ]  initing entity newenddtity_1457316220723...
+2016-03-07 14:30:48  [ main:4935 ] - [ INFO ]  initing entity newenddtity_1457317625630...
+2016-03-07 14:30:48  [ main:4935 ] - [ INFO ]  initing entity newenddtity_1457318160467...
+2016-03-07 14:30:48  [ main:4936 ] - [ INFO ]  initing entity newenddtity_1457318495795...
+2016-03-07 14:30:48  [ main:4936 ] - [ INFO ]  initing entity newenddtity_1457319015405...
+2016-03-07 14:30:48  [ main:4937 ] - [ INFO ]  initing entity newenddtity_1457319127137...
+2016-03-07 14:30:48  [ main:5011 ] - [ INFO ]  FrameworkServlet 'spring-dispatcher': initialization completed in 1138 ms
+2016-03-07 14:31:10  [ Thread-1:26532 ] - [ INFO ]  Closing WebApplicationContext for namespace 'spring-dispatcher-servlet': startup date [Mon Mar 07 14:30:47 EST 2016]; parent: Root WebApplicationContext
+2016-03-07 14:42:10  [ pool-1-thread-8:3516 ] - [ INFO ]  created hibernate mapping file for newenddtity at /Users/steve/oncore-consulting/web/src/main/webapp/destination/mapping/newenddtity/newenddtity_1457297888881/newenddtity.xml
+2016-03-07 14:42:10  [ pool-1-thread-11:3517 ] - [ INFO ]  created hibernate mapping file for newenddtity at /Users/steve/oncore-consulting/web/src/main/webapp/destination/mapping/newenddtity/newenddtity_1457297982604/newenddtity.xml
+2016-03-07 14:42:10  [ pool-1-thread-14:3516 ] - [ INFO ]  created hibernate mapping file for newenddtity at /Users/steve/oncore-consulting/web/src/main/webapp/destination/mapping/newenddtity/newenddtity_1457298650621/newenddtity.xml
+2016-03-07 14:42:10  [ pool-1-thread-2:3517 ] - [ INFO ]  created hibernate mapping file for newenddtity at /Users/steve/oncore-consulting/web/src/main/webapp/destination/mapping/newenddtity/newenddtity_1457291281138/newenddtity.xml
+2016-03-07 14:42:10  [ pool-1-thread-5:3516 ] - [ INFO ]  created hibernate mapping file for newenddtity at /Users/steve/oncore-consulting/web/src/main/webapp/destination/mapping/newenddtity/newenddtity_1457297682725/newenddtity.xml
+2016-03-07 14:42:10  [ main:3585 ] - [ INFO ]  FrameworkServlet 'spring-dispatcher': initialization started
+2016-03-07 14:42:10  [ main:3590 ] - [ INFO ]  Refreshing WebApplicationContext for namespace 'spring-dispatcher-servlet': startup date [Mon Mar 07 14:42:10 EST 2016]; parent: Root WebApplicationContext
+2016-03-07 14:42:10  [ main:3591 ] - [ INFO ]  Loading XML bean definitions from ServletContext resource [/WEB-INF/spring-context.xml]
+2016-03-07 14:42:10  [ main:3675 ] - [ INFO ]  Loading XML bean definitions from URL [jar:file:/Users/steve/.m2/repository/com/oncore/oncore-consulting-template-management/1.0-SNAPSHOT/oncore-consulting-template-management-1.0-SNAPSHOT.jar!/spring-context-template-management.xml]
+2016-03-07 14:42:10  [ main:3742 ] - [ INFO ]  Loading XML bean definitions from URL [jar:file:/Users/steve/.m2/repository/com/oncore/oncore-consulting-common/1.0-SNAPSHOT/oncore-consulting-common-1.0-SNAPSHOT.jar!/spring/spring-context-common.xml]
+2016-03-07 14:42:10  [ main:3798 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring/spring-hibernate.xml]
+2016-03-07 14:42:10  [ main:3842 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring/spring-mvc.xml]
+2016-03-07 14:42:10  [ main:3867 ] - [ INFO ]  Loading XML bean definitions from URL [jar:file:/Users/steve/.m2/repository/com/oncore/oncore-consulting-database-management/1.0-SNAPSHOT/oncore-consulting-database-management-1.0-SNAPSHOT.jar!/spring/spring-context-data-management.xml]
+2016-03-07 14:42:10  [ main:3909 ] - [ INFO ]  Loading XML bean definitions from URL [jar:file:/Users/steve/.m2/repository/com/oncore/oncore-consulting-user/1.0-SNAPSHOT/oncore-consulting-user-1.0-SNAPSHOT.jar!/spring/spring-context-user.xml]
+2016-03-07 14:42:10  [ main:3978 ] - [ INFO ]  Loading properties file from class path resource [properties/hibernate-development.properties]
+2016-03-07 14:42:10  [ main:3978 ] - [ INFO ]  Loading properties file from class path resource [properties/app-development.properties]
+2016-03-07 14:42:10  [ main:3982 ] - [ INFO ]  JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-03-07 14:42:10  [ main:4097 ] - [ INFO ]  Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 2sa00u9fmx2tj4qhvknw|7c8f047a, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceSynchronousCheckins -> false, forceUseNamedDriverClass -> false, identityToken -> 2sa00u9fmx2tj4qhvknw|7c8f047a, idleConnectionTestPeriod -> 0, initialPoolSize -> 1, jdbcUrl -> jdbc:mysql://localhost:3306/hibt, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 1, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 40, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 1, numHelperThreads -> 3, preferredTestQuery -> null, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+2016-03-07 14:42:11  [ main:4114 ] - [ INFO ]  HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2016-03-07 14:42:11  [ main:4141 ] - [ INFO ]  HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-03-07 14:42:11  [ main:4142 ] - [ INFO ]  HHH000397: Using ASTQueryTranslatorFactory
+2016-03-07 14:42:11  [ main:4245 ] - [ INFO ]  HHH000228: Running hbm2ddl schema update
+2016-03-07 14:42:11  [ main:4248 ] - [ INFO ]  HHH000102: Fetching database metadata
+2016-03-07 14:42:11  [ main:4250 ] - [ INFO ]  HHH000396: Updating schema
+2016-03-07 14:42:11  [ main:4265 ] - [ INFO ]  HHH000261: Table found: hibt.element
+2016-03-07 14:42:11  [ main:4266 ] - [ INFO ]  HHH000037: Columns: [createtime, deleted, module_id, name, description, id, updatetime]
+2016-03-07 14:42:11  [ main:4266 ] - [ INFO ]  HHH000108: Foreign keys: []
+2016-03-07 14:42:11  [ main:4267 ] - [ INFO ]  HHH000126: Indexes: [primary]
+2016-03-07 14:42:11  [ main:4290 ] - [ INFO ]  HHH000261: Table found: hibt.entity
+2016-03-07 14:42:11  [ main:4291 ] - [ INFO ]  HHH000037: Columns: [createtime, deleted, module_id, name, description, id, updatetime, tablename, hbmpath]
+2016-03-07 14:42:11  [ main:4292 ] - [ INFO ]  HHH000108: Foreign keys: []
+2016-03-07 14:42:11  [ main:4292 ] - [ INFO ]  HHH000126: Indexes: [primary]
+2016-03-07 14:42:11  [ main:4302 ] - [ INFO ]  HHH000261: Table found: hibt.field
+2016-03-07 14:42:11  [ main:4303 ] - [ INFO ]  HHH000037: Columns: [createtime, deleted, module_id, name, length, description, ifnull, id, updatetime, fieldtype, entity_id]
+2016-03-07 14:42:11  [ main:4304 ] - [ INFO ]  HHH000108: Foreign keys: [fk_o596lc80ccb1rgvhnoku4fdo9]
+2016-03-07 14:42:11  [ main:4304 ] - [ INFO ]  HHH000126: Indexes: [fk_o596lc80ccb1rgvhnoku4fdo9, primary]
+2016-03-07 14:42:11  [ main:4317 ] - [ INFO ]  HHH000261: Table found: hibt.file_element
+2016-03-07 14:42:11  [ main:4318 ] - [ INFO ]  HHH000037: Columns: [createtime, deleted, module_id, parentfoldid, name, description, id, updatetime]
+2016-03-07 14:42:11  [ main:4318 ] - [ INFO ]  HHH000108: Foreign keys: []
+2016-03-07 14:42:11  [ main:4318 ] - [ INFO ]  HHH000126: Indexes: [primary]
+2016-03-07 14:42:11  [ main:4331 ] - [ INFO ]  HHH000261: Table found: hibt.folder_file_element
+2016-03-07 14:42:11  [ main:4332 ] - [ INFO ]  HHH000037: Columns: [createtime, deleted, module_id, parentfoldid, depth, name, description, id, updatetime]
+2016-03-07 14:42:11  [ main:4333 ] - [ INFO ]  HHH000108: Foreign keys: []
+2016-03-07 14:42:11  [ main:4334 ] - [ INFO ]  HHH000126: Indexes: [primary]
+2016-03-07 14:42:11  [ main:4346 ] - [ INFO ]  HHH000261: Table found: hibt.module
+2016-03-07 14:42:11  [ main:4347 ] - [ INFO ]  HHH000037: Columns: [createtime, deleted, module_id, name, description, id, updatetime]
+2016-03-07 14:42:11  [ main:4348 ] - [ INFO ]  HHH000108: Foreign keys: []
+2016-03-07 14:42:11  [ main:4350 ] - [ INFO ]  HHH000126: Indexes: [primary]
+2016-03-07 14:42:11  [ main:4363 ] - [ INFO ]  HHH000261: Table found: hibt.report_field
+2016-03-07 14:42:11  [ main:4367 ] - [ INFO ]  HHH000037: Columns: [createtime, length, description, relatedfield_id, fieldtype, deleted, module_id, report_id, name, ifnull, id, updatetime, isrelatedfield]
+2016-03-07 14:42:11  [ main:4370 ] - [ INFO ]  HHH000108: Foreign keys: [fk_qmru8iktsptb9m0nt6a5kj7yr, fk_t5oxbvi73rrwmoroikmhldvg9]
+2016-03-07 14:42:11  [ main:4373 ] - [ INFO ]  HHH000126: Indexes: [fk_qmru8iktsptb9m0nt6a5kj7yr, fk_t5oxbvi73rrwmoroikmhldvg9, primary]
+2016-03-07 14:42:11  [ main:4383 ] - [ INFO ]  HHH000261: Table found: hibt.report_file_element
+2016-03-07 14:42:11  [ main:4383 ] - [ INFO ]  HHH000037: Columns: [createtime, parentfoldid, currentversion, description, folderid, hbmpath, deleted, module_id, name, id, updatetime, tablename, templatepath]
+2016-03-07 14:42:11  [ main:4384 ] - [ INFO ]  HHH000108: Foreign keys: []
+2016-03-07 14:42:11  [ main:4384 ] - [ INFO ]  HHH000126: Indexes: [primary]
+2016-03-07 14:42:11  [ main:4386 ] - [ INFO ]  HHH000232: Schema update complete
+2016-03-07 14:42:11  [ main:4419 ] - [ INFO ]  running GroovyFactory...
+2016-03-07 14:42:11  [ main:4420 ] - [ INFO ]  setting application context...
+2016-03-07 14:42:11  [ main:4469 ] - [ INFO ]  Using DataSource [com.mchange.v2.c3p0.ComboPooledDataSource[ identityToken -> 2sa00u9fmx2tj4qhvknw|7c8f047a, dataSourceName -> 2sa00u9fmx2tj4qhvknw|7c8f047a ]] of Hibernate SessionFactory for HibernateTransactionManager
+2016-03-07 14:42:11  [ main:4480 ] - [ INFO ]  Mapped "{[/admin/entities/{id}],methods=[DELETE],produces=[application/json]}" onto public org.springframework.http.ResponseEntity com.oncore.template.controller.EntityResource.delete(java.lang.String)
+2016-03-07 14:42:11  [ main:4481 ] - [ INFO ]  Mapped "{[/admin/entities/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.entities.EntityResponse> com.oncore.template.controller.EntityResource.getEntities()
+2016-03-07 14:42:11  [ main:4482 ] - [ INFO ]  Mapped "{[/admin/entities/{id}],methods=[PUT],produces=[application/json]}" onto public com.oncore.template.transfd.entities.EntityResponse com.oncore.template.controller.EntityResource.updateEntity(com.oncore.template.transfd.entities.UpdateEntityRequest)
+2016-03-07 14:42:11  [ main:4482 ] - [ INFO ]  Mapped "{[/admin/entities/{id}],methods=[GET],produces=[application/json]}" onto public com.oncore.template.transfd.entities.EntityResponse com.oncore.template.controller.EntityResource.getEntity(java.lang.String)
+2016-03-07 14:42:11  [ main:4483 ] - [ INFO ]  Mapped "{[/admin/folders/{id}],methods=[GET],produces=[application/json]}" onto public com.oncore.template.transfd.file_element.folder.FolderResponse com.oncore.template.controller.FolderResource.getFolder(java.lang.String)
+2016-03-07 14:42:11  [ main:4484 ] - [ INFO ]  Mapped "{[/admin/folders/{parent_id}/sub_folder/],methods=[POST],produces=[application/json]}" onto public com.oncore.template.transfd.file_element.folder.FolderResponse com.oncore.template.controller.FolderResource.createSubFolderToParent(java.lang.String,org.springframework.security.core.context.SecurityContextHolder,com.oncore.template.transfd.file_element.folder.CreateFolderToParentFolderRequest)
+2016-03-07 14:42:11  [ main:4485 ] - [ INFO ]  Mapped "{[/admin/folders/{parent_id}/sub_folder/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.file_element.folder.FolderResponse> com.oncore.template.controller.FolderResource.getChildFoldersUnderParentFolder(java.lang.String)
+2016-03-07 14:42:11  [ main:4485 ] - [ INFO ]  Mapped "{[/admin/folders/{folderId}/reports/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.report.ReportResponse> com.oncore.template.controller.FolderResource.getReportsUnderFolder(java.lang.String)
+2016-03-07 14:42:11  [ main:4486 ] - [ INFO ]  Mapped "{[/admin/folders/{id}/],methods=[PUT],produces=[application/json]}" onto public com.oncore.template.transfd.file_element.folder.FolderResponse com.oncore.template.controller.FolderResource.updateFolder(java.lang.String,com.oncore.template.transfd.file_element.folder.UpdateFolderRequest)
+2016-03-07 14:42:11  [ main:4487 ] - [ INFO ]  Mapped "{[/admin/modules/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.module.ModuleResponse> com.oncore.template.controller.ModuleResource.getModules()
+2016-03-07 14:42:11  [ main:4488 ] - [ INFO ]  Mapped "{[/admin/modules/{id}/],methods=[GET],produces=[application/json]}" onto public com.oncore.template.transfd.module.ModuleResponse com.oncore.template.controller.ModuleResource.getModule(java.lang.String)
+2016-03-07 14:42:11  [ main:4489 ] - [ INFO ]  Mapped "{[/admin/modules/],methods=[POST],produces=[application/json]}" onto public com.oncore.template.transfd.module.ModuleResponse com.oncore.template.controller.ModuleResource.createModule(com.oncore.template.transfd.module.CreateModuleRequest)
+2016-03-07 14:42:11  [ main:4490 ] - [ INFO ]  Mapped "{[/admin/modules/{id}/],methods=[PUT],produces=[application/json]}" onto public com.oncore.template.transfd.module.ModuleResponse com.oncore.template.controller.ModuleResource.updateModule(java.lang.String,com.oncore.template.transfd.module.CreateModuleRequest)
+2016-03-07 14:42:11  [ main:4491 ] - [ INFO ]  Mapped "{[/admin/modules/{id}/entities/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.entities.EntityResponse> com.oncore.template.controller.ModuleResource.getEntitiesOfModule(java.lang.String)
+2016-03-07 14:42:11  [ main:4491 ] - [ INFO ]  Mapped "{[/admin/modules/{id}/folders/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.file_element.folder.FolderResponse> com.oncore.template.controller.ModuleResource.getFoldersOfModule(java.lang.String)
+2016-03-07 14:42:11  [ main:4492 ] - [ INFO ]  Mapped "{[/admin/modules/{id}/folders/],methods=[POST],produces=[application/json]}" onto public com.oncore.template.transfd.file_element.folder.FolderResponse com.oncore.template.controller.ModuleResource.createFolderUnderModule(java.lang.String,com.oncore.template.transfd.file_element.folder.CreateRootFolderRequest)
+2016-03-07 14:42:11  [ main:4501 ] - [ INFO ]  Mapped "{[/admin/modules/{id}/entities/],methods=[POST],produces=[application/json]}" onto public com.oncore.template.transfd.entities.EntityResponse com.oncore.template.controller.ModuleResource.createEntityUnderModule(java.lang.String,com.oncore.template.transfd.entities.CreateEntityRequest)
+2016-03-07 14:42:11  [ main:4502 ] - [ INFO ]  Mapped "{[/admin/modules/{id}/tree/],methods=[GET],produces=[application/json]}" onto public com.oncore.template.transfd.module.ModuleTreeResponse com.oncore.template.controller.ModuleResource.getModuleTree(java.lang.String)
+2016-03-07 14:42:11  [ main:4507 ] - [ INFO ]  Mapped "{[/admin/reports/{id}/],methods=[DELETE],produces=[application/json]}" onto public org.springframework.http.ResponseEntity com.oncore.template.controller.ReportResource.delete(java.lang.String)
+2016-03-07 14:42:11  [ main:4508 ] - [ INFO ]  Mapped "{[/admin/reports/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.report.ReportResponse> com.oncore.template.controller.ReportResource.getReports()
+2016-03-07 14:42:11  [ main:4509 ] - [ INFO ]  Mapped "{[/admin/reports/],methods=[POST],produces=[application/json]}" onto public com.oncore.template.transfd.report.ReportResponse com.oncore.template.controller.ReportResource.createReport(com.oncore.template.transfd.report.CreateReportRequest)
+2016-03-07 14:42:11  [ main:4510 ] - [ INFO ]  Mapped "{[/admin/reports/{id}/],methods=[GET],produces=[application/json]}" onto public com.oncore.template.transfd.report.ReportResponse com.oncore.template.controller.ReportResource.gerReport(java.lang.String)
+2016-03-07 14:42:11  [ main:4512 ] - [ INFO ]  Mapped "{[/user/entities/{entity_id}/],methods=[POST],produces=[application/json]}" onto public org.springframework.http.ResponseEntity com.oncore.user.controller.UserEntityController.insertEntity(java.lang.String,java.util.Map)
+2016-03-07 14:42:11  [ main:4513 ] - [ INFO ]  Mapped "{[/user/entities/{entity_id}/],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity com.oncore.user.controller.UserEntityController.listEntities(java.lang.String)
+2016-03-07 14:42:11  [ main:4562 ] - [ INFO ]  Looking for @ControllerAdvice: WebApplicationContext for namespace 'spring-dispatcher-servlet': startup date [Mon Mar 07 14:42:10 EST 2016]; parent: Root WebApplicationContext
+2016-03-07 14:42:11  [ main:4590 ] - [ INFO ]  Looking for @ControllerAdvice: WebApplicationContext for namespace 'spring-dispatcher-servlet': startup date [Mon Mar 07 14:42:10 EST 2016]; parent: Root WebApplicationContext
+2016-03-07 14:42:11  [ main:4631 ] - [ INFO ]  Detected @ExceptionHandler methods in commonExceptionHandler
+2016-03-07 14:42:11  [ main:4638 ] - [ INFO ]  start init entity tables...
+2016-03-07 14:42:11  [ main:4667 ] - [ INFO ]  initing entity newenddtity_1457291281138...
+2016-03-07 14:42:11  [ main:4667 ] - [ INFO ]  initing entity newenddtity_1457297682725...
+2016-03-07 14:42:11  [ main:4668 ] - [ INFO ]  initing entity newenddtity_1457297888881...
+2016-03-07 14:42:11  [ pool-2-thread-5:4670 ] - [ INFO ]  created hibernate mapping file for newenddtity at /Users/steve/oncore-consulting/web/src/main/webapp/destination/mapping/newenddtity/newenddtity_1457297682725/newenddtity.xml
+2016-03-07 14:42:11  [ pool-2-thread-2:4668 ] - [ INFO ]  created hibernate mapping file for newenddtity at /Users/steve/oncore-consulting/web/src/main/webapp/destination/mapping/newenddtity/newenddtity_1457291281138/newenddtity.xml
+2016-03-07 14:42:11  [ pool-2-thread-8:4673 ] - [ INFO ]  created hibernate mapping file for newenddtity at /Users/steve/oncore-consulting/web/src/main/webapp/destination/mapping/newenddtity/newenddtity_1457297888881/newenddtity.xml
+2016-03-07 14:42:11  [ main:4673 ] - [ INFO ]  initing entity newenddtity_1457297982604...
+2016-03-07 14:42:11  [ main:4675 ] - [ INFO ]  initing entity newenddtity_1457298650621...
+2016-03-07 14:42:11  [ pool-2-thread-11:4675 ] - [ INFO ]  created hibernate mapping file for newenddtity at /Users/steve/oncore-consulting/web/src/main/webapp/destination/mapping/newenddtity/newenddtity_1457297982604/newenddtity.xml
+2016-03-07 14:42:11  [ main:4676 ] - [ INFO ]  initing entity newenddtity_1457298994151...
+2016-03-07 14:42:11  [ pool-2-thread-14:4676 ] - [ INFO ]  created hibernate mapping file for newenddtity at /Users/steve/oncore-consulting/web/src/main/webapp/destination/mapping/newenddtity/newenddtity_1457298650621/newenddtity.xml
+2016-03-07 14:42:11  [ main:4676 ] - [ INFO ]  initing entity newenddtity_1457299172444...
+2016-03-07 14:42:11  [ main:4677 ] - [ INFO ]  initing entity newenddtity_1457299353317...
+2016-03-07 14:42:11  [ main:4677 ] - [ INFO ]  initing entity newenddtity_1457299549309...
+2016-03-07 14:42:11  [ main:4678 ] - [ INFO ]  initing entity newenddtity_1457300692441...
+2016-03-07 14:42:11  [ main:4678 ] - [ INFO ]  initing entity newenddtity_1457307535157...
+2016-03-07 14:42:11  [ main:4679 ] - [ INFO ]  initing entity newenddtity_1457307733454...
+2016-03-07 14:42:11  [ main:4680 ] - [ INFO ]  initing entity newenddtity_1457307941100...
+2016-03-07 14:42:11  [ main:4680 ] - [ INFO ]  initing entity newenddtity_1457308125302...
+2016-03-07 14:42:11  [ main:4680 ] - [ INFO ]  initing entity newenddtity_1457308192578...
+2016-03-07 14:42:11  [ main:4681 ] - [ INFO ]  initing entity newenddtity_1457308470875...
+2016-03-07 14:42:11  [ main:4681 ] - [ INFO ]  initing entity newenddtity_1457310998866...
+2016-03-07 14:42:11  [ main:4681 ] - [ INFO ]  initing entity newenddtity_1457311344212...
+2016-03-07 14:42:11  [ main:4682 ] - [ INFO ]  initing entity newenddtity_1457313402746...
+2016-03-07 14:42:11  [ main:4682 ] - [ INFO ]  initing entity newenddtity_1457313492801...
+2016-03-07 14:42:11  [ main:4682 ] - [ INFO ]  initing entity newenddtity_1457314728465...
+2016-03-07 14:42:11  [ main:4682 ] - [ INFO ]  initing entity newenddtity_1457315072649...
+2016-03-07 14:42:11  [ main:4683 ] - [ INFO ]  initing entity newenddtity_1457315224642...
+2016-03-07 14:42:11  [ main:4684 ] - [ INFO ]  initing entity newenddtity_1457315555694...
+2016-03-07 14:42:11  [ main:4684 ] - [ INFO ]  initing entity newenddtity_1457315742563...
+2016-03-07 14:42:11  [ main:4685 ] - [ INFO ]  initing entity newenddtity_1457315851342...
+2016-03-07 14:42:11  [ main:4685 ] - [ INFO ]  initing entity newenddtity_1457316142838...
+2016-03-07 14:42:11  [ main:4686 ] - [ INFO ]  initing entity newenddtity_1457316220723...
+2016-03-07 14:42:11  [ main:4686 ] - [ INFO ]  initing entity newenddtity_1457317625630...
+2016-03-07 14:42:11  [ main:4686 ] - [ INFO ]  initing entity newenddtity_1457318160467...
+2016-03-07 14:42:11  [ main:4686 ] - [ INFO ]  initing entity newenddtity_1457318495795...
+2016-03-07 14:42:11  [ main:4687 ] - [ INFO ]  initing entity newenddtity_1457319015405...
+2016-03-07 14:42:11  [ main:4687 ] - [ INFO ]  initing entity newenddtity_1457319127137...
+2016-03-07 14:42:11  [ main:4743 ] - [ INFO ]  FrameworkServlet 'spring-dispatcher': initialization completed in 1157 ms
+2016-03-07 23:10:15  [ qtp1158124724-19:30488985 ] - [ INFO ]  saving Entity newenddtity
+2016-03-07 23:10:15  [ qtp1158124724-19:30489039 ] - [ INFO ]  save Entity newenddtity success
+2016-03-07 23:10:15  [ qtp1158124724-19:30489041 ] - [ INFO ]  saving Field name
+2016-03-07 23:10:15  [ qtp1158124724-19:30489042 ] - [ INFO ]  save Field name success
+2016-03-07 23:48:13  [ qtp1158124724-19:32766690 ] - [ INFO ]  found module id=4028818c534a8b6c01534a97c7ff0002 name=1111111111111111111111

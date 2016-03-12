@@ -18,9 +18,11 @@
     <import resource="classpath:spring/spring-mvc.xml"/>
     <!-- import spring - mvc configure file -->
     <import resource="classpath*:spring/spring-context-data-management.xml"/>
+    <import resource="classpath*:spring/spring-context-user.xml"/>
     <!-- component scan package -->
     <!-- open aop autoproxy -->
     <aop:aspectj-autoproxy/>
     <bean class="org.springframework.scripting.support.ScriptFactoryPostProcessor"/>
+    <!--<bean class="com.oncore.web.init.DynamicTableInitor" id="dynamicTableInitor" init-method="init"  lazy-init="false"/>-->
 
 </beans>

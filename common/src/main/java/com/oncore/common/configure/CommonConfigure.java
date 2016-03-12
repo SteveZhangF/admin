@@ -3,7 +3,6 @@ package com.oncore.common.configure;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Scope;
 
 import javax.validation.Validation;
 import javax.validation.Validator;
@@ -34,6 +33,50 @@ public class CommonConfigure {
     private String generated_file_destination_groovy_dao_file;
     @Value("${template.template_groovy_dao_file}")
     private String template_groovy_dao_file;
+    @Value("${template.template_report_groovy_dao_file}")
+    private String template_report_groovy_dao_file;
+
+    @Value("${qiniu_access_key}")
+    private String qiniu_access_key;
+    @Value("${qiniu_secret_key}")
+    private String qiniu_secret_key;
+
+    @Value("${qiniu_bucket_name}")
+    private String qiniu_bucket_name;
+
+    @Value("${qiniu_download_domain}")
+    private String qiniu_down_load_domain;
+    public String getQiniu_bucket_name() {
+        return qiniu_bucket_name;
+    }
+
+    public String getQiniu_down_load_domain() {
+        return qiniu_down_load_domain;
+    }
+
+    public void setQiniu_down_load_domain(String qiniu_down_load_domain) {
+        this.qiniu_down_load_domain = qiniu_down_load_domain;
+    }
+
+    public void setQiniu_bucket_name(String qiniu_bucket_name) {
+        this.qiniu_bucket_name = qiniu_bucket_name;
+    }
+
+    public String getQiniu_access_key() {
+        return qiniu_access_key;
+    }
+
+    public void setQiniu_access_key(String qiniu_access_key) {
+        this.qiniu_access_key = qiniu_access_key;
+    }
+
+    public String getQiniu_secret_key() {
+        return qiniu_secret_key;
+    }
+
+    public void setQiniu_secret_key(String qiniu_secret_key) {
+        this.qiniu_secret_key = qiniu_secret_key;
+    }
 
     public int getCreate_table_thread_number() {
         return create_table_thread_number;
@@ -52,9 +95,8 @@ public class CommonConfigure {
     }
 
 
-
     public String getBaseDir() {
-        if(baseDir == null){
+        if (baseDir == null) {
             baseDir = System.getProperty("web.root");
             System.out.println(baseDir);
         }
@@ -95,5 +137,14 @@ public class CommonConfigure {
 
     public void setGenerated_file_destination_groovy_dao_file(String generated_file_destination_groovy_dao_file) {
         this.generated_file_destination_groovy_dao_file = generated_file_destination_groovy_dao_file;
+    }
+
+
+    public String getTemplate_report_groovy_dao_file() {
+        return template_report_groovy_dao_file;
+    }
+
+    public void setTemplate_report_groovy_dao_file(String template_report_groovy_dao_file) {
+        this.template_report_groovy_dao_file = template_report_groovy_dao_file;
     }
 }

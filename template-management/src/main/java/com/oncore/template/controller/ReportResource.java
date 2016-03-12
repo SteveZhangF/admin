@@ -35,14 +35,14 @@ public class ReportResource extends BaseController {
         }
         return listResponse;
     }
-
-    @RequestMapping(value = "/admin/reports/", method = RequestMethod.POST, produces = org.springframework.http.MediaType.APPLICATION_JSON_VALUE)
-
-    public ReportResponse createReport(  @RequestBody CreateReportRequest request)   {
-        this.checkUserContext();
-        ReportResponse reportResponse = reportService.createReportFromRequest(request);
-        return reportResponse;
-    }
+//
+//    @RequestMapping(value = "/admin/reports/", method = RequestMethod.POST, produces = org.springframework.http.MediaType.APPLICATION_JSON_VALUE)
+//
+//    public ReportResponse createReport(  @RequestBody CreateReportRequest request)   {
+//        this.checkUserContext();
+//        ReportResponse reportResponse = reportService.createReportFromRequest(request);
+//        return reportResponse;
+//    }
 
 //    @RolesAllowed({"ROLE_USER"})
 //    @PUT

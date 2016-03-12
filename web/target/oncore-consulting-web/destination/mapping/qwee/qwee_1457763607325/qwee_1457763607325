@@ -1,0 +1,10 @@
+
+    drop table if exists qwee_1457763607325
+
+    create table qwee_1457763607325 (
+        id bigint not null auto_increment,
+        ssss integer,
+        userId varchar(255),
+        deleted bit default false,
+        primary key (id)
+    )

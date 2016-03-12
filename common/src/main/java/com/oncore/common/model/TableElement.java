@@ -10,4 +10,5 @@ public interface TableElement {
     String getHbmPath();
     String getName();
     List getFields();
+    boolean isReport();
 }

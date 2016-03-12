@@ -15,15 +15,16 @@ import java.util.List;
 @XmlRootElement
 public class CreateReportRequest extends ElementRequest {
 
-    @NotNull
-    @Valid
-    @Size(min = 1, max = 16)
-    List<ReportFieldRequest> fields;
+//    @NotNull
+//    @Valid
+//    @Size(min = 1, max = 16)
+//    List<ReportFieldRequest> fields;
 
     @NotNull
     @Valid
     @Length(min = 32)
     private String content;
+
 
     public String getContent() {
         return content;
@@ -33,12 +34,12 @@ public class CreateReportRequest extends ElementRequest {
         this.content = content;
     }
 
-    public List<ReportFieldRequest> getFields() {
-        return fields;
-    }
-
-    public void setFields(List<ReportFieldRequest> fields) {
-        this.fields = fields;
-    }
+//    public List<ReportFieldRequest> getFields() {
+//        return fields;
+//    }
+//
+//    public void setFields(List<ReportFieldRequest> fields) {
+//        this.fields = fields;
+//    }
 
 }

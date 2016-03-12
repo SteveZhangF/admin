@@ -15,13 +15,4 @@ import com.oncore.template.transfd.ElementRequest;
  * Created by steve on 2/12/16.
  */
 public class CreateFolderToParentFolderRequest extends ElementRequest {
-    private String parentFolderId;
-
-    public String getParentFolderId() {
-        return parentFolderId;
-    }
-
-    public void setParentFolderId(String parentFolderId) {
-        this.parentFolderId = parentFolderId;
-    }
 }

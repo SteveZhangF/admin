@@ -66,13 +66,13 @@ public class FolderServiceImpl extends BaseGenericServiceImpl<Folder, String> im
     }
 
     @Override
-    public FolderResponse createFolderToParent(CreateFolderToParentFolderRequest createFolderToParentFolderRequest) {
+    public FolderResponse createFolderToParent(String parentId,CreateFolderToParentFolderRequest createFolderToParentFolderRequest) {
         validate(createFolderToParentFolderRequest);
         Folder folder = new Folder();
         folder.setDescription(createFolderToParentFolderRequest.getDescription());
         folder.setName(createFolderToParentFolderRequest.getName());
         folder.setDeleted(false);
-        folderDao.saveFolderToParentFolder(createFolderToParentFolderRequest.getParentFolderId(), folder);
+        folderDao.saveFolderToParentFolder(parentId, folder);
         return new FolderResponse(folder);
     }
     @Override

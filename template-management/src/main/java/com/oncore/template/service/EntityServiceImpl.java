@@ -118,6 +118,7 @@ public class EntityServiceImpl extends BaseGenericServiceImpl<Entity, String> im
                 old.setDescription(field.getDescription());
                 fieldDao.update(old);
             } else {
+                field.setEntity(entity);
                 fieldDao.save(field);
             }
         }
@@ -131,6 +132,11 @@ public class EntityServiceImpl extends BaseGenericServiceImpl<Entity, String> im
             oldEntity.setName(entity.getName());
             oldEntity.setId(entity.getId());
             entityDao.update(oldEntity);
+        }
+        try {
+            tableBuilder.createMappingFile(oldEntity);
+        } catch (Exception e) {
+            e.printStackTrace();
         }
 
         //TODO iTableCreator.updateTable(oldEntity);
@@ -237,6 +243,11 @@ public class EntityServiceImpl extends BaseGenericServiceImpl<Entity, String> im
         String[] fields = new String[]{"id", "name", "createTime", "updateTime", "description", "hbmPath", "tableName"};
         List entities = entityDao.getListbyFieldAndParams(fields, map);
         return entities;
+    }
+
+    @Override
+    public List<Entity> loadAll(){
+        return entityDao.loadAll();
     }
 
     /**

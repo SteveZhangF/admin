@@ -1,0 +1,10 @@
+
+    drop table if exists report_dddaaawwwwddz_1457771749639
+
+    create table report_dddaaawwwwddz_1457771749639 (
+        id bigint not null auto_increment,
+        generated bit,
+        userId varchar(255),
+        deleted bit default false,
+        primary key (id)
+    )

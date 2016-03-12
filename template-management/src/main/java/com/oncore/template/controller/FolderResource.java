@@ -17,12 +17,12 @@ import com.oncore.template.service.ReportService;
 import com.oncore.template.transfd.file_element.folder.CreateFolderToParentFolderRequest;
 import com.oncore.template.transfd.file_element.folder.FolderResponse;
 import com.oncore.template.transfd.file_element.folder.UpdateFolderRequest;
+import com.oncore.template.transfd.report.CreateReportRequest;
 import com.oncore.template.transfd.report.ReportResponse;
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
-import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -49,18 +49,16 @@ public class FolderResource extends BaseController {
 
     @RequestMapping(value = "/admin/folders/{parent_id}/sub_folder/", method = RequestMethod.POST, produces =
             MediaType.APPLICATION_JSON_VALUE)
-    public FolderResponse createSubFolderToParent(@PathVariable("parent_id") String parent_id, SecurityContextHolder context, @RequestBody CreateFolderToParentFolderRequest subFolderRequest) {
-
+    public FolderResponse createSubFolderToParent(@PathVariable("parent_id") String parent_id, @RequestBody CreateFolderToParentFolderRequest subFolderRequest) {
         this.checkUserContext();
-        subFolderRequest.setParentFolderId(parent_id);
-        FolderResponse response = folderService.createFolderToParent(subFolderRequest);
+        FolderResponse response = folderService.createFolderToParent(parent_id, subFolderRequest);
         return response;
     }
 
     @RequestMapping(value = "/admin/folders/{parent_id}/sub_folder/", method = RequestMethod.GET
-    ,produces = MediaType.APPLICATION_JSON_VALUE)
+            , produces = MediaType.APPLICATION_JSON_VALUE)
 
-    public List<FolderResponse> getChildFoldersUnderParentFolder(  @PathVariable("parent_id") String parentId) {
+    public List<FolderResponse> getChildFoldersUnderParentFolder(@PathVariable("parent_id") String parentId) {
         this.checkUserContext();
         List<FolderResponse> list = folderService.getChildFolder(parentId);
         return list;
@@ -72,7 +70,7 @@ public class FolderResource extends BaseController {
     @RequestMapping(value = "/admin/folders/{folderId}/reports/", method = RequestMethod.GET
             , produces = MediaType.APPLICATION_JSON_VALUE)
 
-    public List<ReportResponse> getReportsUnderFolder(  @PathVariable("folderId") String folderId) {
+    public List<ReportResponse> getReportsUnderFolder(@PathVariable("folderId") String folderId) {
         this.checkUserContext();
         List<ReportResponse> reportResponses = new ArrayList<>();
         List<Report> reportList = reportService.listReportsUnderFolder(folderId);
@@ -82,12 +80,28 @@ public class FolderResource extends BaseController {
         return reportResponses;
     }
 
+    @RequestMapping(value = "/admin/folders/{folderId}/reports/", method = RequestMethod.POST
+            , produces = MediaType.APPLICATION_JSON_VALUE)
+
+    public ResponseEntity<ReportResponse> createReportsUnderFolder(@PathVariable("folderId") String folderId
+            , @RequestBody CreateReportRequest reportRequest) {
+        this.checkUserContext();
+        return new ResponseEntity<>(reportService.createReportFromRequest(folderId, reportRequest), HttpStatus.OK);
+    }
 
     @RequestMapping(value = "/admin/folders/{id}/", method = RequestMethod.PUT
             , produces = MediaType.APPLICATION_JSON_VALUE)
 
-    public FolderResponse updateFolder( @PathVariable("id") String id, @RequestBody UpdateFolderRequest request) {
+    public FolderResponse updateFolder(@PathVariable("id") String id, @RequestBody UpdateFolderRequest request) {
         this.checkUserContext();
         return folderService.updateFolderFromRequest(id, request);
     }
+
+
+    @RequestMapping(value = "/admin/folders/{id}/", method = RequestMethod.DELETE, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity deleteFolder(@PathVariable("id") String id) {
+        folderService.deleteFolder(id);
+        return new ResponseEntity(HttpStatus.OK);
+    }
+
 }

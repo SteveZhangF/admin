@@ -40,4 +40,6 @@ public class CommonExceptionHandler {
     public ResponseEntity handlerValidationException(ValidationException e) {
         return new ResponseEntity(new ValidationExceptionMessage(e), HttpStatus.BAD_REQUEST);
     }
+
+
 }

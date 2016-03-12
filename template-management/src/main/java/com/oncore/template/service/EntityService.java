@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * Created by steve on 1/14/16.
  */
-public interface EntityService {
+public interface EntityService extends IBaseGenericService<Entity,String>{
     Entity createEntity(Entity entity);
     Entity createEntityFromRequest(String module_id, CreateEntityRequest entityRequest);
     Entity updateEntity(Entity entity);

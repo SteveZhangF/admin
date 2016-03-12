@@ -114,7 +114,11 @@ public class ReportDaoImpl extends HibernateBaseGenericDaoImpl<Report, String> i
 
     @Override
     public String getReportTableName(String id) {
-        return null;
+        Session session = getSessionFactory().getCurrentSession();
+        Query query = session.createQuery("select report.tableName from Report report where report.id=:id");
+        query.setString("id", id);
+        String tableName = (String) query.uniqueResult();
+        return tableName;
     }
 
     @Override

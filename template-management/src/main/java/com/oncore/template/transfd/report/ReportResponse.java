@@ -21,6 +21,16 @@ public class ReportResponse extends ElementResponse {
 
     private List<ReportFieldResponse> fields = new ArrayList<>();
 
+    private String folderId;
+
+    public String getFolderId() {
+        return folderId;
+    }
+
+    public void setFolderId(String folderId) {
+        this.folderId = folderId;
+    }
+
     public String getContent() {
         return content;
     }
@@ -31,11 +41,13 @@ public class ReportResponse extends ElementResponse {
 
     public ReportResponse(Report element) {
         super(element);
+        this.folderId = element.getFolderId();
         this.setType("report");
         for(ReportField field: element.getFields()){
             ReportFieldResponse fieldResponse = new ReportFieldResponse(field);
             this.fields.add(fieldResponse);
         }
+        this.content = element.getContent();
     }
 
     public List<ReportFieldResponse> getFields() {

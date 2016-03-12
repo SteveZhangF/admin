@@ -1,43 +1,65 @@
 package com.oncore.data.file.uploader;
 
+import com.oncore.common.configure.CommonConfigure;
 import com.qiniu.common.QiniuException;
 import com.qiniu.http.Response;
 import com.qiniu.storage.UploadManager;
 import com.qiniu.util.Auth;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
-import java.io.StringWriter;
+import java.sql.Timestamp;
+import java.util.Date;
 
 /**
  * Created by steve on 3/6/16.
  */
+@Component
 public class UpLoader {
-    //设置好账号的ACCESS_KEY和SECRET_KEY
-    String ACCESS_KEY = "Access_Key";
-    String SECRET_KEY = "Secret_Key";
-    //要上传的空间
-    String bucketname = "Bucket_Name";
-    //上传到七牛后保存的文件名
-    String key = "my-java.png";
-    //上传文件的路径
-    String FilePath = "/.../...";
+    String ACCESS_KEY;
 
-    //密钥配置
-    Auth auth = Auth.create(ACCESS_KEY, SECRET_KEY);
-    //创建上传对象
+    String SECRET_KEY;
+    //upload space
+    String bucketname;
+    Auth auth;
+    CommonConfigure commonConfigure;
+    //set the  ACCESS_KEY and SECRET_KEY of qiniu
+    @Autowired
+    public UpLoader(CommonConfigure commonConfigure) {
+        this.commonConfigure = commonConfigure;
+        this.ACCESS_KEY = commonConfigure.getQiniu_access_key();
+        this.SECRET_KEY = commonConfigure.getQiniu_secret_key();
+        this.bucketname = commonConfigure.getQiniu_bucket_name();
+        this.auth = Auth.create(ACCESS_KEY, SECRET_KEY);
+
+    }
+
     UploadManager uploadManager = new UploadManager();
 
-    //简单上传，使用默认策略，只需要设置上传的空间名就可以了
-    public String getUpToken(){
+    public String getUpToken() {
         return auth.uploadToken(bucketname);
     }
 
-    public void upload() throws IOException {
+    public void upload(String content,String targetName) throws IOException {
 
         try {
             //调用put方法上传
-            Response res = uploadManager.put(FilePath, null, getUpToken());
+
+            File file = new File(commonConfigure.getBaseDir()+"/tmp/");
+            if(!file.exists()){
+                file.mkdirs();
+            }
+            file = new File(file.getAbsolutePath()+"/"+targetName);
+            FileWriter fileWriter = new FileWriter(file);
+            fileWriter.write(content);
+            fileWriter.flush();
+            fileWriter.close();
+            Response res = uploadManager.put(file.getAbsoluteFile(), targetName, getUpToken());
             //打印返回的信息
+//            file.delete();
             System.out.println(res.bodyString());
         } catch (QiniuException e) {
             Response r = e.response;
@@ -51,8 +73,8 @@ public class UpLoader {
             }
         }
     }
-
-    public static void main(String args[]) throws IOException{
-        new UpLoader().upload();
-    }
+//
+//    public static void main(String args[]) throws IOException{
+//        new UpLoader().upload();
+//    }
 }

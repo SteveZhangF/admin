@@ -26,7 +26,7 @@ public interface FolderService extends IBaseGenericService<Folder,String>{
     List<Folder> getRootFoldersUnderModule(String moduleId);
     FolderResponse createRootFolderUnderModule(CreateRootFolderRequest createRootFolderRequest);
     List<FolderResponse> getChildFolder(String id);
-    FolderResponse createFolderToParent(CreateFolderToParentFolderRequest createFolderToParentFolderRequest);
+    FolderResponse createFolderToParent(String parentId,CreateFolderToParentFolderRequest createFolderToParentFolderRequest);
     List<FolderResponse> getRootFolderUnderModule(String moduleId);
     FolderResponse updateFolderFromRequest(String folderId, UpdateFolderRequest request);
     void deleteFolder(String id);

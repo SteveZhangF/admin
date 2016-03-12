@@ -11,14 +11,14 @@
     <#list fields as field>
         <property name="${field.name}"
                   <#if field.length!=0>length="${field.length}"</#if>
-                  <#if field.fieldType?? > type="${field.fieldType}"</#if>
+            <#if field.fieldType?? > type="${field.fieldType}"</#if>
                   column="${field.name}"/>
     </#list>
         <property name="userId"
-        type="string"
+                  type="string"
                   column="userId"/>
-        <property name="deleted"
-                  type="boolean"
-                  column="deleted"/>
+        <property name="deleted" type="boolean">
+            <column name="deleted" not-null="false" default="false" />
+        </property>
     </class>
 </hibernate-mapping>

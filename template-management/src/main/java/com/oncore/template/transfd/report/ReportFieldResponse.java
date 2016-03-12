@@ -25,6 +25,12 @@ public class ReportFieldResponse extends ElementResponse {
     public ReportFieldResponse(ReportField element) {
         super(element);
         this.setType("report_field");
+        this.ifNull = element.isIfNull();
+        this.isRelatedField = element.isRelatedField();
+        if(element.getRelatedField()!=null){
+            this.relatedField = new FieldResponse(element.getRelatedField());
+        }
+        this.length = element.getLength();
     }
 
     public String getFieldType() {

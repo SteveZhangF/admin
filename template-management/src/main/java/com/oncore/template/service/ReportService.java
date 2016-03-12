@@ -10,15 +10,18 @@ import java.util.List;
 /**
  * Created by steve on 1/22/16.
  */
-public interface ReportService {
-    ReportResponse createReportFromRequest(CreateReportRequest reportRequest);
+public interface ReportService extends IBaseGenericService<Report,String>{
+    ReportResponse createReportFromRequest(String folderId,CreateReportRequest reportRequest);
     Report updateReportFromRequest(Report report);
     ReportResponse getReport(String id);
+    String getReportTableName(String id);
 
     void deleteReport(String id);
 
     List<Report> listReports();
 
     List<Report> listReportsUnderFolder(String folderId);
+
+    Report buildReport(Report report,String content);
 
 }

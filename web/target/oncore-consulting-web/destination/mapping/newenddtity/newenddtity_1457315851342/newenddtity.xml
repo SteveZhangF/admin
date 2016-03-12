@@ -8,15 +8,23 @@
         <id name="id" type="java.lang.Long" column="id">
             <generator class="native"/>
         </id>
-        <property name="name"
+        <property name="namwqe"
                   length="8"
-                   type="string"
-                  column="name"/>
+             type="int"
+                  column="namwqe"/>
+        <property name="asdz"
+                  
+             type="int"
+                  column="asdz"/>
+        <property name="wwww"
+                  
+             type="boolean"
+                  column="wwww"/>
         <property name="userId"
-        type="string"
+                  type="string"
                   column="userId"/>
-        <property name="deleted"
-                  type="boolean"
-                  column="deleted"/>
+        <property name="deleted" type="boolean">
+            <column name="deleted" not-null="false" default="false" />
+        </property>
     </class>
 </hibernate-mapping>

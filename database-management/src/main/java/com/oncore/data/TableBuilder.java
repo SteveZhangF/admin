@@ -1,7 +1,6 @@
 package com.oncore.data;
 
 import com.oncore.common.configure.CommonConfigure;
-import com.oncore.common.groovy.GBaseDao;
 import com.oncore.common.model.TableElement;
 import com.oncore.data.file.FileCreator;
 import freemarker.template.TemplateException;
@@ -49,16 +48,21 @@ public class TableBuilder implements ApplicationContextAware {
 
     @Autowired
     public TableBuilder(CommonConfigure commonConfigure) {
-        executorService = Executors.newFixedThreadPool(commonConfigure.getCreate_table_thread_number() * 3 + 1);
-        for (int i = 0; i < commonConfigure.getCreate_table_thread_number() * 3; i = i + 3) {
+        this.commonConfigure = commonConfigure;
+    }
+
+    public void init() {
+        executorService = Executors.newFixedThreadPool(commonConfigure.getCreate_table_thread_number() * 2 + 2);
+        for (int i = 0; i < commonConfigure.getCreate_table_thread_number() * 2; i = i + 2) {
             FileCreatorRunner creator = new FileCreatorRunner();
-            TableCreatorRunner tableCreatorRunner = new TableCreatorRunner();
             GroovyCreatorConsumer groovyCreatorConsumer = new GroovyCreatorConsumer();
-            executorService.submit(tableCreatorRunner);
             executorService.submit(creator);
             executorService.submit(groovyCreatorConsumer);
-            System.out.println(i);
         }
+        TableCreatorRunner tableCreatorRunner = new TableCreatorRunner();
+        executorService.submit(tableCreatorRunner);
+        executorService.submit(new GroovyFactory(applicationContext));
+
     }
 
     public void createMappingFile(TableElement e) throws InterruptedException {
@@ -68,15 +72,18 @@ public class TableBuilder implements ApplicationContextAware {
     @Autowired
     @Qualifier("groovyFileCreator")
     FileCreator groovyFileCreator;
+    @Autowired
+    @Qualifier("reportGroovyFileCreator")
+    FileCreator reportGroovyFileCreator;
 
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
         this.applicationContext = applicationContext;
-        executorService.submit(new GroovyFactory(applicationContext));
         log.info("setting application context...");
     }
 
     Log log = LogFactory.getLog(TableBuilder.class);
+
     /**
      * create groovy dao consumer
      */
@@ -87,10 +94,14 @@ public class TableBuilder implements ApplicationContextAware {
             while (true) {
                 try {
                     TableElement element = preCreatingGroovyFileQueue.take();
-                    File file = groovyFileCreator.createFile(element);
-                    log.info("saving groovy file...");
-                    preRegisterGroovyDaoQueue.put(file);
-                    log.info("saved groovy file...");
+                    if (element.isReport()) {
+                        File f = reportGroovyFileCreator.createFile(element);
+                        preRegisterGroovyDaoQueue.put(f);
+                    } else {
+                        File file = groovyFileCreator.createFile(element);
+                        preRegisterGroovyDaoQueue.put(file);
+                    }
+
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 } catch (TemplateException e) {
@@ -114,10 +125,13 @@ public class TableBuilder implements ApplicationContextAware {
 
         @Override
         public void run() {
+            log.info("running table creator...");
             while (true) {
                 try {
                     File file = preCreatingTableQueue.take();
+                    log.info("creating table " + file.getAbsolutePath());
                     createTable(file);
+                    log.info("created table " + file.getAbsolutePath());
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 } catch (SQLException e) {
@@ -182,7 +196,11 @@ public class TableBuilder implements ApplicationContextAware {
     FileCreator fileCreator;
 
     @Autowired
-    CommonConfigure commonConfigure;;
+    CommonConfigure commonConfigure;
+
+    /**
+     * create hibernate mapping file
+     */
     class FileCreatorRunner implements Runnable {
         @Override
         public void run() {
@@ -197,6 +215,7 @@ public class TableBuilder implements ApplicationContextAware {
                 } catch (InterruptedException | IOException e) {
                     e.printStackTrace();
                 } catch (TemplateException e) {
+                    log.error("create hibernate mapping file error at " + element.getTableName());
                     if (element != null) {
                         try {
                             preCreatingFileQueue.put(element);
@@ -222,7 +241,6 @@ public class TableBuilder implements ApplicationContextAware {
         private DefaultListableBeanFactory beanFactory = null;
 
         public GroovyFactory(ApplicationContext context) {
-            System.out.println(context);
             log.info("running GroovyFactory...");
             this.applicationContext = context;
             this.beanFactory = (DefaultListableBeanFactory) applicationContext.getAutowireCapableBeanFactory();
@@ -238,22 +256,14 @@ public class TableBuilder implements ApplicationContextAware {
             bd.setAttribute(REFRESH_CHECK_DELAY_STR, 500);
             bd.setAttribute(LANGUAGE, "groovy");
             //here must use xiangdui path
-            String path = file.getAbsolutePath().replace(commonConfigure.getBaseDir(),"");
+            String path = file.getAbsolutePath().replace(commonConfigure.getBaseDir(), "");
 
-            log.info("file path..."+path);
+            log.info("file path..." + path);
             bd.getConstructorArgumentValues().addIndexedArgumentValue(0, path);
             // register bean to context
             log.info("registering bd....");
             beanFactory.registerBeanDefinition(file.getParentFile().getName() + "_Dao", bd);
             log.info("registered bd....");
-            try {
-                GBaseDao dao = (GBaseDao) beanFactory.getBean(file.getParentFile().getName() + "_Dao");
-                log.info("getting dao..." + dao.toString());
-            }catch (Exception e){
-                e.printStackTrace();
-            }
-
-
         }
 
 
@@ -261,9 +271,15 @@ public class TableBuilder implements ApplicationContextAware {
         public void run() {
             while (true) {
                 try {
-                    File file = preRegisterGroovyDaoQueue.take();
-                    log.info("reading groovy file...");
-                    this.addGroovyFile(file);
+                    if (preCreatingFileQueue.size() == 0 && preCreatingTableQueue.size() == 0) {
+                        File file = preRegisterGroovyDaoQueue.take();
+                        log.info("reading groovy file...");
+                        this.addGroovyFile(file);
+                    } else {
+                        log.info("waiting for other task finished...preCreatingFileQueue size=" + preCreatingFileQueue.size() + "...preCreatingTableQueue size = " + preCreatingTableQueue.size());
+                        Thread.sleep(5000);
+                    }
+
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }

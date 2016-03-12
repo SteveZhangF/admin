@@ -18,7 +18,6 @@
 
     <!--<bean id="exceptionadvice" class="com.oncore.server.exception.CustomExceptionInterceptor"></bean>-->
 
-
     <!--<aop:config>-->
     <!--&lt;!&ndash;配置com.spring.service包下所有类或接口的所有方法&ndash;&gt;-->
     <!--<aop:pointcut id="businessService" expression="execution(* com.oncore.server.dao.*.*(..))" />-->

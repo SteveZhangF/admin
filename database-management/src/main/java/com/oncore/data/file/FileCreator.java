@@ -23,7 +23,7 @@ public abstract class FileCreator<T> {
     Log log = LogFactory.getLog(FileCreator.class);
     protected Configuration configuration;
 
-    CommonConfigure commonConfigure;
+    protected  CommonConfigure commonConfigure;
 
     public FileCreator(CommonConfigure commonConfigure){
         this.commonConfigure = commonConfigure;

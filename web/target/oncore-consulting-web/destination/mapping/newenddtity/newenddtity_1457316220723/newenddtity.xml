@@ -10,13 +10,13 @@
         </id>
         <property name="name"
                   length="8"
-                   type="string"
+             type="string"
                   column="name"/>
         <property name="userId"
-        type="string"
+                  type="string"
                   column="userId"/>
-        <property name="deleted"
-                  type="boolean"
-                  column="deleted"/>
+        <property name="deleted" type="boolean">
+            <column name="deleted" not-null="false" default="false" />
+        </property>
     </class>
 </hibernate-mapping>

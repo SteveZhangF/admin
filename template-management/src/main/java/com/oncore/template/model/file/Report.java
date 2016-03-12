@@ -2,6 +2,8 @@ package com.oncore.template.model.file;
 
 
 import com.oncore.common.model.TableElement;
+import org.hibernate.annotations.LazyCollection;
+import org.hibernate.annotations.LazyCollectionOption;
 
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
@@ -47,6 +49,7 @@ public class Report extends FileElement implements TableElement {
     }
 
     @OneToMany(mappedBy = "report")
+    @LazyCollection(value = LazyCollectionOption.FALSE)
     private List<ReportField> fields = new ArrayList<>();
 
 
@@ -56,6 +59,11 @@ public class Report extends FileElement implements TableElement {
 
     public List<ReportField> getFields() {
         return fields;
+    }
+
+    @Override
+    public boolean isReport() {
+        return true;
     }
 
     public void setFields(List<ReportField> fields) {

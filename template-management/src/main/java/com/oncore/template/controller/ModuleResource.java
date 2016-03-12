@@ -106,14 +106,13 @@ public class ModuleResource extends BaseController {
 
 
     @RequestMapping(value = "/admin/modules/{id}/folders/", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
-
     public FolderResponse createFolderUnderModule(  @PathVariable("id") String id, @RequestBody CreateRootFolderRequest rootFolderRequest)   {
         this.checkUserContext();
+        rootFolderRequest.setModuleId(id);
         return folderService.createRootFolderUnderModule(rootFolderRequest);
     }
 
     @RequestMapping(value = "/admin/modules/{id}/entities/", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
-
     public EntityResponse createEntityUnderModule(  @PathVariable("id") String id, @RequestBody CreateEntityRequest entityRequest)   {
         this.checkUserContext();
         Entity entity1 = entityService.createEntityFromRequest(id, entityRequest);
