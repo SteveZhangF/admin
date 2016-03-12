@@ -1,0 +1,12 @@
+
+    drop table if exists report_xindemodule_1457771347626
+
+    create table report_xindemodule_1457771347626 (
+        id bigint not null auto_increment,
+        _4028818c534ecb1201534ecb2c960001 integer,
+        _4028819053695a6e0153697b63200004 integer,
+        generated bit,
+        userId varchar(255),
+        deleted bit default false,
+        primary key (id)
+    )
