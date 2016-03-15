@@ -39,6 +39,18 @@
                         not-null="false"
                         unique="false"
                         />
+            <#elseif attr.fieldType=="">
+                <property
+                        name="${attr.name}"
+                        type="java.lang.String"
+                        update="true"
+                        insert="true"
+                        access="property"
+                        column="${attr.name}"
+                        length="${attr.length}"
+                        not-null="false"
+                        unique="false"
+                        />
             <#elseif attr.fieldType=="upload">
                 <property
                         name="${attr.name}"
