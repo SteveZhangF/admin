@@ -33,7 +33,7 @@ public class DynamicTableInitor implements
         this.reportService = reportService;
         this.tableBuilder = tableBuilder;
 
-        init();
+//        init();
     }
 
     public void init() {

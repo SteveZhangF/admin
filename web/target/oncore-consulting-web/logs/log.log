@@ -1,0 +1,206 @@
+2016-03-14 17:53:09  [ main:12131 ] - [ INFO ]  FrameworkServlet 'spring-dispatcher': initialization started
+2016-03-14 17:53:09  [ main:12142 ] - [ INFO ]  Refreshing WebApplicationContext for namespace 'spring-dispatcher-servlet': startup date [Mon Mar 14 17:53:09 EDT 2016]; parent: Root WebApplicationContext
+2016-03-14 17:53:09  [ main:12145 ] - [ INFO ]  Loading XML bean definitions from ServletContext resource [/WEB-INF/spring-context.xml]
+2016-03-14 17:53:09  [ main:12206 ] - [ INFO ]  Loading XML bean definitions from URL [jar:file:/Users/steve/.m2/repository/com/oncore/oncore-consulting-template-management/1.0-SNAPSHOT/oncore-consulting-template-management-1.0-SNAPSHOT.jar!/spring-context-template-management.xml]
+2016-03-14 17:53:09  [ main:12285 ] - [ INFO ]  Loading XML bean definitions from URL [jar:file:/Users/steve/.m2/repository/com/oncore/oncore-consulting-common/1.0-SNAPSHOT/oncore-consulting-common-1.0-SNAPSHOT.jar!/spring/spring-context-common.xml]
+2016-03-14 17:53:09  [ main:12319 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring/spring-hibernate.xml]
+2016-03-14 17:53:09  [ main:12375 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring/spring-mvc.xml]
+2016-03-14 17:53:09  [ main:12420 ] - [ INFO ]  Loading XML bean definitions from URL [jar:file:/Users/steve/.m2/repository/com/oncore/oncore-consulting-database-management/1.0-SNAPSHOT/oncore-consulting-database-management-1.0-SNAPSHOT.jar!/spring/spring-context-data-management.xml]
+2016-03-14 17:53:09  [ main:12448 ] - [ INFO ]  Loading XML bean definitions from URL [jar:file:/Users/steve/.m2/repository/com/oncore/oncore-consulting-user/1.0-SNAPSHOT/oncore-consulting-user-1.0-SNAPSHOT.jar!/spring/spring-context-user.xml]
+2016-03-14 17:53:10  [ main:12535 ] - [ INFO ]  Loading properties file from class path resource [properties/hibernate-development.properties]
+2016-03-14 17:53:10  [ main:12536 ] - [ INFO ]  Loading properties file from class path resource [properties/app-development.properties]
+2016-03-14 17:53:10  [ main:12540 ] - [ INFO ]  JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-03-14 17:53:10  [ main:12626 ] - [ INFO ]  Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 2sa00u9fx1u1vbs8gce9|5599dc60, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceSynchronousCheckins -> false, forceUseNamedDriverClass -> false, identityToken -> 2sa00u9fx1u1vbs8gce9|5599dc60, idleConnectionTestPeriod -> 0, initialPoolSize -> 1, jdbcUrl -> jdbc:mysql://oncore.cpyegapwfsa6.us-west-2.rds.amazonaws.com:3306/hibt, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 1, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 40, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 1, numHelperThreads -> 3, preferredTestQuery -> null, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+2016-03-14 17:53:11  [ main:13735 ] - [ INFO ]  HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2016-03-14 17:53:11  [ main:13752 ] - [ INFO ]  HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-03-14 17:53:11  [ main:13752 ] - [ INFO ]  HHH000397: Using ASTQueryTranslatorFactory
+2016-03-14 17:53:11  [ main:13861 ] - [ INFO ]  HHH000228: Running hbm2ddl schema update
+2016-03-14 17:53:11  [ main:13863 ] - [ INFO ]  HHH000102: Fetching database metadata
+2016-03-14 17:53:11  [ main:13865 ] - [ INFO ]  HHH000396: Updating schema
+2016-03-14 17:53:11  [ main:14386 ] - [ INFO ]  HHH000261: Table found: hibt.element
+2016-03-14 17:53:11  [ main:14387 ] - [ INFO ]  HHH000037: Columns: [createtime, deleted, module_id, name, description, id, updatetime]
+2016-03-14 17:53:11  [ main:14387 ] - [ INFO ]  HHH000108: Foreign keys: []
+2016-03-14 17:53:11  [ main:14388 ] - [ INFO ]  HHH000126: Indexes: [primary]
+2016-03-14 17:53:12  [ main:14899 ] - [ INFO ]  HHH000261: Table found: hibt.entity
+2016-03-14 17:53:12  [ main:14900 ] - [ INFO ]  HHH000037: Columns: [createtime, deleted, module_id, name, description, id, updatetime, tablename, hbmpath]
+2016-03-14 17:53:12  [ main:14900 ] - [ INFO ]  HHH000108: Foreign keys: []
+2016-03-14 17:53:12  [ main:14901 ] - [ INFO ]  HHH000126: Indexes: [primary]
+2016-03-14 17:53:12  [ main:15409 ] - [ INFO ]  HHH000261: Table found: hibt.field
+2016-03-14 17:53:12  [ main:15410 ] - [ INFO ]  HHH000037: Columns: [createtime, deleted, module_id, name, length, description, ifnull, id, updatetime, fieldtype, entity_id]
+2016-03-14 17:53:12  [ main:15411 ] - [ INFO ]  HHH000108: Foreign keys: [fk_o596lc80ccb1rgvhnoku4fdo9]
+2016-03-14 17:53:12  [ main:15411 ] - [ INFO ]  HHH000126: Indexes: [fk_o596lc80ccb1rgvhnoku4fdo9, primary]
+2016-03-14 17:53:13  [ main:15962 ] - [ INFO ]  HHH000261: Table found: hibt.file_element
+2016-03-14 17:53:13  [ main:15962 ] - [ INFO ]  HHH000037: Columns: [createtime, deleted, module_id, parentfoldid, name, description, id, updatetime]
+2016-03-14 17:53:13  [ main:15963 ] - [ INFO ]  HHH000108: Foreign keys: []
+2016-03-14 17:53:13  [ main:15963 ] - [ INFO ]  HHH000126: Indexes: [primary]
+2016-03-14 17:53:14  [ main:16475 ] - [ INFO ]  HHH000261: Table found: hibt.folder_file_element
+2016-03-14 17:53:14  [ main:16475 ] - [ INFO ]  HHH000037: Columns: [createtime, deleted, module_id, parentfoldid, depth, name, description, id, updatetime]
+2016-03-14 17:53:14  [ main:16476 ] - [ INFO ]  HHH000108: Foreign keys: []
+2016-03-14 17:53:14  [ main:16476 ] - [ INFO ]  HHH000126: Indexes: [primary]
+2016-03-14 17:53:14  [ main:16988 ] - [ INFO ]  HHH000261: Table found: hibt.module
+2016-03-14 17:53:14  [ main:16988 ] - [ INFO ]  HHH000037: Columns: [createtime, deleted, module_id, name, description, id, updatetime]
+2016-03-14 17:53:14  [ main:16989 ] - [ INFO ]  HHH000108: Foreign keys: []
+2016-03-14 17:53:14  [ main:16989 ] - [ INFO ]  HHH000126: Indexes: [primary]
+2016-03-14 17:53:15  [ main:17532 ] - [ INFO ]  HHH000261: Table found: hibt.report_field
+2016-03-14 17:53:15  [ main:17533 ] - [ INFO ]  HHH000037: Columns: [createtime, length, description, relatedfield_id, fieldtype, deleted, module_id, report_id, name, ifnull, id, updatetime, isrelatedfield]
+2016-03-14 17:53:15  [ main:17534 ] - [ INFO ]  HHH000108: Foreign keys: [fk_qmru8iktsptb9m0nt6a5kj7yr, fk_t5oxbvi73rrwmoroikmhldvg9]
+2016-03-14 17:53:15  [ main:17534 ] - [ INFO ]  HHH000126: Indexes: [fk_qmru8iktsptb9m0nt6a5kj7yr, fk_t5oxbvi73rrwmoroikmhldvg9, primary]
+2016-03-14 17:53:16  [ main:18522 ] - [ INFO ]  HHH000261: Table found: hibt.report_file_element
+2016-03-14 17:53:16  [ main:18523 ] - [ INFO ]  HHH000037: Columns: [createtime, parentfoldid, currentversion, description, folderid, hbmpath, deleted, module_id, name, id, updatetime, tablename, templatepath]
+2016-03-14 17:53:16  [ main:18524 ] - [ INFO ]  HHH000108: Foreign keys: []
+2016-03-14 17:53:16  [ main:18524 ] - [ INFO ]  HHH000126: Indexes: [primary]
+2016-03-14 17:53:16  [ main:18525 ] - [ INFO ]  HHH000232: Schema update complete
+2016-03-14 17:53:16  [ main:18551 ] - [ INFO ]  setting application context...
+2016-03-14 17:53:16  [ main:18606 ] - [ INFO ]  Using DataSource [com.mchange.v2.c3p0.ComboPooledDataSource[ identityToken -> 2sa00u9fx1u1vbs8gce9|5599dc60, dataSourceName -> 2sa00u9fx1u1vbs8gce9|5599dc60 ]] of Hibernate SessionFactory for HibernateTransactionManager
+2016-03-14 17:53:16  [ main:18614 ] - [ INFO ]  Mapped "{[/admin/entities/{id}],methods=[DELETE],produces=[application/json]}" onto public org.springframework.http.ResponseEntity com.oncore.template.controller.EntityResource.delete(java.lang.String)
+2016-03-14 17:53:16  [ main:18615 ] - [ INFO ]  Mapped "{[/admin/entities/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.entities.EntityResponse> com.oncore.template.controller.EntityResource.getEntities()
+2016-03-14 17:53:16  [ main:18617 ] - [ INFO ]  Mapped "{[/admin/entities/{id}],methods=[GET],produces=[application/json]}" onto public com.oncore.template.transfd.entities.EntityResponse com.oncore.template.controller.EntityResource.getEntity(java.lang.String)
+2016-03-14 17:53:16  [ main:18618 ] - [ INFO ]  Mapped "{[/admin/entities/{id}],methods=[PUT],produces=[application/json]}" onto public com.oncore.template.transfd.entities.EntityResponse com.oncore.template.controller.EntityResource.updateEntity(com.oncore.template.transfd.entities.UpdateEntityRequest)
+2016-03-14 17:53:16  [ main:18619 ] - [ INFO ]  Mapped "{[/admin/folders/{id}],methods=[GET],produces=[application/json]}" onto public com.oncore.template.transfd.file_element.folder.FolderResponse com.oncore.template.controller.FolderResource.getFolder(java.lang.String)
+2016-03-14 17:53:16  [ main:18622 ] - [ INFO ]  Mapped "{[/admin/folders/{parent_id}/sub_folder/],methods=[POST],produces=[application/json]}" onto public com.oncore.template.transfd.file_element.folder.FolderResponse com.oncore.template.controller.FolderResource.createSubFolderToParent(java.lang.String,com.oncore.template.transfd.file_element.folder.CreateFolderToParentFolderRequest)
+2016-03-14 17:53:16  [ main:18622 ] - [ INFO ]  Mapped "{[/admin/folders/{folderId}/reports/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.report.ReportResponse> com.oncore.template.controller.FolderResource.getReportsUnderFolder(java.lang.String)
+2016-03-14 17:53:16  [ main:18623 ] - [ INFO ]  Mapped "{[/admin/folders/{parent_id}/sub_folder/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.file_element.folder.FolderResponse> com.oncore.template.controller.FolderResource.getChildFoldersUnderParentFolder(java.lang.String)
+2016-03-14 17:53:16  [ main:18623 ] - [ INFO ]  Mapped "{[/admin/folders/{folderId}/reports/],methods=[POST],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<com.oncore.template.transfd.report.ReportResponse> com.oncore.template.controller.FolderResource.createReportsUnderFolder(java.lang.String,com.oncore.template.transfd.report.CreateReportRequest)
+2016-03-14 17:53:16  [ main:18624 ] - [ INFO ]  Mapped "{[/admin/folders/{id}/],methods=[PUT],produces=[application/json]}" onto public com.oncore.template.transfd.file_element.folder.FolderResponse com.oncore.template.controller.FolderResource.updateFolder(java.lang.String,com.oncore.template.transfd.file_element.folder.UpdateFolderRequest)
+2016-03-14 17:53:16  [ main:18624 ] - [ INFO ]  Mapped "{[/admin/folders/{id}/],methods=[DELETE],produces=[application/json]}" onto public org.springframework.http.ResponseEntity com.oncore.template.controller.FolderResource.deleteFolder(java.lang.String)
+2016-03-14 17:53:16  [ main:18625 ] - [ INFO ]  Mapped "{[/admin/modules/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.module.ModuleResponse> com.oncore.template.controller.ModuleResource.getModules()
+2016-03-14 17:53:16  [ main:18626 ] - [ INFO ]  Mapped "{[/admin/modules/{id}/],methods=[GET],produces=[application/json]}" onto public com.oncore.template.transfd.module.ModuleResponse com.oncore.template.controller.ModuleResource.getModule(java.lang.String)
+2016-03-14 17:53:16  [ main:18626 ] - [ INFO ]  Mapped "{[/admin/modules/],methods=[POST],produces=[application/json]}" onto public com.oncore.template.transfd.module.ModuleResponse com.oncore.template.controller.ModuleResource.createModule(com.oncore.template.transfd.module.CreateModuleRequest)
+2016-03-14 17:53:16  [ main:18629 ] - [ INFO ]  Mapped "{[/admin/modules/{id}/],methods=[PUT],produces=[application/json]}" onto public com.oncore.template.transfd.module.ModuleResponse com.oncore.template.controller.ModuleResource.updateModule(java.lang.String,com.oncore.template.transfd.module.CreateModuleRequest)
+2016-03-14 17:53:16  [ main:18630 ] - [ INFO ]  Mapped "{[/admin/modules/{id}/entities/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.entities.EntityResponse> com.oncore.template.controller.ModuleResource.getEntitiesOfModule(java.lang.String)
+2016-03-14 17:53:16  [ main:18632 ] - [ INFO ]  Mapped "{[/admin/modules/{id}/folders/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.file_element.folder.FolderResponse> com.oncore.template.controller.ModuleResource.getFoldersOfModule(java.lang.String)
+2016-03-14 17:53:16  [ main:18633 ] - [ INFO ]  Mapped "{[/admin/modules/{id}/folders/],methods=[POST],produces=[application/json]}" onto public com.oncore.template.transfd.file_element.folder.FolderResponse com.oncore.template.controller.ModuleResource.createFolderUnderModule(java.lang.String,com.oncore.template.transfd.file_element.folder.CreateRootFolderRequest)
+2016-03-14 17:53:16  [ main:18638 ] - [ INFO ]  Mapped "{[/admin/modules/{id}/entities/],methods=[POST],produces=[application/json]}" onto public com.oncore.template.transfd.entities.EntityResponse com.oncore.template.controller.ModuleResource.createEntityUnderModule(java.lang.String,com.oncore.template.transfd.entities.CreateEntityRequest)
+2016-03-14 17:53:16  [ main:18673 ] - [ INFO ]  Mapped "{[/admin/modules/{id}/tree/],methods=[GET],produces=[application/json]}" onto public com.oncore.template.transfd.module.ModuleTreeResponse com.oncore.template.controller.ModuleResource.getModuleTree(java.lang.String)
+2016-03-14 17:53:16  [ main:18675 ] - [ INFO ]  Mapped "{[/admin/reports/{id}/],methods=[DELETE],produces=[application/json]}" onto public org.springframework.http.ResponseEntity com.oncore.template.controller.ReportResource.delete(java.lang.String)
+2016-03-14 17:53:16  [ main:18676 ] - [ INFO ]  Mapped "{[/admin/reports/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.report.ReportResponse> com.oncore.template.controller.ReportResource.getReports()
+2016-03-14 17:53:16  [ main:18678 ] - [ INFO ]  Mapped "{[/admin/reports/{id}/],methods=[GET],produces=[application/json]}" onto public com.oncore.template.transfd.report.ReportResponse com.oncore.template.controller.ReportResource.gerReport(java.lang.String)
+2016-03-14 17:53:16  [ main:18685 ] - [ INFO ]  Mapped "{[/user/entities/{entity_id}/],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity com.oncore.user.controller.UserEntityController.listEntities(java.lang.String) throws java.sql.SQLException
+2016-03-14 17:53:16  [ main:18716 ] - [ INFO ]  Mapped "{[/user/entities/{entity_id}/],methods=[POST],produces=[application/json]}" onto public org.springframework.http.ResponseEntity com.oncore.user.controller.UserEntityController.insertEntity(java.lang.String,java.util.Map) throws java.sql.SQLException
+2016-03-14 17:53:16  [ main:18717 ] - [ INFO ]  Mapped "{[/user/reports/{report_table_id}/record/{report_id}/]}" onto public org.springframework.http.ResponseEntity com.oncore.user.controller.UserReportController.getReport(java.lang.String,int) throws java.sql.SQLException
+2016-03-14 17:53:16  [ main:18719 ] - [ INFO ]  Mapped "{[/user/reports/{report_id}/record/]}" onto public org.springframework.http.ResponseEntity com.oncore.user.controller.UserReportController.listReport(java.lang.String) throws java.sql.SQLException
+2016-03-14 17:53:16  [ main:18721 ] - [ INFO ]  Mapped "{[/user/reports/{report_table_id}/desc/]}" onto public org.springframework.http.ResponseEntity com.oncore.user.controller.UserReportController.getReportDescription(java.lang.String)
+2016-03-14 17:53:16  [ main:18722 ] - [ INFO ]  Mapped "{[/user/reports/{report_id}/record/],methods=[POST]}" onto public org.springframework.http.ResponseEntity com.oncore.user.controller.UserReportController.insertReport(java.lang.String,java.util.Map) throws java.sql.SQLException
+2016-03-14 17:53:16  [ main:18781 ] - [ INFO ]  Looking for @ControllerAdvice: WebApplicationContext for namespace 'spring-dispatcher-servlet': startup date [Mon Mar 14 17:53:09 EDT 2016]; parent: Root WebApplicationContext
+2016-03-14 17:53:16  [ main:18836 ] - [ INFO ]  Looking for @ControllerAdvice: WebApplicationContext for namespace 'spring-dispatcher-servlet': startup date [Mon Mar 14 17:53:09 EDT 2016]; parent: Root WebApplicationContext
+2016-03-14 17:53:16  [ main:18870 ] - [ INFO ]  Detected @ExceptionHandler methods in commonExceptionHandler
+2016-03-14 17:53:16  [ main:18880 ] - [ INFO ]  running GroovyFactory...
+2016-03-14 17:53:16  [ pool-4-thread-11:18880 ] - [ INFO ]  running table creator...
+2016-03-14 17:53:16  [ main:18883 ] - [ INFO ]  start init entity tables...
+2016-03-14 17:53:17  [ main:19706 ] - [ INFO ]  initing entity Employee_1457899657886...
+2016-03-14 17:53:17  [ pool-4-thread-1:19708 ] - [ INFO ]  created hibernate mapping file for Employee at /Users/steve/oncore-consulting/web/src/main/webapp/destination/mapping/Employee/Employee_1457899657886/Employee.xml
+2016-03-14 17:53:17  [ pool-4-thread-1:19792 ] - [ INFO ]  created file at /Users/steve/oncore-consulting/web/src/main/webapp/destination/mapping/Employee/Employee_1457899657886/Employee.xml
+2016-03-14 17:53:17  [ pool-4-thread-11:19792 ] - [ INFO ]  creating table /Users/steve/oncore-consulting/web/src/main/webapp/destination/mapping/Employee/Employee_1457899657886/Employee.xml
+2016-03-14 17:53:17  [ pool-4-thread-11:19793 ] - [ INFO ]  HHH000220: Reading mappings from file: /Users/steve/oncore-consulting/web/src/main/webapp/destination/mapping/Employee/Employee_1457899657886/Employee.xml
+2016-03-14 17:53:17  [ pool-4-thread-2:19794 ] - [ INFO ]  created groovy dao file for Employee at /Users/steve/oncore-consulting/web/src/main/webapp/destination/groovy/Employee/Employee_1457899657886/Employee.groovy
+2016-03-14 17:53:17  [ pool-4-thread-2:19892 ] - [ INFO ]  created file at /Users/steve/oncore-consulting/web/src/main/webapp/destination/groovy/Employee/Employee_1457899657886/Employee.groovy
+2016-03-14 17:53:17  [ pool-4-thread-12:19893 ] - [ INFO ]  reading groovy file...
+2016-03-14 17:53:17  [ pool-4-thread-12:19894 ] - [ INFO ]  file path.../destination/groovy/Employee/Employee_1457899657886/Employee.groovy
+2016-03-14 17:53:17  [ pool-4-thread-12:19894 ] - [ INFO ]  registering bd....
+2016-03-14 17:53:17  [ pool-4-thread-12:19895 ] - [ INFO ]  registered bd....
+2016-03-14 17:53:18  [ pool-4-thread-5:20976 ] - [ INFO ]  created hibernate mapping file for employee report2 at /Users/steve/oncore-consulting/web/src/main/webapp/destination/mapping/employee report2/report_employee report2_1457928160782/employee report2.xml
+2016-03-14 17:53:18  [ pool-4-thread-3:20976 ] - [ INFO ]  created hibernate mapping file for employee report at /Users/steve/oncore-consulting/web/src/main/webapp/destination/mapping/employee report/report_employee report_1457926611048/employee report.xml
+2016-03-14 17:53:18  [ pool-4-thread-7:20976 ] - [ INFO ]  created hibernate mapping file for xindemodule at /Users/steve/oncore-consulting/web/src/main/webapp/destination/mapping/xindemodule/report_xindemodule_1457935983032/xindemodule.xml
+2016-03-14 17:53:18  [ pool-4-thread-5:21023 ] - [ INFO ]  created file at /Users/steve/oncore-consulting/web/src/main/webapp/destination/mapping/employee report2/report_employee report2_1457928160782/employee report2.xml
+2016-03-14 17:53:18  [ pool-4-thread-7:21024 ] - [ INFO ]  created file at /Users/steve/oncore-consulting/web/src/main/webapp/destination/mapping/xindemodule/report_xindemodule_1457935983032/xindemodule.xml
+2016-03-14 17:53:18  [ pool-4-thread-3:21025 ] - [ INFO ]  created file at /Users/steve/oncore-consulting/web/src/main/webapp/destination/mapping/employee report/report_employee report_1457926611048/employee report.xml
+2016-03-14 17:53:18  [ pool-4-thread-6:21029 ] - [ INFO ]  created report groovy dao file for xindemodule at /Users/steve/oncore-consulting/web/src/main/webapp/destination/groovy/xindemodule/report_xindemodule_1457935983032/xindemodule.groovy
+2016-03-14 17:53:18  [ pool-4-thread-4:21030 ] - [ INFO ]  created report groovy dao file for employee report2 at /Users/steve/oncore-consulting/web/src/main/webapp/destination/groovy/employee report2/report_employee report2_1457928160782/employee report2.groovy
+2016-03-14 17:53:18  [ pool-4-thread-8:21029 ] - [ INFO ]  created report groovy dao file for employee report at /Users/steve/oncore-consulting/web/src/main/webapp/destination/groovy/employee report/report_employee report_1457926611048/employee report.groovy
+2016-03-14 17:53:18  [ pool-4-thread-4:21045 ] - [ INFO ]  created file at /Users/steve/oncore-consulting/web/src/main/webapp/destination/groovy/employee report2/report_employee report2_1457928160782/employee report2.groovy
+2016-03-14 17:53:18  [ pool-4-thread-8:21046 ] - [ INFO ]  created file at /Users/steve/oncore-consulting/web/src/main/webapp/destination/groovy/employee report/report_employee report_1457926611048/employee report.groovy
+2016-03-14 17:53:18  [ pool-4-thread-12:21047 ] - [ INFO ]  reading groovy file...
+2016-03-14 17:53:18  [ pool-4-thread-12:21047 ] - [ INFO ]  file path.../destination/groovy/employee report2/report_employee report2_1457928160782/employee report2.groovy
+2016-03-14 17:53:18  [ pool-4-thread-12:21047 ] - [ INFO ]  registering bd....
+2016-03-14 17:53:18  [ pool-4-thread-12:21047 ] - [ INFO ]  registered bd....
+2016-03-14 17:53:18  [ pool-4-thread-12:21047 ] - [ INFO ]  waiting for other task finished...preCreatingFileQueue size=0...preCreatingTableQueue size = 3
+2016-03-14 17:53:18  [ pool-4-thread-6:21047 ] - [ INFO ]  created file at /Users/steve/oncore-consulting/web/src/main/webapp/destination/groovy/xindemodule/report_xindemodule_1457935983032/xindemodule.groovy
+2016-03-14 17:53:18  [ pool-4-thread-11:21121 ] - [ INFO ]  HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2016-03-14 17:53:19  [ main:21667 ] - [ WARN ]  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userEntityController': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: com.oncore.user.dao.GroovyDaoFactory com.oncore.user.controller.UserEntityController.groovyDaoFactory; nested exception is java.util.ConcurrentModificationException
+2016-03-14 17:53:19  [ main:21682 ] - [ ERROR ]  Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userEntityController': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: com.oncore.user.dao.GroovyDaoFactory com.oncore.user.controller.UserEntityController.groovyDaoFactory; nested exception is java.util.ConcurrentModificationException
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1208)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:755)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:762)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:664)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:630)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:678)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:549)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:490)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:244)
+	at org.eclipse.jetty.servlet.ServletHolder.initServlet(ServletHolder.java:612)
+	at org.eclipse.jetty.servlet.ServletHolder.initialize(ServletHolder.java:395)
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:871)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:298)
+	at org.eclipse.jetty.webapp.WebAppContext.startWebapp(WebAppContext.java:1349)
+	at org.eclipse.jetty.maven.plugin.JettyWebAppContext.startWebapp(JettyWebAppContext.java:296)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1342)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:741)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:505)
+	at org.eclipse.jetty.maven.plugin.JettyWebAppContext.doStart(JettyWebAppContext.java:365)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:114)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.doStart(ContextHandlerCollection.java:163)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:114)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+	at org.eclipse.jetty.server.Server.start(Server.java:387)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:114)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:354)
+	at org.eclipse.jetty.maven.plugin.JettyServer.doStart(JettyServer.java:73)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.maven.plugin.AbstractJettyMojo.startJetty(AbstractJettyMojo.java:534)
+	at org.eclipse.jetty.maven.plugin.AbstractJettyMojo.execute(AbstractJettyMojo.java:357)
+	at org.eclipse.jetty.maven.plugin.JettyRunMojo.execute(JettyRunMojo.java:167)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:101)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:209)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:84)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:59)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.singleThreadedBuild(LifecycleStarter.java:183)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:161)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:320)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:156)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:537)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:196)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:141)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:290)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:230)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:409)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:352)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: com.oncore.user.dao.GroovyDaoFactory com.oncore.user.controller.UserEntityController.groovyDaoFactory; nested exception is java.util.ConcurrentModificationException
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:561)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:331)
+	... 68 more
+Caused by: java.util.ConcurrentModificationException
+	at java.util.ArrayList$Itr.checkForComodification(ArrayList.java:901)
+	at java.util.ArrayList$Itr.next(ArrayList.java:851)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:423)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:412)
+	at org.springframework.beans.factory.BeanFactoryUtils.beanNamesForTypeIncludingAncestors(BeanFactoryUtils.java:186)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1105)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1044)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:942)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:533)
+	... 70 more

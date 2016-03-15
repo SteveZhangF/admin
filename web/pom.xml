@@ -68,7 +68,19 @@
                 <artifactId>jetty-maven-plugin</artifactId>
                 <version>9.2.8.v20150217</version>
             </plugin>
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <configuration>
+                    <url>http://localhost:8080/manager/text</url>
+                    <server>tomcat</server>
+                    <username>tomcat</username>
+                    <password>tomcat</password>
+                    <path>/oncore</path>
+                </configuration>
+            </plugin>
         </plugins>
+
         <resources>
             <!--
                 Placeholders that are found from the files located in the configured resource

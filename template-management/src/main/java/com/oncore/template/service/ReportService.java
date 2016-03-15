@@ -12,7 +12,7 @@ import java.util.List;
  */
 public interface ReportService extends IBaseGenericService<Report,String>{
     ReportResponse createReportFromRequest(String folderId,CreateReportRequest reportRequest);
-    Report updateReportFromRequest(Report report);
+    Report updateReportFromRequest(CreateReportRequest report);
     ReportResponse getReport(String id);
     String getReportTableName(String id);
 

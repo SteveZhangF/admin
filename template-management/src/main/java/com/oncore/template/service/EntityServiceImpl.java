@@ -53,7 +53,7 @@ public class EntityServiceImpl extends BaseGenericServiceImpl<Entity, String> im
     public Entity createEntity(Entity entity) {
         checkFields(entity);
         Long now = new Date().getTime();
-        String tableName = entity.getName() + "_" + now;
+        String tableName = "entity_"+entity.getName().replace("","_") + "_" + now;
         entity.setTableName(tableName);
         entity.setHbmPath(entity.getName() + "/" + entity.getTableName());
         entity.setDeleted(false);
@@ -82,10 +82,11 @@ public class EntityServiceImpl extends BaseGenericServiceImpl<Entity, String> im
         entity.setModule_id(module_id);
         for (FieldRequest fieldRequest : entityRequest.getFields()) {
             Field field = new Field();
-            field.setName(fieldRequest.getName());
+            field.setName(fieldRequest.getName().replace(" ","_"));
             field.setDescription(fieldRequest.getDescription());
-            field.setLength(fieldRequest.getLength());
-            field.setFieldType(fieldRequest.getFieldType());
+            field.setLength(fieldRequest.getLength()==0?32:fieldRequest.getLength());
+
+            field.setFieldType(fieldRequest.getFieldType()==null?"string":fieldRequest.getFieldType());
             field.setIfNull(fieldRequest.isIfNull());
             entity.addField(field);
         }

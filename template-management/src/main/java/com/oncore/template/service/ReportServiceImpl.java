@@ -96,7 +96,7 @@ public class ReportServiceImpl extends BaseGenericServiceImpl<Report, String> im
     }
 
     @Override
-    public Report buildReport(Report report,String content) {
+    public Report buildReport(Report report, String content) {
 
         return null;
     }
@@ -138,7 +138,7 @@ public class ReportServiceImpl extends BaseGenericServiceImpl<Report, String> im
 //        }
 //        reportDao.save(report);
         reportDao.save(report);
-        reportGenerator.parseHTML(report,report.getContent());
+        reportGenerator.parseHTML(report, report.getContent());
 
 //        for (ReportField field : report.getFields()) {
 //            field.setDeleted(false);
@@ -166,8 +166,45 @@ public class ReportServiceImpl extends BaseGenericServiceImpl<Report, String> im
     }
 
     @Override
-    public Report updateReportFromRequest(Report report) {
-        return null;
+    public Report updateReportFromRequest(CreateReportRequest reportRequest) {
+        validate(reportRequest);
+        Report reportOld = null;
+        if (reportRequest.getId() == null || (reportOld = reportDao.get(reportRequest.getId())) == null) {
+            throw new ElementNotFoundException("Report");
+        }
+
+        Long now = new Date().getTime();
+        Report report = new Report();
+        String tableName = "report_" + reportRequest.getName().replace(" ","_") + "_" + now;
+        report.setTableName(tableName);
+        report.setName(reportRequest.getName());
+        report.setHbmPath(report.getName() + "/" + report.getTableName());
+        report.setDescription(reportRequest.getDescription());
+        report.setDeleted(false);
+        report.setFolderId(reportOld.getFolderId());
+        report.setContent(reportRequest.getContent());
+        reportDao.update(report);
+        reportGenerator.parseHTML(report, report.getContent());
+
+//        for (ReportField field : report.getFields()) {
+//            field.setDeleted(false);
+//            field.setReport(report);
+//            reportFieldDao.save(field);
+//        }
+        try {
+            ReportField field = new ReportField();
+            field.setName("generated");
+            field.setFieldType("boolean");
+            report.addField(field);
+            tableBuilder.createMappingFile(report);
+        } catch (InterruptedException e) {
+            logger.error(e.getMessage());
+        }
+        String targetName = report.getTableName();
+        reportTemplateBuilder.uploadReport(reportTemplateBuilder.new ReportElement(targetName, report.getContent()));
+        return report;
+
+
     }
 
     @Override

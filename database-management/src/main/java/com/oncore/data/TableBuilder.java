@@ -134,8 +134,10 @@ public class TableBuilder implements ApplicationContextAware {
                     log.info("created table " + file.getAbsolutePath());
                 } catch (InterruptedException e) {
                     e.printStackTrace();
+                    log.error(e.toString());
                 } catch (SQLException e) {
                     e.printStackTrace();
+                    log.error(e.toString());
                 }
             }
         }
@@ -214,6 +216,7 @@ public class TableBuilder implements ApplicationContextAware {
 
                 } catch (InterruptedException | IOException e) {
                     e.printStackTrace();
+                    log.error(e.toString());
                 } catch (TemplateException e) {
                     log.error("create hibernate mapping file error at " + element.getTableName());
                     if (element != null) {
@@ -221,6 +224,7 @@ public class TableBuilder implements ApplicationContextAware {
                             preCreatingFileQueue.put(element);
                         } catch (InterruptedException e1) {
                             e.printStackTrace();
+                            log.error(e.toString());
                         }
                     }
                 }

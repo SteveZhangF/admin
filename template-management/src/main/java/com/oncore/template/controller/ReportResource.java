@@ -26,11 +26,11 @@ public class ReportResource extends BaseController {
 
     //
     @RequestMapping(value = "/admin/reports/", method = RequestMethod.GET, produces = org.springframework.http.MediaType.APPLICATION_JSON_VALUE)
-    public List<ReportResponse> getReports()   {
+    public List<ReportResponse> getReports() {
         this.checkUserContext();
         List<Report> list = reportService.listReports();
         List<ReportResponse> listResponse = new ArrayList<>();
-        for(Report report:list){
+        for (Report report : list) {
             listResponse.add(new ReportResponse(report));
         }
         return listResponse;
@@ -59,7 +59,7 @@ public class ReportResource extends BaseController {
 //    }
 
     @RequestMapping(value = "/admin/reports/{id}/", method = RequestMethod.GET, produces = org.springframework.http.MediaType.APPLICATION_JSON_VALUE)
-    public ReportResponse gerReport(@PathVariable("id") String reportId ) {
+    public ReportResponse gerReport(@PathVariable("id") String reportId) {
         this.checkUserContext();
         return reportService.getReport(reportId);
     }
@@ -70,4 +70,15 @@ public class ReportResource extends BaseController {
         reportService.deleteReport(id);
         return new ResponseEntity(HttpStatus.OK);
     }
+
+
+    @RequestMapping(value = "/admin/reports/{id}/", method = RequestMethod.PUT, produces = org.springframework.http.MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity updateReport(@PathVariable("id") String id, @RequestBody CreateReportRequest reportRequest) {
+        this.checkUserContext();
+        reportRequest.setId(id);
+        reportService.updateReportFromRequest(reportRequest);
+        return new ResponseEntity(HttpStatus.OK);
+    }
+
+
 }

@@ -23,6 +23,6 @@
     <!-- open aop autoproxy -->
     <aop:aspectj-autoproxy/>
     <bean class="org.springframework.scripting.support.ScriptFactoryPostProcessor"/>
-    <!--<bean class="com.oncore.web.init.DynamicTableInitor" id="dynamicTableInitor" init-method="init"  lazy-init="false"/>-->
+    <bean class="com.oncore.web.init.DynamicTableInitor" id="dynamicTableInitor" init-method="init"  lazy-init="true"/>
 
 </beans>
