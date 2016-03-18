@@ -15,4 +15,12 @@ public class ValidationExceptionMessage extends ExceptionMessage {
         super(e);
         this.error_validations = e.getFields();
     }
+
+    public Map getError_validations() {
+        return error_validations;
+    }
+
+    public void setError_validations(Map error_validations) {
+        this.error_validations = error_validations;
+    }
 }

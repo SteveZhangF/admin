@@ -2,6 +2,8 @@ package com.oncore.template.model;
 
 
 import com.oncore.common.model.TableElement;
+import org.hibernate.annotations.Cascade;
+import org.hibernate.annotations.CascadeType;
 
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
@@ -21,6 +23,7 @@ public class Entity extends Element implements TableElement {
     private String hbmPath;
 
     @OneToMany(mappedBy = "entity")
+    @Cascade(value = CascadeType.ALL)
     private List<Field> fields = new ArrayList<>();
 
     public String getHbmPath() {

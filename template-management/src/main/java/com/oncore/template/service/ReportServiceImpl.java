@@ -15,6 +15,7 @@ import com.oncore.template.transfd.report.ReportResponse;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -52,6 +53,7 @@ public class ReportServiceImpl extends BaseGenericServiceImpl<Report, String> im
     ReportTemplateBuilder reportTemplateBuilder;
 
     @Autowired
+    @Qualifier(value = "awsDownloader")
     DownLoader downLoader;
 
     @Override
@@ -109,10 +111,10 @@ public class ReportServiceImpl extends BaseGenericServiceImpl<Report, String> im
         validate(reportRequest);
         Long now = new Date().getTime();
         Report report = new Report();
-        String tableName = "report_" + reportRequest.getName() + "_" + now;
+        String tableName = "report_" + reportRequest.getName().replace(" ", "_") + "_" + now;
         report.setTableName(tableName);
         report.setName(reportRequest.getName());
-        report.setHbmPath(report.getName() + "/" + report.getTableName());
+        report.setHbmPath(report.getName().replace(" ", "_") + "/" + report.getTableName());
         report.setDescription(reportRequest.getDescription());
         report.setDeleted(false);
         report.setFolderId(folderId);
@@ -175,7 +177,7 @@ public class ReportServiceImpl extends BaseGenericServiceImpl<Report, String> im
 
         Long now = new Date().getTime();
         Report report = new Report();
-        String tableName = "report_" + reportRequest.getName().replace(" ","_") + "_" + now;
+        String tableName = "report_" + reportRequest.getName().replace(" ", "_") + "_" + now;
         report.setTableName(tableName);
         report.setName(reportRequest.getName());
         report.setHbmPath(report.getName() + "/" + report.getTableName());

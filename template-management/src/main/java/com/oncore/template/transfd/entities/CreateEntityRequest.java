@@ -26,6 +26,13 @@ public class CreateEntityRequest extends ElementRequest {
     public void setFields(List<FieldRequest> fields) {
         this.fields = fields;
     }
+
+    @Override
+    public String toString() {
+        return "CreateEntityRequest{" +
+                "fields=" + fields +
+                "} " + super.toString();
+    }
 }
 
 

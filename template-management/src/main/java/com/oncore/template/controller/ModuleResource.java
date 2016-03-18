@@ -115,6 +115,7 @@ public class ModuleResource extends BaseController {
     @RequestMapping(value = "/admin/modules/{id}/entities/", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     public EntityResponse createEntityUnderModule(  @PathVariable("id") String id, @RequestBody CreateEntityRequest entityRequest)   {
         this.checkUserContext();
+        log.info("creating entity "+ entityRequest.toString());
         Entity entity1 = entityService.createEntityFromRequest(id, entityRequest);
         EntityResponse entityResponse = new EntityResponse(entity1);
         return entityResponse;

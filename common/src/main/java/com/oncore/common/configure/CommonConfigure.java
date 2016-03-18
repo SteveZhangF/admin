@@ -46,6 +46,48 @@ public class CommonConfigure {
 
     @Value("${qiniu_download_domain}")
     private String qiniu_down_load_domain;
+
+    @Value("${report_template_file_path}")
+    private String report_template_file_path;
+    @Value("${aws_report_template_bucket_name}")
+    private String aws_report_template_bucket_name;
+    @Value("${aws_access_key}")
+    private String aws_access_key;
+    @Value("${aws_secret_key}")
+    private String aws_secret_key;
+
+    public String getAws_report_template_bucket_name() {
+        return aws_report_template_bucket_name;
+    }
+
+    public void setAws_report_template_bucket_name(String aws_report_template_bucket_name) {
+        this.aws_report_template_bucket_name = aws_report_template_bucket_name;
+    }
+
+    public String getAws_access_key() {
+        return aws_access_key;
+    }
+
+    public void setAws_access_key(String aws_access_key) {
+        this.aws_access_key = aws_access_key;
+    }
+
+    public String getAws_secret_key() {
+        return aws_secret_key;
+    }
+
+    public void setAws_secret_key(String aws_secret_key) {
+        this.aws_secret_key = aws_secret_key;
+    }
+
+    public String getReport_template_file_path() {
+        return report_template_file_path;
+    }
+
+    public void setReport_template_file_path(String report_template_file_path) {
+        this.report_template_file_path = report_template_file_path;
+    }
+
     public String getQiniu_bucket_name() {
         return qiniu_bucket_name;
     }

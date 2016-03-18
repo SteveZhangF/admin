@@ -56,4 +56,14 @@ public class FieldRequest extends ElementRequest {
     public void setId(String id) {
         this.id = id;
     }
+
+    @Override
+    public String toString() {
+        return "FieldRequest{" +
+                "fieldType='" + fieldType + '\'' +
+                ", id='" + id + '\'' +
+                ", length=" + length +
+                ", ifNull=" + ifNull +
+                "} " + super.toString();
+    }
 }

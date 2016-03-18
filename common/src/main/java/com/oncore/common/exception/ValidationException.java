@@ -21,7 +21,7 @@ public class ValidationException extends BusinessException {
 
     private void buildException(Set<? extends ConstraintViolation<?>> constraints) {
         for (ConstraintViolation constraintViolation : constraints) {
-            fields.put(constraintViolation.getPropertyPath().toString(),constraintViolation.getMessage() + (constraintViolation.getInvalidValue() != null ? constraintViolation.getInvalidValue().toString() : null));
+            fields.put(constraintViolation.getPropertyPath().toString()+"  "+ (constraintViolation.getInvalidValue() != null ? constraintViolation.getInvalidValue().toString() : null),constraintViolation.getMessage());
         }
     }
 

@@ -52,7 +52,7 @@ public class ReportGroovyFileCreator extends FileCreator<Report> {
             Template template = configuration.getTemplate(commonConfigure.getTemplate_report_groovy_dao_file());
             return template;
         } catch (IOException e) {
-            log.info("reading report groovy dao template file error");
+            log.error("reading report groovy dao template file error");
             return null;
         }
     }

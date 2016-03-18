@@ -16,11 +16,8 @@ import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.bind.annotation.ExceptionHandler;
 
 import javax.validation.Validator;
-import java.io.IOException;
-import java.sql.SQLException;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -44,18 +41,20 @@ public class EntityServiceImpl extends BaseGenericServiceImpl<Entity, String> im
     public EntityServiceImpl(Validator validator) {
         super(validator);
     }
+
     /**
      * create one entity and generate related files and table
      */
     @Autowired
     TableBuilder tableBuilder;
+
     @Override
     public Entity createEntity(Entity entity) {
         checkFields(entity);
         Long now = new Date().getTime();
-        String tableName = "entity_"+entity.getName().replace("","_") + "_" + now;
+        String tableName = "entity_" + entity.getName().replace(" ", "_") + "_" + now;
         entity.setTableName(tableName);
-        entity.setHbmPath(entity.getName() + "/" + entity.getTableName());
+        entity.setHbmPath(entity.getName().replace(" ","_") + "/" + entity.getTableName());
         entity.setDeleted(false);
         entityDao.save(entity);
         for (Field field : entity.getFields()) {
@@ -64,7 +63,7 @@ public class EntityServiceImpl extends BaseGenericServiceImpl<Entity, String> im
             fieldDao.save(field);
         }
         //TODO
-       // iTableCreator.createTable(entity);
+        // iTableCreator.createTable(entity);
         try {
             tableBuilder.createMappingFile(entity);
         } catch (Exception e) {
@@ -74,7 +73,7 @@ public class EntityServiceImpl extends BaseGenericServiceImpl<Entity, String> im
     }
 
     @Override
-    public Entity createEntityFromRequest(String module_id,CreateEntityRequest entityRequest) {
+    public Entity createEntityFromRequest(String module_id, CreateEntityRequest entityRequest) {
         validate(entityRequest);
         Entity entity = new Entity();
         entity.setName(entityRequest.getName());
@@ -82,11 +81,11 @@ public class EntityServiceImpl extends BaseGenericServiceImpl<Entity, String> im
         entity.setModule_id(module_id);
         for (FieldRequest fieldRequest : entityRequest.getFields()) {
             Field field = new Field();
-            field.setName(fieldRequest.getName().replace(" ","_"));
+            field.setName(fieldRequest.getName().replace(" ", "_"));
             field.setDescription(fieldRequest.getDescription());
-            field.setLength(fieldRequest.getLength()==0?32:fieldRequest.getLength());
+            field.setLength(fieldRequest.getLength() == 0 ? 32 : fieldRequest.getLength());
 
-            field.setFieldType(fieldRequest.getFieldType()==null?"string":fieldRequest.getFieldType());
+            field.setFieldType(fieldRequest.getFieldType() == null ? "string" : fieldRequest.getFieldType());
             field.setIfNull(fieldRequest.isIfNull());
             entity.addField(field);
         }
@@ -99,49 +98,43 @@ public class EntityServiceImpl extends BaseGenericServiceImpl<Entity, String> im
     @Override
     public Entity updateEntity(Entity entity) throws ElementNotFoundException {
         checkFields(entity);
-        if (getEntity(entity.getId()) == null)
-            throw new ElementNotFoundException("entity");
-        fieldDao.deleteFieldByEntityId(entity.getId());
-        for (Field field : entity.getFields()) {
-            Field old = null;
-            if (field.getId() != null) {
-                old = fieldDao.get(field.getId());
-            }
-            if (null != field.getId() && null != old) {
-                old.setFieldType(field.getFieldType());
-                old.setIfNull(field.isIfNull());
-                old.setEntity(field.getEntity());
-                old.setCreateTime(field.getCreateTime());
-                old.setUpdateTime(field.getUpdateTime());
-                old.setName(field.getName());
-                old.setDeleted(false);
-                old.setLength(field.getLength());
-                old.setDescription(field.getDescription());
-                fieldDao.update(old);
-            } else {
-                field.setEntity(entity);
-                fieldDao.save(field);
-            }
-        }
         Entity oldEntity = getEntity(entity.getId());
-        if (oldEntity != null) {
-            oldEntity.setFields(entity.getFields());
-            oldEntity.setDescription(entity.getDescription());
-            oldEntity.setDeleted(entity.isDeleted());
-            oldEntity.setCreateTime(entity.getCreateTime());
-            oldEntity.setUpdateTime(entity.getUpdateTime());
-            oldEntity.setName(entity.getName());
-            oldEntity.setId(entity.getId());
-            entityDao.update(oldEntity);
+        if (oldEntity == null)
+            throw new ElementNotFoundException("entity");
+        List<Field> oldFields = oldEntity.getFields();
+        for (Field field : entity.getFields()) {
+            if(field.getId()!=null){
+                for(Field oldField: oldFields){
+                    if(oldField.getId().equals(field.getId())){
+                        oldField.setFieldType(field.getFieldType());
+                        oldField.setIfNull(field.isIfNull());
+                        oldField.setEntity(field.getEntity());
+                        oldField.setCreateTime(field.getCreateTime());
+                        oldField.setUpdateTime(field.getUpdateTime());
+                        oldField.setName(field.getName());
+                        oldField.setDeleted(false);
+                        oldField.setLength(field.getLength());
+                        oldField.setDescription(field.getDescription());
+                    }
+                }
+            } else {
+                oldEntity.addField(field);
+            }
         }
+
+        oldEntity.setDescription(entity.getDescription());
+        oldEntity.setDeleted(entity.isDeleted());
+        oldEntity.setCreateTime(entity.getCreateTime());
+        oldEntity.setUpdateTime(entity.getUpdateTime());
+        oldEntity.setName(entity.getName());
+        oldEntity.setId(entity.getId());
+        entityDao.update(oldEntity);
         try {
-            tableBuilder.createMappingFile(oldEntity);
+            tableBuilder.createMappingFile(entity);
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-        //TODO iTableCreator.updateTable(oldEntity);
-        return oldEntity;
+        return entity;
     }
 
     @Override
@@ -211,10 +204,10 @@ public class EntityServiceImpl extends BaseGenericServiceImpl<Entity, String> im
 
     @Override
     public List<Entity> getEntityUnderModule(String moduleId) {
-        moduleDao.checkExist(moduleId," module is not exist");
+        moduleDao.checkExist(moduleId, " module is not exist");
         Map query = new HashMap<>();
-        query.put("deleted",false);
-        query.put("moduleId",moduleId);
+        query.put("deleted", false);
+        query.put("moduleId", moduleId);
         return entityDao.getListbyParams(query);
     }
 
@@ -247,7 +240,7 @@ public class EntityServiceImpl extends BaseGenericServiceImpl<Entity, String> im
     }
 
     @Override
-    public List<Entity> loadAll(){
+    public List<Entity> loadAll() {
         return entityDao.loadAll();
     }
 

@@ -19,6 +19,12 @@ import org.springframework.web.servlet.NoHandlerFoundException;
 
 @ControllerAdvice
 public class CommonExceptionHandler {
+
+    @ExceptionHandler(ValidationException.class)
+    public ResponseEntity handleValidationException(ValidationException e){
+        return new ResponseEntity(new ValidationExceptionMessage(e),e.getCode());
+    }
+
     @ExceptionHandler(BusinessException.class)
     public ResponseEntity handleBusinessException(BusinessException e
     ) {
@@ -35,11 +41,5 @@ public class CommonExceptionHandler {
         return  new ResponseEntity(new ExceptionMessage(new BadRequestException("Bad Request")),HttpStatus.BAD_REQUEST);
 
     }
-
-    @ExceptionHandler(ValidationException.class)
-    public ResponseEntity handlerValidationException(ValidationException e) {
-        return new ResponseEntity(new ValidationExceptionMessage(e), HttpStatus.BAD_REQUEST);
-    }
-
 
 }

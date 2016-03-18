@@ -4,9 +4,9 @@ import com.oncore.data.file.uploader.UpLoader;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
-import java.io.IOException;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -39,6 +39,7 @@ public class ReportTemplateBuilder {
     }
 
     @Autowired
+    @Qualifier(value = "aWSUploader")
     UpLoader upLoader;
 
     class UploaderRunner implements Runnable {
@@ -48,7 +49,7 @@ public class ReportTemplateBuilder {
                 try {
                     ReportElement reportElement = reportElements.take();
                     upLoader.upload(reportElement.getContent(), reportElement.getReportTableName());
-                } catch (InterruptedException | IOException e) {
+                } catch (InterruptedException e) {
                     log.error(e.getMessage());
                 }
             }

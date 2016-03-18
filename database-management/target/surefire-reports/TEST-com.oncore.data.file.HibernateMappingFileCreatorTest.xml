@@ -61,7 +61,7 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="com.oncore.data.file.HibernateMappingFileCreatorTest" name="testGetTemplate" time="0.004"/>
-  <testcase classname="com.oncore.data.file.HibernateMappingFileCreatorTest" name="testGetElementRoot" time="0"/>
+  <testcase classname="com.oncore.data.file.HibernateMappingFileCreatorTest" name="testGetElementRoot" time="0.002"/>
+  <testcase classname="com.oncore.data.file.HibernateMappingFileCreatorTest" name="testGetTemplate" time="0"/>
   <testcase classname="com.oncore.data.file.HibernateMappingFileCreatorTest" name="testSetElement" time="0"/>
 </testsuite>
