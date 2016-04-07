@@ -8,6 +8,12 @@ import org.springframework.security.oauth2.provider.OAuth2Authentication;
 /**
  * Created by steve on 3/3/16.
  */
+
+
+/**
+ *
+ * base controller
+ * */
 public class BaseController {
     //    @Autowired
 //    private UserRepository userRepository;
@@ -21,6 +27,11 @@ public class BaseController {
 //        throw new AuthorizationException("User not permitted to access this resource");
 //
 //    }
+
+    /**
+     * check user context
+     * @throw AuthorizationException
+     * */
     protected void checkUserContext() {
 //        User user = loadUserFromSecurityContext(securityContext);
 //        if (user != null && (user.getId().equals(userId) || user.getEmailAddress().equals(userId.toLowerCase()))) {
@@ -31,6 +42,11 @@ public class BaseController {
     }
 
 
+    /**
+     * ensure user is authorized
+     * @Param SecurityContextHolder securityContext
+     * @Param String userId
+     * */
     protected void ensureUserIsAuthorized(SecurityContextHolder securityContext, String userId) {
 //        User user = loadUserFromSecurityContext(securityContext);
 //        if (user != null && (user.getId().equals(userId) || user.getEmailAddress().equals(userId.toLowerCase()))) {
@@ -40,6 +56,11 @@ public class BaseController {
 
     }
 
+    /**
+     *
+     * load user from security context
+     * @return User
+     * */
     protected User loadUserFromSecurityContext() {
 //        OAuth2Authentication requestingUser = (OAuth2Authentication) securityContext.getContext().getAuthentication().getPrincipal();
 //        Object principal = requestingUser.getUserAuthentication().getPrincipal();

@@ -22,10 +22,11 @@ import java.util.List;
 public interface FolderService extends IBaseGenericService<Folder,String>{
 
 
-
-    List<Folder> getRootFoldersUnderModule(String moduleId);
+    List<Folder> getUserRootFolderUnderModule(String moduleId);
+    List<FolderResponse> getRootFoldersUnderModule(String moduleId);
     FolderResponse createRootFolderUnderModule(CreateRootFolderRequest createRootFolderRequest);
     List<FolderResponse> getChildFolder(String id);
+    List<Folder> getUserChildFolder(String id);
     FolderResponse createFolderToParent(String parentId,CreateFolderToParentFolderRequest createFolderToParentFolderRequest);
     List<FolderResponse> getRootFolderUnderModule(String moduleId);
     FolderResponse updateFolderFromRequest(String folderId, UpdateFolderRequest request);

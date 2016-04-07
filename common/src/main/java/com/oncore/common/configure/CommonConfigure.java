@@ -13,29 +13,37 @@ import javax.validation.Validator;
 @Configuration
 public class CommonConfigure {
 
+    // hibernate validator
     @Bean
     public Validator validator() {
         return Validation.buildDefaultValidatorFactory().getValidator();
     }
-
+    //web base folder
     private String baseDir;
-
+    //template base path
     @Value("${template.base_path}")
     private String templateBasePath;
+    //thread number useless
     @Value("${create_table_thread_number}")
     private int create_table_thread_number;
+    //hibernate mapping file template
     @Value("${template.hibernate_mapping_file}")
     private String template_hibernate_mapping_file;
-
+    // hibernate mapping file generated destination path
     @Value("${generated_file_destination.hibernate_mapping_file}")
     private String generated_file_destination_hibernate_mapping_file;
+    //entity groovy dao file generated file
     @Value("${generated_file_destination.groovy_dao_file}")
     private String generated_file_destination_groovy_dao_file;
+    // entity groovy template file
     @Value("${template.template_groovy_dao_file}")
     private String template_groovy_dao_file;
+    // report groovy dao template file
     @Value("${template.template_report_groovy_dao_file}")
     private String template_report_groovy_dao_file;
-
+    /**
+     * qiniu related start
+     * */
     @Value("${qiniu_access_key}")
     private String qiniu_access_key;
     @Value("${qiniu_secret_key}")
@@ -47,14 +55,27 @@ public class CommonConfigure {
     @Value("${qiniu_download_domain}")
     private String qiniu_down_load_domain;
 
+    /**
+     * qiniu related end
+     * */
+
+
+    //report template file path
     @Value("${report_template_file_path}")
     private String report_template_file_path;
+
+    /**
+     * amazon web service start
+     * */
     @Value("${aws_report_template_bucket_name}")
     private String aws_report_template_bucket_name;
     @Value("${aws_access_key}")
     private String aws_access_key;
     @Value("${aws_secret_key}")
     private String aws_secret_key;
+    /**
+     * amazon web service end
+     * */
 
     public String getAws_report_template_bucket_name() {
         return aws_report_template_bucket_name;

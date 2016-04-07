@@ -1,0 +1,683 @@
+2016-03-28 00:16:38  [ qtp99132505-13:41204840 ] - [ WARN ]  No mapping found for HTTP request with URI [/index.jsp] in DispatcherServlet with name 'spring-dispatcher'
+2016-03-28 00:16:38  [ qtp99132505-13:41205054 ] - [ ERROR ]  Failed to invoke @ExceptionHandler method: public org.springframework.http.ResponseEntity com.oncore.common.exception.handler.CommonExceptionHandler.handleNoHandlerFoundException(org.springframework.web.servlet.NoHandlerFoundException)
+org.springframework.web.HttpMediaTypeNotAcceptableException: Could not find acceptable representation
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:177)
+	at org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.handleReturnValue(HttpEntityMethodProcessor.java:146)
+	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:71)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:126)
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.doResolveHandlerMethodException(ExceptionHandlerExceptionResolver.java:362)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodExceptionResolver.doResolveException(AbstractHandlerMethodExceptionResolver.java:60)
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:138)
+	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1182)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1020)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:971)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:893)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:856)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:841)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:808)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1669)
+	at com.oncore.web.filter.CORSFilter.doFilter(CORSFilter.java:22)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1652)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:585)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:577)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:223)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1127)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:515)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1061)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:215)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:110)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:97)
+	at org.eclipse.jetty.server.Server.handle(Server.java:497)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:310)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:257)
+	at org.eclipse.jetty.io.AbstractConnection$2.run(AbstractConnection.java:540)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:635)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:555)
+	at java.lang.Thread.run(Thread.java:745)
+2016-03-28 00:16:41  [ qtp99132505-17:41207681 ] - [ WARN ]  No mapping found for HTTP request with URI [/index.html] in DispatcherServlet with name 'spring-dispatcher'
+2016-03-28 00:16:41  [ qtp99132505-17:41207683 ] - [ ERROR ]  Failed to invoke @ExceptionHandler method: public org.springframework.http.ResponseEntity com.oncore.common.exception.handler.CommonExceptionHandler.handleNoHandlerFoundException(org.springframework.web.servlet.NoHandlerFoundException)
+org.springframework.web.HttpMediaTypeNotAcceptableException: Could not find acceptable representation
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:177)
+	at org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.handleReturnValue(HttpEntityMethodProcessor.java:146)
+	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:71)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:126)
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.doResolveHandlerMethodException(ExceptionHandlerExceptionResolver.java:362)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodExceptionResolver.doResolveException(AbstractHandlerMethodExceptionResolver.java:60)
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:138)
+	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1182)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1020)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:971)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:893)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:856)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:841)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:808)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1669)
+	at com.oncore.web.filter.CORSFilter.doFilter(CORSFilter.java:22)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1652)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:585)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:577)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:223)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1127)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:515)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1061)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:215)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:110)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:97)
+	at org.eclipse.jetty.server.Server.handle(Server.java:497)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:310)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:257)
+	at org.eclipse.jetty.io.AbstractConnection$2.run(AbstractConnection.java:540)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:635)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:555)
+	at java.lang.Thread.run(Thread.java:745)
+2016-03-28 00:17:10  [ qtp99132505-15:41237282 ] - [ INFO ]  found module id=8a8a821e53ae50a80153af156f490000 name=module
+2016-03-28 00:17:13  [ qtp99132505-16:41240471 ] - [ INFO ]  found report id=8a8a821e53af26bd0153b0e348140003 name=Employee Information
+2016-03-28 00:17:17  [ qtp99132505-13:41243684 ] - [ INFO ]  updating Report id=8a8a821e53af26bd0153b0e348140003
+2016-03-28 00:17:17  [ qtp99132505-13:41243690 ] - [ INFO ]  updated Report id=8a8a821e53af26bd0153b0e348140003
+2016-03-28 00:17:17  [ qtp99132505-13:41243874 ] - [ INFO ]  saving ReportField Employee_First_Name
+2016-03-28 00:17:17  [ qtp99132505-13:41243929 ] - [ INFO ]  save ReportField Employee_First_Name success
+2016-03-28 00:17:17  [ qtp99132505-13:41243929 ] - [ INFO ]  updating ReportField id=4028818c53b8fb640153bb70ae470000
+2016-03-28 00:17:17  [ qtp99132505-13:41243930 ] - [ INFO ]  updated ReportField id=4028818c53b8fb640153bb70ae470000
+2016-03-28 00:17:17  [ qtp99132505-13:41243930 ] - [ INFO ]  saving ReportField Employee_Last_Name
+2016-03-28 00:17:17  [ qtp99132505-13:41243930 ] - [ INFO ]  save ReportField Employee_Last_Name success
+2016-03-28 00:17:17  [ qtp99132505-13:41243931 ] - [ INFO ]  updating ReportField id=4028818c53b8fb640153bb70ae7d0001
+2016-03-28 00:17:17  [ qtp99132505-13:41243931 ] - [ INFO ]  updated ReportField id=4028818c53b8fb640153bb70ae7d0001
+2016-03-28 00:17:17  [ qtp99132505-13:41243931 ] - [ INFO ]  saving ReportField Employee_SSNumber
+2016-03-28 00:17:17  [ qtp99132505-13:41243932 ] - [ INFO ]  save ReportField Employee_SSNumber success
+2016-03-28 00:17:17  [ qtp99132505-13:41243932 ] - [ INFO ]  updating ReportField id=4028818c53b8fb640153bb70ae7f0002
+2016-03-28 00:17:17  [ qtp99132505-13:41243932 ] - [ INFO ]  updated ReportField id=4028818c53b8fb640153bb70ae7f0002
+2016-03-28 00:17:17  [ qtp99132505-13:41243933 ] - [ INFO ]  saving ReportField Employee_phone
+2016-03-28 00:17:17  [ qtp99132505-13:41243933 ] - [ INFO ]  save ReportField Employee_phone success
+2016-03-28 00:17:17  [ qtp99132505-13:41243933 ] - [ INFO ]  updating ReportField id=4028818c53b8fb640153bb70ae800003
+2016-03-28 00:17:17  [ qtp99132505-13:41243934 ] - [ INFO ]  updated ReportField id=4028818c53b8fb640153bb70ae800003
+2016-03-28 00:17:17  [ qtp99132505-13:41244021 ] - [ INFO ]  sent message Element{id='8a8a821e53af26bd0153b0e348140003', createTime=2016-03-25 23:06:38.0, updateTime=2016-03-28 00:17:17.192, deleted=false, name='Employee Information', description=''}
+2016-03-28 00:17:17  [ qtp99132505-13:41244029 ] - [ INFO ]  sent message com.oncore.data.messagequeue.msgobj.ReportElement@79e3b79d
+2016-03-28 10:53:16  [ Thread-1:79402794 ] - [ INFO ]  Closing WebApplicationContext for namespace 'spring-dispatcher-servlet': startup date [Sun Mar 27 12:49:58 EDT 2016]; parent: Root WebApplicationContext
+2016-03-28 11:27:45  [ main:6273 ] - [ INFO ]  FrameworkServlet 'spring-dispatcher': initialization started
+2016-03-28 11:27:45  [ main:6282 ] - [ INFO ]  Refreshing WebApplicationContext for namespace 'spring-dispatcher-servlet': startup date [Mon Mar 28 11:27:45 EDT 2016]; parent: Root WebApplicationContext
+2016-03-28 11:27:45  [ main:6283 ] - [ INFO ]  Loading XML bean definitions from ServletContext resource [/WEB-INF/spring-context.xml]
+2016-03-28 11:27:45  [ main:6318 ] - [ INFO ]  Loading XML bean definitions from URL [jar:file:/Users/steve/.m2/repository/com/oncore/oncore-consulting-template-management/1.0-SNAPSHOT/oncore-consulting-template-management-1.0-SNAPSHOT.jar!/spring-context-template-management.xml]
+2016-03-28 11:27:45  [ main:6380 ] - [ INFO ]  Loading XML bean definitions from URL [jar:file:/Users/steve/.m2/repository/com/oncore/oncore-consulting-common/1.0-SNAPSHOT/oncore-consulting-common-1.0-SNAPSHOT.jar!/spring/spring-context-common.xml]
+2016-03-28 11:27:45  [ main:6430 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring/spring-hibernate.xml]
+2016-03-28 11:27:45  [ main:6467 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring/spring-mvc.xml]
+2016-03-28 11:27:45  [ main:6515 ] - [ INFO ]  Loading XML bean definitions from URL [jar:file:/Users/steve/.m2/repository/com/oncore/oncore-consulting-database-management/1.0-SNAPSHOT/oncore-consulting-database-management-1.0-SNAPSHOT.jar!/spring/spring-context-data-management.xml]
+2016-03-28 11:27:45  [ main:6548 ] - [ INFO ]  Loading XML bean definitions from URL [jar:file:/Users/steve/.m2/repository/com/oncore/oncore-consulting-user/1.0-SNAPSHOT/oncore-consulting-user-1.0-SNAPSHOT.jar!/spring/spring-context-user.xml]
+2016-03-28 11:27:45  [ main:6632 ] - [ INFO ]  Loading properties file from class path resource [properties/hibernate-development.properties]
+2016-03-28 11:27:45  [ main:6633 ] - [ INFO ]  Loading properties file from class path resource [properties/app-development.properties]
+2016-03-28 11:27:45  [ main:6640 ] - [ INFO ]  JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-03-28 11:27:45  [ main:6783 ] - [ INFO ]  Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 2sa00u9f1go8h9kap6deo|1d9bd1d6, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceSynchronousCheckins -> false, forceUseNamedDriverClass -> false, identityToken -> 2sa00u9f1go8h9kap6deo|1d9bd1d6, idleConnectionTestPeriod -> 0, initialPoolSize -> 1, jdbcUrl -> jdbc:mysql://localhost:3306/oncore_admin, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 1, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 40, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 1, numHelperThreads -> 3, preferredTestQuery -> null, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+2016-03-28 11:27:45  [ main:6795 ] - [ INFO ]  HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2016-03-28 11:27:45  [ main:6829 ] - [ INFO ]  HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-03-28 11:27:45  [ main:6830 ] - [ INFO ]  HHH000397: Using ASTQueryTranslatorFactory
+2016-03-28 11:27:45  [ main:6925 ] - [ INFO ]  HHH000228: Running hbm2ddl schema update
+2016-03-28 11:27:45  [ main:6926 ] - [ INFO ]  HHH000102: Fetching database metadata
+2016-03-28 11:27:45  [ main:6927 ] - [ INFO ]  HHH000396: Updating schema
+2016-03-28 11:27:45  [ main:6935 ] - [ INFO ]  HHH000261: Table found: oncore_admin.element
+2016-03-28 11:27:45  [ main:6938 ] - [ INFO ]  HHH000037: Columns: [createtime, deleted, module_id, name, description, id, updatetime]
+2016-03-28 11:27:45  [ main:6939 ] - [ INFO ]  HHH000108: Foreign keys: []
+2016-03-28 11:27:45  [ main:6939 ] - [ INFO ]  HHH000126: Indexes: [primary]
+2016-03-28 11:27:45  [ main:6951 ] - [ INFO ]  HHH000261: Table found: oncore_admin.entity
+2016-03-28 11:27:45  [ main:6952 ] - [ INFO ]  HHH000037: Columns: [createtime, deleted, module_id, name, description, id, updatetime, tablename, hbmpath]
+2016-03-28 11:27:45  [ main:6953 ] - [ INFO ]  HHH000108: Foreign keys: []
+2016-03-28 11:27:45  [ main:6953 ] - [ INFO ]  HHH000126: Indexes: [primary]
+2016-03-28 11:27:45  [ main:6964 ] - [ INFO ]  HHH000261: Table found: oncore_admin.field
+2016-03-28 11:27:45  [ main:6966 ] - [ INFO ]  HHH000037: Columns: [createtime, deleted, module_id, name, length, description, ifnull, id, updatetime, fieldtype, tablename, entity_id]
+2016-03-28 11:27:45  [ main:6967 ] - [ INFO ]  HHH000108: Foreign keys: [fk_o596lc80ccb1rgvhnoku4fdo9]
+2016-03-28 11:27:45  [ main:6969 ] - [ INFO ]  HHH000126: Indexes: [fk_o596lc80ccb1rgvhnoku4fdo9, primary]
+2016-03-28 11:27:45  [ main:6986 ] - [ INFO ]  HHH000261: Table found: oncore_admin.file_element
+2016-03-28 11:27:45  [ main:6987 ] - [ INFO ]  HHH000037: Columns: [createtime, deleted, module_id, parentfoldid, name, description, id, updatetime]
+2016-03-28 11:27:45  [ main:6988 ] - [ INFO ]  HHH000108: Foreign keys: []
+2016-03-28 11:27:45  [ main:6989 ] - [ INFO ]  HHH000126: Indexes: [primary]
+2016-03-28 11:27:45  [ main:7001 ] - [ INFO ]  HHH000261: Table found: oncore_admin.folder_file_element
+2016-03-28 11:27:45  [ main:7005 ] - [ INFO ]  HHH000037: Columns: [createtime, deleted, module_id, parentfoldid, depth, name, description, id, updatetime]
+2016-03-28 11:27:45  [ main:7005 ] - [ INFO ]  HHH000108: Foreign keys: []
+2016-03-28 11:27:45  [ main:7007 ] - [ INFO ]  HHH000126: Indexes: [primary]
+2016-03-28 11:27:45  [ main:7020 ] - [ INFO ]  HHH000261: Table found: oncore_admin.module
+2016-03-28 11:27:45  [ main:7021 ] - [ INFO ]  HHH000037: Columns: [createtime, deleted, module_id, name, description, id, updatetime]
+2016-03-28 11:27:45  [ main:7022 ] - [ INFO ]  HHH000108: Foreign keys: []
+2016-03-28 11:27:45  [ main:7023 ] - [ INFO ]  HHH000126: Indexes: [primary]
+2016-03-28 11:27:45  [ main:7038 ] - [ INFO ]  HHH000261: Table found: oncore_admin.report_field
+2016-03-28 11:27:45  [ main:7039 ] - [ INFO ]  HHH000037: Columns: [createtime, length, description, relatedfield_id, fieldtype, ifrelatedfield, deleted, module_id, report_id, name, ifnull, id, updatetime]
+2016-03-28 11:27:45  [ main:7039 ] - [ INFO ]  HHH000108: Foreign keys: [fk_qmru8iktsptb9m0nt6a5kj7yr, fk_t5oxbvi73rrwmoroikmhldvg9]
+2016-03-28 11:27:45  [ main:7041 ] - [ INFO ]  HHH000126: Indexes: [fk_qmru8iktsptb9m0nt6a5kj7yr, fk_t5oxbvi73rrwmoroikmhldvg9, primary]
+2016-03-28 11:27:45  [ main:7053 ] - [ INFO ]  HHH000261: Table found: oncore_admin.report_file_element
+2016-03-28 11:27:45  [ main:7054 ] - [ INFO ]  HHH000037: Columns: [createtime, parentfoldid, currentversion, description, folderid, hbmpath, deleted, module_id, name, id, updatetime, tablename, templatepath]
+2016-03-28 11:27:45  [ main:7056 ] - [ INFO ]  HHH000108: Foreign keys: []
+2016-03-28 11:27:45  [ main:7058 ] - [ INFO ]  HHH000126: Indexes: [primary]
+2016-03-28 11:27:45  [ main:7059 ] - [ INFO ]  HHH000232: Schema update complete
+2016-03-28 11:27:45  [ main:7147 ] - [ INFO ]  Using DataSource [com.mchange.v2.c3p0.ComboPooledDataSource[ identityToken -> 2sa00u9f1go8h9kap6deo|1d9bd1d6, dataSourceName -> 2sa00u9f1go8h9kap6deo|1d9bd1d6 ]] of Hibernate SessionFactory for HibernateTransactionManager
+2016-03-28 11:27:46  [ main:7171 ] - [ INFO ]  Mapped "{[/admin/entities/{id}],methods=[DELETE],produces=[application/json]}" onto public org.springframework.http.ResponseEntity com.oncore.template.controller.EntityResource.delete(java.lang.String)
+2016-03-28 11:27:46  [ main:7173 ] - [ INFO ]  Mapped "{[/admin/entities/{id}],methods=[GET],produces=[application/json]}" onto public com.oncore.template.transfd.entities.EntityResponse com.oncore.template.controller.EntityResource.getEntity(java.lang.String)
+2016-03-28 11:27:46  [ main:7173 ] - [ INFO ]  Mapped "{[/admin/entities/{id}],methods=[PUT],produces=[application/json]}" onto public com.oncore.template.transfd.entities.EntityResponse com.oncore.template.controller.EntityResource.updateEntity(com.oncore.template.transfd.entities.UpdateEntityRequest)
+2016-03-28 11:27:46  [ main:7174 ] - [ INFO ]  Mapped "{[/admin/entities/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.entities.EntityResponse> com.oncore.template.controller.EntityResource.getEntities()
+2016-03-28 11:27:46  [ main:7175 ] - [ INFO ]  Mapped "{[/admin/folders/{id}],methods=[GET],produces=[application/json]}" onto public com.oncore.template.transfd.file_element.folder.FolderResponse com.oncore.template.controller.FolderResource.getFolder(java.lang.String)
+2016-03-28 11:27:46  [ main:7175 ] - [ INFO ]  Mapped "{[/admin/folders/{parent_id}/sub_folder/],methods=[POST],produces=[application/json]}" onto public com.oncore.template.transfd.file_element.folder.FolderResponse com.oncore.template.controller.FolderResource.createSubFolderToParent(java.lang.String,com.oncore.template.transfd.file_element.folder.CreateFolderToParentFolderRequest)
+2016-03-28 11:27:46  [ main:7176 ] - [ INFO ]  Mapped "{[/admin/folders/{parent_id}/sub_folder/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.file_element.folder.FolderResponse> com.oncore.template.controller.FolderResource.getChildFoldersUnderParentFolder(java.lang.String)
+2016-03-28 11:27:46  [ main:7177 ] - [ INFO ]  Mapped "{[/admin/folders/{folderId}/reports/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.report.ReportResponse> com.oncore.template.controller.FolderResource.getReportsUnderFolder(java.lang.String)
+2016-03-28 11:27:46  [ main:7178 ] - [ INFO ]  Mapped "{[/admin/folders/{folderId}/reports/],methods=[POST],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<com.oncore.template.transfd.report.ReportResponse> com.oncore.template.controller.FolderResource.createReportsUnderFolder(java.lang.String,com.oncore.template.transfd.report.CreateReportRequest)
+2016-03-28 11:27:46  [ main:7178 ] - [ INFO ]  Mapped "{[/admin/folders/{id}/],methods=[PUT],produces=[application/json]}" onto public com.oncore.template.transfd.file_element.folder.FolderResponse com.oncore.template.controller.FolderResource.updateFolder(java.lang.String,com.oncore.template.transfd.file_element.folder.UpdateFolderRequest)
+2016-03-28 11:27:46  [ main:7182 ] - [ INFO ]  Mapped "{[/admin/folders/{id}/],methods=[DELETE],produces=[application/json]}" onto public org.springframework.http.ResponseEntity com.oncore.template.controller.FolderResource.deleteFolder(java.lang.String)
+2016-03-28 11:27:46  [ main:7184 ] - [ INFO ]  Mapped "{[/admin/modules/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.module.ModuleResponse> com.oncore.template.controller.ModuleResource.getModules()
+2016-03-28 11:27:46  [ main:7184 ] - [ INFO ]  Mapped "{[/admin/modules/{id}/],methods=[GET],produces=[application/json]}" onto public com.oncore.template.transfd.module.ModuleResponse com.oncore.template.controller.ModuleResource.getModule(java.lang.String)
+2016-03-28 11:27:46  [ main:7185 ] - [ INFO ]  Mapped "{[/admin/modules/],methods=[POST],produces=[application/json]}" onto public com.oncore.template.transfd.module.ModuleResponse com.oncore.template.controller.ModuleResource.createModule(com.oncore.template.transfd.module.CreateModuleRequest)
+2016-03-28 11:27:46  [ main:7186 ] - [ INFO ]  Mapped "{[/admin/modules/{id}/],methods=[PUT],produces=[application/json]}" onto public com.oncore.template.transfd.module.ModuleResponse com.oncore.template.controller.ModuleResource.updateModule(java.lang.String,com.oncore.template.transfd.module.CreateModuleRequest)
+2016-03-28 11:27:46  [ main:7202 ] - [ INFO ]  Mapped "{[/admin/modules/{id}/entities/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.entities.EntityResponse> com.oncore.template.controller.ModuleResource.getEntitiesOfModule(java.lang.String)
+2016-03-28 11:27:46  [ main:7204 ] - [ INFO ]  Mapped "{[/admin/modules/{id}/folders/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.file_element.folder.FolderResponse> com.oncore.template.controller.ModuleResource.getFoldersOfModule(java.lang.String)
+2016-03-28 11:27:46  [ main:7205 ] - [ INFO ]  Mapped "{[/admin/modules/{id}/folders/],methods=[POST],produces=[application/json]}" onto public com.oncore.template.transfd.file_element.folder.FolderResponse com.oncore.template.controller.ModuleResource.createFolderUnderModule(java.lang.String,com.oncore.template.transfd.file_element.folder.CreateRootFolderRequest)
+2016-03-28 11:27:46  [ main:7206 ] - [ INFO ]  Mapped "{[/admin/modules/{id}/entities/],methods=[POST],produces=[application/json]}" onto public com.oncore.template.transfd.entities.EntityResponse com.oncore.template.controller.ModuleResource.createEntityUnderModule(java.lang.String,com.oncore.template.transfd.entities.CreateEntityRequest)
+2016-03-28 11:27:46  [ main:7208 ] - [ INFO ]  Mapped "{[/admin/modules/{id}/tree/],methods=[GET],produces=[application/json]}" onto public com.oncore.template.transfd.module.ModuleTreeResponse com.oncore.template.controller.ModuleResource.getModuleTree(java.lang.String)
+2016-03-28 11:27:46  [ main:7210 ] - [ INFO ]  Mapped "{[/admin/reports/{id}/],methods=[DELETE],produces=[application/json]}" onto public org.springframework.http.ResponseEntity com.oncore.template.controller.ReportResource.delete(java.lang.String)
+2016-03-28 11:27:46  [ main:7218 ] - [ INFO ]  Mapped "{[/admin/reports/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.report.ReportResponse> com.oncore.template.controller.ReportResource.getReports()
+2016-03-28 11:27:46  [ main:7223 ] - [ INFO ]  Mapped "{[/admin/reports/{id}/],methods=[GET],produces=[application/json]}" onto public com.oncore.template.transfd.report.ReportResponse com.oncore.template.controller.ReportResource.gerReport(java.lang.String)
+2016-03-28 11:27:46  [ main:7224 ] - [ INFO ]  Mapped "{[/admin/reports/{id}/],methods=[PUT],produces=[application/json]}" onto public org.springframework.http.ResponseEntity com.oncore.template.controller.ReportResource.updateReport(java.lang.String,com.oncore.template.transfd.report.CreateReportRequest)
+2016-03-28 11:27:46  [ main:7226 ] - [ INFO ]  Mapped "{[/user/entities/{entity_id}/],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity com.oncore.user.controller.UserEntityController.listEntities(java.lang.String) throws java.sql.SQLException
+2016-03-28 11:27:46  [ main:7228 ] - [ INFO ]  Mapped "{[/user/entities/{entity_id}/],methods=[POST],produces=[application/json]}" onto public org.springframework.http.ResponseEntity com.oncore.user.controller.UserEntityController.insertEntity(java.lang.String,java.util.Map) throws java.sql.SQLException
+2016-03-28 11:27:46  [ main:7230 ] - [ INFO ]  Mapped "{[/user/reports/{report_table_id}/record/{report_id}/]}" onto public org.springframework.http.ResponseEntity com.oncore.user.controller.UserReportController.getReport(java.lang.String,int) throws java.sql.SQLException
+2016-03-28 11:27:46  [ main:7233 ] - [ INFO ]  Mapped "{[/user/reports/{report_id}/record/]}" onto public org.springframework.http.ResponseEntity com.oncore.user.controller.UserReportController.listReport(java.lang.String) throws java.sql.SQLException
+2016-03-28 11:27:46  [ main:7234 ] - [ INFO ]  Mapped "{[/user/reports/{report_table_id}/desc/]}" onto public org.springframework.http.ResponseEntity com.oncore.user.controller.UserReportController.getReportDescription(java.lang.String)
+2016-03-28 11:27:46  [ main:7240 ] - [ INFO ]  Mapped "{[/user/reports/{report_id}/record/],methods=[POST]}" onto public org.springframework.http.ResponseEntity com.oncore.user.controller.UserReportController.insertReport(java.lang.String,java.util.Map) throws java.sql.SQLException
+2016-03-28 11:27:46  [ main:7299 ] - [ INFO ]  Looking for @ControllerAdvice: WebApplicationContext for namespace 'spring-dispatcher-servlet': startup date [Mon Mar 28 11:27:45 EDT 2016]; parent: Root WebApplicationContext
+2016-03-28 11:27:46  [ main:7343 ] - [ INFO ]  Looking for @ControllerAdvice: WebApplicationContext for namespace 'spring-dispatcher-servlet': startup date [Mon Mar 28 11:27:45 EDT 2016]; parent: Root WebApplicationContext
+2016-03-28 11:27:46  [ main:7391 ] - [ INFO ]  Detected @ExceptionHandler methods in commonExceptionHandler
+2016-03-28 11:27:46  [ main:7488 ] - [ INFO ]  start init entity tables...
+2016-03-28 11:27:47  [ main:8193 ] - [ INFO ]  initing entity entity_Employee_1458931383563...
+2016-03-28 11:27:47  [ main:8401 ] - [ INFO ]  Established shared JMS Connection: PooledConnection { ConnectionPool[ActiveMQConnection {id=ID:fuqiangs-MacBook-Pro.local-50787-1459178867123-1:1,clientId=null,started=false}] }
+2016-03-28 11:27:47  [ main:8624 ] - [ INFO ]  sent message Entity{tableName='entity_Employee_1458931383563', hbmPath='Employee/entity_Employee_1458931383563', fields=[Field{ifNull=false, length=32, fieldType='string'} Element{id='8a8a821e53ae50a80153af163d370002', createTime=2016-03-25 14:43:04.0, updateTime=2016-03-25 14:43:04.0, deleted=false, name='First_Name', description=''}, Field{ifNull=false, length=32, fieldType='string'} Element{id='8a8a821e53ae50a80153af163d390003', createTime=2016-03-25 14:43:04.0, updateTime=2016-03-25 14:43:04.0, deleted=false, name='Last_Name', description=''}, Field{ifNull=false, length=32, fieldType='int'} Element{id='8a8a821e53af26bd0153b0bf91c90000', createTime=2016-03-25 22:27:38.0, updateTime=2016-03-25 22:27:38.0, deleted=false, name='SSNumber', description=''}, Field{ifNull=true, length=32, fieldType='upload'} Element{id='8a8a821e53af26bd0153b0cd8f270001', createTime=2016-03-25 22:42:55.0, updateTime=2016-03-25 22:42:55.0, deleted=false, name='phone', description=''}]} Element{id='8a8a821e53ae50a80153af163d0c0001', createTime=2016-03-25 14:43:04.0, updateTime=2016-03-25 23:48:32.0, deleted=false, name='Employee', description=''}
+2016-03-28 11:27:47  [ main:8801 ] - [ INFO ]  sent message Element{id='8a8a821e53af26bd0153b0e348140003', createTime=2016-03-25 23:06:38.0, updateTime=2016-03-28 00:17:17.0, deleted=false, name='Employee Information', description=''}
+2016-03-28 11:27:47  [ main:8805 ] - [ INFO ]  start init entity tables...
+2016-03-28 11:27:47  [ main:9052 ] - [ INFO ]  initing entity entity_Employee_1458931383563...
+2016-03-28 11:27:47  [ main:9056 ] - [ INFO ]  Established shared JMS Connection: PooledConnection { ConnectionPool[ActiveMQConnection {id=ID:fuqiangs-MacBook-Pro.local-50787-1459178867123-3:1,clientId=null,started=false}] }
+2016-03-28 11:27:47  [ main:9132 ] - [ INFO ]  sent message Entity{tableName='entity_Employee_1458931383563', hbmPath='Employee/entity_Employee_1458931383563', fields=[Field{ifNull=false, length=32, fieldType='string'} Element{id='8a8a821e53ae50a80153af163d370002', createTime=2016-03-25 14:43:04.0, updateTime=2016-03-25 14:43:04.0, deleted=false, name='First_Name', description=''}, Field{ifNull=false, length=32, fieldType='string'} Element{id='8a8a821e53ae50a80153af163d390003', createTime=2016-03-25 14:43:04.0, updateTime=2016-03-25 14:43:04.0, deleted=false, name='Last_Name', description=''}, Field{ifNull=false, length=32, fieldType='int'} Element{id='8a8a821e53af26bd0153b0bf91c90000', createTime=2016-03-25 22:27:38.0, updateTime=2016-03-25 22:27:38.0, deleted=false, name='SSNumber', description=''}, Field{ifNull=true, length=32, fieldType='upload'} Element{id='8a8a821e53af26bd0153b0cd8f270001', createTime=2016-03-25 22:42:55.0, updateTime=2016-03-25 22:42:55.0, deleted=false, name='phone', description=''}]} Element{id='8a8a821e53ae50a80153af163d0c0001', createTime=2016-03-25 14:43:04.0, updateTime=2016-03-25 23:48:32.0, deleted=false, name='Employee', description=''}
+2016-03-28 11:27:48  [ main:9220 ] - [ INFO ]  sent message Element{id='8a8a821e53af26bd0153b0e348140003', createTime=2016-03-25 23:06:38.0, updateTime=2016-03-28 00:17:17.0, deleted=false, name='Employee Information', description=''}
+2016-03-28 11:27:48  [ main:9247 ] - [ INFO ]  FrameworkServlet 'spring-dispatcher': initialization completed in 2968 ms
+2016-03-28 11:27:59  [ qtp10405169-20:21067 ] - [ INFO ]  found module id=8a8a821e53ae50a80153af156f490000 name=module
+2016-03-28 11:28:05  [ qtp10405169-16:27026 ] - [ INFO ]  found report id=8a8a821e53af26bd0153b0e348140003 name=Employee Information
+2016-03-28 11:28:08  [ qtp10405169-15:29448 ] - [ INFO ]  updating Report id=8a8a821e53af26bd0153b0e348140003
+2016-03-28 11:28:08  [ qtp10405169-15:29450 ] - [ INFO ]  updated Report id=8a8a821e53af26bd0153b0e348140003
+2016-03-28 11:28:08  [ qtp10405169-15:29634 ] - [ INFO ]  saving ReportField Employee_First_Name
+2016-03-28 11:28:08  [ qtp10405169-15:29661 ] - [ INFO ]  save ReportField Employee_First_Name success
+2016-03-28 11:28:08  [ qtp10405169-15:29672 ] - [ INFO ]  updating ReportField id=8a8a821e53bdd6780153bdd6dd1d0000
+2016-03-28 11:28:08  [ qtp10405169-15:29678 ] - [ INFO ]  updated ReportField id=8a8a821e53bdd6780153bdd6dd1d0000
+2016-03-28 11:28:08  [ qtp10405169-15:29679 ] - [ INFO ]  saving ReportField Employee_Last_Name
+2016-03-28 11:28:08  [ qtp10405169-15:29680 ] - [ INFO ]  save ReportField Employee_Last_Name success
+2016-03-28 11:28:08  [ qtp10405169-15:29682 ] - [ INFO ]  updating ReportField id=8a8a821e53bdd6780153bdd6dd490001
+2016-03-28 11:28:08  [ qtp10405169-15:29688 ] - [ INFO ]  updated ReportField id=8a8a821e53bdd6780153bdd6dd490001
+2016-03-28 11:28:08  [ qtp10405169-15:29692 ] - [ INFO ]  saving ReportField Employee_SSNumber
+2016-03-28 11:28:08  [ qtp10405169-15:29695 ] - [ INFO ]  save ReportField Employee_SSNumber success
+2016-03-28 11:28:08  [ qtp10405169-15:29696 ] - [ INFO ]  updating ReportField id=8a8a821e53bdd6780153bdd6dd580002
+2016-03-28 11:28:08  [ qtp10405169-15:29702 ] - [ INFO ]  updated ReportField id=8a8a821e53bdd6780153bdd6dd580002
+2016-03-28 11:28:08  [ qtp10405169-15:29708 ] - [ INFO ]  saving ReportField Employee_phone
+2016-03-28 11:28:08  [ qtp10405169-15:29711 ] - [ INFO ]  save ReportField Employee_phone success
+2016-03-28 11:28:08  [ qtp10405169-15:29714 ] - [ INFO ]  updating ReportField id=8a8a821e53bdd6780153bdd6dd660003
+2016-03-28 11:28:08  [ qtp10405169-15:29716 ] - [ INFO ]  updated ReportField id=8a8a821e53bdd6780153bdd6dd660003
+2016-03-28 11:28:08  [ qtp10405169-15:29769 ] - [ INFO ]  sent message Element{id='8a8a821e53af26bd0153b0e348140003', createTime=2016-03-25 23:06:38.0, updateTime=2016-03-28 11:28:08.29, deleted=false, name='Employee Information', description=''}
+2016-03-28 11:28:08  [ qtp10405169-15:29800 ] - [ INFO ]  sent message com.oncore.data.messagequeue.msgobj.ReportElement@30965687
+2016-03-28 15:12:59  [ qtp10405169-20:13520317 ] - [ INFO ]  updating Report id=8a8a821e53af26bd0153b0e348140003
+2016-03-28 15:12:59  [ qtp10405169-20:13520346 ] - [ INFO ]  updated Report id=8a8a821e53af26bd0153b0e348140003
+2016-03-28 15:12:59  [ qtp10405169-20:13520352 ] - [ INFO ]  saving ReportField Employee_First_Name
+2016-03-28 15:12:59  [ qtp10405169-20:13520365 ] - [ INFO ]  save ReportField Employee_First_Name success
+2016-03-28 15:12:59  [ qtp10405169-20:13520365 ] - [ INFO ]  updating ReportField id=8a8a821e53bdd6780153bea4b7450004
+2016-03-28 15:12:59  [ qtp10405169-20:13520366 ] - [ INFO ]  updated ReportField id=8a8a821e53bdd6780153bea4b7450004
+2016-03-28 15:12:59  [ qtp10405169-20:13520366 ] - [ INFO ]  saving ReportField Employee_Last_Name
+2016-03-28 15:12:59  [ qtp10405169-20:13520367 ] - [ INFO ]  save ReportField Employee_Last_Name success
+2016-03-28 15:12:59  [ qtp10405169-20:13520368 ] - [ INFO ]  updating ReportField id=8a8a821e53bdd6780153bea4b7480005
+2016-03-28 15:12:59  [ qtp10405169-20:13520368 ] - [ INFO ]  updated ReportField id=8a8a821e53bdd6780153bea4b7480005
+2016-03-28 15:12:59  [ qtp10405169-20:13520377 ] - [ INFO ]  saving ReportField Employee_SSNumber
+2016-03-28 15:12:59  [ qtp10405169-20:13520379 ] - [ INFO ]  save ReportField Employee_SSNumber success
+2016-03-28 15:12:59  [ qtp10405169-20:13520380 ] - [ INFO ]  updating ReportField id=8a8a821e53bdd6780153bea4b7540006
+2016-03-28 15:12:59  [ qtp10405169-20:13520382 ] - [ INFO ]  updated ReportField id=8a8a821e53bdd6780153bea4b7540006
+2016-03-28 15:12:59  [ qtp10405169-20:13520383 ] - [ INFO ]  saving ReportField Employee_phone
+2016-03-28 15:12:59  [ qtp10405169-20:13520387 ] - [ INFO ]  save ReportField Employee_phone success
+2016-03-28 15:12:59  [ qtp10405169-20:13520389 ] - [ INFO ]  updating ReportField id=8a8a821e53bdd6780153bea4b75b0007
+2016-03-28 15:12:59  [ qtp10405169-20:13520390 ] - [ INFO ]  updated ReportField id=8a8a821e53bdd6780153bea4b75b0007
+2016-03-28 15:12:59  [ qtp10405169-20:13520531 ] - [ INFO ]  sent message Element{id='8a8a821e53af26bd0153b0e348140003', createTime=2016-03-25 23:06:38.0, updateTime=2016-03-28 15:12:59.187, deleted=false, name='Employee Information', description=''}
+2016-03-28 15:12:59  [ qtp10405169-20:13520535 ] - [ INFO ]  sent message com.oncore.data.messagequeue.msgobj.ReportElement@263fdbe4
+2016-03-28 15:19:46  [ Thread-1:13927624 ] - [ INFO ]  Closing WebApplicationContext for namespace 'spring-dispatcher-servlet': startup date [Mon Mar 28 11:27:45 EDT 2016]; parent: Root WebApplicationContext
+2016-03-28 15:20:02  [ main:4772 ] - [ INFO ]  FrameworkServlet 'spring-dispatcher': initialization started
+2016-03-28 15:20:02  [ main:4787 ] - [ INFO ]  Refreshing WebApplicationContext for namespace 'spring-dispatcher-servlet': startup date [Mon Mar 28 15:20:02 EDT 2016]; parent: Root WebApplicationContext
+2016-03-28 15:20:02  [ main:4789 ] - [ INFO ]  Loading XML bean definitions from ServletContext resource [/WEB-INF/spring-context.xml]
+2016-03-28 15:20:02  [ main:4814 ] - [ INFO ]  Loading XML bean definitions from URL [jar:file:/Users/steve/.m2/repository/com/oncore/oncore-consulting-template-management/1.0-SNAPSHOT/oncore-consulting-template-management-1.0-SNAPSHOT.jar!/spring-context-template-management.xml]
+2016-03-28 15:20:02  [ main:4861 ] - [ INFO ]  Loading XML bean definitions from URL [jar:file:/Users/steve/.m2/repository/com/oncore/oncore-consulting-common/1.0-SNAPSHOT/oncore-consulting-common-1.0-SNAPSHOT.jar!/spring/spring-context-common.xml]
+2016-03-28 15:20:02  [ main:4888 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring/spring-hibernate.xml]
+2016-03-28 15:20:02  [ main:4906 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring/spring-mvc.xml]
+2016-03-28 15:20:02  [ main:4938 ] - [ INFO ]  Loading XML bean definitions from URL [jar:file:/Users/steve/.m2/repository/com/oncore/oncore-consulting-database-management/1.0-SNAPSHOT/oncore-consulting-database-management-1.0-SNAPSHOT.jar!/spring/spring-context-data-management.xml]
+2016-03-28 15:20:02  [ main:4961 ] - [ INFO ]  Loading XML bean definitions from URL [jar:file:/Users/steve/.m2/repository/com/oncore/oncore-consulting-user/1.0-SNAPSHOT/oncore-consulting-user-1.0-SNAPSHOT.jar!/spring/spring-context-user.xml]
+2016-03-28 15:20:03  [ main:5034 ] - [ INFO ]  Loading properties file from class path resource [properties/hibernate-development.properties]
+2016-03-28 15:20:03  [ main:5035 ] - [ INFO ]  Loading properties file from class path resource [properties/app-development.properties]
+2016-03-28 15:20:03  [ main:5038 ] - [ INFO ]  JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-03-28 15:20:03  [ main:5141 ] - [ INFO ]  Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 1hge1gj9f1gwj8fftisyaz|1d9bd1d6, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceSynchronousCheckins -> false, forceUseNamedDriverClass -> false, identityToken -> 1hge1gj9f1gwj8fftisyaz|1d9bd1d6, idleConnectionTestPeriod -> 0, initialPoolSize -> 1, jdbcUrl -> jdbc:mysql://localhost:3306/oncore_admin, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 1, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 40, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 1, numHelperThreads -> 3, preferredTestQuery -> null, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+2016-03-28 15:20:03  [ main:5159 ] - [ INFO ]  HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2016-03-28 15:20:03  [ main:5181 ] - [ INFO ]  HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-03-28 15:20:03  [ main:5182 ] - [ INFO ]  HHH000397: Using ASTQueryTranslatorFactory
+2016-03-28 15:20:03  [ main:5260 ] - [ INFO ]  HHH000228: Running hbm2ddl schema update
+2016-03-28 15:20:03  [ main:5260 ] - [ INFO ]  HHH000102: Fetching database metadata
+2016-03-28 15:20:03  [ main:5261 ] - [ INFO ]  HHH000396: Updating schema
+2016-03-28 15:20:03  [ main:5268 ] - [ INFO ]  HHH000261: Table found: oncore_admin.element
+2016-03-28 15:20:03  [ main:5269 ] - [ INFO ]  HHH000037: Columns: [createtime, deleted, module_id, name, description, id, updatetime]
+2016-03-28 15:20:03  [ main:5270 ] - [ INFO ]  HHH000108: Foreign keys: []
+2016-03-28 15:20:03  [ main:5270 ] - [ INFO ]  HHH000126: Indexes: [primary]
+2016-03-28 15:20:03  [ main:5284 ] - [ INFO ]  HHH000261: Table found: oncore_admin.entity
+2016-03-28 15:20:03  [ main:5285 ] - [ INFO ]  HHH000037: Columns: [createtime, deleted, module_id, name, description, id, updatetime, tablename, hbmpath]
+2016-03-28 15:20:03  [ main:5286 ] - [ INFO ]  HHH000108: Foreign keys: []
+2016-03-28 15:20:03  [ main:5287 ] - [ INFO ]  HHH000126: Indexes: [primary]
+2016-03-28 15:20:03  [ main:5297 ] - [ INFO ]  HHH000261: Table found: oncore_admin.field
+2016-03-28 15:20:03  [ main:5298 ] - [ INFO ]  HHH000037: Columns: [createtime, deleted, module_id, name, length, description, ifnull, id, updatetime, fieldtype, tablename, entity_id]
+2016-03-28 15:20:03  [ main:5298 ] - [ INFO ]  HHH000108: Foreign keys: [fk_o596lc80ccb1rgvhnoku4fdo9]
+2016-03-28 15:20:03  [ main:5299 ] - [ INFO ]  HHH000126: Indexes: [fk_o596lc80ccb1rgvhnoku4fdo9, primary]
+2016-03-28 15:20:03  [ main:5312 ] - [ INFO ]  HHH000261: Table found: oncore_admin.file_element
+2016-03-28 15:20:03  [ main:5313 ] - [ INFO ]  HHH000037: Columns: [createtime, deleted, module_id, parentfoldid, name, description, id, updatetime]
+2016-03-28 15:20:03  [ main:5313 ] - [ INFO ]  HHH000108: Foreign keys: []
+2016-03-28 15:20:03  [ main:5314 ] - [ INFO ]  HHH000126: Indexes: [primary]
+2016-03-28 15:20:03  [ main:5324 ] - [ INFO ]  HHH000261: Table found: oncore_admin.folder_file_element
+2016-03-28 15:20:03  [ main:5329 ] - [ INFO ]  HHH000037: Columns: [createtime, deleted, module_id, parentfoldid, depth, name, description, id, updatetime]
+2016-03-28 15:20:03  [ main:5330 ] - [ INFO ]  HHH000108: Foreign keys: []
+2016-03-28 15:20:03  [ main:5331 ] - [ INFO ]  HHH000126: Indexes: [primary]
+2016-03-28 15:20:03  [ main:5344 ] - [ INFO ]  HHH000261: Table found: oncore_admin.module
+2016-03-28 15:20:03  [ main:5344 ] - [ INFO ]  HHH000037: Columns: [createtime, deleted, module_id, name, description, id, updatetime]
+2016-03-28 15:20:03  [ main:5345 ] - [ INFO ]  HHH000108: Foreign keys: []
+2016-03-28 15:20:03  [ main:5346 ] - [ INFO ]  HHH000126: Indexes: [primary]
+2016-03-28 15:20:03  [ main:5358 ] - [ INFO ]  HHH000261: Table found: oncore_admin.report_field
+2016-03-28 15:20:03  [ main:5360 ] - [ INFO ]  HHH000037: Columns: [createtime, length, description, relatedfield_id, fieldtype, ifrelatedfield, deleted, module_id, report_id, name, ifnull, id, updatetime]
+2016-03-28 15:20:03  [ main:5361 ] - [ INFO ]  HHH000108: Foreign keys: [fk_qmru8iktsptb9m0nt6a5kj7yr, fk_t5oxbvi73rrwmoroikmhldvg9]
+2016-03-28 15:20:03  [ main:5362 ] - [ INFO ]  HHH000126: Indexes: [fk_qmru8iktsptb9m0nt6a5kj7yr, fk_t5oxbvi73rrwmoroikmhldvg9, primary]
+2016-03-28 15:20:03  [ main:5370 ] - [ INFO ]  HHH000261: Table found: oncore_admin.report_file_element
+2016-03-28 15:20:03  [ main:5373 ] - [ INFO ]  HHH000037: Columns: [createtime, parentfoldid, currentversion, description, folderid, hbmpath, deleted, module_id, name, id, updatetime, tablename, templatepath]
+2016-03-28 15:20:03  [ main:5374 ] - [ INFO ]  HHH000108: Foreign keys: []
+2016-03-28 15:20:03  [ main:5375 ] - [ INFO ]  HHH000126: Indexes: [primary]
+2016-03-28 15:20:03  [ main:5377 ] - [ INFO ]  HHH000232: Schema update complete
+2016-03-28 15:20:03  [ main:5470 ] - [ INFO ]  Using DataSource [com.mchange.v2.c3p0.ComboPooledDataSource[ identityToken -> 1hge1gj9f1gwj8fftisyaz|1d9bd1d6, dataSourceName -> 1hge1gj9f1gwj8fftisyaz|1d9bd1d6 ]] of Hibernate SessionFactory for HibernateTransactionManager
+2016-03-28 15:20:03  [ main:5482 ] - [ INFO ]  Mapped "{[/admin/entities/{id}],methods=[DELETE],produces=[application/json]}" onto public org.springframework.http.ResponseEntity com.oncore.template.controller.EntityResource.delete(java.lang.String)
+2016-03-28 15:20:03  [ main:5482 ] - [ INFO ]  Mapped "{[/admin/entities/{id}],methods=[GET],produces=[application/json]}" onto public com.oncore.template.transfd.entities.EntityResponse com.oncore.template.controller.EntityResource.getEntity(java.lang.String)
+2016-03-28 15:20:03  [ main:5483 ] - [ INFO ]  Mapped "{[/admin/entities/{id}],methods=[PUT],produces=[application/json]}" onto public com.oncore.template.transfd.entities.EntityResponse com.oncore.template.controller.EntityResource.updateEntity(com.oncore.template.transfd.entities.UpdateEntityRequest)
+2016-03-28 15:20:03  [ main:5483 ] - [ INFO ]  Mapped "{[/admin/entities/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.entities.EntityResponse> com.oncore.template.controller.EntityResource.getEntities()
+2016-03-28 15:20:03  [ main:5484 ] - [ INFO ]  Mapped "{[/admin/folders/{id}],methods=[GET],produces=[application/json]}" onto public com.oncore.template.transfd.file_element.folder.FolderResponse com.oncore.template.controller.FolderResource.getFolder(java.lang.String)
+2016-03-28 15:20:03  [ main:5485 ] - [ INFO ]  Mapped "{[/admin/folders/{parent_id}/sub_folder/],methods=[POST],produces=[application/json]}" onto public com.oncore.template.transfd.file_element.folder.FolderResponse com.oncore.template.controller.FolderResource.createSubFolderToParent(java.lang.String,com.oncore.template.transfd.file_element.folder.CreateFolderToParentFolderRequest)
+2016-03-28 15:20:03  [ main:5493 ] - [ INFO ]  Mapped "{[/admin/folders/{parent_id}/sub_folder/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.file_element.folder.FolderResponse> com.oncore.template.controller.FolderResource.getChildFoldersUnderParentFolder(java.lang.String)
+2016-03-28 15:20:03  [ main:5495 ] - [ INFO ]  Mapped "{[/admin/folders/{folderId}/reports/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.report.ReportResponse> com.oncore.template.controller.FolderResource.getReportsUnderFolder(java.lang.String)
+2016-03-28 15:20:03  [ main:5495 ] - [ INFO ]  Mapped "{[/admin/folders/{folderId}/reports/],methods=[POST],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<com.oncore.template.transfd.report.ReportResponse> com.oncore.template.controller.FolderResource.createReportsUnderFolder(java.lang.String,com.oncore.template.transfd.report.CreateReportRequest)
+2016-03-28 15:20:03  [ main:5496 ] - [ INFO ]  Mapped "{[/admin/folders/{id}/],methods=[PUT],produces=[application/json]}" onto public com.oncore.template.transfd.file_element.folder.FolderResponse com.oncore.template.controller.FolderResource.updateFolder(java.lang.String,com.oncore.template.transfd.file_element.folder.UpdateFolderRequest)
+2016-03-28 15:20:03  [ main:5498 ] - [ INFO ]  Mapped "{[/admin/folders/{id}/],methods=[DELETE],produces=[application/json]}" onto public org.springframework.http.ResponseEntity com.oncore.template.controller.FolderResource.deleteFolder(java.lang.String)
+2016-03-28 15:20:03  [ main:5503 ] - [ INFO ]  Mapped "{[/admin/modules/{id}/],methods=[GET],produces=[application/json]}" onto public com.oncore.template.transfd.module.ModuleResponse com.oncore.template.controller.ModuleResource.getModule(java.lang.String)
+2016-03-28 15:20:03  [ main:5504 ] - [ INFO ]  Mapped "{[/admin/modules/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.module.ModuleResponse> com.oncore.template.controller.ModuleResource.getModules()
+2016-03-28 15:20:03  [ main:5504 ] - [ INFO ]  Mapped "{[/admin/modules/],methods=[POST],produces=[application/json]}" onto public com.oncore.template.transfd.module.ModuleResponse com.oncore.template.controller.ModuleResource.createModule(com.oncore.template.transfd.module.CreateModuleRequest)
+2016-03-28 15:20:03  [ main:5505 ] - [ INFO ]  Mapped "{[/admin/modules/{id}/],methods=[PUT],produces=[application/json]}" onto public com.oncore.template.transfd.module.ModuleResponse com.oncore.template.controller.ModuleResource.updateModule(java.lang.String,com.oncore.template.transfd.module.CreateModuleRequest)
+2016-03-28 15:20:03  [ main:5505 ] - [ INFO ]  Mapped "{[/admin/modules/{id}/entities/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.entities.EntityResponse> com.oncore.template.controller.ModuleResource.getEntitiesOfModule(java.lang.String)
+2016-03-28 15:20:03  [ main:5506 ] - [ INFO ]  Mapped "{[/admin/modules/{id}/folders/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.file_element.folder.FolderResponse> com.oncore.template.controller.ModuleResource.getFoldersOfModule(java.lang.String)
+2016-03-28 15:20:03  [ main:5507 ] - [ INFO ]  Mapped "{[/admin/modules/{id}/folders/],methods=[POST],produces=[application/json]}" onto public com.oncore.template.transfd.file_element.folder.FolderResponse com.oncore.template.controller.ModuleResource.createFolderUnderModule(java.lang.String,com.oncore.template.transfd.file_element.folder.CreateRootFolderRequest)
+2016-03-28 15:20:03  [ main:5508 ] - [ INFO ]  Mapped "{[/admin/modules/{id}/entities/],methods=[POST],produces=[application/json]}" onto public com.oncore.template.transfd.entities.EntityResponse com.oncore.template.controller.ModuleResource.createEntityUnderModule(java.lang.String,com.oncore.template.transfd.entities.CreateEntityRequest)
+2016-03-28 15:20:03  [ main:5509 ] - [ INFO ]  Mapped "{[/admin/modules/{id}/tree/],methods=[GET],produces=[application/json]}" onto public com.oncore.template.transfd.module.ModuleTreeResponse com.oncore.template.controller.ModuleResource.getModuleTree(java.lang.String)
+2016-03-28 15:20:03  [ main:5510 ] - [ INFO ]  Mapped "{[/admin/reports/{id}/],methods=[DELETE],produces=[application/json]}" onto public org.springframework.http.ResponseEntity com.oncore.template.controller.ReportResource.delete(java.lang.String)
+2016-03-28 15:20:03  [ main:5524 ] - [ INFO ]  Mapped "{[/admin/reports/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.report.ReportResponse> com.oncore.template.controller.ReportResource.getReports()
+2016-03-28 15:20:03  [ main:5525 ] - [ INFO ]  Mapped "{[/admin/reports/{id}/],methods=[GET],produces=[application/json]}" onto public com.oncore.template.transfd.report.ReportResponse com.oncore.template.controller.ReportResource.gerReport(java.lang.String)
+2016-03-28 15:20:03  [ main:5525 ] - [ INFO ]  Mapped "{[/admin/reports/{id}/],methods=[PUT],produces=[application/json]}" onto public org.springframework.http.ResponseEntity com.oncore.template.controller.ReportResource.updateReport(java.lang.String,com.oncore.template.transfd.report.CreateReportRequest)
+2016-03-28 15:20:03  [ main:5529 ] - [ INFO ]  Mapped "{[/user/entities/{entity_id}/],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity com.oncore.user.controller.UserEntityController.listEntities(java.lang.String) throws java.sql.SQLException
+2016-03-28 15:20:03  [ main:5531 ] - [ INFO ]  Mapped "{[/user/entities/{entity_id}/],methods=[POST],produces=[application/json]}" onto public org.springframework.http.ResponseEntity com.oncore.user.controller.UserEntityController.insertEntity(java.lang.String,java.util.Map) throws java.sql.SQLException
+2016-03-28 15:20:03  [ main:5533 ] - [ INFO ]  Mapped "{[/user/reports/{report_table_id}/record/{report_id}/]}" onto public org.springframework.http.ResponseEntity com.oncore.user.controller.UserReportController.getReport(java.lang.String,int) throws java.sql.SQLException
+2016-03-28 15:20:03  [ main:5533 ] - [ INFO ]  Mapped "{[/user/reports/{report_id}/record/]}" onto public org.springframework.http.ResponseEntity com.oncore.user.controller.UserReportController.listReport(java.lang.String) throws java.sql.SQLException
+2016-03-28 15:20:03  [ main:5534 ] - [ INFO ]  Mapped "{[/user/reports/{report_table_id}/desc/]}" onto public org.springframework.http.ResponseEntity com.oncore.user.controller.UserReportController.getReportDescription(java.lang.String)
+2016-03-28 15:20:03  [ main:5540 ] - [ INFO ]  Mapped "{[/user/reports/{report_id}/record/],methods=[POST]}" onto public org.springframework.http.ResponseEntity com.oncore.user.controller.UserReportController.insertReport(java.lang.String,java.util.Map) throws java.sql.SQLException
+2016-03-28 15:20:03  [ main:5583 ] - [ INFO ]  Looking for @ControllerAdvice: WebApplicationContext for namespace 'spring-dispatcher-servlet': startup date [Mon Mar 28 15:20:02 EDT 2016]; parent: Root WebApplicationContext
+2016-03-28 15:20:03  [ main:5625 ] - [ INFO ]  Looking for @ControllerAdvice: WebApplicationContext for namespace 'spring-dispatcher-servlet': startup date [Mon Mar 28 15:20:02 EDT 2016]; parent: Root WebApplicationContext
+2016-03-28 15:20:03  [ main:5656 ] - [ INFO ]  Detected @ExceptionHandler methods in commonExceptionHandler
+2016-03-28 15:20:03  [ main:5722 ] - [ INFO ]  start init entity tables...
+2016-03-28 15:20:04  [ main:6075 ] - [ INFO ]  initing entity entity_Employee_1458931383563...
+2016-03-28 15:20:04  [ main:6437 ] - [ INFO ]  Established shared JMS Connection: PooledConnection { ConnectionPool[ActiveMQConnection {id=ID:fuqiangs-MBP-58504-1459192804340-1:1,clientId=null,started=false}] }
+2016-03-28 15:20:04  [ main:6596 ] - [ INFO ]  sent message Entity{tableName='entity_Employee_1458931383563', hbmPath='Employee/entity_Employee_1458931383563', fields=[Field{ifNull=false, length=32, fieldType='string'} Element{id='8a8a821e53ae50a80153af163d370002', createTime=2016-03-25 14:43:04.0, updateTime=2016-03-25 14:43:04.0, deleted=false, name='First_Name', description=''}, Field{ifNull=false, length=32, fieldType='string'} Element{id='8a8a821e53ae50a80153af163d390003', createTime=2016-03-25 14:43:04.0, updateTime=2016-03-25 14:43:04.0, deleted=false, name='Last_Name', description=''}, Field{ifNull=false, length=32, fieldType='int'} Element{id='8a8a821e53af26bd0153b0bf91c90000', createTime=2016-03-25 22:27:38.0, updateTime=2016-03-25 22:27:38.0, deleted=false, name='SSNumber', description=''}, Field{ifNull=true, length=32, fieldType='upload'} Element{id='8a8a821e53af26bd0153b0cd8f270001', createTime=2016-03-25 22:42:55.0, updateTime=2016-03-25 22:42:55.0, deleted=false, name='phone', description=''}]} Element{id='8a8a821e53ae50a80153af163d0c0001', createTime=2016-03-25 14:43:04.0, updateTime=2016-03-25 23:48:32.0, deleted=false, name='Employee', description=''}
+2016-03-28 15:20:04  [ main:6744 ] - [ INFO ]  sent message Element{id='8a8a821e53af26bd0153b0e348140003', createTime=2016-03-25 23:06:38.0, updateTime=2016-03-28 15:12:59.0, deleted=false, name='Employee Information', description=''}
+2016-03-28 15:20:04  [ main:6759 ] - [ INFO ]  start init entity tables...
+2016-03-28 15:20:04  [ main:6818 ] - [ INFO ]  initing entity entity_Employee_1458931383563...
+2016-03-28 15:20:04  [ main:6820 ] - [ INFO ]  Established shared JMS Connection: PooledConnection { ConnectionPool[ActiveMQConnection {id=ID:fuqiangs-MBP-58504-1459192804340-3:1,clientId=null,started=false}] }
+2016-03-28 15:20:04  [ main:6943 ] - [ INFO ]  sent message Entity{tableName='entity_Employee_1458931383563', hbmPath='Employee/entity_Employee_1458931383563', fields=[Field{ifNull=false, length=32, fieldType='string'} Element{id='8a8a821e53ae50a80153af163d370002', createTime=2016-03-25 14:43:04.0, updateTime=2016-03-25 14:43:04.0, deleted=false, name='First_Name', description=''}, Field{ifNull=false, length=32, fieldType='string'} Element{id='8a8a821e53ae50a80153af163d390003', createTime=2016-03-25 14:43:04.0, updateTime=2016-03-25 14:43:04.0, deleted=false, name='Last_Name', description=''}, Field{ifNull=false, length=32, fieldType='int'} Element{id='8a8a821e53af26bd0153b0bf91c90000', createTime=2016-03-25 22:27:38.0, updateTime=2016-03-25 22:27:38.0, deleted=false, name='SSNumber', description=''}, Field{ifNull=true, length=32, fieldType='upload'} Element{id='8a8a821e53af26bd0153b0cd8f270001', createTime=2016-03-25 22:42:55.0, updateTime=2016-03-25 22:42:55.0, deleted=false, name='phone', description=''}]} Element{id='8a8a821e53ae50a80153af163d0c0001', createTime=2016-03-25 14:43:04.0, updateTime=2016-03-25 23:48:32.0, deleted=false, name='Employee', description=''}
+2016-03-28 15:20:05  [ main:7085 ] - [ INFO ]  sent message Element{id='8a8a821e53af26bd0153b0e348140003', createTime=2016-03-25 23:06:38.0, updateTime=2016-03-28 15:12:59.0, deleted=false, name='Employee Information', description=''}
+2016-03-28 15:20:05  [ main:7112 ] - [ INFO ]  FrameworkServlet 'spring-dispatcher': initialization completed in 2329 ms
+2016-03-28 15:20:24  [ qtp10405169-15:26859 ] - [ INFO ]  updating Report id=8a8a821e53af26bd0153b0e348140003
+2016-03-28 15:20:24  [ qtp10405169-15:26864 ] - [ INFO ]  updated Report id=8a8a821e53af26bd0153b0e348140003
+2016-03-28 15:20:24  [ qtp10405169-15:26980 ] - [ INFO ]  saving ReportField Employee_First_Name
+2016-03-28 15:20:25  [ qtp10405169-15:26986 ] - [ INFO ]  save ReportField Employee_First_Name success
+2016-03-28 15:20:25  [ qtp10405169-15:26986 ] - [ INFO ]  updating ReportField id=4028826353beab260153beab84a40000
+2016-03-28 15:20:25  [ qtp10405169-15:26987 ] - [ INFO ]  updated ReportField id=4028826353beab260153beab84a40000
+2016-03-28 15:20:25  [ qtp10405169-15:26987 ] - [ INFO ]  saving ReportField Employee_Last_Name
+2016-03-28 15:20:25  [ qtp10405169-15:26988 ] - [ INFO ]  save ReportField Employee_Last_Name success
+2016-03-28 15:20:25  [ qtp10405169-15:26988 ] - [ INFO ]  updating ReportField id=4028826353beab260153beab84ab0001
+2016-03-28 15:20:25  [ qtp10405169-15:26988 ] - [ INFO ]  updated ReportField id=4028826353beab260153beab84ab0001
+2016-03-28 15:20:25  [ qtp10405169-15:26989 ] - [ INFO ]  saving ReportField Employee_SSNumber
+2016-03-28 15:20:25  [ qtp10405169-15:26990 ] - [ INFO ]  save ReportField Employee_SSNumber success
+2016-03-28 15:20:25  [ qtp10405169-15:26990 ] - [ INFO ]  updating ReportField id=4028826353beab260153beab84ac0002
+2016-03-28 15:20:25  [ qtp10405169-15:26990 ] - [ INFO ]  updated ReportField id=4028826353beab260153beab84ac0002
+2016-03-28 15:20:25  [ qtp10405169-15:26991 ] - [ INFO ]  saving ReportField Employee_phone
+2016-03-28 15:20:25  [ qtp10405169-15:26991 ] - [ INFO ]  save ReportField Employee_phone success
+2016-03-28 15:20:25  [ qtp10405169-15:26992 ] - [ INFO ]  updating ReportField id=4028826353beab260153beab84ae0003
+2016-03-28 15:20:25  [ qtp10405169-15:26992 ] - [ INFO ]  updated ReportField id=4028826353beab260153beab84ae0003
+2016-03-28 15:20:25  [ qtp10405169-15:27037 ] - [ INFO ]  sent message Element{id='8a8a821e53af26bd0153b0e348140003', createTime=2016-03-25 23:06:38.0, updateTime=2016-03-28 15:20:24.878, deleted=false, name='Employee Information', description=''}
+2016-03-28 15:20:25  [ qtp10405169-15:27046 ] - [ INFO ]  sent message com.oncore.data.messagequeue.msgobj.ReportElement@10be2e0b
+2016-03-28 15:23:11  [ Thread-1:193740 ] - [ INFO ]  Closing WebApplicationContext for namespace 'spring-dispatcher-servlet': startup date [Mon Mar 28 15:20:02 EDT 2016]; parent: Root WebApplicationContext
+2016-03-28 15:23:55  [ main:10485 ] - [ INFO ]  FrameworkServlet 'spring-dispatcher': initialization started
+2016-03-28 15:23:55  [ main:10494 ] - [ INFO ]  Refreshing WebApplicationContext for namespace 'spring-dispatcher-servlet': startup date [Mon Mar 28 15:23:55 EDT 2016]; parent: Root WebApplicationContext
+2016-03-28 15:23:55  [ main:10495 ] - [ INFO ]  Loading XML bean definitions from ServletContext resource [/WEB-INF/spring-context.xml]
+2016-03-28 15:23:55  [ main:10534 ] - [ INFO ]  Loading XML bean definitions from URL [jar:file:/Users/steve/.m2/repository/com/oncore/oncore-consulting-template-management/1.0-SNAPSHOT/oncore-consulting-template-management-1.0-SNAPSHOT.jar!/spring-context-template-management.xml]
+2016-03-28 15:23:55  [ main:10600 ] - [ INFO ]  Loading XML bean definitions from URL [jar:file:/Users/steve/.m2/repository/com/oncore/oncore-consulting-common/1.0-SNAPSHOT/oncore-consulting-common-1.0-SNAPSHOT.jar!/spring/spring-context-common.xml]
+2016-03-28 15:23:55  [ main:10633 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring/spring-hibernate.xml]
+2016-03-28 15:23:55  [ main:10669 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring/spring-mvc.xml]
+2016-03-28 15:23:55  [ main:10715 ] - [ INFO ]  Loading XML bean definitions from URL [jar:file:/Users/steve/.m2/repository/com/oncore/oncore-consulting-database-management/1.0-SNAPSHOT/oncore-consulting-database-management-1.0-SNAPSHOT.jar!/spring/spring-context-data-management.xml]
+2016-03-28 15:23:55  [ main:10758 ] - [ INFO ]  Loading XML bean definitions from URL [jar:file:/Users/steve/.m2/repository/com/oncore/oncore-consulting-user/1.0-SNAPSHOT/oncore-consulting-user-1.0-SNAPSHOT.jar!/spring/spring-context-user.xml]
+2016-03-28 15:23:56  [ main:10859 ] - [ INFO ]  Loading properties file from class path resource [properties/hibernate-development.properties]
+2016-03-28 15:23:56  [ main:10861 ] - [ INFO ]  Loading properties file from class path resource [properties/app-development.properties]
+2016-03-28 15:23:56  [ main:10864 ] - [ INFO ]  JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-03-28 15:23:56  [ main:10973 ] - [ INFO ]  Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 1hge1gj9f1gwo6lp1cw0lsw|117fb9ba, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceSynchronousCheckins -> false, forceUseNamedDriverClass -> false, identityToken -> 1hge1gj9f1gwo6lp1cw0lsw|117fb9ba, idleConnectionTestPeriod -> 0, initialPoolSize -> 1, jdbcUrl -> jdbc:mysql://localhost:3306/oncore_admin, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 1, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 40, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 1, numHelperThreads -> 3, preferredTestQuery -> null, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+2016-03-28 15:23:56  [ main:10989 ] - [ INFO ]  HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2016-03-28 15:23:56  [ main:11016 ] - [ INFO ]  HHH000399: Using default transaction strategy (direct JDBC transactions)
+2016-03-28 15:23:56  [ main:11017 ] - [ INFO ]  HHH000397: Using ASTQueryTranslatorFactory
+2016-03-28 15:23:56  [ main:11109 ] - [ INFO ]  HHH000228: Running hbm2ddl schema update
+2016-03-28 15:23:56  [ main:11109 ] - [ INFO ]  HHH000102: Fetching database metadata
+2016-03-28 15:23:56  [ main:11110 ] - [ INFO ]  HHH000396: Updating schema
+2016-03-28 15:23:56  [ main:11125 ] - [ INFO ]  HHH000261: Table found: oncore_admin.element
+2016-03-28 15:23:56  [ main:11126 ] - [ INFO ]  HHH000037: Columns: [createtime, deleted, module_id, name, description, id, updatetime]
+2016-03-28 15:23:56  [ main:11127 ] - [ INFO ]  HHH000108: Foreign keys: []
+2016-03-28 15:23:56  [ main:11127 ] - [ INFO ]  HHH000126: Indexes: [primary]
+2016-03-28 15:23:56  [ main:11138 ] - [ INFO ]  HHH000261: Table found: oncore_admin.entity
+2016-03-28 15:23:56  [ main:11139 ] - [ INFO ]  HHH000037: Columns: [createtime, deleted, module_id, name, description, id, updatetime, tablename, hbmpath]
+2016-03-28 15:23:56  [ main:11140 ] - [ INFO ]  HHH000108: Foreign keys: []
+2016-03-28 15:23:56  [ main:11140 ] - [ INFO ]  HHH000126: Indexes: [primary]
+2016-03-28 15:23:56  [ main:11149 ] - [ INFO ]  HHH000261: Table found: oncore_admin.field
+2016-03-28 15:23:56  [ main:11150 ] - [ INFO ]  HHH000037: Columns: [createtime, deleted, module_id, name, length, description, ifnull, id, updatetime, fieldtype, tablename, entity_id]
+2016-03-28 15:23:56  [ main:11150 ] - [ INFO ]  HHH000108: Foreign keys: [fk_o596lc80ccb1rgvhnoku4fdo9]
+2016-03-28 15:23:56  [ main:11151 ] - [ INFO ]  HHH000126: Indexes: [fk_o596lc80ccb1rgvhnoku4fdo9, primary]
+2016-03-28 15:23:56  [ main:11162 ] - [ INFO ]  HHH000261: Table found: oncore_admin.file_element
+2016-03-28 15:23:56  [ main:11162 ] - [ INFO ]  HHH000037: Columns: [createtime, deleted, module_id, parentfoldid, name, description, id, updatetime]
+2016-03-28 15:23:56  [ main:11163 ] - [ INFO ]  HHH000108: Foreign keys: []
+2016-03-28 15:23:56  [ main:11164 ] - [ INFO ]  HHH000126: Indexes: [primary]
+2016-03-28 15:23:56  [ main:11177 ] - [ INFO ]  HHH000261: Table found: oncore_admin.folder_file_element
+2016-03-28 15:23:56  [ main:11178 ] - [ INFO ]  HHH000037: Columns: [createtime, deleted, module_id, parentfoldid, depth, name, description, id, updatetime]
+2016-03-28 15:23:56  [ main:11179 ] - [ INFO ]  HHH000108: Foreign keys: []
+2016-03-28 15:23:56  [ main:11179 ] - [ INFO ]  HHH000126: Indexes: [primary]
+2016-03-28 15:23:56  [ main:11188 ] - [ INFO ]  HHH000261: Table found: oncore_admin.module
+2016-03-28 15:23:56  [ main:11189 ] - [ INFO ]  HHH000037: Columns: [createtime, deleted, module_id, name, description, id, updatetime]
+2016-03-28 15:23:56  [ main:11189 ] - [ INFO ]  HHH000108: Foreign keys: []
+2016-03-28 15:23:56  [ main:11190 ] - [ INFO ]  HHH000126: Indexes: [primary]
+2016-03-28 15:23:56  [ main:11202 ] - [ INFO ]  HHH000261: Table found: oncore_admin.report_field
+2016-03-28 15:23:56  [ main:11202 ] - [ INFO ]  HHH000037: Columns: [createtime, length, description, relatedfield_id, fieldtype, ifrelatedfield, deleted, module_id, report_id, name, ifnull, id, updatetime]
+2016-03-28 15:23:56  [ main:11203 ] - [ INFO ]  HHH000108: Foreign keys: [fk_qmru8iktsptb9m0nt6a5kj7yr, fk_t5oxbvi73rrwmoroikmhldvg9]
+2016-03-28 15:23:56  [ main:11204 ] - [ INFO ]  HHH000126: Indexes: [fk_qmru8iktsptb9m0nt6a5kj7yr, fk_t5oxbvi73rrwmoroikmhldvg9, primary]
+2016-03-28 15:23:56  [ main:11219 ] - [ INFO ]  HHH000261: Table found: oncore_admin.report_file_element
+2016-03-28 15:23:56  [ main:11221 ] - [ INFO ]  HHH000037: Columns: [createtime, parentfoldid, currentversion, description, folderid, hbmpath, deleted, module_id, name, id, updatetime, tablename, templatepath]
+2016-03-28 15:23:56  [ main:11222 ] - [ INFO ]  HHH000108: Foreign keys: []
+2016-03-28 15:23:56  [ main:11223 ] - [ INFO ]  HHH000126: Indexes: [primary]
+2016-03-28 15:23:56  [ main:11224 ] - [ INFO ]  HHH000232: Schema update complete
+2016-03-28 15:23:56  [ main:11319 ] - [ INFO ]  Using DataSource [com.mchange.v2.c3p0.ComboPooledDataSource[ identityToken -> 1hge1gj9f1gwo6lp1cw0lsw|117fb9ba, dataSourceName -> 1hge1gj9f1gwo6lp1cw0lsw|117fb9ba ]] of Hibernate SessionFactory for HibernateTransactionManager
+2016-03-28 15:23:56  [ main:11369 ] - [ INFO ]  Mapped "{[/admin/entities/{id}],methods=[DELETE],produces=[application/json]}" onto public org.springframework.http.ResponseEntity com.oncore.template.controller.EntityResource.delete(java.lang.String)
+2016-03-28 15:23:56  [ main:11370 ] - [ INFO ]  Mapped "{[/admin/entities/{id}],methods=[GET],produces=[application/json]}" onto public com.oncore.template.transfd.entities.EntityResponse com.oncore.template.controller.EntityResource.getEntity(java.lang.String)
+2016-03-28 15:23:56  [ main:11371 ] - [ INFO ]  Mapped "{[/admin/entities/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.entities.EntityResponse> com.oncore.template.controller.EntityResource.getEntities()
+2016-03-28 15:23:56  [ main:11373 ] - [ INFO ]  Mapped "{[/admin/entities/{id}],methods=[PUT],produces=[application/json]}" onto public com.oncore.template.transfd.entities.EntityResponse com.oncore.template.controller.EntityResource.updateEntity(com.oncore.template.transfd.entities.UpdateEntityRequest)
+2016-03-28 15:23:56  [ main:11375 ] - [ INFO ]  Mapped "{[/admin/folders/{id}],methods=[GET],produces=[application/json]}" onto public com.oncore.template.transfd.file_element.folder.FolderResponse com.oncore.template.controller.FolderResource.getFolder(java.lang.String)
+2016-03-28 15:23:56  [ main:11376 ] - [ INFO ]  Mapped "{[/admin/folders/{parent_id}/sub_folder/],methods=[POST],produces=[application/json]}" onto public com.oncore.template.transfd.file_element.folder.FolderResponse com.oncore.template.controller.FolderResource.createSubFolderToParent(java.lang.String,com.oncore.template.transfd.file_element.folder.CreateFolderToParentFolderRequest)
+2016-03-28 15:23:56  [ main:11377 ] - [ INFO ]  Mapped "{[/admin/folders/{folderId}/reports/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.report.ReportResponse> com.oncore.template.controller.FolderResource.getReportsUnderFolder(java.lang.String)
+2016-03-28 15:23:56  [ main:11378 ] - [ INFO ]  Mapped "{[/admin/folders/{parent_id}/sub_folder/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.file_element.folder.FolderResponse> com.oncore.template.controller.FolderResource.getChildFoldersUnderParentFolder(java.lang.String)
+2016-03-28 15:23:56  [ main:11379 ] - [ INFO ]  Mapped "{[/admin/folders/{folderId}/reports/],methods=[POST],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<com.oncore.template.transfd.report.ReportResponse> com.oncore.template.controller.FolderResource.createReportsUnderFolder(java.lang.String,com.oncore.template.transfd.report.CreateReportRequest)
+2016-03-28 15:23:56  [ main:11380 ] - [ INFO ]  Mapped "{[/admin/folders/{id}/],methods=[PUT],produces=[application/json]}" onto public com.oncore.template.transfd.file_element.folder.FolderResponse com.oncore.template.controller.FolderResource.updateFolder(java.lang.String,com.oncore.template.transfd.file_element.folder.UpdateFolderRequest)
+2016-03-28 15:23:56  [ main:11381 ] - [ INFO ]  Mapped "{[/admin/folders/{id}/],methods=[DELETE],produces=[application/json]}" onto public org.springframework.http.ResponseEntity com.oncore.template.controller.FolderResource.deleteFolder(java.lang.String)
+2016-03-28 15:23:56  [ main:11391 ] - [ INFO ]  Mapped "{[/admin/modules/{id}/],methods=[GET],produces=[application/json]}" onto public com.oncore.template.transfd.module.ModuleResponse com.oncore.template.controller.ModuleResource.getModule(java.lang.String)
+2016-03-28 15:23:56  [ main:11393 ] - [ INFO ]  Mapped "{[/admin/modules/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.module.ModuleResponse> com.oncore.template.controller.ModuleResource.getModules()
+2016-03-28 15:23:56  [ main:11401 ] - [ INFO ]  Mapped "{[/admin/modules/],methods=[POST],produces=[application/json]}" onto public com.oncore.template.transfd.module.ModuleResponse com.oncore.template.controller.ModuleResource.createModule(com.oncore.template.transfd.module.CreateModuleRequest)
+2016-03-28 15:23:56  [ main:11402 ] - [ INFO ]  Mapped "{[/admin/modules/{id}/],methods=[PUT],produces=[application/json]}" onto public com.oncore.template.transfd.module.ModuleResponse com.oncore.template.controller.ModuleResource.updateModule(java.lang.String,com.oncore.template.transfd.module.CreateModuleRequest)
+2016-03-28 15:23:56  [ main:11403 ] - [ INFO ]  Mapped "{[/admin/modules/{id}/entities/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.entities.EntityResponse> com.oncore.template.controller.ModuleResource.getEntitiesOfModule(java.lang.String)
+2016-03-28 15:23:56  [ main:11404 ] - [ INFO ]  Mapped "{[/admin/modules/{id}/folders/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.file_element.folder.FolderResponse> com.oncore.template.controller.ModuleResource.getFoldersOfModule(java.lang.String)
+2016-03-28 15:23:56  [ main:11405 ] - [ INFO ]  Mapped "{[/admin/modules/{id}/folders/],methods=[POST],produces=[application/json]}" onto public com.oncore.template.transfd.file_element.folder.FolderResponse com.oncore.template.controller.ModuleResource.createFolderUnderModule(java.lang.String,com.oncore.template.transfd.file_element.folder.CreateRootFolderRequest)
+2016-03-28 15:23:56  [ main:11407 ] - [ INFO ]  Mapped "{[/admin/modules/{id}/entities/],methods=[POST],produces=[application/json]}" onto public com.oncore.template.transfd.entities.EntityResponse com.oncore.template.controller.ModuleResource.createEntityUnderModule(java.lang.String,com.oncore.template.transfd.entities.CreateEntityRequest)
+2016-03-28 15:23:56  [ main:11407 ] - [ INFO ]  Mapped "{[/admin/modules/{id}/tree/],methods=[GET],produces=[application/json]}" onto public com.oncore.template.transfd.module.ModuleTreeResponse com.oncore.template.controller.ModuleResource.getModuleTree(java.lang.String)
+2016-03-28 15:23:56  [ main:11419 ] - [ INFO ]  Mapped "{[/admin/reports/{id}/],methods=[DELETE],produces=[application/json]}" onto public org.springframework.http.ResponseEntity com.oncore.template.controller.ReportResource.delete(java.lang.String)
+2016-03-28 15:23:56  [ main:11421 ] - [ INFO ]  Mapped "{[/admin/reports/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.report.ReportResponse> com.oncore.template.controller.ReportResource.getReports()
+2016-03-28 15:23:56  [ main:11422 ] - [ INFO ]  Mapped "{[/admin/reports/{id}/],methods=[GET],produces=[application/json]}" onto public com.oncore.template.transfd.report.ReportResponse com.oncore.template.controller.ReportResource.gerReport(java.lang.String)
+2016-03-28 15:23:56  [ main:11423 ] - [ INFO ]  Mapped "{[/admin/reports/{id}/],methods=[PUT],produces=[application/json]}" onto public org.springframework.http.ResponseEntity com.oncore.template.controller.ReportResource.updateReport(java.lang.String,com.oncore.template.transfd.report.CreateReportRequest)
+2016-03-28 15:23:56  [ main:11425 ] - [ INFO ]  Mapped "{[/user/entities/{entity_id}/],methods=[POST],produces=[application/json]}" onto public org.springframework.http.ResponseEntity com.oncore.user.controller.UserEntityController.insertEntity(java.lang.String,java.util.Map) throws java.sql.SQLException
+2016-03-28 15:23:56  [ main:11426 ] - [ INFO ]  Mapped "{[/user/entities/{entity_id}/],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity com.oncore.user.controller.UserEntityController.listEntities(java.lang.String) throws java.sql.SQLException
+2016-03-28 15:23:56  [ main:11465 ] - [ INFO ]  Mapped "{[/user/reports/{report_table_id}/record/{report_id}/]}" onto public org.springframework.http.ResponseEntity com.oncore.user.controller.UserReportController.getReport(java.lang.String,int) throws java.sql.SQLException
+2016-03-28 15:23:56  [ main:11466 ] - [ INFO ]  Mapped "{[/user/reports/{report_id}/record/]}" onto public org.springframework.http.ResponseEntity com.oncore.user.controller.UserReportController.listReport(java.lang.String) throws java.sql.SQLException
+2016-03-28 15:23:56  [ main:11467 ] - [ INFO ]  Mapped "{[/user/reports/{report_table_id}/desc/]}" onto public org.springframework.http.ResponseEntity com.oncore.user.controller.UserReportController.getReportDescription(java.lang.String)
+2016-03-28 15:23:56  [ main:11468 ] - [ INFO ]  Mapped "{[/user/reports/{report_id}/record/],methods=[POST]}" onto public org.springframework.http.ResponseEntity com.oncore.user.controller.UserReportController.insertReport(java.lang.String,java.util.Map) throws java.sql.SQLException
+2016-03-28 15:23:56  [ main:11606 ] - [ INFO ]  Looking for @ControllerAdvice: WebApplicationContext for namespace 'spring-dispatcher-servlet': startup date [Mon Mar 28 15:23:55 EDT 2016]; parent: Root WebApplicationContext
+2016-03-28 15:23:56  [ main:11658 ] - [ INFO ]  Looking for @ControllerAdvice: WebApplicationContext for namespace 'spring-dispatcher-servlet': startup date [Mon Mar 28 15:23:55 EDT 2016]; parent: Root WebApplicationContext
+2016-03-28 15:23:56  [ main:11698 ] - [ INFO ]  Detected @ExceptionHandler methods in commonExceptionHandler
+2016-03-28 15:23:56  [ main:11797 ] - [ INFO ]  start init entity tables...
+2016-03-28 15:23:57  [ main:12372 ] - [ INFO ]  initing entity entity_Employee_1458931383563...
+2016-03-28 15:23:57  [ main:12592 ] - [ INFO ]  Established shared JMS Connection: PooledConnection { ConnectionPool[ActiveMQConnection {id=ID:fuqiangs-MBP-58938-1459193037660-1:1,clientId=null,started=false}] }
+2016-03-28 15:23:57  [ main:12783 ] - [ INFO ]  sent message Entity{tableName='entity_Employee_1458931383563', hbmPath='Employee/entity_Employee_1458931383563', fields=[Field{ifNull=false, length=32, fieldType='string'} Element{id='8a8a821e53ae50a80153af163d370002', createTime=2016-03-25 14:43:04.0, updateTime=2016-03-25 14:43:04.0, deleted=false, name='First_Name', description=''}, Field{ifNull=false, length=32, fieldType='string'} Element{id='8a8a821e53ae50a80153af163d390003', createTime=2016-03-25 14:43:04.0, updateTime=2016-03-25 14:43:04.0, deleted=false, name='Last_Name', description=''}, Field{ifNull=false, length=32, fieldType='int'} Element{id='8a8a821e53af26bd0153b0bf91c90000', createTime=2016-03-25 22:27:38.0, updateTime=2016-03-25 22:27:38.0, deleted=false, name='SSNumber', description=''}, Field{ifNull=true, length=32, fieldType='upload'} Element{id='8a8a821e53af26bd0153b0cd8f270001', createTime=2016-03-25 22:42:55.0, updateTime=2016-03-25 22:42:55.0, deleted=false, name='phone', description=''}]} Element{id='8a8a821e53ae50a80153af163d0c0001', createTime=2016-03-25 14:43:04.0, updateTime=2016-03-25 23:48:32.0, deleted=false, name='Employee', description=''}
+2016-03-28 15:23:58  [ main:12996 ] - [ INFO ]  sent message Element{id='8a8a821e53af26bd0153b0e348140003', createTime=2016-03-25 23:06:38.0, updateTime=2016-03-28 15:20:25.0, deleted=false, name='Employee Information', description=''}
+2016-03-28 15:23:58  [ main:13036 ] - [ INFO ]  start init entity tables...
+2016-03-28 15:23:58  [ main:13279 ] - [ INFO ]  initing entity entity_Employee_1458931383563...
+2016-03-28 15:23:58  [ main:13281 ] - [ INFO ]  Established shared JMS Connection: PooledConnection { ConnectionPool[ActiveMQConnection {id=ID:fuqiangs-MBP-58938-1459193037660-3:1,clientId=null,started=false}] }
+2016-03-28 15:23:58  [ main:13437 ] - [ INFO ]  sent message Entity{tableName='entity_Employee_1458931383563', hbmPath='Employee/entity_Employee_1458931383563', fields=[Field{ifNull=false, length=32, fieldType='string'} Element{id='8a8a821e53ae50a80153af163d370002', createTime=2016-03-25 14:43:04.0, updateTime=2016-03-25 14:43:04.0, deleted=false, name='First_Name', description=''}, Field{ifNull=false, length=32, fieldType='string'} Element{id='8a8a821e53ae50a80153af163d390003', createTime=2016-03-25 14:43:04.0, updateTime=2016-03-25 14:43:04.0, deleted=false, name='Last_Name', description=''}, Field{ifNull=false, length=32, fieldType='int'} Element{id='8a8a821e53af26bd0153b0bf91c90000', createTime=2016-03-25 22:27:38.0, updateTime=2016-03-25 22:27:38.0, deleted=false, name='SSNumber', description=''}, Field{ifNull=true, length=32, fieldType='upload'} Element{id='8a8a821e53af26bd0153b0cd8f270001', createTime=2016-03-25 22:42:55.0, updateTime=2016-03-25 22:42:55.0, deleted=false, name='phone', description=''}]} Element{id='8a8a821e53ae50a80153af163d0c0001', createTime=2016-03-25 14:43:04.0, updateTime=2016-03-25 23:48:32.0, deleted=false, name='Employee', description=''}
+2016-03-28 15:23:58  [ main:13608 ] - [ INFO ]  sent message Element{id='8a8a821e53af26bd0153b0e348140003', createTime=2016-03-25 23:06:38.0, updateTime=2016-03-28 15:20:25.0, deleted=false, name='Employee Information', description=''}
+2016-03-28 15:23:58  [ main:13618 ] - [ INFO ]  FrameworkServlet 'spring-dispatcher': initialization completed in 3126 ms
+2016-03-28 15:24:11  [ qtp10405169-15:25937 ] - [ INFO ]  updating Report id=8a8a821e53af26bd0153b0e348140003
+2016-03-28 15:24:11  [ qtp10405169-15:25942 ] - [ INFO ]  updated Report id=8a8a821e53af26bd0153b0e348140003
+2016-03-28 15:24:11  [ qtp10405169-15:26090 ] - [ INFO ]  saving ReportField Employee_First_Name
+2016-03-28 15:24:11  [ qtp10405169-15:26104 ] - [ INFO ]  save ReportField Employee_First_Name success
+2016-03-28 15:24:11  [ qtp10405169-15:26104 ] - [ INFO ]  updating ReportField id=4028826353beaeaf0153beaef88e0000
+2016-03-28 15:24:11  [ qtp10405169-15:26104 ] - [ INFO ]  updated ReportField id=4028826353beaeaf0153beaef88e0000
+2016-03-28 15:24:11  [ qtp10405169-15:26105 ] - [ INFO ]  saving ReportField Employee_Last_Name
+2016-03-28 15:24:11  [ qtp10405169-15:26106 ] - [ INFO ]  save ReportField Employee_Last_Name success
+2016-03-28 15:24:11  [ qtp10405169-15:26107 ] - [ INFO ]  updating ReportField id=4028826353beaeaf0153beaef89d0001
+2016-03-28 15:24:11  [ qtp10405169-15:26107 ] - [ INFO ]  updated ReportField id=4028826353beaeaf0153beaef89d0001
+2016-03-28 15:24:11  [ qtp10405169-15:26108 ] - [ INFO ]  saving ReportField Employee_SSNumber
+2016-03-28 15:24:11  [ qtp10405169-15:26108 ] - [ INFO ]  save ReportField Employee_SSNumber success
+2016-03-28 15:24:11  [ qtp10405169-15:26109 ] - [ INFO ]  updating ReportField id=4028826353beaeaf0153beaef89f0002
+2016-03-28 15:24:11  [ qtp10405169-15:26109 ] - [ INFO ]  updated ReportField id=4028826353beaeaf0153beaef89f0002
+2016-03-28 15:24:11  [ qtp10405169-15:26109 ] - [ INFO ]  saving ReportField Employee_phone
+2016-03-28 15:24:11  [ qtp10405169-15:26110 ] - [ INFO ]  save ReportField Employee_phone success
+2016-03-28 15:24:11  [ qtp10405169-15:26111 ] - [ INFO ]  updating ReportField id=4028826353beaeaf0153beaef8a10003
+2016-03-28 15:24:11  [ qtp10405169-15:26112 ] - [ INFO ]  updated ReportField id=4028826353beaeaf0153beaef8a10003
+2016-03-28 15:24:11  [ qtp10405169-15:26163 ] - [ INFO ]  sent message Element{id='8a8a821e53af26bd0153b0e348140003', createTime=2016-03-25 23:06:38.0, updateTime=2016-03-28 15:24:11.127, deleted=false, name='Employee Information', description=''}
+2016-03-28 15:24:11  [ qtp10405169-15:26180 ] - [ INFO ]  sent message com.oncore.data.messagequeue.msgobj.ReportElement@1ce03036
+2016-03-28 16:15:13  [ qtp10405169-18:3088283 ] - [ INFO ]  updating Report id=8a8a821e53af26bd0153b0e348140003
+2016-03-28 16:15:13  [ qtp10405169-18:3088288 ] - [ INFO ]  updated Report id=8a8a821e53af26bd0153b0e348140003
+2016-03-28 16:15:13  [ qtp10405169-18:3088297 ] - [ INFO ]  saving ReportField Employee_First_Name
+2016-03-28 16:15:13  [ qtp10405169-18:3088306 ] - [ INFO ]  save ReportField Employee_First_Name success
+2016-03-28 16:15:13  [ qtp10405169-18:3088307 ] - [ INFO ]  updating ReportField id=4028826353beaeaf0153beddb2510004
+2016-03-28 16:15:13  [ qtp10405169-18:3088308 ] - [ INFO ]  updated ReportField id=4028826353beaeaf0153beddb2510004
+2016-03-28 16:15:13  [ qtp10405169-18:3088308 ] - [ INFO ]  saving ReportField Employee_Last_Name
+2016-03-28 16:15:13  [ qtp10405169-18:3088309 ] - [ INFO ]  save ReportField Employee_Last_Name success
+2016-03-28 16:15:13  [ qtp10405169-18:3088309 ] - [ INFO ]  updating ReportField id=4028826353beaeaf0153beddb2580005
+2016-03-28 16:15:13  [ qtp10405169-18:3088309 ] - [ INFO ]  updated ReportField id=4028826353beaeaf0153beddb2580005
+2016-03-28 16:15:13  [ qtp10405169-18:3088310 ] - [ INFO ]  saving ReportField Employee_SSNumber
+2016-03-28 16:15:13  [ qtp10405169-18:3088310 ] - [ INFO ]  save ReportField Employee_SSNumber success
+2016-03-28 16:15:13  [ qtp10405169-18:3088310 ] - [ INFO ]  updating ReportField id=4028826353beaeaf0153beddb2590006
+2016-03-28 16:15:13  [ qtp10405169-18:3088311 ] - [ INFO ]  updated ReportField id=4028826353beaeaf0153beddb2590006
+2016-03-28 16:15:13  [ qtp10405169-18:3088311 ] - [ INFO ]  saving ReportField Employee_phone
+2016-03-28 16:15:13  [ qtp10405169-18:3088311 ] - [ INFO ]  save ReportField Employee_phone success
+2016-03-28 16:15:13  [ qtp10405169-18:3088311 ] - [ INFO ]  updating ReportField id=4028826353beaeaf0153beddb25a0007
+2016-03-28 16:15:13  [ qtp10405169-18:3088314 ] - [ INFO ]  updated ReportField id=4028826353beaeaf0153beddb25a0007
+2016-03-28 16:15:13  [ qtp10405169-18:3088391 ] - [ INFO ]  sent message Element{id='8a8a821e53af26bd0153b0e348140003', createTime=2016-03-25 23:06:38.0, updateTime=2016-03-28 16:15:13.475, deleted=false, name='Employee Information', description=''}
+2016-03-28 16:15:13  [ qtp10405169-18:3088431 ] - [ INFO ]  sent message com.oncore.data.messagequeue.msgobj.ReportElement@15d56641
+2016-03-28 16:17:31  [ qtp10405169-17:3226105 ] - [ INFO ]  updating Report id=8a8a821e53af26bd0153b0e348140003
+2016-03-28 16:17:31  [ qtp10405169-17:3226109 ] - [ INFO ]  updated Report id=8a8a821e53af26bd0153b0e348140003
+2016-03-28 16:17:31  [ qtp10405169-17:3226121 ] - [ INFO ]  saving ReportField Employee_First_Name
+2016-03-28 16:17:31  [ qtp10405169-17:3226123 ] - [ INFO ]  save ReportField Employee_First_Name success
+2016-03-28 16:17:31  [ qtp10405169-17:3226123 ] - [ INFO ]  updating ReportField id=4028826353beaeaf0153bedfccad0008
+2016-03-28 16:17:31  [ qtp10405169-17:3226124 ] - [ INFO ]  updated ReportField id=4028826353beaeaf0153bedfccad0008
+2016-03-28 16:17:31  [ qtp10405169-17:3226124 ] - [ INFO ]  saving ReportField Employee_Last_Name
+2016-03-28 16:17:31  [ qtp10405169-17:3226124 ] - [ INFO ]  save ReportField Employee_Last_Name success
+2016-03-28 16:17:31  [ qtp10405169-17:3226124 ] - [ INFO ]  updating ReportField id=4028826353beaeaf0153bedfccaf0009
+2016-03-28 16:17:31  [ qtp10405169-17:3226125 ] - [ INFO ]  updated ReportField id=4028826353beaeaf0153bedfccaf0009
+2016-03-28 16:17:31  [ qtp10405169-17:3226125 ] - [ INFO ]  saving ReportField Employee_SSNumber
+2016-03-28 16:17:31  [ qtp10405169-17:3226126 ] - [ INFO ]  save ReportField Employee_SSNumber success
+2016-03-28 16:17:31  [ qtp10405169-17:3226126 ] - [ INFO ]  updating ReportField id=4028826353beaeaf0153bedfccb1000a
+2016-03-28 16:17:31  [ qtp10405169-17:3226127 ] - [ INFO ]  updated ReportField id=4028826353beaeaf0153bedfccb1000a
+2016-03-28 16:17:31  [ qtp10405169-17:3226127 ] - [ INFO ]  saving ReportField Employee_phone
+2016-03-28 16:17:31  [ qtp10405169-17:3226128 ] - [ INFO ]  save ReportField Employee_phone success
+2016-03-28 16:17:31  [ qtp10405169-17:3226129 ] - [ INFO ]  updating ReportField id=4028826353beaeaf0153bedfccb3000b
+2016-03-28 16:17:31  [ qtp10405169-17:3226133 ] - [ INFO ]  updated ReportField id=4028826353beaeaf0153bedfccb3000b
+2016-03-28 16:17:31  [ qtp10405169-17:3226223 ] - [ INFO ]  sent message Element{id='8a8a821e53af26bd0153b0e348140003', createTime=2016-03-25 23:06:38.0, updateTime=2016-03-28 16:17:31.296, deleted=false, name='Employee Information', description=''}
+2016-03-28 16:17:31  [ qtp10405169-17:3226238 ] - [ INFO ]  sent message com.oncore.data.messagequeue.msgobj.ReportElement@76e83ff
+2016-03-28 16:41:27  [ qtp10405169-17:4662479 ] - [ INFO ]  updating Report id=8a8a821e53af26bd0153b0e348140003
+2016-03-28 16:41:27  [ qtp10405169-17:4662484 ] - [ INFO ]  updated Report id=8a8a821e53af26bd0153b0e348140003
+2016-03-28 16:41:27  [ qtp10405169-17:4662491 ] - [ INFO ]  saving ReportField Employee_First_Name
+2016-03-28 16:41:27  [ qtp10405169-17:4662493 ] - [ INFO ]  save ReportField Employee_First_Name success
+2016-03-28 16:41:27  [ qtp10405169-17:4662493 ] - [ INFO ]  updating ReportField id=4028826353beaeaf0153bef5b77f000c
+2016-03-28 16:41:27  [ qtp10405169-17:4662494 ] - [ INFO ]  updated ReportField id=4028826353beaeaf0153bef5b77f000c
+2016-03-28 16:41:27  [ qtp10405169-17:4662494 ] - [ INFO ]  saving ReportField Employee_Last_Name
+2016-03-28 16:41:27  [ qtp10405169-17:4662495 ] - [ INFO ]  save ReportField Employee_Last_Name success
+2016-03-28 16:41:27  [ qtp10405169-17:4662497 ] - [ INFO ]  updating ReportField id=4028826353beaeaf0153bef5b782000d
+2016-03-28 16:41:27  [ qtp10405169-17:4662498 ] - [ INFO ]  updated ReportField id=4028826353beaeaf0153bef5b782000d
+2016-03-28 16:41:27  [ qtp10405169-17:4662499 ] - [ INFO ]  saving ReportField Employee_SSNumber
+2016-03-28 16:41:27  [ qtp10405169-17:4662510 ] - [ INFO ]  save ReportField Employee_SSNumber success
+2016-03-28 16:41:27  [ qtp10405169-17:4662517 ] - [ INFO ]  updating ReportField id=4028826353beaeaf0153bef5b790000e
+2016-03-28 16:41:27  [ qtp10405169-17:4662525 ] - [ INFO ]  updated ReportField id=4028826353beaeaf0153bef5b790000e
+2016-03-28 16:41:27  [ qtp10405169-17:4662533 ] - [ INFO ]  saving ReportField Employee_phone
+2016-03-28 16:41:27  [ qtp10405169-17:4662541 ] - [ INFO ]  save ReportField Employee_phone success
+2016-03-28 16:41:27  [ qtp10405169-17:4662542 ] - [ INFO ]  updating ReportField id=4028826353beaeaf0153bef5b7b0000f
+2016-03-28 16:41:27  [ qtp10405169-17:4662543 ] - [ INFO ]  updated ReportField id=4028826353beaeaf0153bef5b7b0000f
+2016-03-28 16:41:27  [ qtp10405169-17:4662636 ] - [ INFO ]  sent message Element{id='8a8a821e53af26bd0153b0e348140003', createTime=2016-03-25 23:06:38.0, updateTime=2016-03-28 16:41:27.671, deleted=false, name='Employee Information', description=''}
+2016-03-28 16:41:27  [ qtp10405169-17:4662699 ] - [ INFO ]  sent message com.oncore.data.messagequeue.msgobj.ReportElement@71a37f31
+2016-03-28 16:44:20  [ qtp10405169-17:4835687 ] - [ INFO ]  updating Report id=8a8a821e53af26bd0153b0e348140003
+2016-03-28 16:44:20  [ qtp10405169-17:4835695 ] - [ INFO ]  updated Report id=8a8a821e53af26bd0153b0e348140003
+2016-03-28 16:44:20  [ qtp10405169-17:4835708 ] - [ INFO ]  saving ReportField Employee_First_Name
+2016-03-28 16:44:20  [ qtp10405169-17:4835715 ] - [ INFO ]  save ReportField Employee_First_Name success
+2016-03-28 16:44:20  [ qtp10405169-17:4835716 ] - [ INFO ]  updating ReportField id=4028826353beaeaf0153bef85c240010
+2016-03-28 16:44:20  [ qtp10405169-17:4835717 ] - [ INFO ]  updated ReportField id=4028826353beaeaf0153bef85c240010
+2016-03-28 16:44:20  [ qtp10405169-17:4835719 ] - [ INFO ]  saving ReportField Employee_Last_Name
+2016-03-28 16:44:20  [ qtp10405169-17:4835721 ] - [ INFO ]  save ReportField Employee_Last_Name success
+2016-03-28 16:44:20  [ qtp10405169-17:4835722 ] - [ INFO ]  updating ReportField id=4028826353beaeaf0153bef85c2b0011
+2016-03-28 16:44:20  [ qtp10405169-17:4835723 ] - [ INFO ]  updated ReportField id=4028826353beaeaf0153bef85c2b0011
+2016-03-28 16:44:20  [ qtp10405169-17:4835724 ] - [ INFO ]  saving ReportField Employee_SSNumber
+2016-03-28 16:44:20  [ qtp10405169-17:4835725 ] - [ INFO ]  save ReportField Employee_SSNumber success
+2016-03-28 16:44:20  [ qtp10405169-17:4835725 ] - [ INFO ]  updating ReportField id=4028826353beaeaf0153bef85c2f0012
+2016-03-28 16:44:20  [ qtp10405169-17:4835728 ] - [ INFO ]  updated ReportField id=4028826353beaeaf0153bef85c2f0012
+2016-03-28 16:44:20  [ qtp10405169-17:4835762 ] - [ INFO ]  saving ReportField Employee_phone
+2016-03-28 16:44:20  [ qtp10405169-17:4835766 ] - [ INFO ]  save ReportField Employee_phone success
+2016-03-28 16:44:20  [ qtp10405169-17:4835767 ] - [ INFO ]  updating ReportField id=4028826353beaeaf0153bef85c590013
+2016-03-28 16:44:20  [ qtp10405169-17:4835776 ] - [ INFO ]  updated ReportField id=4028826353beaeaf0153bef85c590013
+2016-03-28 16:44:21  [ qtp10405169-17:4835831 ] - [ INFO ]  sent message Element{id='8a8a821e53af26bd0153b0e348140003', createTime=2016-03-25 23:06:38.0, updateTime=2016-03-28 16:44:20.881, deleted=false, name='Employee Information', description=''}
+2016-03-28 16:44:21  [ qtp10405169-17:4835853 ] - [ INFO ]  sent message com.oncore.data.messagequeue.msgobj.ReportElement@7f220bc1
+2016-03-28 16:46:57  [ qtp10405169-15:4992123 ] - [ INFO ]  updating Report id=8a8a821e53af26bd0153b0e348140003
+2016-03-28 16:46:57  [ qtp10405169-15:4992134 ] - [ INFO ]  updated Report id=8a8a821e53af26bd0153b0e348140003
+2016-03-28 16:46:57  [ qtp10405169-15:4992154 ] - [ INFO ]  saving ReportField Employee_First_Name
+2016-03-28 16:46:57  [ qtp10405169-15:4992155 ] - [ INFO ]  save ReportField Employee_First_Name success
+2016-03-28 16:46:57  [ qtp10405169-15:4992161 ] - [ INFO ]  updating ReportField id=4028826353beaeaf0153befabf3d0014
+2016-03-28 16:46:57  [ qtp10405169-15:4992162 ] - [ INFO ]  updated ReportField id=4028826353beaeaf0153befabf3d0014
+2016-03-28 16:46:57  [ qtp10405169-15:4992163 ] - [ INFO ]  saving ReportField Employee_Last_Name
+2016-03-28 16:46:57  [ qtp10405169-15:4992170 ] - [ INFO ]  save ReportField Employee_Last_Name success
+2016-03-28 16:46:57  [ qtp10405169-15:4992170 ] - [ INFO ]  updating ReportField id=4028826353beaeaf0153befabf4c0015
+2016-03-28 16:46:57  [ qtp10405169-15:4992171 ] - [ INFO ]  updated ReportField id=4028826353beaeaf0153befabf4c0015
+2016-03-28 16:46:57  [ qtp10405169-15:4992171 ] - [ INFO ]  saving ReportField Employee_SSNumber
+2016-03-28 16:46:57  [ qtp10405169-15:4992172 ] - [ INFO ]  save ReportField Employee_SSNumber success
+2016-03-28 16:46:57  [ qtp10405169-15:4992173 ] - [ INFO ]  updating ReportField id=4028826353beaeaf0153befabf4f0016
+2016-03-28 16:46:57  [ qtp10405169-15:4992173 ] - [ INFO ]  updated ReportField id=4028826353beaeaf0153befabf4f0016
+2016-03-28 16:46:57  [ qtp10405169-15:4992175 ] - [ INFO ]  saving ReportField Employee_phone
+2016-03-28 16:46:57  [ qtp10405169-15:4992177 ] - [ INFO ]  save ReportField Employee_phone success
+2016-03-28 16:46:57  [ qtp10405169-15:4992177 ] - [ INFO ]  updating ReportField id=4028826353beaeaf0153befabf540017
+2016-03-28 16:46:57  [ qtp10405169-15:4992178 ] - [ INFO ]  updated ReportField id=4028826353beaeaf0153befabf540017
+2016-03-28 16:46:57  [ qtp10405169-15:4992237 ] - [ INFO ]  sent message Element{id='8a8a821e53af26bd0153b0e348140003', createTime=2016-03-25 23:06:38.0, updateTime=2016-03-28 16:46:57.321, deleted=false, name='Employee Information', description=''}
+2016-03-28 16:46:57  [ qtp10405169-15:4992246 ] - [ INFO ]  sent message com.oncore.data.messagequeue.msgobj.ReportElement@397ddaf3
+2016-03-28 16:49:09  [ qtp10405169-18:5124598 ] - [ INFO ]  updating Report id=8a8a821e53af26bd0153b0e348140003
+2016-03-28 16:49:09  [ qtp10405169-18:5124605 ] - [ INFO ]  updated Report id=8a8a821e53af26bd0153b0e348140003
+2016-03-28 16:49:09  [ qtp10405169-18:5124615 ] - [ INFO ]  saving ReportField Employee_First_Name
+2016-03-28 16:49:09  [ qtp10405169-18:5124625 ] - [ INFO ]  save ReportField Employee_First_Name success
+2016-03-28 16:49:09  [ qtp10405169-18:5124625 ] - [ INFO ]  updating ReportField id=4028826353beaeaf0153befcc4b30018
+2016-03-28 16:49:09  [ qtp10405169-18:5124626 ] - [ INFO ]  updated ReportField id=4028826353beaeaf0153befcc4b30018
+2016-03-28 16:49:09  [ qtp10405169-18:5124630 ] - [ INFO ]  saving ReportField Employee_Last_Name
+2016-03-28 16:49:09  [ qtp10405169-18:5124636 ] - [ INFO ]  save ReportField Employee_Last_Name success
+2016-03-28 16:49:09  [ qtp10405169-18:5124637 ] - [ INFO ]  updating ReportField id=4028826353beaeaf0153befcc4be0019
+2016-03-28 16:49:09  [ qtp10405169-18:5124638 ] - [ INFO ]  updated ReportField id=4028826353beaeaf0153befcc4be0019
+2016-03-28 16:49:09  [ qtp10405169-18:5124638 ] - [ INFO ]  saving ReportField Employee_SSNumber
+2016-03-28 16:49:09  [ qtp10405169-18:5124640 ] - [ INFO ]  save ReportField Employee_SSNumber success
+2016-03-28 16:49:09  [ qtp10405169-18:5124640 ] - [ INFO ]  updating ReportField id=4028826353beaeaf0153befcc4c2001a
+2016-03-28 16:49:09  [ qtp10405169-18:5124641 ] - [ INFO ]  updated ReportField id=4028826353beaeaf0153befcc4c2001a
+2016-03-28 16:49:09  [ qtp10405169-18:5124642 ] - [ INFO ]  saving ReportField Employee_phone
+2016-03-28 16:49:09  [ qtp10405169-18:5124644 ] - [ INFO ]  save ReportField Employee_phone success
+2016-03-28 16:49:09  [ qtp10405169-18:5124645 ] - [ INFO ]  updating ReportField id=4028826353beaeaf0153befcc4c5001b
+2016-03-28 16:49:09  [ qtp10405169-18:5124646 ] - [ INFO ]  updated ReportField id=4028826353beaeaf0153befcc4c5001b
+2016-03-28 16:49:09  [ qtp10405169-18:5124740 ] - [ INFO ]  sent message Element{id='8a8a821e53af26bd0153b0e348140003', createTime=2016-03-25 23:06:38.0, updateTime=2016-03-28 16:49:09.792, deleted=false, name='Employee Information', description=''}
+2016-03-28 16:49:09  [ qtp10405169-18:5124794 ] - [ INFO ]  sent message com.oncore.data.messagequeue.msgobj.ReportElement@3899d8eb
+2016-03-28 16:50:39  [ qtp10405169-19:5213959 ] - [ INFO ]  updating Report id=8a8a821e53af26bd0153b0e348140003
+2016-03-28 16:50:39  [ qtp10405169-19:5213963 ] - [ INFO ]  updated Report id=8a8a821e53af26bd0153b0e348140003
+2016-03-28 16:50:39  [ qtp10405169-19:5214021 ] - [ INFO ]  saving ReportField Employee_First_Name
+2016-03-28 16:50:39  [ qtp10405169-19:5214023 ] - [ INFO ]  save ReportField Employee_First_Name success
+2016-03-28 16:50:39  [ qtp10405169-19:5214023 ] - [ INFO ]  updating ReportField id=4028826353beaeaf0153befe21e9001c
+2016-03-28 16:50:39  [ qtp10405169-19:5214023 ] - [ INFO ]  updated ReportField id=4028826353beaeaf0153befe21e9001c
+2016-03-28 16:50:39  [ qtp10405169-19:5214024 ] - [ INFO ]  saving ReportField Employee_Last_Name
+2016-03-28 16:50:39  [ qtp10405169-19:5214024 ] - [ INFO ]  save ReportField Employee_Last_Name success
+2016-03-28 16:50:39  [ qtp10405169-19:5214025 ] - [ INFO ]  updating ReportField id=4028826353beaeaf0153befe21eb001d
+2016-03-28 16:50:39  [ qtp10405169-19:5214025 ] - [ INFO ]  updated ReportField id=4028826353beaeaf0153befe21eb001d
+2016-03-28 16:50:39  [ qtp10405169-19:5214026 ] - [ INFO ]  saving ReportField Employee_SSNumber
+2016-03-28 16:50:39  [ qtp10405169-19:5214026 ] - [ INFO ]  save ReportField Employee_SSNumber success
+2016-03-28 16:50:39  [ qtp10405169-19:5214029 ] - [ INFO ]  updating ReportField id=4028826353beaeaf0153befe21ed001e
+2016-03-28 16:50:39  [ qtp10405169-19:5214030 ] - [ INFO ]  updated ReportField id=4028826353beaeaf0153befe21ed001e
+2016-03-28 16:50:39  [ qtp10405169-19:5214031 ] - [ INFO ]  saving ReportField Employee_phone
+2016-03-28 16:50:39  [ qtp10405169-19:5214033 ] - [ INFO ]  save ReportField Employee_phone success
+2016-03-28 16:50:39  [ qtp10405169-19:5214034 ] - [ INFO ]  updating ReportField id=4028826353beaeaf0153befe21f3001f
+2016-03-28 16:50:39  [ qtp10405169-19:5214034 ] - [ INFO ]  updated ReportField id=4028826353beaeaf0153befe21f3001f
+2016-03-28 16:50:39  [ qtp10405169-19:5214202 ] - [ INFO ]  sent message Element{id='8a8a821e53af26bd0153b0e348140003', createTime=2016-03-25 23:06:38.0, updateTime=2016-03-28 16:50:39.149, deleted=false, name='Employee Information', description=''}
+2016-03-28 16:50:39  [ qtp10405169-19:5214247 ] - [ INFO ]  sent message com.oncore.data.messagequeue.msgobj.ReportElement@2a4dd28e
+2016-03-28 17:15:40  [ qtp10405169-13:6714987 ] - [ INFO ]  updating Report id=8a8a821e53af26bd0153b0e348140003
+2016-03-28 17:15:40  [ qtp10405169-13:6714992 ] - [ INFO ]  updated Report id=8a8a821e53af26bd0153b0e348140003
+2016-03-28 17:15:40  [ qtp10405169-13:6715002 ] - [ INFO ]  saving ReportField Employee_First_Name
+2016-03-28 17:15:40  [ qtp10405169-13:6715004 ] - [ INFO ]  save ReportField Employee_First_Name success
+2016-03-28 17:15:40  [ qtp10405169-13:6715004 ] - [ INFO ]  updating ReportField id=4028826353beaeaf0153bf15091e0020
+2016-03-28 17:15:40  [ qtp10405169-13:6715005 ] - [ INFO ]  updated ReportField id=4028826353beaeaf0153bf15091e0020
+2016-03-28 17:15:40  [ qtp10405169-13:6715005 ] - [ INFO ]  saving ReportField Employee_Last_Name
+2016-03-28 17:15:40  [ qtp10405169-13:6715006 ] - [ INFO ]  save ReportField Employee_Last_Name success
+2016-03-28 17:15:40  [ qtp10405169-13:6715006 ] - [ INFO ]  updating ReportField id=4028826353beaeaf0153bf1509210021
+2016-03-28 17:15:40  [ qtp10405169-13:6715007 ] - [ INFO ]  updated ReportField id=4028826353beaeaf0153bf1509210021
+2016-03-28 17:15:40  [ qtp10405169-13:6715012 ] - [ INFO ]  saving ReportField Employee_SSNumber
+2016-03-28 17:15:40  [ qtp10405169-13:6715013 ] - [ INFO ]  save ReportField Employee_SSNumber success
+2016-03-28 17:15:40  [ qtp10405169-13:6715013 ] - [ INFO ]  updating ReportField id=4028826353beaeaf0153bf1509280022
+2016-03-28 17:15:40  [ qtp10405169-13:6715014 ] - [ INFO ]  updated ReportField id=4028826353beaeaf0153bf1509280022
+2016-03-28 17:15:40  [ qtp10405169-13:6715014 ] - [ INFO ]  saving ReportField Employee_phone
+2016-03-28 17:15:40  [ qtp10405169-13:6715015 ] - [ INFO ]  save ReportField Employee_phone success
+2016-03-28 17:15:40  [ qtp10405169-13:6715015 ] - [ INFO ]  updating ReportField id=4028826353beaeaf0153bf15092a0023
+2016-03-28 17:15:40  [ qtp10405169-13:6715037 ] - [ INFO ]  updated ReportField id=4028826353beaeaf0153bf15092a0023
+2016-03-28 17:15:40  [ qtp10405169-13:6715102 ] - [ INFO ]  sent message Element{id='8a8a821e53af26bd0153b0e348140003', createTime=2016-03-25 23:06:38.0, updateTime=2016-03-28 17:15:40.178, deleted=false, name='Employee Information', description=''}
+2016-03-28 17:15:40  [ qtp10405169-13:6715118 ] - [ INFO ]  sent message com.oncore.data.messagequeue.msgobj.ReportElement@7dde88bd
+2016-03-28 17:20:46  [ qtp10405169-15:7021811 ] - [ INFO ]  updating Report id=8a8a821e53af26bd0153b0e348140003
+2016-03-28 17:20:47  [ qtp10405169-15:7021821 ] - [ INFO ]  updated Report id=8a8a821e53af26bd0153b0e348140003
+2016-03-28 17:20:47  [ qtp10405169-15:7021830 ] - [ INFO ]  saving ReportField Employee_First_Name
+2016-03-28 17:20:47  [ qtp10405169-15:7021832 ] - [ INFO ]  save ReportField Employee_First_Name success
+2016-03-28 17:20:47  [ qtp10405169-15:7021832 ] - [ INFO ]  updating ReportField id=4028826353beaeaf0153bf19b7ab0024
+2016-03-28 17:20:47  [ qtp10405169-15:7021833 ] - [ INFO ]  updated ReportField id=4028826353beaeaf0153bf19b7ab0024
+2016-03-28 17:20:47  [ qtp10405169-15:7021833 ] - [ INFO ]  saving ReportField Employee_Last_Name
+2016-03-28 17:20:47  [ qtp10405169-15:7021833 ] - [ INFO ]  save ReportField Employee_Last_Name success
+2016-03-28 17:20:47  [ qtp10405169-15:7021834 ] - [ INFO ]  updating ReportField id=4028826353beaeaf0153bf19b7ac0025
+2016-03-28 17:20:47  [ qtp10405169-15:7021834 ] - [ INFO ]  updated ReportField id=4028826353beaeaf0153bf19b7ac0025
+2016-03-28 17:20:47  [ qtp10405169-15:7021835 ] - [ INFO ]  saving ReportField Employee_SSNumber
+2016-03-28 17:20:47  [ qtp10405169-15:7021835 ] - [ INFO ]  save ReportField Employee_SSNumber success
+2016-03-28 17:20:47  [ qtp10405169-15:7021836 ] - [ INFO ]  updating ReportField id=4028826353beaeaf0153bf19b7ae0026
+2016-03-28 17:20:47  [ qtp10405169-15:7021836 ] - [ INFO ]  updated ReportField id=4028826353beaeaf0153bf19b7ae0026
+2016-03-28 17:20:47  [ qtp10405169-15:7021836 ] - [ INFO ]  saving ReportField Employee_phone
+2016-03-28 17:20:47  [ qtp10405169-15:7021837 ] - [ INFO ]  save ReportField Employee_phone success
+2016-03-28 17:20:47  [ qtp10405169-15:7021837 ] - [ INFO ]  updating ReportField id=4028826353beaeaf0153bf19b7b00027
+2016-03-28 17:20:47  [ qtp10405169-15:7021839 ] - [ INFO ]  updated ReportField id=4028826353beaeaf0153bf19b7b00027
+2016-03-28 17:20:47  [ qtp10405169-15:7021902 ] - [ INFO ]  sent message Element{id='8a8a821e53af26bd0153b0e348140003', createTime=2016-03-25 23:06:38.0, updateTime=2016-03-28 17:20:47.008, deleted=false, name='Employee Information', description=''}
+2016-03-28 17:20:47  [ qtp10405169-15:7021986 ] - [ INFO ]  sent message com.oncore.data.messagequeue.msgobj.ReportElement@398d8360
+2016-03-28 17:23:38  [ qtp10405169-19:7193332 ] - [ INFO ]  updating Report id=8a8a821e53af26bd0153b0e348140003
+2016-03-28 17:23:38  [ qtp10405169-19:7193344 ] - [ INFO ]  updated Report id=8a8a821e53af26bd0153b0e348140003
+2016-03-28 17:23:38  [ qtp10405169-19:7193369 ] - [ INFO ]  saving ReportField Employee_First_Name
+2016-03-28 17:23:38  [ qtp10405169-19:7193379 ] - [ INFO ]  save ReportField Employee_First_Name success
+2016-03-28 17:23:38  [ qtp10405169-19:7193379 ] - [ INFO ]  updating ReportField id=4028826353beaeaf0153bf1c55c20028
+2016-03-28 17:23:38  [ qtp10405169-19:7193380 ] - [ INFO ]  updated ReportField id=4028826353beaeaf0153bf1c55c20028
+2016-03-28 17:23:38  [ qtp10405169-19:7193381 ] - [ INFO ]  saving ReportField Employee_Last_Name
+2016-03-28 17:23:38  [ qtp10405169-19:7193381 ] - [ INFO ]  save ReportField Employee_Last_Name success
+2016-03-28 17:23:38  [ qtp10405169-19:7193382 ] - [ INFO ]  updating ReportField id=4028826353beaeaf0153bf1c55c80029
+2016-03-28 17:23:38  [ qtp10405169-19:7193382 ] - [ INFO ]  updated ReportField id=4028826353beaeaf0153bf1c55c80029
+2016-03-28 17:23:38  [ qtp10405169-19:7193382 ] - [ INFO ]  saving ReportField Employee_SSNumber
+2016-03-28 17:23:38  [ qtp10405169-19:7193383 ] - [ INFO ]  save ReportField Employee_SSNumber success
+2016-03-28 17:23:38  [ qtp10405169-19:7193384 ] - [ INFO ]  updating ReportField id=4028826353beaeaf0153bf1c55ca002a
+2016-03-28 17:23:38  [ qtp10405169-19:7193385 ] - [ INFO ]  updated ReportField id=4028826353beaeaf0153bf1c55ca002a
+2016-03-28 17:23:38  [ qtp10405169-19:7193386 ] - [ INFO ]  saving ReportField Employee_phone
+2016-03-28 17:23:38  [ qtp10405169-19:7193398 ] - [ INFO ]  save ReportField Employee_phone success
+2016-03-28 17:23:38  [ qtp10405169-19:7193413 ] - [ INFO ]  updating ReportField id=4028826353beaeaf0153bf1c55cf002b
+2016-03-28 17:23:38  [ qtp10405169-19:7193414 ] - [ INFO ]  updated ReportField id=4028826353beaeaf0153bf1c55cf002b
+2016-03-28 17:23:38  [ qtp10405169-19:7193530 ] - [ INFO ]  sent message Element{id='8a8a821e53af26bd0153b0e348140003', createTime=2016-03-25 23:06:38.0, updateTime=2016-03-28 17:23:38.53, deleted=false, name='Employee Information', description=''}
+2016-03-28 17:23:38  [ qtp10405169-19:7193586 ] - [ INFO ]  sent message com.oncore.data.messagequeue.msgobj.ReportElement@2745bef7
+2016-03-28 22:08:19  [ Thread-1:24274767 ] - [ INFO ]  Closing WebApplicationContext for namespace 'spring-dispatcher-servlet': startup date [Mon Mar 28 15:23:55 EDT 2016]; parent: Root WebApplicationContext

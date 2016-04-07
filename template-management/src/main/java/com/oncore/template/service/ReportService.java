@@ -15,13 +15,9 @@ public interface ReportService extends IBaseGenericService<Report,String>{
     Report updateReportFromRequest(CreateReportRequest report);
     ReportResponse getReport(String id);
     String getReportTableName(String id);
-
     void deleteReport(String id);
-
     List<Report> listReports();
-
     List<Report> listReportsUnderFolder(String folderId);
-
     Report buildReport(Report report,String content);
 
 }

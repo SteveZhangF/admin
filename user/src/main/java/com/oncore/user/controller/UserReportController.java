@@ -20,6 +20,10 @@ import java.util.Map;
 /**
  * Created by steve on 3/9/16.
  */
+/**
+ * all user things are moved to user project
+ *
+ * */
 @RestController
 public class UserReportController extends BaseController {
 

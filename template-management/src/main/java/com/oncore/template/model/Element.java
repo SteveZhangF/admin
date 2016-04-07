@@ -4,6 +4,7 @@ import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import javax.persistence.Entity;
+import java.io.Serializable;
 import java.sql.Timestamp;
 
 /**
@@ -12,7 +13,7 @@ import java.sql.Timestamp;
 @Entity
 @Table(name = "element")
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
-public class Element {
+public class Element implements Serializable{
     @Id
     @GeneratedValue(generator = "idGenerator")
     @GenericGenerator(name = "idGenerator", strategy = "uuid")

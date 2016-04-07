@@ -13,6 +13,15 @@ import java.util.List;
 /**
  * Created by steve on 1/14/16.
  */
+
+
+
+/**
+ *  an entity
+ *  such as Company,Employee,Entrance, Exit, Office, Door...
+ *
+ * */
+
 @javax.persistence.Entity
 @Table(name = "entity")
 public class Entity extends Element implements TableElement {

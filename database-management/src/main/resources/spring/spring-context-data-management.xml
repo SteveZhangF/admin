@@ -10,24 +10,31 @@
                       http://www.springframework.org/schema/context/spring-context.xsd
        http://www.springframework.org/schema/context
        http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
-    <!--<bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">-->
-        <!--<property name="locations">-->
-            <!--<list>-->
-                <!--<value>classpath:properties/app-${profiles.active}.properties</value>-->
-            <!--</list>-->
-        <!--</property>-->
-    <!--</bean>-->
 
     <context:component-scan base-package="com.oncore.data"/>
-
-    <!--<tx:annotation-driven transaction-manager="hibernateTransactionManager"/>-->
-
-    <!--<bean id="exceptionadvice" class="com.oncore.server.exception.CustomExceptionInterceptor"></bean>-->
-
-
-    <!--<aop:config>-->
-    <!--&lt;!&ndash;配置com.spring.service包下所有类或接口的所有方法&ndash;&gt;-->
-    <!--<aop:pointcut id="businessService" expression="execution(* com.oncore.server.dao.*.*(..))" />-->
-    <!--<aop:advisor pointcut-ref="businessService" advice-ref="exceptionadvice" />-->
-    <!--</aop:config>-->
+    <bean id="jmsTemplate" class="org.springframework.jms.core.JmsTemplate">
+        <property name="connectionFactory" ref="connectionFactory"/>
+    </bean>
+    <bean id="connectionFactory" class="org.springframework.jms.connection.SingleConnectionFactory">
+        <property name="targetConnectionFactory" ref="pooledConnectionFactory"/>
+    </bean>
+    <bean id="pooledConnectionFactory" class="org.apache.activemq.pool.PooledConnectionFactory">
+        <property name="connectionFactory" ref="targetConnectionFactory"/>
+        <property name="maxConnections" value="10"/>
+    </bean>
+    <bean id="targetConnectionFactory" class="org.apache.activemq.ActiveMQConnectionFactory">
+        <property name="brokerURL" value="${activemq_url}"/>
+    </bean>
+    <!-- table creator destination -->
+    <bean id="tableCreatorDestination" class="org.apache.activemq.command.ActiveMQQueue">
+        <constructor-arg>
+            <value>file_creator_destination</value>
+        </constructor-arg>
+    </bean>
+    <!-- report uploader destination -->
+    <bean id="reportUploaderDestination" class="org.apache.activemq.command.ActiveMQQueue">
+        <constructor-arg>
+            <value>report_uploader_destination</value>
+        </constructor-arg>
+    </bean>
 </beans>

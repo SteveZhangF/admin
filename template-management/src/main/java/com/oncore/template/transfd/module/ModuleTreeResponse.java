@@ -42,15 +42,9 @@ public class ModuleTreeResponse extends ModuleResponse {
         this.folders = folders;
     }
 
-    public ModuleTreeResponse(Module element,List<Entity> entitiesT,List<Folder> rootFoldersT) {
+    public ModuleTreeResponse(Module element,List<EntityResponse> entitiesT,List<FolderResponse> rootFoldersT) {
         super(element);
-        entities = new ArrayList<>();
-        folders = new ArrayList<>();
-        for(Entity entity:entitiesT){
-            entities.add(new EntityResponse(entity));
-        }
-        for(Folder folder: rootFoldersT){
-            folders.add(new FolderResponse(folder));
-        }
+        this.entities = entitiesT;
+        this.folders = rootFoldersT;
     }
 }

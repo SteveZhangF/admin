@@ -19,6 +19,17 @@ public class FieldRequest extends ElementRequest {
 
     private  String id;
 
+    @Valid
+    private boolean deleted;
+
+    public boolean isDeleted() {
+        return deleted;
+    }
+
+    public void setDeleted(boolean deleted) {
+        this.deleted = deleted;
+    }
+
     @NotNull
     private int length;
 

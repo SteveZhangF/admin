@@ -7,6 +7,10 @@ import java.sql.SQLException;
 /**
  * Created by steve on 3/8/16.
  */
+/**
+ * all user things are moved to user project
+ *
+ * */
 @Aspect
 public class UserExceptionHandler {
 

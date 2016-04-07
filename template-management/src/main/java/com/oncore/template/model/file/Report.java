@@ -61,6 +61,15 @@ public class Report extends FileElement implements TableElement {
         return fields;
     }
 
+    public void clearFields(){
+        for(ReportField field:fields){
+            field.setReport(null);
+        }
+        this.fields.clear();
+
+    }
+
+
     @Override
     public boolean isReport() {
         return true;

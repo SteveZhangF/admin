@@ -9,6 +9,10 @@ import org.springframework.context.ApplicationContextAware;
 /**
  * Created by steve on 3/7/16.
  */
+/**
+ * all user things are moved to user project
+ *
+ * */
 public abstract class GroovyDaoFactory  implements ApplicationContextAware {
      @Autowired
      public GroovyDaoFactory(){}

@@ -4,6 +4,7 @@
 /Users/steve/oncore-consulting/template-management/src/main/java/com/oncore/template/dao/ReportFieldDao.java
 /Users/steve/oncore-consulting/template-management/src/main/java/com/oncore/template/transfd/entities/CreateEntityRequest.java
 /Users/steve/oncore-consulting/template-management/src/main/java/com/oncore/template/exception/ElementNotFoundException.java
+/Users/steve/oncore-consulting/template-management/src/main/java/com/oncore/template/transfd/user/UserModuleResponse.java
 /Users/steve/oncore-consulting/template-management/src/main/java/com/oncore/template/controller/FolderResource.java
 /Users/steve/oncore-consulting/template-management/src/main/java/com/oncore/template/controller/ModuleResource.java
 /Users/steve/oncore-consulting/template-management/src/main/java/com/oncore/template/dao/FieldDaoImpl.java
@@ -56,13 +57,15 @@
 /Users/steve/oncore-consulting/template-management/src/main/java/com/oncore/template/service/ReportServiceImpl.java
 /Users/steve/oncore-consulting/template-management/src/main/java/com/oncore/template/transfd/report/CreateReportRequest.java
 /Users/steve/oncore-consulting/template-management/src/main/java/com/oncore/template/transfd/ElementRequest.java
+/Users/steve/oncore-consulting/template-management/src/main/java/com/oncore/template/transfd/user/UserReportResponse.java
 /Users/steve/oncore-consulting/template-management/src/main/java/com/oncore/template/exception/FileElementDuplicatedException.java
 /Users/steve/oncore-consulting/template-management/src/main/java/com/oncore/template/dao/EntityDao.java
 /Users/steve/oncore-consulting/template-management/src/main/java/com/oncore/template/service/ModuleService.java
 /Users/steve/oncore-consulting/template-management/src/main/java/com/oncore/template/transfd/customizedRecord/CustomizedRecordType.java
 /Users/steve/oncore-consulting/template-management/src/main/java/com/oncore/template/model/file/FileElement.java
-/Users/steve/oncore-consulting/template-management/src/main/java/com/oncore/template/helper/ReportGroovyFileCreator.java
 /Users/steve/oncore-consulting/template-management/src/main/java/com/oncore/template/dao/FolderDaoImpl.java
+/Users/steve/oncore-consulting/template-management/src/main/java/com/oncore/template/transfd/user/UserEntityResponse.java
 /Users/steve/oncore-consulting/template-management/src/main/java/com/oncore/template/transfd/module/CreateModuleRequest.java
 /Users/steve/oncore-consulting/template-management/src/main/java/com/oncore/template/transfd/module/ModuleTreeResponse.java
 /Users/steve/oncore-consulting/template-management/src/main/java/com/oncore/template/transfd/report/ReportFieldRequest.java
+/Users/steve/oncore-consulting/template-management/src/main/java/com/oncore/template/transfd/user/UserFolderResponse.java

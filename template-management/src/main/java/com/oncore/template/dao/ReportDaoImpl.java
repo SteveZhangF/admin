@@ -102,14 +102,12 @@ public class ReportDaoImpl extends HibernateBaseGenericDaoImpl<Report, String> i
     @Override
     public void deleteReport(String id) {
         Session session = getSessionFactory().getCurrentSession();
-        session.beginTransaction();
         Query query = session.createQuery("update Report report set report.deleted=true where report.id=:id");
         query.setString("id", id);
         int i = query.executeUpdate();
         if (i == 0) {
             throw new ElementNotFoundException("report");
         }
-        session.getTransaction().commit();
     }
 
     @Override

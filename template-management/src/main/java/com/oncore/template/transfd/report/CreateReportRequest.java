@@ -43,12 +43,4 @@ public class CreateReportRequest extends ElementRequest {
         this.content = content;
     }
 
-//    public List<ReportFieldRequest> getFields() {
-//        return fields;
-//    }
-//
-//    public void setFields(List<ReportFieldRequest> fields) {
-//        this.fields = fields;
-//    }
-
 }

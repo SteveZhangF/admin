@@ -14,6 +14,17 @@ import javax.persistence.Table;
 /**
  * Created by steve on 1/26/16.
  */
+
+
+/**
+ *
+ * -modules
+ *  -entities
+ *  -folders
+ *     -report
+ *     -folders
+ *        -reports
+ * */
 @javax.persistence.Entity
 @Table(name = "module")
 public class Module extends Element {

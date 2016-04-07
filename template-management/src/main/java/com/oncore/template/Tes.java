@@ -1,8 +1,6 @@
 package com.oncore.template;
 
 import com.oncore.common.model.TableElement;
-import com.oncore.data.file.FileCreator;
-import com.oncore.data.file.HibernateMappingFileCreator;
 import com.oncore.template.model.Entity;
 
 

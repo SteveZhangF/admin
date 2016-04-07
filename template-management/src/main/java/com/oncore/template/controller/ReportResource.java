@@ -24,7 +24,7 @@ public class ReportResource extends BaseController {
     @Autowired
     ReportService reportService;
 
-    //
+    // get all reports
     @RequestMapping(value = "/admin/reports/", method = RequestMethod.GET, produces = org.springframework.http.MediaType.APPLICATION_JSON_VALUE)
     public List<ReportResponse> getReports() {
         this.checkUserContext();
@@ -35,35 +35,15 @@ public class ReportResource extends BaseController {
         }
         return listResponse;
     }
-//
-//    @RequestMapping(value = "/admin/reports/", method = RequestMethod.POST, produces = org.springframework.http.MediaType.APPLICATION_JSON_VALUE)
-//
-//    public ReportResponse createReport(  @RequestBody CreateReportRequest request)   {
-//        this.checkUserContext();
-//        ReportResponse reportResponse = reportService.createReportFromRequest(request);
-//        return reportResponse;
-//    }
 
-//    @RolesAllowed({"ROLE_USER"})
-//    @PUT
-//    public EntityResponse updateEntity(@Context SecurityContext context, UpdateEntityRequest request) {
-////        if (request == null)
-////            throw new NullParametersException("entity");
-////        User user = loadUserFromSecurityContext(context);
-////        if (user == null)
-////            throw new UnauthorizedUserException("you don't have permit to update this entities");
-////        log.info("updating entity [name:" + request.getName() + " id:" + request.getId() + "] by [" + user.getId() + "]");
-////        Entity entity1 = entityService.updateEntityFromRequest(request);
-////        EntityResponse entityResponse = new EntityResponse(entity1);
-//        return null;
-//    }
-
+    //get one report for admin to edit
     @RequestMapping(value = "/admin/reports/{id}/", method = RequestMethod.GET, produces = org.springframework.http.MediaType.APPLICATION_JSON_VALUE)
     public ReportResponse gerReport(@PathVariable("id") String reportId) {
         this.checkUserContext();
         return reportService.getReport(reportId);
     }
 
+    //delete one report
     @RequestMapping(value = "/admin/reports/{id}/", method = RequestMethod.DELETE, produces = org.springframework.http.MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity delete(@PathVariable("id") String id) {
         this.checkUserContext();
@@ -71,7 +51,7 @@ public class ReportResource extends BaseController {
         return new ResponseEntity(HttpStatus.OK);
     }
 
-
+    //update one report
     @RequestMapping(value = "/admin/reports/{id}/", method = RequestMethod.PUT, produces = org.springframework.http.MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity updateReport(@PathVariable("id") String id, @RequestBody CreateReportRequest reportRequest) {
         this.checkUserContext();
@@ -79,6 +59,4 @@ public class ReportResource extends BaseController {
         reportService.updateReportFromRequest(reportRequest);
         return new ResponseEntity(HttpStatus.OK);
     }
-
-
 }

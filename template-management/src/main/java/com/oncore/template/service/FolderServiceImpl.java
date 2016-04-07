@@ -75,11 +75,29 @@ public class FolderServiceImpl extends BaseGenericServiceImpl<Folder, String> im
         folderDao.saveFolderToParentFolder(parentId, folder);
         return new FolderResponse(folder);
     }
+
     @Override
-    public List<Folder> getRootFoldersUnderModule(String moduleId) {
+    public List<Folder> getUserRootFolderUnderModule(String moduleId) {
         moduleDao.checkExist(moduleId,"no such module");
         List<Folder> list = folderDao.getRootFolderByModuleId(moduleId);
         return list;
+    }
+
+    @Override
+    public List<Folder> getUserChildFolder(String id) {
+        List<Folder> list = folderDao.getFoldersByParentFolder(id);
+        return list;
+    }
+
+    @Override
+    public List<FolderResponse> getRootFoldersUnderModule(String moduleId) {
+        moduleDao.checkExist(moduleId,"no such module");
+        List<Folder> list = folderDao.getRootFolderByModuleId(moduleId);
+        List<FolderResponse> listR = new ArrayList<>();
+        for(Folder folder:list){
+            listR.add(new FolderResponse(folder));
+        }
+        return listR;
     }
 
     @Override

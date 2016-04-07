@@ -32,9 +32,9 @@
             <version>1.0-SNAPSHOT</version>
         </dependency>
         <!--<dependency>-->
-            <!--<groupId>com.oncore</groupId>-->
-            <!--<artifactId>oncore-consulting-auth</artifactId>-->
-            <!--<version>1.0-SNAPSHOT</version>-->
+        <!--<groupId>com.oncore</groupId>-->
+        <!--<artifactId>oncore-consulting-auth</artifactId>-->
+        <!--<version>1.0-SNAPSHOT</version>-->
         <!--</dependency>-->
     </dependencies>
     <profiles>
@@ -66,16 +66,22 @@
             <plugin>
                 <groupId>org.eclipse.jetty</groupId>
                 <artifactId>jetty-maven-plugin</artifactId>
+                <configuration>
+                    <httpConnector>
+                        <!--host>localhost</host-->
+                        <port>9999</port>
+                    </httpConnector>
+                </configuration>
                 <version>9.2.8.v20150217</version>
             </plugin>
             <plugin>
                 <groupId>org.apache.tomcat.maven</groupId>
                 <artifactId>tomcat7-maven-plugin</artifactId>
                 <configuration>
-                    <url>http://ec2-52-36-200-2.us-west-2.compute.amazonaws.com/api/manager/text</url>
-                    <server>tomcat</server>
-                    <username>admin</username>
-                    <password>admin</password>
+                    <url>http://ec2-54-210-205-19.compute-1.amazonaws.com/admin/manager/text</url>
+                    <server>adminserver</server>
+                    <username>fuqiang</username>
+                    <password>2420327a</password>
                     <path>/oncore</path>
                 </configuration>
             </plugin>

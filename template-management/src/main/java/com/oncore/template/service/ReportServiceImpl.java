@@ -1,8 +1,8 @@
 package com.oncore.template.service;
 
-import com.oncore.data.TableBuilder;
-import com.oncore.data.file.ReportTemplateBuilder;
-import com.oncore.data.file.downloader.DownLoader;
+import com.oncore.common.store.DownLoader;
+import com.oncore.data.messagequeue.msgobj.ReportElement;
+import com.oncore.data.messagequeue.producer.ProducerService;
 import com.oncore.template.dao.FieldDao;
 import com.oncore.template.dao.ReportDao;
 import com.oncore.template.dao.ReportFieldDao;
@@ -20,7 +20,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.validation.Validator;
-import java.io.IOException;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -48,9 +47,11 @@ public class ReportServiceImpl extends BaseGenericServiceImpl<Report, String> im
     @Autowired
     FieldDao fieldDao;
     @Autowired
-    TableBuilder tableBuilder;
+    @Qualifier(value = "tableBuilderMessageSender")
+    ProducerService tableBuilderMessageSender;
     @Autowired
-    ReportTemplateBuilder reportTemplateBuilder;
+    @Qualifier(value = "reportTemplateMessageSender")
+    ProducerService reportTemplateMessageSender;
 
     @Autowired
     @Qualifier(value = "awsDownloader")
@@ -119,45 +120,23 @@ public class ReportServiceImpl extends BaseGenericServiceImpl<Report, String> im
         report.setDeleted(false);
         report.setFolderId(folderId);
         report.setContent(reportRequest.getContent());
-
-
-//        for (ReportFieldRequest fieldRequest : reportRequest.getFields()) {
-//            ReportField field = new ReportField();
-//            field.setName(fieldRequest.getName());
-//            field.setDescription(fieldRequest.getDescription());
-//            field.setLength(fieldRequest.getLength());
-//            field.setFieldType(fieldRequest.getFieldType());
-//            field.setIfNull(fieldRequest.isIfNull());
-//            field.setIsRelatedField(fieldRequest.isRelatedField());
-//            if (fieldRequest.isRelatedField() ) {
-//                Field relatedField = null;
-//                if(fieldRequest.getRelatedField() == null || (relatedField =fieldDao.get(fieldRequest.getRelatedField())) == null){
-//                    throw new BadRequestException("related field can not be null or not found");
-//                }
-//                field.setRelatedField(relatedField);
-//            }
-//            report.addField(field);
-//        }
-//        reportDao.save(report);
         reportDao.save(report);
         reportGenerator.parseHTML(report, report.getContent());
+        ReportField field = new ReportField();
+        field.setName("generated");
+        field.setFieldType("boolean");
+        report.addField(field);
 
-//        for (ReportField field : report.getFields()) {
-//            field.setDeleted(false);
-//            field.setReport(report);
-//            reportFieldDao.save(field);
-//        }
-        try {
-            ReportField field = new ReportField();
-            field.setName("generated");
-            field.setFieldType("boolean");
-            report.addField(field);
-            tableBuilder.createMappingFile(report);
-        } catch (InterruptedException e) {
-            logger.error(e.getMessage());
-        }
-        String targetName = report.getTableName();
-        reportTemplateBuilder.uploadReport(reportTemplateBuilder.new ReportElement(targetName, report.getContent()));
+
+        ReportField report_url = new ReportField();
+        report_url.setName("path");
+        report_url.setFieldType("string");
+        report_url.setLength(256);
+        report.addField(report_url);
+
+
+        tableBuilderMessageSender.sendMessage(report);
+        reportTemplateMessageSender.sendMessage(new ReportElement(report.getTableName(), report.getContent()));
         ReportResponse reportResponse = new ReportResponse(report);
         return reportResponse;
     }
@@ -175,37 +154,26 @@ public class ReportServiceImpl extends BaseGenericServiceImpl<Report, String> im
             throw new ElementNotFoundException("Report");
         }
 
-        Long now = new Date().getTime();
-        Report report = new Report();
-        String tableName = "report_" + reportRequest.getName().replace(" ", "_") + "_" + now;
-        report.setTableName(tableName);
-        report.setName(reportRequest.getName());
-        report.setHbmPath(report.getName() + "/" + report.getTableName());
-        report.setDescription(reportRequest.getDescription());
-        report.setDeleted(false);
-        report.setFolderId(reportOld.getFolderId());
-        report.setContent(reportRequest.getContent());
-        reportDao.update(report);
-        reportGenerator.parseHTML(report, report.getContent());
+        reportOld.setName(reportRequest.getName());
+        reportOld.setDescription(reportRequest.getDescription());
+        reportOld.setFolderId(reportOld.getFolderId());
+        reportOld.setContent(reportRequest.getContent());
+        reportOld.clearFields();
+        reportDao.update(reportOld);
+        reportGenerator.parseHTML(reportOld, reportOld.getContent());
 
-//        for (ReportField field : report.getFields()) {
-//            field.setDeleted(false);
-//            field.setReport(report);
-//            reportFieldDao.save(field);
-//        }
-        try {
-            ReportField field = new ReportField();
-            field.setName("generated");
-            field.setFieldType("boolean");
-            report.addField(field);
-            tableBuilder.createMappingFile(report);
-        } catch (InterruptedException e) {
-            logger.error(e.getMessage());
-        }
-        String targetName = report.getTableName();
-        reportTemplateBuilder.uploadReport(reportTemplateBuilder.new ReportElement(targetName, report.getContent()));
-        return report;
-
+        ReportField field = new ReportField();
+        field.setName("generated");
+        field.setFieldType("boolean");
+        reportOld.addField(field);
+        ReportField report_url = new ReportField();
+        report_url.setName("path");
+        report_url.setFieldType("string");
+        report_url.setLength(256);
+        reportOld.addField(report_url);
+        tableBuilderMessageSender.sendMessage(reportOld);
+        reportTemplateMessageSender.sendMessage(new ReportElement(reportOld.getTableName(), reportOld.getContent()));
+        return reportOld;
 
     }
 
@@ -218,11 +186,13 @@ public class ReportServiceImpl extends BaseGenericServiceImpl<Report, String> im
         }
         logger.info("found report id=" + report.getId() + " name=" + report.getName());
         String content = null;
-        try {
-            content = downLoader.getReportContent(report.getTableName());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+//        try {
+//            content = downLoader.getReportContent(report.getTableName());
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+        // todo set content path? or content?
+        content = downLoader.getDownloadUrl(report.getTableName());
         report.setContent(content);
         ReportResponse reportResponse = new ReportResponse(report);
         return reportResponse;

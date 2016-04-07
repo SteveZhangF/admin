@@ -10,6 +10,10 @@ import org.springframework.stereotype.Component;
  * Created by steve on 3/7/16.
  */
 
+/**
+ * all user things are moved to user project
+ *
+ * */
 @Component("entityGroovyDaoFactory")
 public class EntityGroovyDaoFactory extends GroovyDaoFactory {
 

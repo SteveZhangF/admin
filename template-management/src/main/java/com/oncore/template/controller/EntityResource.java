@@ -36,42 +36,44 @@ public class EntityResource extends BaseController {
     @Autowired
     ModuleService moduleService;
 
+    /**
+     * get all entity
+     * */
     //    @RolesAllowed({"ROLE_USER"})
     @RequestMapping(value = "/admin/entities/", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public List<EntityResponse> getEntities() {
         checkUserContext();
-        log.info("reading all entities by ");
-        List<Entity> list = entityService.listEntities();
-        List<EntityResponse> listResponse = new ArrayList<>();
-        for (Entity entity : list) {
-            listResponse.add(new EntityResponse(entity));
-        }
-
-        return listResponse;
+        List<EntityResponse> list = entityService.listEntities();
+        return list;
     }
 
-
+    /**
+     * update entity
+     * */
     //    @RolesAllowed({"ROLE_USER"})
     @RequestMapping(value = "/admin/entities/{id}", method = RequestMethod.PUT, produces = MediaType.APPLICATION_JSON_VALUE)
 
     public EntityResponse updateEntity( @RequestBody UpdateEntityRequest request) {
         checkUserContext();
-        Entity entity1 = entityService.updateEntityFromRequest(request);
-        EntityResponse entityResponse = new EntityResponse(entity1);
-        return entityResponse;
+        return entityService.updateEntityFromRequest(request);
     }
 
+    /**
+     * get entity
+     * */
     //    @RolesAllowed({"ROLE_USER"})
     @RequestMapping(value = "/admin/entities/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public EntityResponse getEntity(final @PathVariable("id") String entityId) {
         checkUserContext();
-        Entity entity = entityService.getEntity(entityId);
-        return new EntityResponse(entity);
+        return entityService.getEntity(entityId);
     }
 
     //    @RolesAllowed({"ROLE_USER"})
+    /**
+     *
+     * delete the entity
+     * */
     @RequestMapping(value = "/admin/entities/{id}", method = RequestMethod.DELETE, produces = MediaType.APPLICATION_JSON_VALUE)
-
     public ResponseEntity delete(final @PathVariable("id") String id  ) {
         checkUserContext();
         entityService.deleteEntity(id);

@@ -10,6 +10,9 @@ import java.io.IOException;
  * Created by steve on 3/5/16.
  */
 
+/**
+ * A  CORS filter
+ * */
 @Component
 public class CORSFilter implements Filter {
 

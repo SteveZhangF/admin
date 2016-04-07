@@ -1,6 +1,7 @@
 package com.oncore.template.model.file;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.oncore.template.model.Element;
 import com.oncore.template.model.Field;
 
@@ -15,6 +16,7 @@ import javax.persistence.Table;
 @Table(name = "report_field")
 public class ReportField extends Element {
     @ManyToOne
+    @JsonIgnore
     private Report report;
 
     private String fieldType;
@@ -23,7 +25,7 @@ public class ReportField extends Element {
 
     private boolean ifNull;
 
-    private boolean isRelatedField;
+    private boolean ifRelatedField;
 
     @ManyToOne
     private Field relatedField;
@@ -68,11 +70,11 @@ public class ReportField extends Element {
         this.ifNull = ifNull;
     }
 
-    public boolean isRelatedField() {
-        return isRelatedField;
+    public boolean isIfRelatedField() {
+        return ifRelatedField;
     }
 
-    public void setIsRelatedField(boolean isRelatedField) {
-        this.isRelatedField = isRelatedField;
+    public void setIfRelatedField(boolean ifRelatedField) {
+        this.ifRelatedField = ifRelatedField;
     }
 }

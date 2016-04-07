@@ -8,6 +8,10 @@ import org.springframework.stereotype.Component;
 /**
  * Created by steve on 3/9/16.
  */
+/**
+ * all user things are moved to user project
+ *
+ * */
 @Component("reportGroovyDaoFactory")
 public class ReportGroovyDaoFactory extends GroovyDaoFactory {
 

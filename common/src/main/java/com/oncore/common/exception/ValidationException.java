@@ -10,6 +10,13 @@ import java.util.Set;
 /**
  * Created by steve on 3/4/16.
  */
+
+/**
+ *
+ * validation exception
+ * extends from BusinessException
+ *
+ * */
 public class ValidationException extends BusinessException {
 
     private Map fields = new HashMap<>();

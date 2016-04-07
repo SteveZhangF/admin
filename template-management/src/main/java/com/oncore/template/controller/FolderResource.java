@@ -35,7 +35,9 @@ import java.util.List;
 public class FolderResource extends BaseController {
     @Autowired
     FolderService folderService;
-
+    /**
+     * get folder based on id
+     * */
     @RequestMapping(value = "/admin/folders/{id}", method = RequestMethod.GET, produces = org.springframework.http.MediaType.APPLICATION_JSON_VALUE)
     public FolderResponse getFolder(@PathVariable("id") String id) {
         super.checkUserContext();
@@ -47,6 +49,9 @@ public class FolderResource extends BaseController {
         return response;
     }
 
+    /**
+     * create sub folder under parent
+     * */
     @RequestMapping(value = "/admin/folders/{parent_id}/sub_folder/", method = RequestMethod.POST, produces =
             MediaType.APPLICATION_JSON_VALUE)
     public FolderResponse createSubFolderToParent(@PathVariable("parent_id") String parent_id, @RequestBody CreateFolderToParentFolderRequest subFolderRequest) {
@@ -55,6 +60,9 @@ public class FolderResource extends BaseController {
         return response;
     }
 
+    /**
+     * get child folders under parent folder
+     * */
     @RequestMapping(value = "/admin/folders/{parent_id}/sub_folder/", method = RequestMethod.GET
             , produces = MediaType.APPLICATION_JSON_VALUE)
 
@@ -67,6 +75,9 @@ public class FolderResource extends BaseController {
     @Autowired
     ReportService reportService;
 
+    /**
+     * get reports under folder
+     * */
     @RequestMapping(value = "/admin/folders/{folderId}/reports/", method = RequestMethod.GET
             , produces = MediaType.APPLICATION_JSON_VALUE)
 
@@ -80,6 +91,9 @@ public class FolderResource extends BaseController {
         return reportResponses;
     }
 
+    /**
+     * create report under folder
+     * */
     @RequestMapping(value = "/admin/folders/{folderId}/reports/", method = RequestMethod.POST
             , produces = MediaType.APPLICATION_JSON_VALUE)
 
@@ -89,6 +103,10 @@ public class FolderResource extends BaseController {
         return new ResponseEntity<>(reportService.createReportFromRequest(folderId, reportRequest), HttpStatus.OK);
     }
 
+
+    /**
+     * update folder
+     * */
     @RequestMapping(value = "/admin/folders/{id}/", method = RequestMethod.PUT
             , produces = MediaType.APPLICATION_JSON_VALUE)
 
@@ -97,7 +115,9 @@ public class FolderResource extends BaseController {
         return folderService.updateFolderFromRequest(id, request);
     }
 
-
+    /**
+     * delete folder
+     * */
     @RequestMapping(value = "/admin/folders/{id}/", method = RequestMethod.DELETE, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity deleteFolder(@PathVariable("id") String id) {
         folderService.deleteFolder(id);

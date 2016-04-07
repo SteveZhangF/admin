@@ -7,7 +7,8 @@ import java.util.Map;
 /**
  * Created by steve on 1/16/16.
  * base dao for groovy script
- *
+ * all groovy script should implement this interface so that
+ * the script could be invoked by spring
  */
 public interface GBaseDao {
     boolean insert(Map params, String userId)  throws SQLException;

@@ -14,6 +14,12 @@ import com.oncore.common.exception.BadRequestException;
 /**
  * Created by steve on 2/12/16.
  */
+
+/**
+ * duplicated exception
+ *
+ * throws when same type and same name under same module or folder
+ * */
 public class FileElementDuplicatedException extends BadRequestException {
     public FileElementDuplicatedException(String developerMessage) {
         super("file or folder "+developerMessage+" already existing");

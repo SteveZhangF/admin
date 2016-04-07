@@ -18,7 +18,7 @@ public class ReportFieldResponse extends ElementResponse {
 
     private boolean ifNull;
 
-    private boolean isRelatedField;
+    private boolean ifRelatedField;
 
     private FieldResponse relatedField;
 
@@ -26,7 +26,7 @@ public class ReportFieldResponse extends ElementResponse {
         super(element);
         this.setType("report_field");
         this.ifNull = element.isIfNull();
-        this.isRelatedField = element.isRelatedField();
+        this.ifRelatedField = element.isIfRelatedField();
         if(element.getRelatedField()!=null){
             this.relatedField = new FieldResponse(element.getRelatedField());
         }
@@ -57,12 +57,12 @@ public class ReportFieldResponse extends ElementResponse {
         this.ifNull = ifNull;
     }
 
-    public boolean isRelatedField() {
-        return isRelatedField;
+    public boolean isIfRelatedField() {
+        return ifRelatedField;
     }
 
-    public void setIsRelatedField(boolean isRelatedField) {
-        this.isRelatedField = isRelatedField;
+    public void setIfRelatedField(boolean ifRelatedField) {
+        this.ifRelatedField = ifRelatedField;
     }
 
     public FieldResponse getRelatedField() {
