@@ -32,46 +32,57 @@ public class ReportGenerator {
         Document document = Jsoup.parse(html);
         org.jsoup.select.Elements elements = document.select("field[id]");
         for (Element element : elements) {
-            String field_id = element.attr("id");
+            //if has entity id and no id, it's a new related field
+            String field_id = element.attr("entity_field_id");
+            String id = element.attr("id");
             String name = element.attr("name");
-            Field field = null;
-            if (field_id != null && (field = fieldDao.get(field_id)) != null) {
-                ReportField reportField = new ReportField();
-                reportField.setFieldType(field.getFieldType());
-                reportField.setName(name);
-                reportField.setIfNull(field.isIfNull());
-                reportField.setIfRelatedField(true);
-                reportField.setLength(field.getLength());
-                reportField.setRelatedField(field);
+            Field field;
+            if(id == null || id.replace(" ","").equalsIgnoreCase("")){
+                if (field_id != null && (field = fieldDao.get(field_id)) != null) {
+                    ReportField reportField = new ReportField();
+                    reportField.setFieldType(field.getFieldType());
+                    reportField.setName(name);
+                    reportField.setIfNull(field.isIfNull());
+                    reportField.setIfRelatedField(true);
+                    reportField.setLength(field.getLength());
+                    reportField.setRelatedField(field);
+                    report.addField(reportField);
+                    reportField.setReport(report);
+                    reportFieldDao.save(reportField);
+                    reportField.setName(name + "_" +reportField.getId());
+                    reportFieldDao.update(reportField);
+                    element.attr("id",reportField.getId());
+                    element.text("${" + name + "_" + reportField.getId() + "}");
+                }
+            }else {
+                ReportField reportField = reportFieldDao.get(id);
                 report.addField(reportField);
                 reportField.setReport(report);
-                reportFieldDao.save(reportField);
-                reportField.setName(name + "_" +reportField.getId());
-                reportFieldDao.update(reportField);
                 element.text("${" + name + "_" + reportField.getId() + "}");
-            } else {
-                ReportField reportField = new ReportField();
-                String type = element.attr("type");
-                String if_null = element.attr("if_null");
-                String length = element.attr("length");
-                reportField.setIfRelatedField(false);
-                reportField.setName(name);
-                if (if_null != null)
-                    reportField.setIfNull(Boolean.valueOf(if_null));
-                if (length != null)
-                    reportField.setLength(Integer.valueOf(length));
-                if (type != null)
-                    reportField.setFieldType(type);
-                reportField.setReport(report);
-                report.addField(reportField);
-                reportFieldDao.save(reportField);
-                reportField.setName(name + "_" +reportField.getId());
-                reportFieldDao.update(reportField);
-                element.text("${" + name + "_" + reportField.getId()  + "}");
             }
+
+//             else {
+//                ReportField reportField = new ReportField();
+//                String type = element.attr("type");
+//                String if_null = element.attr("if_null");
+//                String length = element.attr("length");
+//                reportField.setIfRelatedField(false);
+//                reportField.setName(name);
+//                if (if_null != null)
+//                    reportField.setIfNull(Boolean.valueOf(if_null));
+//                if (length != null)
+//                    reportField.setLength(Integer.valueOf(length));
+//                if (type != null)
+//                    reportField.setFieldType(type);
+//                reportField.setReport(report);
+//                report.addField(reportField);
+//                reportFieldDao.save(reportField);
+//                reportField.setName(name + "_" +reportField.getId());
+//                reportFieldDao.update(reportField);
+//                element.text("${" + name + "_" + reportField.getId()  + "}");
+//            }
         }
         report.setContent(document.outerHtml());
         return report;
     }
-
 }
