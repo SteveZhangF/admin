@@ -11,6 +11,7 @@ public class UpdateEntityRequest extends CreateEntityRequest {
     @NotNull
     private String id;
 
+
     public String getId() {
         return id;
     }

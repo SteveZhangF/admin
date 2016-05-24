@@ -57,6 +57,7 @@ public class EntityServiceImpl extends BaseGenericServiceImpl<Entity, String> im
         entity.setTableName(tableName);
         entity.setHbmPath(entity.getName().replace(" ", "_") + "/" + entity.getTableName());
         entity.setDeleted(false);
+        entity.setUnique_(entity.isUnique_());
         entityDao.save(entity);
         for (Field field : entity.getFields()) {
             field.setEntity(entity);
@@ -79,6 +80,8 @@ public class EntityServiceImpl extends BaseGenericServiceImpl<Entity, String> im
         validate(entityRequest);
         Entity entity = new Entity();
         entity.setName(entityRequest.getName());
+        entity.setUnique_(entityRequest.isUnique());
+        entity.setPriority(entityRequest.getPriority());
         entity.setDescription(entityRequest.getDescription());
         entity.setModule_id(module_id);
         for (FieldRequest fieldRequest : entityRequest.getFields()) {
@@ -133,7 +136,7 @@ public class EntityServiceImpl extends BaseGenericServiceImpl<Entity, String> im
                 fieldDao.save(field);
             }
         }
-
+        oldEntity.setUnique_(entity.isUnique_());
         oldEntity.setDescription(entity.getDescription());
         oldEntity.setDeleted(entity.isDeleted());
         oldEntity.setName(entity.getName());
@@ -152,6 +155,8 @@ public class EntityServiceImpl extends BaseGenericServiceImpl<Entity, String> im
         Entity entity = new Entity();
         entity.setId(entityRequest.getId());
         entity.setName(entityRequest.getName());
+        entity.setUnique_(entityRequest.isUnique());
+        entity.setPriority(entityRequest.getPriority());
         entity.setDescription(entityRequest.getDescription());
         for (FieldRequest fieldRequest : entityRequest.getFields()) {
             Field field = new Field();
@@ -230,7 +235,7 @@ public class EntityServiceImpl extends BaseGenericServiceImpl<Entity, String> im
     public List<EntityResponse> listEntities() {
         Map<String, Object> map = new HashMap<>();
         map.put("deleted", false);
-        String[] fields = new String[]{"id", "name", "createTime", "updateTime", "description", "hbmPath", "tableName"};
+        String[] fields = new String[]{"id", "name", "createTime", "updateTime", "description", "hbmPath", "tableName","unique_","priority"};
         List<Entity> entities = entityDao.getListbyFieldAndParams(fields, map);
         List<EntityResponse> listR = new ArrayList<>();
         for (Entity entity : entities) {
@@ -244,7 +249,7 @@ public class EntityServiceImpl extends BaseGenericServiceImpl<Entity, String> im
         Map<String, Object> map = new HashMap<>();
         map.put("deleted", false);
         map.put("module_id", moduleId);
-        String[] fields = new String[]{"id", "name","tableName"};
+        String[] fields = new String[]{"id", "name","tableName","unique_","priority"};
         List<Entity> entities = entityDao.getListbyFieldAndParams(fields, map);
 
         return entities;
@@ -263,7 +268,7 @@ public class EntityServiceImpl extends BaseGenericServiceImpl<Entity, String> im
         Map<String, Object> map = new HashMap<>();
         map.put("deleted", false);
         map.put("id", id);
-        String[] fields = new String[]{"id", "name", "createTime", "updateTime", "description", "hbmPath", "tableName"};
+        String[] fields = new String[]{"id", "name", "createTime", "updateTime", "description", "hbmPath", "tableName","unique_","priority"};
         List<Entity> entities = entityDao.getListbyFieldAndParams(fields, map);
         if (entities.size() == 1) {
             return new EntityResponse(entities.get(0));

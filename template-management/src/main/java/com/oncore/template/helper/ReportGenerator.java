@@ -30,15 +30,17 @@ public class ReportGenerator {
      */
     public Report parseHTML(Report report, String html) {
         Document document = Jsoup.parse(html);
-        org.jsoup.select.Elements elements = document.select("field[id]");
+        org.jsoup.select.Elements elements = document.select("field");
         for (Element element : elements) {
             //if has entity id and no id, it's a new related field
             String field_id = element.attr("entity_field_id");
+            System.out.println("find a related field |  "+field_id);
             String id = element.attr("id");
             String name = element.attr("name");
             Field field;
             if(id == null || id.replace(" ","").equalsIgnoreCase("")){
                 if (field_id != null && (field = fieldDao.get(field_id)) != null) {
+                    System.out.println("find a related field |  "+field_id);
                     ReportField reportField = new ReportField();
                     reportField.setFieldType(field.getFieldType());
                     reportField.setName(name);

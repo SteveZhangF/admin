@@ -1,0 +1,1071 @@
+INFO  - 2016-04-14 12:17:43.435; org.springframework.web.context.ContextLoader; Root WebApplicationContext: initialization started
+INFO  - 2016-04-14 12:17:43.539; org.springframework.context.support.AbstractApplicationContext; Refreshing Root WebApplicationContext: startup date [Thu Apr 14 12:17:43 EDT 2016]; root of context hierarchy
+INFO  - 2016-04-14 12:17:43.585; org.springframework.beans.factory.xml.XmlBeanDefinitionReader; Loading XML bean definitions from class path resource [spring-context.xml]
+INFO  - 2016-04-14 12:17:43.731; org.springframework.beans.factory.xml.XmlBeanDefinitionReader; Loading XML bean definitions from URL [jar:file:/Users/steve/.m2/repository/com/oncore/oncore-consulting-template-management/1.0-SNAPSHOT/oncore-consulting-template-management-1.0-SNAPSHOT.jar!/spring-context-template-management.xml]
+INFO  - 2016-04-14 12:17:43.916; org.springframework.beans.factory.xml.XmlBeanDefinitionReader; Loading XML bean definitions from URL [jar:file:/Users/steve/.m2/repository/com/oncore/oncore-consulting-common/1.0-SNAPSHOT/oncore-consulting-common-1.0-SNAPSHOT.jar!/spring/spring-context-common.xml]
+INFO  - 2016-04-14 12:17:43.953; org.springframework.beans.factory.xml.XmlBeanDefinitionReader; Loading XML bean definitions from class path resource [spring/spring-hibernate.xml]
+INFO  - 2016-04-14 12:17:44.035; org.springframework.beans.factory.xml.XmlBeanDefinitionReader; Loading XML bean definitions from class path resource [spring/spring-mvc.xml]
+INFO  - 2016-04-14 12:17:44.119; org.springframework.beans.factory.xml.XmlBeanDefinitionReader; Loading XML bean definitions from URL [jar:file:/Users/steve/.m2/repository/com/oncore/oncore-consulting-database-management/1.0-SNAPSHOT/oncore-consulting-database-management-1.0-SNAPSHOT.jar!/spring/spring-context-data-management.xml]
+INFO  - 2016-04-14 12:17:44.154; org.springframework.beans.factory.xml.XmlBeanDefinitionReader; Loading XML bean definitions from URL [jar:file:/Users/steve/.m2/repository/com/oncore/oncore-consulting-user/1.0-SNAPSHOT/oncore-consulting-user-1.0-SNAPSHOT.jar!/spring/spring-context-user.xml]
+INFO  - 2016-04-14 12:17:44.484; org.springframework.core.io.support.PropertiesLoaderSupport; Loading properties file from class path resource [properties/hibernate-development.properties]
+INFO  - 2016-04-14 12:17:44.485; org.springframework.core.io.support.PropertiesLoaderSupport; Loading properties file from class path resource [properties/app-development.properties]
+INFO  - 2016-04-14 12:17:44.494; org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor; JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+INFO  - 2016-04-14 12:17:44.679; org.hibernate.validator.internal.util.Version; HV000001: Hibernate Validator 5.1.3.Final
+INFO  - 2016-04-14 12:17:44.864; com.mchange.v2.log.slf4j.Slf4jMLog$Slf4jMLogger$InfoLogger; MLog clients using slf4j logging.
+INFO  - 2016-04-14 12:17:44.993; com.mchange.v2.log.slf4j.Slf4jMLog$Slf4jMLogger$InfoLogger; Initializing c3p0-0.9.5.2 [built 08-December-2015 22:06:04 -0800; debug? true; trace: 10]
+INFO  - 2016-04-14 12:17:45.340; org.hibernate.annotations.common.reflection.java.JavaReflectionManager; HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+INFO  - 2016-04-14 12:17:45.348; org.hibernate.Version; HHH000412: Hibernate Core {4.3.6.Final}
+INFO  - 2016-04-14 12:17:45.353; org.hibernate.cfg.Environment; HHH000206: hibernate.properties not found
+INFO  - 2016-04-14 12:17:45.356; org.hibernate.cfg.Environment; HHH000021: Bytecode provider name : javassist
+INFO  - 2016-04-14 12:17:45.519; com.mchange.v2.log.slf4j.Slf4jMLog$Slf4jMLogger$InfoLogger; Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 2sa00u9g5zeaje1wvbf6b|60a7e509, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceSynchronousCheckins -> false, forceUseNamedDriverClass -> false, identityToken -> 2sa00u9g5zeaje1wvbf6b|60a7e509, idleConnectionTestPeriod -> 0, initialPoolSize -> 1, jdbcUrl -> jdbc:mysql://oncore.cw7lo8mlcfvo.us-east-1.rds.amazonaws.com:3306/oncore, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 1, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 40, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 1, numHelperThreads -> 3, preferredTestQuery -> null, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+WARN  - 2016-04-14 12:18:05.508; com.mchange.v2.log.slf4j.Slf4jMLog$Slf4jMLogger$WarnLogger; com.mchange.v2.async.ThreadPoolAsynchronousRunner$DeadlockDetector@33c8cdda -- APPARENT DEADLOCK!!! Creating emergency threads for unassigned pending tasks!
+WARN  - 2016-04-14 12:18:05.529; com.mchange.v2.log.slf4j.Slf4jMLog$Slf4jMLogger$WarnLogger; com.mchange.v2.async.ThreadPoolAsynchronousRunner$DeadlockDetector@33c8cdda -- APPARENT DEADLOCK!!! Complete Status: 
+	Managed Threads: 3
+	Active Threads: 3
+	Active Tasks: 
+		com.mchange.v2.resourcepool.BasicResourcePool$ScatteredAcquireTask@9619ba9
+			on thread: C3P0PooledConnectionPoolManager[identityToken->2sa00u9g5zeaje1wvbf6b|60a7e509]-HelperThread-#1
+		com.mchange.v2.resourcepool.BasicResourcePool$ScatteredAcquireTask@4d0416eb
+			on thread: C3P0PooledConnectionPoolManager[identityToken->2sa00u9g5zeaje1wvbf6b|60a7e509]-HelperThread-#2
+		com.mchange.v2.resourcepool.BasicResourcePool$ScatteredAcquireTask@71bdfc17
+			on thread: C3P0PooledConnectionPoolManager[identityToken->2sa00u9g5zeaje1wvbf6b|60a7e509]-HelperThread-#0
+	Pending Tasks: 
+		com.mchange.v2.resourcepool.BasicResourcePool$ScatteredAcquireTask@1c1dd0a7
+Pool thread stack traces:
+	Thread[C3P0PooledConnectionPoolManager[identityToken->2sa00u9g5zeaje1wvbf6b|60a7e509]-HelperThread-#1,5,main]
+		java.net.PlainSocketImpl.socketConnect(Native Method)
+		java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+		java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+		java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+		java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+		java.net.Socket.connect(Socket.java:589)
+		java.net.Socket.connect(Socket.java:538)
+		java.net.Socket.<init>(Socket.java:434)
+		java.net.Socket.<init>(Socket.java:244)
+		com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:258)
+		com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:306)
+		com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2504)
+		com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2541)
+		com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2323)
+		com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:832)
+		com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:46)
+		sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+		sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+		sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+		java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+		com.mysql.jdbc.Util.handleNewInstance(Util.java:408)
+		com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:417)
+		com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:344)
+		com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:175)
+		com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:220)
+		com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:206)
+		com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:203)
+		com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1138)
+		com.mchange.v2.resourcepool.BasicResourcePool.doAcquireAndDecrementPendingAcquiresWithinLockOnSuccess(BasicResourcePool.java:1125)
+		com.mchange.v2.resourcepool.BasicResourcePool.access$700(BasicResourcePool.java:44)
+		com.mchange.v2.resourcepool.BasicResourcePool$ScatteredAcquireTask.run(BasicResourcePool.java:1870)
+		com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:696)
+	Thread[C3P0PooledConnectionPoolManager[identityToken->2sa00u9g5zeaje1wvbf6b|60a7e509]-HelperThread-#2,5,main]
+		java.net.PlainSocketImpl.socketConnect(Native Method)
+		java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+		java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+		java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+		java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+		java.net.Socket.connect(Socket.java:589)
+		java.net.Socket.connect(Socket.java:538)
+		java.net.Socket.<init>(Socket.java:434)
+		java.net.Socket.<init>(Socket.java:244)
+		com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:258)
+		com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:306)
+		com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2504)
+		com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2541)
+		com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2323)
+		com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:832)
+		com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:46)
+		sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+		sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+		sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+		java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+		com.mysql.jdbc.Util.handleNewInstance(Util.java:408)
+		com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:417)
+		com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:344)
+		com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:175)
+		com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:220)
+		com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:206)
+		com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:203)
+		com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1138)
+		com.mchange.v2.resourcepool.BasicResourcePool.doAcquireAndDecrementPendingAcquiresWithinLockOnSuccess(BasicResourcePool.java:1125)
+		com.mchange.v2.resourcepool.BasicResourcePool.access$700(BasicResourcePool.java:44)
+		com.mchange.v2.resourcepool.BasicResourcePool$ScatteredAcquireTask.run(BasicResourcePool.java:1870)
+		com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:696)
+	Thread[C3P0PooledConnectionPoolManager[identityToken->2sa00u9g5zeaje1wvbf6b|60a7e509]-HelperThread-#0,5,main]
+		java.net.PlainSocketImpl.socketConnect(Native Method)
+		java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+		java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+		java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+		java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+		java.net.Socket.connect(Socket.java:589)
+		java.net.Socket.connect(Socket.java:538)
+		java.net.Socket.<init>(Socket.java:434)
+		java.net.Socket.<init>(Socket.java:244)
+		com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:258)
+		com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:306)
+		com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2504)
+		com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2541)
+		com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2323)
+		com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:832)
+		com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:46)
+		sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+		sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+		sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+		java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+		com.mysql.jdbc.Util.handleNewInstance(Util.java:408)
+		com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:417)
+		com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:344)
+		com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:175)
+		com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:220)
+		com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:206)
+		com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:203)
+		com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1138)
+		com.mchange.v2.resourcepool.BasicResourcePool.doAcquireAndDecrementPendingAcquiresWithinLockOnSuccess(BasicResourcePool.java:1125)
+		com.mchange.v2.resourcepool.BasicResourcePool.access$700(BasicResourcePool.java:44)
+		com.mchange.v2.resourcepool.BasicResourcePool$ScatteredAcquireTask.run(BasicResourcePool.java:1870)
+		com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:696)
+
+WARN  - 2016-04-14 12:19:35.534; com.mchange.v2.log.slf4j.Slf4jMLog$Slf4jMLogger$WarnLogger; com.mchange.v2.async.ThreadPoolAsynchronousRunner$DeadlockDetector@33c8cdda -- APPARENT DEADLOCK!!! Creating emergency threads for unassigned pending tasks!
+WARN  - 2016-04-14 12:19:35.537; com.mchange.v2.log.slf4j.Slf4jMLog$Slf4jMLogger$WarnLogger; com.mchange.v2.async.ThreadPoolAsynchronousRunner$DeadlockDetector@33c8cdda -- APPARENT DEADLOCK!!! Complete Status: 
+	Managed Threads: 3
+	Active Threads: 3
+	Active Tasks: 
+		com.mchange.v2.resourcepool.BasicResourcePool$ScatteredAcquireTask@64774a60
+			on thread: C3P0PooledConnectionPoolManager[identityToken->2sa00u9g5zeaje1wvbf6b|60a7e509]-HelperThread-#0
+		com.mchange.v2.resourcepool.BasicResourcePool$ScatteredAcquireTask@41501ce6
+			on thread: C3P0PooledConnectionPoolManager[identityToken->2sa00u9g5zeaje1wvbf6b|60a7e509]-HelperThread-#2
+		com.mchange.v2.resourcepool.BasicResourcePool$ScatteredAcquireTask@69d0f81a
+			on thread: C3P0PooledConnectionPoolManager[identityToken->2sa00u9g5zeaje1wvbf6b|60a7e509]-HelperThread-#1
+	Pending Tasks: 
+		com.mchange.v2.resourcepool.BasicResourcePool$ScatteredAcquireTask@70f6d8e9
+Pool thread stack traces:
+	Thread[C3P0PooledConnectionPoolManager[identityToken->2sa00u9g5zeaje1wvbf6b|60a7e509]-HelperThread-#1,5,main]
+		java.net.PlainSocketImpl.socketConnect(Native Method)
+		java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+		java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+		java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+		java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+		java.net.Socket.connect(Socket.java:589)
+		java.net.Socket.connect(Socket.java:538)
+		java.net.Socket.<init>(Socket.java:434)
+		java.net.Socket.<init>(Socket.java:244)
+		com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:258)
+		com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:306)
+		com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2504)
+		com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2541)
+		com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2323)
+		com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:832)
+		com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:46)
+		sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+		sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+		sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+		java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+		com.mysql.jdbc.Util.handleNewInstance(Util.java:408)
+		com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:417)
+		com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:344)
+		com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:175)
+		com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:220)
+		com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:206)
+		com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:203)
+		com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1138)
+		com.mchange.v2.resourcepool.BasicResourcePool.doAcquireAndDecrementPendingAcquiresWithinLockOnSuccess(BasicResourcePool.java:1125)
+		com.mchange.v2.resourcepool.BasicResourcePool.access$700(BasicResourcePool.java:44)
+		com.mchange.v2.resourcepool.BasicResourcePool$ScatteredAcquireTask.run(BasicResourcePool.java:1870)
+		com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:696)
+	Thread[C3P0PooledConnectionPoolManager[identityToken->2sa00u9g5zeaje1wvbf6b|60a7e509]-HelperThread-#0,5,main]
+		java.net.PlainSocketImpl.socketConnect(Native Method)
+		java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+		java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+		java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+		java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+		java.net.Socket.connect(Socket.java:589)
+		java.net.Socket.connect(Socket.java:538)
+		java.net.Socket.<init>(Socket.java:434)
+		java.net.Socket.<init>(Socket.java:244)
+		com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:258)
+		com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:306)
+		com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2504)
+		com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2541)
+		com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2323)
+		com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:832)
+		com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:46)
+		sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+		sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+		sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+		java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+		com.mysql.jdbc.Util.handleNewInstance(Util.java:408)
+		com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:417)
+		com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:344)
+		com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:175)
+		com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:220)
+		com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:206)
+		com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:203)
+		com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1138)
+		com.mchange.v2.resourcepool.BasicResourcePool.doAcquireAndDecrementPendingAcquiresWithinLockOnSuccess(BasicResourcePool.java:1125)
+		com.mchange.v2.resourcepool.BasicResourcePool.access$700(BasicResourcePool.java:44)
+		com.mchange.v2.resourcepool.BasicResourcePool$ScatteredAcquireTask.run(BasicResourcePool.java:1870)
+		com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:696)
+	Thread[C3P0PooledConnectionPoolManager[identityToken->2sa00u9g5zeaje1wvbf6b|60a7e509]-HelperThread-#2,5,main]
+		java.net.PlainSocketImpl.socketConnect(Native Method)
+		java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+		java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+		java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+		java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+		java.net.Socket.connect(Socket.java:589)
+		java.net.Socket.connect(Socket.java:538)
+		java.net.Socket.<init>(Socket.java:434)
+		java.net.Socket.<init>(Socket.java:244)
+		com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:258)
+		com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:306)
+		com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2504)
+		com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2541)
+		com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2323)
+		com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:832)
+		com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:46)
+		sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+		sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+		sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+		java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+		com.mysql.jdbc.Util.handleNewInstance(Util.java:408)
+		com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:417)
+		com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:344)
+		com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:175)
+		com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:220)
+		com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:206)
+		com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:203)
+		com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1138)
+		com.mchange.v2.resourcepool.BasicResourcePool.doAcquireAndDecrementPendingAcquiresWithinLockOnSuccess(BasicResourcePool.java:1125)
+		com.mchange.v2.resourcepool.BasicResourcePool.access$700(BasicResourcePool.java:44)
+		com.mchange.v2.resourcepool.BasicResourcePool$ScatteredAcquireTask.run(BasicResourcePool.java:1870)
+		com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:696)
+
+WARN  - 2016-04-14 12:21:05.552; com.mchange.v2.log.slf4j.Slf4jMLog$Slf4jMLogger$WarnLogger; com.mchange.v2.async.ThreadPoolAsynchronousRunner$DeadlockDetector@33c8cdda -- APPARENT DEADLOCK!!! Creating emergency threads for unassigned pending tasks!
+WARN  - 2016-04-14 12:21:05.555; com.mchange.v2.log.slf4j.Slf4jMLog$Slf4jMLogger$WarnLogger; com.mchange.v2.async.ThreadPoolAsynchronousRunner$DeadlockDetector@33c8cdda -- APPARENT DEADLOCK!!! Complete Status: 
+	Managed Threads: 3
+	Active Threads: 3
+	Active Tasks: 
+		com.mchange.v2.resourcepool.BasicResourcePool$ScatteredAcquireTask@c722021
+			on thread: C3P0PooledConnectionPoolManager[identityToken->2sa00u9g5zeaje1wvbf6b|60a7e509]-HelperThread-#0
+		com.mchange.v2.resourcepool.BasicResourcePool$ScatteredAcquireTask@32007bff
+			on thread: C3P0PooledConnectionPoolManager[identityToken->2sa00u9g5zeaje1wvbf6b|60a7e509]-HelperThread-#1
+		com.mchange.v2.resourcepool.BasicResourcePool$ScatteredAcquireTask@133dbaef
+			on thread: C3P0PooledConnectionPoolManager[identityToken->2sa00u9g5zeaje1wvbf6b|60a7e509]-HelperThread-#2
+	Pending Tasks: 
+		com.mchange.v2.resourcepool.BasicResourcePool$ScatteredAcquireTask@4906eb68
+Pool thread stack traces:
+	Thread[C3P0PooledConnectionPoolManager[identityToken->2sa00u9g5zeaje1wvbf6b|60a7e509]-HelperThread-#0,5,main]
+		java.net.PlainSocketImpl.socketConnect(Native Method)
+		java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+		java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+		java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+		java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+		java.net.Socket.connect(Socket.java:589)
+		java.net.Socket.connect(Socket.java:538)
+		java.net.Socket.<init>(Socket.java:434)
+		java.net.Socket.<init>(Socket.java:244)
+		com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:258)
+		com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:306)
+		com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2504)
+		com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2541)
+		com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2323)
+		com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:832)
+		com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:46)
+		sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+		sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+		sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+		java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+		com.mysql.jdbc.Util.handleNewInstance(Util.java:408)
+		com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:417)
+		com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:344)
+		com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:175)
+		com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:220)
+		com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:206)
+		com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:203)
+		com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1138)
+		com.mchange.v2.resourcepool.BasicResourcePool.doAcquireAndDecrementPendingAcquiresWithinLockOnSuccess(BasicResourcePool.java:1125)
+		com.mchange.v2.resourcepool.BasicResourcePool.access$700(BasicResourcePool.java:44)
+		com.mchange.v2.resourcepool.BasicResourcePool$ScatteredAcquireTask.run(BasicResourcePool.java:1870)
+		com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:696)
+	Thread[C3P0PooledConnectionPoolManager[identityToken->2sa00u9g5zeaje1wvbf6b|60a7e509]-HelperThread-#1,5,main]
+		java.net.PlainSocketImpl.socketConnect(Native Method)
+		java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+		java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+		java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+		java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+		java.net.Socket.connect(Socket.java:589)
+		java.net.Socket.connect(Socket.java:538)
+		java.net.Socket.<init>(Socket.java:434)
+		java.net.Socket.<init>(Socket.java:244)
+		com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:258)
+		com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:306)
+		com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2504)
+		com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2541)
+		com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2323)
+		com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:832)
+		com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:46)
+		sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+		sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+		sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+		java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+		com.mysql.jdbc.Util.handleNewInstance(Util.java:408)
+		com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:417)
+		com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:344)
+		com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:175)
+		com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:220)
+		com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:206)
+		com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:203)
+		com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1138)
+		com.mchange.v2.resourcepool.BasicResourcePool.doAcquireAndDecrementPendingAcquiresWithinLockOnSuccess(BasicResourcePool.java:1125)
+		com.mchange.v2.resourcepool.BasicResourcePool.access$700(BasicResourcePool.java:44)
+		com.mchange.v2.resourcepool.BasicResourcePool$ScatteredAcquireTask.run(BasicResourcePool.java:1870)
+		com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:696)
+	Thread[C3P0PooledConnectionPoolManager[identityToken->2sa00u9g5zeaje1wvbf6b|60a7e509]-HelperThread-#2,5,main]
+		java.net.PlainSocketImpl.socketConnect(Native Method)
+		java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+		java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+		java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+		java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+		java.net.Socket.connect(Socket.java:589)
+		java.net.Socket.connect(Socket.java:538)
+		java.net.Socket.<init>(Socket.java:434)
+		java.net.Socket.<init>(Socket.java:244)
+		com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:258)
+		com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:306)
+		com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2504)
+		com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2541)
+		com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2323)
+		com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:832)
+		com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:46)
+		sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+		sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+		sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+		java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+		com.mysql.jdbc.Util.handleNewInstance(Util.java:408)
+		com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:417)
+		com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:344)
+		com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:175)
+		com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:220)
+		com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:206)
+		com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:203)
+		com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1138)
+		com.mchange.v2.resourcepool.BasicResourcePool.doAcquireAndDecrementPendingAcquiresWithinLockOnSuccess(BasicResourcePool.java:1125)
+		com.mchange.v2.resourcepool.BasicResourcePool.access$700(BasicResourcePool.java:44)
+		com.mchange.v2.resourcepool.BasicResourcePool$ScatteredAcquireTask.run(BasicResourcePool.java:1870)
+		com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:696)
+
+WARN  - 2016-04-14 12:22:35.569; com.mchange.v2.log.slf4j.Slf4jMLog$Slf4jMLogger$WarnLogger; com.mchange.v2.async.ThreadPoolAsynchronousRunner$DeadlockDetector@33c8cdda -- APPARENT DEADLOCK!!! Creating emergency threads for unassigned pending tasks!
+WARN  - 2016-04-14 12:22:35.572; com.mchange.v2.log.slf4j.Slf4jMLog$Slf4jMLogger$WarnLogger; com.mchange.v2.async.ThreadPoolAsynchronousRunner$DeadlockDetector@33c8cdda -- APPARENT DEADLOCK!!! Complete Status: 
+	Managed Threads: 3
+	Active Threads: 3
+	Active Tasks: 
+		com.mchange.v2.resourcepool.BasicResourcePool$ScatteredAcquireTask@748221da
+			on thread: C3P0PooledConnectionPoolManager[identityToken->2sa00u9g5zeaje1wvbf6b|60a7e509]-HelperThread-#0
+		com.mchange.v2.resourcepool.BasicResourcePool$ScatteredAcquireTask@262bbb95
+			on thread: C3P0PooledConnectionPoolManager[identityToken->2sa00u9g5zeaje1wvbf6b|60a7e509]-HelperThread-#1
+		com.mchange.v2.resourcepool.BasicResourcePool$ScatteredAcquireTask@2bed57de
+			on thread: C3P0PooledConnectionPoolManager[identityToken->2sa00u9g5zeaje1wvbf6b|60a7e509]-HelperThread-#2
+	Pending Tasks: 
+		com.mchange.v2.resourcepool.BasicResourcePool$ScatteredAcquireTask@47c4d971
+Pool thread stack traces:
+	Thread[C3P0PooledConnectionPoolManager[identityToken->2sa00u9g5zeaje1wvbf6b|60a7e509]-HelperThread-#1,5,main]
+		java.net.PlainSocketImpl.socketConnect(Native Method)
+		java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+		java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+		java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+		java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+		java.net.Socket.connect(Socket.java:589)
+		java.net.Socket.connect(Socket.java:538)
+		java.net.Socket.<init>(Socket.java:434)
+		java.net.Socket.<init>(Socket.java:244)
+		com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:258)
+		com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:306)
+		com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2504)
+		com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2541)
+		com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2323)
+		com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:832)
+		com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:46)
+		sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+		sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+		sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+		java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+		com.mysql.jdbc.Util.handleNewInstance(Util.java:408)
+		com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:417)
+		com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:344)
+		com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:175)
+		com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:220)
+		com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:206)
+		com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:203)
+		com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1138)
+		com.mchange.v2.resourcepool.BasicResourcePool.doAcquireAndDecrementPendingAcquiresWithinLockOnSuccess(BasicResourcePool.java:1125)
+		com.mchange.v2.resourcepool.BasicResourcePool.access$700(BasicResourcePool.java:44)
+		com.mchange.v2.resourcepool.BasicResourcePool$ScatteredAcquireTask.run(BasicResourcePool.java:1870)
+		com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:696)
+	Thread[C3P0PooledConnectionPoolManager[identityToken->2sa00u9g5zeaje1wvbf6b|60a7e509]-HelperThread-#0,5,main]
+		java.net.PlainSocketImpl.socketConnect(Native Method)
+		java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+		java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+		java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+		java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+		java.net.Socket.connect(Socket.java:589)
+		java.net.Socket.connect(Socket.java:538)
+		java.net.Socket.<init>(Socket.java:434)
+		java.net.Socket.<init>(Socket.java:244)
+		com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:258)
+		com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:306)
+		com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2504)
+		com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2541)
+		com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2323)
+		com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:832)
+		com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:46)
+		sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+		sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+		sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+		java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+		com.mysql.jdbc.Util.handleNewInstance(Util.java:408)
+		com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:417)
+		com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:344)
+		com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:175)
+		com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:220)
+		com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:206)
+		com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:203)
+		com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1138)
+		com.mchange.v2.resourcepool.BasicResourcePool.doAcquireAndDecrementPendingAcquiresWithinLockOnSuccess(BasicResourcePool.java:1125)
+		com.mchange.v2.resourcepool.BasicResourcePool.access$700(BasicResourcePool.java:44)
+		com.mchange.v2.resourcepool.BasicResourcePool$ScatteredAcquireTask.run(BasicResourcePool.java:1870)
+		com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:696)
+	Thread[C3P0PooledConnectionPoolManager[identityToken->2sa00u9g5zeaje1wvbf6b|60a7e509]-HelperThread-#2,5,main]
+		java.net.PlainSocketImpl.socketConnect(Native Method)
+		java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+		java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+		java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+		java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+		java.net.Socket.connect(Socket.java:589)
+		java.net.Socket.connect(Socket.java:538)
+		java.net.Socket.<init>(Socket.java:434)
+		java.net.Socket.<init>(Socket.java:244)
+		com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:258)
+		com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:306)
+		com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2504)
+		com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2541)
+		com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2323)
+		com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:832)
+		com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:46)
+		sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+		sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+		sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+		java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+		com.mysql.jdbc.Util.handleNewInstance(Util.java:408)
+		com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:417)
+		com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:344)
+		com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:175)
+		com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:220)
+		com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:206)
+		com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:203)
+		com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1138)
+		com.mchange.v2.resourcepool.BasicResourcePool.doAcquireAndDecrementPendingAcquiresWithinLockOnSuccess(BasicResourcePool.java:1125)
+		com.mchange.v2.resourcepool.BasicResourcePool.access$700(BasicResourcePool.java:44)
+		com.mchange.v2.resourcepool.BasicResourcePool$ScatteredAcquireTask.run(BasicResourcePool.java:1870)
+		com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:696)
+
+INFO  - 2016-04-14 12:23:34.847; org.springframework.web.context.ContextLoader; Root WebApplicationContext: initialization started
+INFO  - 2016-04-14 12:23:34.947; org.springframework.context.support.AbstractApplicationContext; Refreshing Root WebApplicationContext: startup date [Thu Apr 14 12:23:34 EDT 2016]; root of context hierarchy
+INFO  - 2016-04-14 12:23:34.990; org.springframework.beans.factory.xml.XmlBeanDefinitionReader; Loading XML bean definitions from class path resource [spring-context.xml]
+INFO  - 2016-04-14 12:23:35.117; org.springframework.beans.factory.xml.XmlBeanDefinitionReader; Loading XML bean definitions from URL [jar:file:/Users/steve/.m2/repository/com/oncore/oncore-consulting-template-management/1.0-SNAPSHOT/oncore-consulting-template-management-1.0-SNAPSHOT.jar!/spring-context-template-management.xml]
+INFO  - 2016-04-14 12:23:35.294; org.springframework.beans.factory.xml.XmlBeanDefinitionReader; Loading XML bean definitions from URL [jar:file:/Users/steve/.m2/repository/com/oncore/oncore-consulting-common/1.0-SNAPSHOT/oncore-consulting-common-1.0-SNAPSHOT.jar!/spring/spring-context-common.xml]
+INFO  - 2016-04-14 12:23:35.361; org.springframework.beans.factory.xml.XmlBeanDefinitionReader; Loading XML bean definitions from class path resource [spring/spring-hibernate.xml]
+INFO  - 2016-04-14 12:23:35.435; org.springframework.beans.factory.xml.XmlBeanDefinitionReader; Loading XML bean definitions from class path resource [spring/spring-mvc.xml]
+INFO  - 2016-04-14 12:23:35.552; org.springframework.beans.factory.xml.XmlBeanDefinitionReader; Loading XML bean definitions from URL [jar:file:/Users/steve/.m2/repository/com/oncore/oncore-consulting-database-management/1.0-SNAPSHOT/oncore-consulting-database-management-1.0-SNAPSHOT.jar!/spring/spring-context-data-management.xml]
+INFO  - 2016-04-14 12:23:35.608; org.springframework.beans.factory.xml.XmlBeanDefinitionReader; Loading XML bean definitions from URL [jar:file:/Users/steve/.m2/repository/com/oncore/oncore-consulting-user/1.0-SNAPSHOT/oncore-consulting-user-1.0-SNAPSHOT.jar!/spring/spring-context-user.xml]
+INFO  - 2016-04-14 12:23:36.135; org.springframework.core.io.support.PropertiesLoaderSupport; Loading properties file from class path resource [properties/hibernate-development.properties]
+INFO  - 2016-04-14 12:23:36.141; org.springframework.core.io.support.PropertiesLoaderSupport; Loading properties file from class path resource [properties/app-development.properties]
+INFO  - 2016-04-14 12:23:36.202; org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor; JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+INFO  - 2016-04-14 12:23:36.492; org.hibernate.validator.internal.util.Version; HV000001: Hibernate Validator 5.1.3.Final
+INFO  - 2016-04-14 12:23:36.812; com.mchange.v2.log.slf4j.Slf4jMLog$Slf4jMLogger$InfoLogger; MLog clients using slf4j logging.
+INFO  - 2016-04-14 12:23:37.024; com.mchange.v2.log.slf4j.Slf4jMLog$Slf4jMLogger$InfoLogger; Initializing c3p0-0.9.5.2 [built 08-December-2015 22:06:04 -0800; debug? true; trace: 10]
+INFO  - 2016-04-14 12:23:37.575; org.hibernate.annotations.common.reflection.java.JavaReflectionManager; HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+INFO  - 2016-04-14 12:23:37.619; org.hibernate.Version; HHH000412: Hibernate Core {4.3.6.Final}
+INFO  - 2016-04-14 12:23:37.679; org.hibernate.cfg.Environment; HHH000206: hibernate.properties not found
+INFO  - 2016-04-14 12:23:37.682; org.hibernate.cfg.Environment; HHH000021: Bytecode provider name : javassist
+INFO  - 2016-04-14 12:23:37.953; com.mchange.v2.log.slf4j.Slf4jMLog$Slf4jMLogger$InfoLogger; Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 2sa00u9g5zlu4v17rxsdk|60a7e509, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceSynchronousCheckins -> false, forceUseNamedDriverClass -> false, identityToken -> 2sa00u9g5zlu4v17rxsdk|60a7e509, idleConnectionTestPeriod -> 0, initialPoolSize -> 1, jdbcUrl -> jdbc:mysql://oncore.cw7lo8mlcfvo.us-east-1.rds.amazonaws.com:3306/oncore, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 1, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 40, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 1, numHelperThreads -> 3, preferredTestQuery -> null, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+INFO  - 2016-04-14 12:23:38.835; org.hibernate.dialect.Dialect; HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+INFO  - 2016-04-14 12:23:38.995; org.hibernate.engine.transaction.internal.TransactionFactoryInitiator; HHH000399: Using default transaction strategy (direct JDBC transactions)
+INFO  - 2016-04-14 12:23:38.998; org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory; HHH000397: Using ASTQueryTranslatorFactory
+WARN  - 2016-04-14 12:23:39.144; org.hibernate.id.UUIDHexGenerator; HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+INFO  - 2016-04-14 12:23:39.397; org.hibernate.tool.hbm2ddl.SchemaUpdate; HHH000228: Running hbm2ddl schema update
+INFO  - 2016-04-14 12:23:39.399; org.hibernate.tool.hbm2ddl.SchemaUpdate; HHH000102: Fetching database metadata
+INFO  - 2016-04-14 12:23:39.408; org.hibernate.tool.hbm2ddl.SchemaUpdate; HHH000396: Updating schema
+INFO  - 2016-04-14 12:23:39.620; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000261: Table found: oncore.element
+INFO  - 2016-04-14 12:23:39.621; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000037: Columns: [createtime, deleted, module_id, name, description, id, updatetime]
+INFO  - 2016-04-14 12:23:39.621; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000108: Foreign keys: []
+INFO  - 2016-04-14 12:23:39.622; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000126: Indexes: [primary]
+INFO  - 2016-04-14 12:23:39.742; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000261: Table found: oncore.entity
+INFO  - 2016-04-14 12:23:39.742; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000037: Columns: [createtime, deleted, module_id, unique_, unique, name, description, id, updatetime, tablename, hbmpath]
+INFO  - 2016-04-14 12:23:39.743; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000108: Foreign keys: []
+INFO  - 2016-04-14 12:23:39.743; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000126: Indexes: [primary]
+INFO  - 2016-04-14 12:23:39.950; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000261: Table found: oncore.field
+INFO  - 2016-04-14 12:23:39.951; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000037: Columns: [createtime, deleted, module_id, name, length, description, ifnull, id, updatetime, fieldtype, tablename, entity_id]
+INFO  - 2016-04-14 12:23:39.952; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000108: Foreign keys: [fk_o596lc80ccb1rgvhnoku4fdo9]
+INFO  - 2016-04-14 12:23:39.953; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000126: Indexes: [fk_o596lc80ccb1rgvhnoku4fdo9, primary]
+INFO  - 2016-04-14 12:23:40.099; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000261: Table found: oncore.file_element
+INFO  - 2016-04-14 12:23:40.100; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000037: Columns: [createtime, deleted, module_id, parentfoldid, name, description, id, updatetime]
+INFO  - 2016-04-14 12:23:40.101; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000108: Foreign keys: []
+INFO  - 2016-04-14 12:23:40.101; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000126: Indexes: [primary]
+INFO  - 2016-04-14 12:23:40.231; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000261: Table found: oncore.folder_file_element
+INFO  - 2016-04-14 12:23:40.232; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000037: Columns: [createtime, deleted, module_id, parentfoldid, depth, name, description, id, updatetime]
+INFO  - 2016-04-14 12:23:40.233; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000108: Foreign keys: []
+INFO  - 2016-04-14 12:23:40.233; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000126: Indexes: [primary]
+INFO  - 2016-04-14 12:23:40.404; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000261: Table found: oncore.module
+INFO  - 2016-04-14 12:23:40.405; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000037: Columns: [createtime, deleted, module_id, name, description, id, updatetime]
+INFO  - 2016-04-14 12:23:40.405; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000108: Foreign keys: []
+INFO  - 2016-04-14 12:23:40.406; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000126: Indexes: [primary]
+INFO  - 2016-04-14 12:23:40.559; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000261: Table found: oncore.report_field
+INFO  - 2016-04-14 12:23:40.560; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000037: Columns: [createtime, length, description, relatedfield_id, fieldtype, ifrelatedfield, deleted, module_id, report_id, name, ifnull, id, updatetime]
+INFO  - 2016-04-14 12:23:40.560; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000108: Foreign keys: [fk_qmru8iktsptb9m0nt6a5kj7yr, fk_t5oxbvi73rrwmoroikmhldvg9]
+INFO  - 2016-04-14 12:23:40.560; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000126: Indexes: [fk_qmru8iktsptb9m0nt6a5kj7yr, fk_t5oxbvi73rrwmoroikmhldvg9, primary]
+INFO  - 2016-04-14 12:23:40.713; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000261: Table found: oncore.report_file_element
+INFO  - 2016-04-14 12:23:40.714; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000037: Columns: [createtime, parentfoldid, currentversion, description, folderid, hbmpath, deleted, module_id, name, id, updatetime, tablename, templatepath]
+INFO  - 2016-04-14 12:23:40.715; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000108: Foreign keys: []
+INFO  - 2016-04-14 12:23:40.715; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000126: Indexes: [primary]
+INFO  - 2016-04-14 12:23:40.717; org.hibernate.tool.hbm2ddl.SchemaUpdate; HHH000232: Schema update complete
+INFO  - 2016-04-14 12:23:42.023; org.springframework.orm.hibernate4.HibernateTransactionManager; Using DataSource [com.mchange.v2.c3p0.ComboPooledDataSource[ identityToken -> 2sa00u9g5zlu4v17rxsdk|60a7e509, dataSourceName -> 2sa00u9g5zlu4v17rxsdk|60a7e509 ]] of Hibernate SessionFactory for HibernateTransactionManager
+INFO  - 2016-04-14 12:23:42.247; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/admin/entities/{id}],methods=[DELETE],produces=[application/json]}" onto public org.springframework.http.ResponseEntity com.oncore.template.controller.EntityResource.delete(java.lang.String)
+INFO  - 2016-04-14 12:23:42.249; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/admin/entities/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.entities.EntityResponse> com.oncore.template.controller.EntityResource.getEntities()
+INFO  - 2016-04-14 12:23:42.249; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/admin/entities/{id}],methods=[GET],produces=[application/json]}" onto public com.oncore.template.transfd.entities.EntityResponse com.oncore.template.controller.EntityResource.getEntity(java.lang.String)
+INFO  - 2016-04-14 12:23:42.250; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/admin/entities/{id}],methods=[PUT],produces=[application/json]}" onto public com.oncore.template.transfd.entities.EntityResponse com.oncore.template.controller.EntityResource.updateEntity(com.oncore.template.transfd.entities.UpdateEntityRequest)
+INFO  - 2016-04-14 12:23:42.252; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/admin/folders/{id}],methods=[GET],produces=[application/json]}" onto public com.oncore.template.transfd.file_element.folder.FolderResponse com.oncore.template.controller.FolderResource.getFolder(java.lang.String)
+INFO  - 2016-04-14 12:23:42.253; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/admin/folders/{parent_id}/sub_folder/],methods=[POST],produces=[application/json]}" onto public com.oncore.template.transfd.file_element.folder.FolderResponse com.oncore.template.controller.FolderResource.createSubFolderToParent(java.lang.String,com.oncore.template.transfd.file_element.folder.CreateFolderToParentFolderRequest)
+INFO  - 2016-04-14 12:23:42.254; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/admin/folders/{parent_id}/sub_folder/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.file_element.folder.FolderResponse> com.oncore.template.controller.FolderResource.getChildFoldersUnderParentFolder(java.lang.String)
+INFO  - 2016-04-14 12:23:42.255; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/admin/folders/{folderId}/reports/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.report.ReportResponse> com.oncore.template.controller.FolderResource.getReportsUnderFolder(java.lang.String)
+INFO  - 2016-04-14 12:23:42.257; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/admin/folders/{folderId}/reports/],methods=[POST],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<com.oncore.template.transfd.report.ReportResponse> com.oncore.template.controller.FolderResource.createReportsUnderFolder(java.lang.String,com.oncore.template.transfd.report.CreateReportRequest)
+INFO  - 2016-04-14 12:23:42.260; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/admin/folders/{id}/],methods=[PUT],produces=[application/json]}" onto public com.oncore.template.transfd.file_element.folder.FolderResponse com.oncore.template.controller.FolderResource.updateFolder(java.lang.String,com.oncore.template.transfd.file_element.folder.UpdateFolderRequest)
+INFO  - 2016-04-14 12:23:42.260; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/admin/folders/{id}/],methods=[DELETE],produces=[application/json]}" onto public org.springframework.http.ResponseEntity com.oncore.template.controller.FolderResource.deleteFolder(java.lang.String)
+INFO  - 2016-04-14 12:23:42.270; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/admin/modules/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.module.ModuleResponse> com.oncore.template.controller.ModuleResource.getModules()
+INFO  - 2016-04-14 12:23:42.289; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/admin/modules/{id}/],methods=[GET],produces=[application/json]}" onto public com.oncore.template.transfd.module.ModuleResponse com.oncore.template.controller.ModuleResource.getModule(java.lang.String)
+INFO  - 2016-04-14 12:23:42.293; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/admin/modules/],methods=[POST],produces=[application/json]}" onto public com.oncore.template.transfd.module.ModuleResponse com.oncore.template.controller.ModuleResource.createModule(com.oncore.template.transfd.module.CreateModuleRequest)
+INFO  - 2016-04-14 12:23:42.294; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/admin/modules/{id}/],methods=[PUT],produces=[application/json]}" onto public com.oncore.template.transfd.module.ModuleResponse com.oncore.template.controller.ModuleResource.updateModule(java.lang.String,com.oncore.template.transfd.module.CreateModuleRequest)
+INFO  - 2016-04-14 12:23:42.302; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/admin/modules/{id}/entities/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.entities.EntityResponse> com.oncore.template.controller.ModuleResource.getEntitiesOfModule(java.lang.String)
+INFO  - 2016-04-14 12:23:42.303; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/admin/modules/{id}/folders/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.file_element.folder.FolderResponse> com.oncore.template.controller.ModuleResource.getFoldersOfModule(java.lang.String)
+INFO  - 2016-04-14 12:23:42.342; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/admin/modules/{id}/folders/],methods=[POST],produces=[application/json]}" onto public com.oncore.template.transfd.file_element.folder.FolderResponse com.oncore.template.controller.ModuleResource.createFolderUnderModule(java.lang.String,com.oncore.template.transfd.file_element.folder.CreateRootFolderRequest)
+INFO  - 2016-04-14 12:23:42.346; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/admin/modules/{id}/entities/],methods=[POST],produces=[application/json]}" onto public com.oncore.template.transfd.entities.EntityResponse com.oncore.template.controller.ModuleResource.createEntityUnderModule(java.lang.String,com.oncore.template.transfd.entities.CreateEntityRequest)
+INFO  - 2016-04-14 12:23:42.350; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/admin/modules/{id}/tree/],methods=[GET],produces=[application/json]}" onto public com.oncore.template.transfd.module.ModuleTreeResponse com.oncore.template.controller.ModuleResource.getModuleTree(java.lang.String)
+INFO  - 2016-04-14 12:23:42.351; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/user/modules/{id}/tree/],methods=[GET],produces=[application/json]}" onto public com.oncore.template.transfd.user.UserModuleResponse com.oncore.template.controller.ModuleResource.getModuleTreeForUser(java.lang.String)
+INFO  - 2016-04-14 12:23:42.384; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/user/modules/trees/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.user.UserModuleResponse> com.oncore.template.controller.ModuleResource.getUserModules()
+INFO  - 2016-04-14 12:23:42.389; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/admin/reports/{id}/],methods=[DELETE],produces=[application/json]}" onto public org.springframework.http.ResponseEntity com.oncore.template.controller.ReportResource.delete(java.lang.String)
+INFO  - 2016-04-14 12:23:42.390; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/admin/reports/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.report.ReportResponse> com.oncore.template.controller.ReportResource.getReports()
+INFO  - 2016-04-14 12:23:42.392; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/admin/reports/{id}/],methods=[GET],produces=[application/json]}" onto public com.oncore.template.transfd.report.ReportResponse com.oncore.template.controller.ReportResource.gerReport(java.lang.String)
+INFO  - 2016-04-14 12:23:42.393; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/admin/reports/{id}/],methods=[PUT],produces=[application/json]}" onto public org.springframework.http.ResponseEntity com.oncore.template.controller.ReportResource.updateReport(java.lang.String,com.oncore.template.transfd.report.CreateReportRequest)
+INFO  - 2016-04-14 12:23:42.400; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/user/entities/{entity_id}/],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity com.oncore.user.controller.UserEntityController.listEntities(java.lang.String) throws java.sql.SQLException
+INFO  - 2016-04-14 12:23:42.437; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/user/entities/{entity_id}/],methods=[POST],produces=[application/json]}" onto public org.springframework.http.ResponseEntity com.oncore.user.controller.UserEntityController.insertEntity(java.lang.String,java.util.Map) throws java.sql.SQLException
+INFO  - 2016-04-14 12:23:42.440; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/user/reports/{report_id}/record/]}" onto public org.springframework.http.ResponseEntity com.oncore.user.controller.UserReportController.listReport(java.lang.String) throws java.sql.SQLException
+INFO  - 2016-04-14 12:23:42.442; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/user/reports/{report_table_id}/desc/]}" onto public org.springframework.http.ResponseEntity com.oncore.user.controller.UserReportController.getReportDescription(java.lang.String)
+INFO  - 2016-04-14 12:23:42.442; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/user/reports/{report_id}/record/],methods=[POST]}" onto public org.springframework.http.ResponseEntity com.oncore.user.controller.UserReportController.insertReport(java.lang.String,java.util.Map) throws java.sql.SQLException
+INFO  - 2016-04-14 12:23:42.443; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/user/reports/{report_table_id}/record/{report_id}/]}" onto public org.springframework.http.ResponseEntity com.oncore.user.controller.UserReportController.getReport(java.lang.String,int) throws java.sql.SQLException
+INFO  - 2016-04-14 12:23:42.779; org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter; Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Thu Apr 14 12:23:34 EDT 2016]; root of context hierarchy
+INFO  - 2016-04-14 12:23:42.865; org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter; Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Thu Apr 14 12:23:34 EDT 2016]; root of context hierarchy
+INFO  - 2016-04-14 12:23:42.917; org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver; Detected @ExceptionHandler methods in commonExceptionHandler
+INFO  - 2016-04-14 12:23:42.985; org.springframework.web.context.ContextLoader; Root WebApplicationContext: initialization completed in 8132 ms
+INFO  - 2016-04-14 12:23:43.086; org.springframework.web.servlet.FrameworkServlet; FrameworkServlet 'spring-dispatcher': initialization started
+INFO  - 2016-04-14 12:23:43.089; org.springframework.context.support.AbstractApplicationContext; Refreshing WebApplicationContext for namespace 'spring-dispatcher-servlet': startup date [Thu Apr 14 12:23:43 EDT 2016]; parent: Root WebApplicationContext
+INFO  - 2016-04-14 12:23:43.092; org.springframework.beans.factory.xml.XmlBeanDefinitionReader; Loading XML bean definitions from ServletContext resource [/WEB-INF/spring-dispatcher-servlet.xml]
+INFO  - 2016-04-14 12:23:43.130; com.oncore.web.init.DynamicTableInitor; start init entity tables...
+INFO  - 2016-04-14 12:23:43.845; com.oncore.web.init.DynamicTableInitor; initing entity entity_Employee_1460184015908...
+ERROR - 2016-04-14 12:24:14.034; org.springframework.web.servlet.FrameworkServlet; Context initialization failed
+org.springframework.jms.UncategorizedJmsException: Uncategorized exception occured during JMS processing; nested exception is javax.jms.JMSException: Error while attempting to add new Connection to the pool; nested exception is javax.jms.JMSException: Could not connect to broker URL: tcp://172.31.62.173:61616. Reason: java.net.SocketTimeoutException: connect timed out
+	at org.springframework.jms.support.JmsUtils.convertJmsAccessException(JmsUtils.java:316)
+	at org.springframework.jms.support.JmsAccessor.convertJmsAccessException(JmsAccessor.java:169)
+	at org.springframework.jms.core.JmsTemplate.execute(JmsTemplate.java:497)
+	at org.springframework.jms.core.JmsTemplate.send(JmsTemplate.java:569)
+	at com.oncore.data.messagequeue.producer.ProducerService.sendMessage(ProducerService.java:37)
+	at com.oncore.web.init.DynamicTableInitor.init(DynamicTableInitor.java:56)
+	at com.oncore.web.init.DynamicTableInitor.onApplicationEvent(DynamicTableInitor.java:73)
+	at com.oncore.web.init.DynamicTableInitor.onApplicationEvent(DynamicTableInitor.java:27)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:151)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:128)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:331)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:333)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:778)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:483)
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:664)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:630)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:678)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:549)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:490)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:244)
+	at org.eclipse.jetty.servlet.ServletHolder.initServlet(ServletHolder.java:612)
+	at org.eclipse.jetty.servlet.ServletHolder.initialize(ServletHolder.java:395)
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:871)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:298)
+	at org.eclipse.jetty.webapp.WebAppContext.startWebapp(WebAppContext.java:1349)
+	at org.eclipse.jetty.maven.plugin.JettyWebAppContext.startWebapp(JettyWebAppContext.java:296)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1342)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:741)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:505)
+	at org.eclipse.jetty.maven.plugin.JettyWebAppContext.doStart(JettyWebAppContext.java:365)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:114)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.doStart(ContextHandlerCollection.java:163)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:114)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+	at org.eclipse.jetty.server.Server.start(Server.java:387)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:114)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:354)
+	at org.eclipse.jetty.maven.plugin.JettyServer.doStart(JettyServer.java:73)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.maven.plugin.AbstractJettyMojo.startJetty(AbstractJettyMojo.java:534)
+	at org.eclipse.jetty.maven.plugin.AbstractJettyMojo.execute(AbstractJettyMojo.java:357)
+	at org.eclipse.jetty.maven.plugin.JettyRunMojo.execute(JettyRunMojo.java:167)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:101)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:209)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:84)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:59)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.singleThreadedBuild(LifecycleStarter.java:183)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:161)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:320)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:156)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:537)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:196)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:141)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:290)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:230)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:409)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:352)
+Caused by: javax.jms.JMSException: Error while attempting to add new Connection to the pool
+	at org.apache.activemq.util.JMSExceptionSupport.create(JMSExceptionSupport.java:35)
+	at org.apache.activemq.pool.PooledConnectionFactory.createConnection(PooledConnectionFactory.java:216)
+	at org.apache.activemq.pool.PooledConnectionFactory.createConnection(PooledConnectionFactory.java:195)
+	at org.springframework.jms.connection.SingleConnectionFactory.doCreateConnection(SingleConnectionFactory.java:365)
+	at org.springframework.jms.connection.SingleConnectionFactory.initConnection(SingleConnectionFactory.java:305)
+	at org.springframework.jms.connection.SingleConnectionFactory.getConnection(SingleConnectionFactory.java:283)
+	at org.springframework.jms.connection.SingleConnectionFactory.createConnection(SingleConnectionFactory.java:224)
+	at org.springframework.jms.support.JmsAccessor.createConnection(JmsAccessor.java:180)
+	at org.springframework.jms.core.JmsTemplate.execute(JmsTemplate.java:484)
+	... 69 more
+Caused by: javax.jms.JMSException: Could not connect to broker URL: tcp://172.31.62.173:61616. Reason: java.net.SocketTimeoutException: connect timed out
+	at org.apache.activemq.util.JMSExceptionSupport.create(JMSExceptionSupport.java:35)
+	at org.apache.activemq.ActiveMQConnectionFactory.createActiveMQConnection(ActiveMQConnectionFactory.java:293)
+	at org.apache.activemq.ActiveMQConnectionFactory.createActiveMQConnection(ActiveMQConnectionFactory.java:238)
+	at org.apache.activemq.ActiveMQConnectionFactory.createConnection(ActiveMQConnectionFactory.java:184)
+	at org.apache.activemq.pool.PooledConnectionFactory.createConnection(PooledConnectionFactory.java:247)
+	at org.apache.activemq.pool.PooledConnectionFactory$1.makeObject(PooledConnectionFactory.java:131)
+	at org.apache.activemq.pool.PooledConnectionFactory$1.makeObject(PooledConnectionFactory.java:111)
+	at org.apache.commons.pool.impl.GenericKeyedObjectPool.addObject(GenericKeyedObjectPool.java:1748)
+	at org.apache.activemq.pool.PooledConnectionFactory.createConnection(PooledConnectionFactory.java:214)
+	... 76 more
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.activemq.transport.tcp.TcpTransport.connect(TcpTransport.java:504)
+	at org.apache.activemq.transport.tcp.TcpTransport.doStart(TcpTransport.java:467)
+	at org.apache.activemq.util.ServiceSupport.start(ServiceSupport.java:55)
+	at org.apache.activemq.transport.AbstractInactivityMonitor.start(AbstractInactivityMonitor.java:132)
+	at org.apache.activemq.transport.TransportFilter.start(TransportFilter.java:58)
+	at org.apache.activemq.transport.WireFormatNegotiator.start(WireFormatNegotiator.java:72)
+	at org.apache.activemq.transport.TransportFilter.start(TransportFilter.java:58)
+	at org.apache.activemq.transport.TransportFilter.start(TransportFilter.java:58)
+	at org.apache.activemq.ActiveMQConnectionFactory.createActiveMQConnection(ActiveMQConnectionFactory.java:273)
+	... 83 more
+INFO  - 2016-04-14 13:09:44.689; org.springframework.context.support.AbstractApplicationContext; Closing Root WebApplicationContext: startup date [Thu Apr 14 12:23:34 EDT 2016]; root of context hierarchy
+INFO  - 2016-04-14 13:09:55.085; org.springframework.web.context.ContextLoader; Root WebApplicationContext: initialization started
+INFO  - 2016-04-14 13:09:55.181; org.springframework.context.support.AbstractApplicationContext; Refreshing Root WebApplicationContext: startup date [Thu Apr 14 13:09:55 EDT 2016]; root of context hierarchy
+INFO  - 2016-04-14 13:09:55.244; org.springframework.beans.factory.xml.XmlBeanDefinitionReader; Loading XML bean definitions from class path resource [spring-context.xml]
+INFO  - 2016-04-14 13:09:55.350; org.springframework.beans.factory.xml.XmlBeanDefinitionReader; Loading XML bean definitions from URL [jar:file:/Users/steve/.m2/repository/com/oncore/oncore-consulting-template-management/1.0-SNAPSHOT/oncore-consulting-template-management-1.0-SNAPSHOT.jar!/spring-context-template-management.xml]
+INFO  - 2016-04-14 13:09:55.492; org.springframework.beans.factory.xml.XmlBeanDefinitionReader; Loading XML bean definitions from URL [jar:file:/Users/steve/.m2/repository/com/oncore/oncore-consulting-common/1.0-SNAPSHOT/oncore-consulting-common-1.0-SNAPSHOT.jar!/spring/spring-context-common.xml]
+INFO  - 2016-04-14 13:09:55.524; org.springframework.beans.factory.xml.XmlBeanDefinitionReader; Loading XML bean definitions from class path resource [spring/spring-hibernate.xml]
+INFO  - 2016-04-14 13:09:55.577; org.springframework.beans.factory.xml.XmlBeanDefinitionReader; Loading XML bean definitions from class path resource [spring/spring-mvc.xml]
+INFO  - 2016-04-14 13:09:55.664; org.springframework.beans.factory.xml.XmlBeanDefinitionReader; Loading XML bean definitions from URL [jar:file:/Users/steve/.m2/repository/com/oncore/oncore-consulting-database-management/1.0-SNAPSHOT/oncore-consulting-database-management-1.0-SNAPSHOT.jar!/spring/spring-context-data-management.xml]
+INFO  - 2016-04-14 13:09:55.705; org.springframework.beans.factory.xml.XmlBeanDefinitionReader; Loading XML bean definitions from URL [jar:file:/Users/steve/.m2/repository/com/oncore/oncore-consulting-user/1.0-SNAPSHOT/oncore-consulting-user-1.0-SNAPSHOT.jar!/spring/spring-context-user.xml]
+INFO  - 2016-04-14 13:09:56.033; org.springframework.core.io.support.PropertiesLoaderSupport; Loading properties file from class path resource [properties/hibernate-development.properties]
+INFO  - 2016-04-14 13:09:56.035; org.springframework.core.io.support.PropertiesLoaderSupport; Loading properties file from class path resource [properties/app-development.properties]
+INFO  - 2016-04-14 13:09:56.045; org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor; JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+INFO  - 2016-04-14 13:09:56.263; org.hibernate.validator.internal.util.Version; HV000001: Hibernate Validator 5.1.3.Final
+INFO  - 2016-04-14 13:09:56.593; com.mchange.v2.log.slf4j.Slf4jMLog$Slf4jMLogger$InfoLogger; MLog clients using slf4j logging.
+INFO  - 2016-04-14 13:09:56.758; com.mchange.v2.log.slf4j.Slf4jMLog$Slf4jMLogger$InfoLogger; Initializing c3p0-0.9.5.2 [built 08-December-2015 22:06:04 -0800; debug? true; trace: 10]
+INFO  - 2016-04-14 13:09:57.226; org.hibernate.annotations.common.reflection.java.JavaReflectionManager; HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+INFO  - 2016-04-14 13:09:57.236; org.hibernate.Version; HHH000412: Hibernate Core {4.3.6.Final}
+INFO  - 2016-04-14 13:09:57.240; org.hibernate.cfg.Environment; HHH000206: hibernate.properties not found
+INFO  - 2016-04-14 13:09:57.242; org.hibernate.cfg.Environment; HHH000021: Bytecode provider name : javassist
+INFO  - 2016-04-14 13:09:57.410; com.mchange.v2.log.slf4j.Slf4jMLog$Slf4jMLogger$InfoLogger; Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 2sa00u9g619f0o1j8me0i|60a7e509, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceSynchronousCheckins -> false, forceUseNamedDriverClass -> false, identityToken -> 2sa00u9g619f0o1j8me0i|60a7e509, idleConnectionTestPeriod -> 0, initialPoolSize -> 1, jdbcUrl -> jdbc:mysql://oncore.cw7lo8mlcfvo.us-east-1.rds.amazonaws.com:3306/oncore, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 1, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 40, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 1, numHelperThreads -> 3, preferredTestQuery -> null, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+INFO  - 2016-04-14 13:09:58.859; org.hibernate.dialect.Dialect; HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+INFO  - 2016-04-14 13:09:59.012; org.hibernate.engine.transaction.internal.TransactionFactoryInitiator; HHH000399: Using default transaction strategy (direct JDBC transactions)
+INFO  - 2016-04-14 13:09:59.018; org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory; HHH000397: Using ASTQueryTranslatorFactory
+WARN  - 2016-04-14 13:09:59.192; org.hibernate.id.UUIDHexGenerator; HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+INFO  - 2016-04-14 13:09:59.413; org.hibernate.tool.hbm2ddl.SchemaUpdate; HHH000228: Running hbm2ddl schema update
+INFO  - 2016-04-14 13:09:59.414; org.hibernate.tool.hbm2ddl.SchemaUpdate; HHH000102: Fetching database metadata
+INFO  - 2016-04-14 13:09:59.422; org.hibernate.tool.hbm2ddl.SchemaUpdate; HHH000396: Updating schema
+INFO  - 2016-04-14 13:09:59.770; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000261: Table found: oncore.element
+INFO  - 2016-04-14 13:09:59.771; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000037: Columns: [createtime, deleted, module_id, name, description, id, updatetime]
+INFO  - 2016-04-14 13:09:59.772; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000108: Foreign keys: []
+INFO  - 2016-04-14 13:09:59.773; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000126: Indexes: [primary]
+INFO  - 2016-04-14 13:10:00.120; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000261: Table found: oncore.entity
+INFO  - 2016-04-14 13:10:00.120; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000037: Columns: [createtime, deleted, module_id, unique_, unique, name, description, id, updatetime, tablename, hbmpath]
+INFO  - 2016-04-14 13:10:00.121; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000108: Foreign keys: []
+INFO  - 2016-04-14 13:10:00.121; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000126: Indexes: [primary]
+INFO  - 2016-04-14 13:10:00.280; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000261: Table found: oncore.field
+INFO  - 2016-04-14 13:10:00.281; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000037: Columns: [createtime, deleted, module_id, name, length, description, ifnull, id, updatetime, fieldtype, tablename, entity_id]
+INFO  - 2016-04-14 13:10:00.282; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000108: Foreign keys: [fk_o596lc80ccb1rgvhnoku4fdo9]
+INFO  - 2016-04-14 13:10:00.282; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000126: Indexes: [fk_o596lc80ccb1rgvhnoku4fdo9, primary]
+INFO  - 2016-04-14 13:10:00.400; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000261: Table found: oncore.file_element
+INFO  - 2016-04-14 13:10:00.401; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000037: Columns: [createtime, deleted, module_id, parentfoldid, name, description, id, updatetime]
+INFO  - 2016-04-14 13:10:00.401; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000108: Foreign keys: []
+INFO  - 2016-04-14 13:10:00.402; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000126: Indexes: [primary]
+INFO  - 2016-04-14 13:10:00.609; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000261: Table found: oncore.folder_file_element
+INFO  - 2016-04-14 13:10:00.609; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000037: Columns: [createtime, deleted, module_id, parentfoldid, depth, name, description, id, updatetime]
+INFO  - 2016-04-14 13:10:00.610; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000108: Foreign keys: []
+INFO  - 2016-04-14 13:10:00.611; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000126: Indexes: [primary]
+INFO  - 2016-04-14 13:10:00.800; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000261: Table found: oncore.module
+INFO  - 2016-04-14 13:10:00.801; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000037: Columns: [createtime, deleted, module_id, name, description, id, updatetime]
+INFO  - 2016-04-14 13:10:00.802; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000108: Foreign keys: []
+INFO  - 2016-04-14 13:10:00.802; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000126: Indexes: [primary]
+INFO  - 2016-04-14 13:10:00.988; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000261: Table found: oncore.report_field
+INFO  - 2016-04-14 13:10:00.989; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000037: Columns: [createtime, length, description, relatedfield_id, fieldtype, ifrelatedfield, deleted, module_id, report_id, name, ifnull, id, updatetime]
+INFO  - 2016-04-14 13:10:00.990; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000108: Foreign keys: [fk_qmru8iktsptb9m0nt6a5kj7yr, fk_t5oxbvi73rrwmoroikmhldvg9]
+INFO  - 2016-04-14 13:10:00.990; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000126: Indexes: [fk_qmru8iktsptb9m0nt6a5kj7yr, fk_t5oxbvi73rrwmoroikmhldvg9, primary]
+INFO  - 2016-04-14 13:10:01.275; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000261: Table found: oncore.report_file_element
+INFO  - 2016-04-14 13:10:01.276; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000037: Columns: [createtime, parentfoldid, currentversion, description, folderid, hbmpath, deleted, module_id, name, id, updatetime, tablename, templatepath]
+INFO  - 2016-04-14 13:10:01.276; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000108: Foreign keys: []
+INFO  - 2016-04-14 13:10:01.277; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000126: Indexes: [primary]
+INFO  - 2016-04-14 13:10:01.278; org.hibernate.tool.hbm2ddl.SchemaUpdate; HHH000232: Schema update complete
+INFO  - 2016-04-14 13:10:02.045; org.springframework.orm.hibernate4.HibernateTransactionManager; Using DataSource [com.mchange.v2.c3p0.ComboPooledDataSource[ identityToken -> 2sa00u9g619f0o1j8me0i|60a7e509, dataSourceName -> 2sa00u9g619f0o1j8me0i|60a7e509 ]] of Hibernate SessionFactory for HibernateTransactionManager
+INFO  - 2016-04-14 13:10:02.216; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/admin/entities/{id}],methods=[DELETE],produces=[application/json]}" onto public org.springframework.http.ResponseEntity com.oncore.template.controller.EntityResource.delete(java.lang.String)
+INFO  - 2016-04-14 13:10:02.217; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/admin/entities/{id}],methods=[PUT],produces=[application/json]}" onto public com.oncore.template.transfd.entities.EntityResponse com.oncore.template.controller.EntityResource.updateEntity(com.oncore.template.transfd.entities.UpdateEntityRequest)
+INFO  - 2016-04-14 13:10:02.217; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/admin/entities/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.entities.EntityResponse> com.oncore.template.controller.EntityResource.getEntities()
+INFO  - 2016-04-14 13:10:02.218; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/admin/entities/{id}],methods=[GET],produces=[application/json]}" onto public com.oncore.template.transfd.entities.EntityResponse com.oncore.template.controller.EntityResource.getEntity(java.lang.String)
+INFO  - 2016-04-14 13:10:02.220; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/admin/folders/{id}],methods=[GET],produces=[application/json]}" onto public com.oncore.template.transfd.file_element.folder.FolderResponse com.oncore.template.controller.FolderResource.getFolder(java.lang.String)
+INFO  - 2016-04-14 13:10:02.221; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/admin/folders/{parent_id}/sub_folder/],methods=[POST],produces=[application/json]}" onto public com.oncore.template.transfd.file_element.folder.FolderResponse com.oncore.template.controller.FolderResource.createSubFolderToParent(java.lang.String,com.oncore.template.transfd.file_element.folder.CreateFolderToParentFolderRequest)
+INFO  - 2016-04-14 13:10:02.222; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/admin/folders/{folderId}/reports/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.report.ReportResponse> com.oncore.template.controller.FolderResource.getReportsUnderFolder(java.lang.String)
+INFO  - 2016-04-14 13:10:02.223; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/admin/folders/{parent_id}/sub_folder/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.file_element.folder.FolderResponse> com.oncore.template.controller.FolderResource.getChildFoldersUnderParentFolder(java.lang.String)
+INFO  - 2016-04-14 13:10:02.223; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/admin/folders/{folderId}/reports/],methods=[POST],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<com.oncore.template.transfd.report.ReportResponse> com.oncore.template.controller.FolderResource.createReportsUnderFolder(java.lang.String,com.oncore.template.transfd.report.CreateReportRequest)
+INFO  - 2016-04-14 13:10:02.224; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/admin/folders/{id}/],methods=[PUT],produces=[application/json]}" onto public com.oncore.template.transfd.file_element.folder.FolderResponse com.oncore.template.controller.FolderResource.updateFolder(java.lang.String,com.oncore.template.transfd.file_element.folder.UpdateFolderRequest)
+INFO  - 2016-04-14 13:10:02.225; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/admin/folders/{id}/],methods=[DELETE],produces=[application/json]}" onto public org.springframework.http.ResponseEntity com.oncore.template.controller.FolderResource.deleteFolder(java.lang.String)
+INFO  - 2016-04-14 13:10:02.230; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/admin/modules/{id}/],methods=[GET],produces=[application/json]}" onto public com.oncore.template.transfd.module.ModuleResponse com.oncore.template.controller.ModuleResource.getModule(java.lang.String)
+INFO  - 2016-04-14 13:10:02.231; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/admin/modules/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.module.ModuleResponse> com.oncore.template.controller.ModuleResource.getModules()
+INFO  - 2016-04-14 13:10:02.233; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/admin/modules/],methods=[POST],produces=[application/json]}" onto public com.oncore.template.transfd.module.ModuleResponse com.oncore.template.controller.ModuleResource.createModule(com.oncore.template.transfd.module.CreateModuleRequest)
+INFO  - 2016-04-14 13:10:02.248; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/admin/modules/{id}/],methods=[PUT],produces=[application/json]}" onto public com.oncore.template.transfd.module.ModuleResponse com.oncore.template.controller.ModuleResource.updateModule(java.lang.String,com.oncore.template.transfd.module.CreateModuleRequest)
+INFO  - 2016-04-14 13:10:02.251; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/admin/modules/{id}/entities/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.entities.EntityResponse> com.oncore.template.controller.ModuleResource.getEntitiesOfModule(java.lang.String)
+INFO  - 2016-04-14 13:10:02.255; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/admin/modules/{id}/folders/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.file_element.folder.FolderResponse> com.oncore.template.controller.ModuleResource.getFoldersOfModule(java.lang.String)
+INFO  - 2016-04-14 13:10:02.256; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/admin/modules/{id}/folders/],methods=[POST],produces=[application/json]}" onto public com.oncore.template.transfd.file_element.folder.FolderResponse com.oncore.template.controller.ModuleResource.createFolderUnderModule(java.lang.String,com.oncore.template.transfd.file_element.folder.CreateRootFolderRequest)
+INFO  - 2016-04-14 13:10:02.274; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/admin/modules/{id}/entities/],methods=[POST],produces=[application/json]}" onto public com.oncore.template.transfd.entities.EntityResponse com.oncore.template.controller.ModuleResource.createEntityUnderModule(java.lang.String,com.oncore.template.transfd.entities.CreateEntityRequest)
+INFO  - 2016-04-14 13:10:02.276; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/admin/modules/{id}/tree/],methods=[GET],produces=[application/json]}" onto public com.oncore.template.transfd.module.ModuleTreeResponse com.oncore.template.controller.ModuleResource.getModuleTree(java.lang.String)
+INFO  - 2016-04-14 13:10:02.279; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/user/modules/{id}/tree/],methods=[GET],produces=[application/json]}" onto public com.oncore.template.transfd.user.UserModuleResponse com.oncore.template.controller.ModuleResource.getModuleTreeForUser(java.lang.String)
+INFO  - 2016-04-14 13:10:02.280; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/user/modules/trees/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.user.UserModuleResponse> com.oncore.template.controller.ModuleResource.getUserModules()
+INFO  - 2016-04-14 13:10:02.282; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/admin/reports/{id}/],methods=[DELETE],produces=[application/json]}" onto public org.springframework.http.ResponseEntity com.oncore.template.controller.ReportResource.delete(java.lang.String)
+INFO  - 2016-04-14 13:10:02.283; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/admin/reports/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.report.ReportResponse> com.oncore.template.controller.ReportResource.getReports()
+INFO  - 2016-04-14 13:10:02.314; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/admin/reports/{id}/],methods=[GET],produces=[application/json]}" onto public com.oncore.template.transfd.report.ReportResponse com.oncore.template.controller.ReportResource.gerReport(java.lang.String)
+INFO  - 2016-04-14 13:10:02.319; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/admin/reports/{id}/],methods=[PUT],produces=[application/json]}" onto public org.springframework.http.ResponseEntity com.oncore.template.controller.ReportResource.updateReport(java.lang.String,com.oncore.template.transfd.report.CreateReportRequest)
+INFO  - 2016-04-14 13:10:02.326; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/user/entities/{entity_id}/],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity com.oncore.user.controller.UserEntityController.listEntities(java.lang.String) throws java.sql.SQLException
+INFO  - 2016-04-14 13:10:02.328; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/user/entities/{entity_id}/],methods=[POST],produces=[application/json]}" onto public org.springframework.http.ResponseEntity com.oncore.user.controller.UserEntityController.insertEntity(java.lang.String,java.util.Map) throws java.sql.SQLException
+INFO  - 2016-04-14 13:10:02.333; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/user/reports/{report_table_id}/record/{report_id}/]}" onto public org.springframework.http.ResponseEntity com.oncore.user.controller.UserReportController.getReport(java.lang.String,int) throws java.sql.SQLException
+INFO  - 2016-04-14 13:10:02.364; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/user/reports/{report_id}/record/]}" onto public org.springframework.http.ResponseEntity com.oncore.user.controller.UserReportController.listReport(java.lang.String) throws java.sql.SQLException
+INFO  - 2016-04-14 13:10:02.366; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/user/reports/{report_table_id}/desc/]}" onto public org.springframework.http.ResponseEntity com.oncore.user.controller.UserReportController.getReportDescription(java.lang.String)
+INFO  - 2016-04-14 13:10:02.368; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/user/reports/{report_id}/record/],methods=[POST]}" onto public org.springframework.http.ResponseEntity com.oncore.user.controller.UserReportController.insertReport(java.lang.String,java.util.Map) throws java.sql.SQLException
+INFO  - 2016-04-14 13:10:02.578; org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter; Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Thu Apr 14 13:09:55 EDT 2016]; root of context hierarchy
+INFO  - 2016-04-14 13:10:02.637; org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter; Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Thu Apr 14 13:09:55 EDT 2016]; root of context hierarchy
+INFO  - 2016-04-14 13:10:02.678; org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver; Detected @ExceptionHandler methods in commonExceptionHandler
+INFO  - 2016-04-14 13:10:02.743; org.springframework.web.context.ContextLoader; Root WebApplicationContext: initialization completed in 7653 ms
+INFO  - 2016-04-14 13:10:02.829; org.springframework.web.servlet.FrameworkServlet; FrameworkServlet 'spring-dispatcher': initialization started
+INFO  - 2016-04-14 13:10:02.832; org.springframework.context.support.AbstractApplicationContext; Refreshing WebApplicationContext for namespace 'spring-dispatcher-servlet': startup date [Thu Apr 14 13:10:02 EDT 2016]; parent: Root WebApplicationContext
+INFO  - 2016-04-14 13:10:02.834; org.springframework.beans.factory.xml.XmlBeanDefinitionReader; Loading XML bean definitions from ServletContext resource [/WEB-INF/spring-dispatcher-servlet.xml]
+INFO  - 2016-04-14 13:10:02.890; com.oncore.web.init.DynamicTableInitor; start init entity tables...
+INFO  - 2016-04-14 13:10:03.655; com.oncore.web.init.DynamicTableInitor; initing entity entity_Employee_1460184015908...
+ERROR - 2016-04-14 13:10:33.971; org.springframework.web.servlet.FrameworkServlet; Context initialization failed
+org.springframework.jms.UncategorizedJmsException: Uncategorized exception occured during JMS processing; nested exception is javax.jms.JMSException: Error while attempting to add new Connection to the pool; nested exception is javax.jms.JMSException: Could not connect to broker URL: tcp://172.31.62.173:61616. Reason: java.net.SocketTimeoutException: connect timed out
+	at org.springframework.jms.support.JmsUtils.convertJmsAccessException(JmsUtils.java:316)
+	at org.springframework.jms.support.JmsAccessor.convertJmsAccessException(JmsAccessor.java:169)
+	at org.springframework.jms.core.JmsTemplate.execute(JmsTemplate.java:497)
+	at org.springframework.jms.core.JmsTemplate.send(JmsTemplate.java:569)
+	at com.oncore.data.messagequeue.producer.ProducerService.sendMessage(ProducerService.java:37)
+	at com.oncore.web.init.DynamicTableInitor.init(DynamicTableInitor.java:56)
+	at com.oncore.web.init.DynamicTableInitor.onApplicationEvent(DynamicTableInitor.java:73)
+	at com.oncore.web.init.DynamicTableInitor.onApplicationEvent(DynamicTableInitor.java:27)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:151)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:128)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:331)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:333)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:778)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:483)
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:664)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:630)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:678)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:549)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:490)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:244)
+	at org.eclipse.jetty.servlet.ServletHolder.initServlet(ServletHolder.java:612)
+	at org.eclipse.jetty.servlet.ServletHolder.initialize(ServletHolder.java:395)
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:871)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:298)
+	at org.eclipse.jetty.webapp.WebAppContext.startWebapp(WebAppContext.java:1349)
+	at org.eclipse.jetty.maven.plugin.JettyWebAppContext.startWebapp(JettyWebAppContext.java:296)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1342)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:741)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:505)
+	at org.eclipse.jetty.maven.plugin.JettyWebAppContext.doStart(JettyWebAppContext.java:365)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:114)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.doStart(ContextHandlerCollection.java:163)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:114)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:132)
+	at org.eclipse.jetty.server.Server.start(Server.java:387)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:114)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:61)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:354)
+	at org.eclipse.jetty.maven.plugin.JettyServer.doStart(JettyServer.java:73)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.maven.plugin.AbstractJettyMojo.startJetty(AbstractJettyMojo.java:534)
+	at org.eclipse.jetty.maven.plugin.AbstractJettyMojo.execute(AbstractJettyMojo.java:357)
+	at org.eclipse.jetty.maven.plugin.JettyRunMojo.execute(JettyRunMojo.java:167)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:101)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:209)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:84)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:59)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.singleThreadedBuild(LifecycleStarter.java:183)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:161)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:320)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:156)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:537)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:196)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:141)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:290)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:230)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:409)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:352)
+Caused by: javax.jms.JMSException: Error while attempting to add new Connection to the pool
+	at org.apache.activemq.util.JMSExceptionSupport.create(JMSExceptionSupport.java:35)
+	at org.apache.activemq.pool.PooledConnectionFactory.createConnection(PooledConnectionFactory.java:216)
+	at org.apache.activemq.pool.PooledConnectionFactory.createConnection(PooledConnectionFactory.java:195)
+	at org.springframework.jms.connection.SingleConnectionFactory.doCreateConnection(SingleConnectionFactory.java:365)
+	at org.springframework.jms.connection.SingleConnectionFactory.initConnection(SingleConnectionFactory.java:305)
+	at org.springframework.jms.connection.SingleConnectionFactory.getConnection(SingleConnectionFactory.java:283)
+	at org.springframework.jms.connection.SingleConnectionFactory.createConnection(SingleConnectionFactory.java:224)
+	at org.springframework.jms.support.JmsAccessor.createConnection(JmsAccessor.java:180)
+	at org.springframework.jms.core.JmsTemplate.execute(JmsTemplate.java:484)
+	... 69 more
+Caused by: javax.jms.JMSException: Could not connect to broker URL: tcp://172.31.62.173:61616. Reason: java.net.SocketTimeoutException: connect timed out
+	at org.apache.activemq.util.JMSExceptionSupport.create(JMSExceptionSupport.java:35)
+	at org.apache.activemq.ActiveMQConnectionFactory.createActiveMQConnection(ActiveMQConnectionFactory.java:293)
+	at org.apache.activemq.ActiveMQConnectionFactory.createActiveMQConnection(ActiveMQConnectionFactory.java:238)
+	at org.apache.activemq.ActiveMQConnectionFactory.createConnection(ActiveMQConnectionFactory.java:184)
+	at org.apache.activemq.pool.PooledConnectionFactory.createConnection(PooledConnectionFactory.java:247)
+	at org.apache.activemq.pool.PooledConnectionFactory$1.makeObject(PooledConnectionFactory.java:131)
+	at org.apache.activemq.pool.PooledConnectionFactory$1.makeObject(PooledConnectionFactory.java:111)
+	at org.apache.commons.pool.impl.GenericKeyedObjectPool.addObject(GenericKeyedObjectPool.java:1748)
+	at org.apache.activemq.pool.PooledConnectionFactory.createConnection(PooledConnectionFactory.java:214)
+	... 76 more
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.activemq.transport.tcp.TcpTransport.connect(TcpTransport.java:504)
+	at org.apache.activemq.transport.tcp.TcpTransport.doStart(TcpTransport.java:467)
+	at org.apache.activemq.util.ServiceSupport.start(ServiceSupport.java:55)
+	at org.apache.activemq.transport.AbstractInactivityMonitor.start(AbstractInactivityMonitor.java:132)
+	at org.apache.activemq.transport.TransportFilter.start(TransportFilter.java:58)
+	at org.apache.activemq.transport.WireFormatNegotiator.start(WireFormatNegotiator.java:72)
+	at org.apache.activemq.transport.TransportFilter.start(TransportFilter.java:58)
+	at org.apache.activemq.transport.TransportFilter.start(TransportFilter.java:58)
+	at org.apache.activemq.ActiveMQConnectionFactory.createActiveMQConnection(ActiveMQConnectionFactory.java:273)
+	... 83 more
+INFO  - 2016-04-14 13:17:16.985; org.springframework.context.support.AbstractApplicationContext; Closing Root WebApplicationContext: startup date [Thu Apr 14 13:09:55 EDT 2016]; root of context hierarchy
+INFO  - 2016-04-14 13:17:27.280; org.springframework.web.context.ContextLoader; Root WebApplicationContext: initialization started
+INFO  - 2016-04-14 13:17:27.386; org.springframework.context.support.AbstractApplicationContext; Refreshing Root WebApplicationContext: startup date [Thu Apr 14 13:17:27 EDT 2016]; root of context hierarchy
+INFO  - 2016-04-14 13:17:27.436; org.springframework.beans.factory.xml.XmlBeanDefinitionReader; Loading XML bean definitions from class path resource [spring-context.xml]
+INFO  - 2016-04-14 13:17:27.559; org.springframework.beans.factory.xml.XmlBeanDefinitionReader; Loading XML bean definitions from URL [jar:file:/Users/steve/.m2/repository/com/oncore/oncore-consulting-template-management/1.0-SNAPSHOT/oncore-consulting-template-management-1.0-SNAPSHOT.jar!/spring-context-template-management.xml]
+INFO  - 2016-04-14 13:17:27.749; org.springframework.beans.factory.xml.XmlBeanDefinitionReader; Loading XML bean definitions from URL [jar:file:/Users/steve/.m2/repository/com/oncore/oncore-consulting-common/1.0-SNAPSHOT/oncore-consulting-common-1.0-SNAPSHOT.jar!/spring/spring-context-common.xml]
+INFO  - 2016-04-14 13:17:27.790; org.springframework.beans.factory.xml.XmlBeanDefinitionReader; Loading XML bean definitions from class path resource [spring/spring-hibernate.xml]
+INFO  - 2016-04-14 13:17:27.845; org.springframework.beans.factory.xml.XmlBeanDefinitionReader; Loading XML bean definitions from class path resource [spring/spring-mvc.xml]
+INFO  - 2016-04-14 13:17:27.950; org.springframework.beans.factory.xml.XmlBeanDefinitionReader; Loading XML bean definitions from URL [jar:file:/Users/steve/.m2/repository/com/oncore/oncore-consulting-database-management/1.0-SNAPSHOT/oncore-consulting-database-management-1.0-SNAPSHOT.jar!/spring/spring-context-data-management.xml]
+INFO  - 2016-04-14 13:17:27.977; org.springframework.beans.factory.xml.XmlBeanDefinitionReader; Loading XML bean definitions from URL [jar:file:/Users/steve/.m2/repository/com/oncore/oncore-consulting-user/1.0-SNAPSHOT/oncore-consulting-user-1.0-SNAPSHOT.jar!/spring/spring-context-user.xml]
+INFO  - 2016-04-14 13:17:28.342; org.springframework.core.io.support.PropertiesLoaderSupport; Loading properties file from class path resource [properties/hibernate-development.properties]
+INFO  - 2016-04-14 13:17:28.346; org.springframework.core.io.support.PropertiesLoaderSupport; Loading properties file from class path resource [properties/app-development.properties]
+INFO  - 2016-04-14 13:17:28.355; org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor; JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+INFO  - 2016-04-14 13:17:28.569; org.hibernate.validator.internal.util.Version; HV000001: Hibernate Validator 5.1.3.Final
+INFO  - 2016-04-14 13:17:28.873; com.mchange.v2.log.slf4j.Slf4jMLog$Slf4jMLogger$InfoLogger; MLog clients using slf4j logging.
+INFO  - 2016-04-14 13:17:29.026; com.mchange.v2.log.slf4j.Slf4jMLog$Slf4jMLogger$InfoLogger; Initializing c3p0-0.9.5.2 [built 08-December-2015 22:06:04 -0800; debug? true; trace: 10]
+INFO  - 2016-04-14 13:17:29.581; org.hibernate.annotations.common.reflection.java.JavaReflectionManager; HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+INFO  - 2016-04-14 13:17:29.592; org.hibernate.Version; HHH000412: Hibernate Core {4.3.6.Final}
+INFO  - 2016-04-14 13:17:29.603; org.hibernate.cfg.Environment; HHH000206: hibernate.properties not found
+INFO  - 2016-04-14 13:17:29.620; org.hibernate.cfg.Environment; HHH000021: Bytecode provider name : javassist
+INFO  - 2016-04-14 13:17:29.892; com.mchange.v2.log.slf4j.Slf4jMLog$Slf4jMLogger$InfoLogger; Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 2sa00u9g61j3z9pm7blc|60a7e509, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceSynchronousCheckins -> false, forceUseNamedDriverClass -> false, identityToken -> 2sa00u9g61j3z9pm7blc|60a7e509, idleConnectionTestPeriod -> 0, initialPoolSize -> 1, jdbcUrl -> jdbc:mysql://oncore.cw7lo8mlcfvo.us-east-1.rds.amazonaws.com:3306/oncore, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 1, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 40, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 1, numHelperThreads -> 3, preferredTestQuery -> null, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+INFO  - 2016-04-14 13:17:30.669; org.hibernate.dialect.Dialect; HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+INFO  - 2016-04-14 13:17:30.855; org.hibernate.engine.transaction.internal.TransactionFactoryInitiator; HHH000399: Using default transaction strategy (direct JDBC transactions)
+INFO  - 2016-04-14 13:17:30.859; org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory; HHH000397: Using ASTQueryTranslatorFactory
+WARN  - 2016-04-14 13:17:31.051; org.hibernate.id.UUIDHexGenerator; HHH000409: Using org.hibernate.id.UUIDHexGenerator which does not generate IETF RFC 4122 compliant UUID values; consider using org.hibernate.id.UUIDGenerator instead
+INFO  - 2016-04-14 13:17:31.285; org.hibernate.tool.hbm2ddl.SchemaUpdate; HHH000228: Running hbm2ddl schema update
+INFO  - 2016-04-14 13:17:31.286; org.hibernate.tool.hbm2ddl.SchemaUpdate; HHH000102: Fetching database metadata
+INFO  - 2016-04-14 13:17:31.293; org.hibernate.tool.hbm2ddl.SchemaUpdate; HHH000396: Updating schema
+INFO  - 2016-04-14 13:17:31.427; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000261: Table found: oncore.element
+INFO  - 2016-04-14 13:17:31.428; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000037: Columns: [createtime, deleted, module_id, name, description, id, updatetime]
+INFO  - 2016-04-14 13:17:31.428; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000108: Foreign keys: []
+INFO  - 2016-04-14 13:17:31.429; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000126: Indexes: [primary]
+INFO  - 2016-04-14 13:17:31.577; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000261: Table found: oncore.entity
+INFO  - 2016-04-14 13:17:31.578; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000037: Columns: [createtime, deleted, module_id, unique_, unique, name, description, id, updatetime, tablename, hbmpath]
+INFO  - 2016-04-14 13:17:31.578; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000108: Foreign keys: []
+INFO  - 2016-04-14 13:17:31.579; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000126: Indexes: [primary]
+INFO  - 2016-04-14 13:17:31.702; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000261: Table found: oncore.field
+INFO  - 2016-04-14 13:17:31.703; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000037: Columns: [createtime, deleted, module_id, name, length, description, ifnull, id, updatetime, fieldtype, tablename, entity_id]
+INFO  - 2016-04-14 13:17:31.704; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000108: Foreign keys: [fk_o596lc80ccb1rgvhnoku4fdo9]
+INFO  - 2016-04-14 13:17:31.705; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000126: Indexes: [fk_o596lc80ccb1rgvhnoku4fdo9, primary]
+INFO  - 2016-04-14 13:17:31.851; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000261: Table found: oncore.file_element
+INFO  - 2016-04-14 13:17:31.851; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000037: Columns: [createtime, deleted, module_id, parentfoldid, name, description, id, updatetime]
+INFO  - 2016-04-14 13:17:31.852; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000108: Foreign keys: []
+INFO  - 2016-04-14 13:17:31.853; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000126: Indexes: [primary]
+INFO  - 2016-04-14 13:17:31.992; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000261: Table found: oncore.folder_file_element
+INFO  - 2016-04-14 13:17:31.993; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000037: Columns: [createtime, deleted, module_id, parentfoldid, depth, name, description, id, updatetime]
+INFO  - 2016-04-14 13:17:31.994; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000108: Foreign keys: []
+INFO  - 2016-04-14 13:17:31.994; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000126: Indexes: [primary]
+INFO  - 2016-04-14 13:17:32.110; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000261: Table found: oncore.module
+INFO  - 2016-04-14 13:17:32.111; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000037: Columns: [createtime, deleted, module_id, name, description, id, updatetime]
+INFO  - 2016-04-14 13:17:32.111; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000108: Foreign keys: []
+INFO  - 2016-04-14 13:17:32.112; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000126: Indexes: [primary]
+INFO  - 2016-04-14 13:17:32.244; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000261: Table found: oncore.report_field
+INFO  - 2016-04-14 13:17:32.245; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000037: Columns: [createtime, length, description, relatedfield_id, fieldtype, ifrelatedfield, deleted, module_id, report_id, name, ifnull, id, updatetime]
+INFO  - 2016-04-14 13:17:32.245; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000108: Foreign keys: [fk_qmru8iktsptb9m0nt6a5kj7yr, fk_t5oxbvi73rrwmoroikmhldvg9]
+INFO  - 2016-04-14 13:17:32.246; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000126: Indexes: [fk_qmru8iktsptb9m0nt6a5kj7yr, fk_t5oxbvi73rrwmoroikmhldvg9, primary]
+INFO  - 2016-04-14 13:17:32.352; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000261: Table found: oncore.report_file_element
+INFO  - 2016-04-14 13:17:32.353; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000037: Columns: [createtime, parentfoldid, currentversion, description, folderid, hbmpath, deleted, module_id, name, id, updatetime, tablename, templatepath]
+INFO  - 2016-04-14 13:17:32.354; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000108: Foreign keys: []
+INFO  - 2016-04-14 13:17:32.354; org.hibernate.tool.hbm2ddl.TableMetadata; HHH000126: Indexes: [primary]
+INFO  - 2016-04-14 13:17:32.356; org.hibernate.tool.hbm2ddl.SchemaUpdate; HHH000232: Schema update complete
+INFO  - 2016-04-14 13:17:32.990; org.springframework.orm.hibernate4.HibernateTransactionManager; Using DataSource [com.mchange.v2.c3p0.ComboPooledDataSource[ identityToken -> 2sa00u9g61j3z9pm7blc|60a7e509, dataSourceName -> 2sa00u9g61j3z9pm7blc|60a7e509 ]] of Hibernate SessionFactory for HibernateTransactionManager
+INFO  - 2016-04-14 13:17:33.119; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/admin/entities/{id}],methods=[DELETE],produces=[application/json]}" onto public org.springframework.http.ResponseEntity com.oncore.template.controller.EntityResource.delete(java.lang.String)
+INFO  - 2016-04-14 13:17:33.120; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/admin/entities/{id}],methods=[PUT],produces=[application/json]}" onto public com.oncore.template.transfd.entities.EntityResponse com.oncore.template.controller.EntityResource.updateEntity(com.oncore.template.transfd.entities.UpdateEntityRequest)
+INFO  - 2016-04-14 13:17:33.120; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/admin/entities/{id}],methods=[GET],produces=[application/json]}" onto public com.oncore.template.transfd.entities.EntityResponse com.oncore.template.controller.EntityResource.getEntity(java.lang.String)
+INFO  - 2016-04-14 13:17:33.121; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/admin/entities/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.entities.EntityResponse> com.oncore.template.controller.EntityResource.getEntities()
+INFO  - 2016-04-14 13:17:33.122; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/admin/folders/{id}],methods=[GET],produces=[application/json]}" onto public com.oncore.template.transfd.file_element.folder.FolderResponse com.oncore.template.controller.FolderResource.getFolder(java.lang.String)
+INFO  - 2016-04-14 13:17:33.123; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/admin/folders/{parent_id}/sub_folder/],methods=[POST],produces=[application/json]}" onto public com.oncore.template.transfd.file_element.folder.FolderResponse com.oncore.template.controller.FolderResource.createSubFolderToParent(java.lang.String,com.oncore.template.transfd.file_element.folder.CreateFolderToParentFolderRequest)
+INFO  - 2016-04-14 13:17:33.123; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/admin/folders/{parent_id}/sub_folder/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.file_element.folder.FolderResponse> com.oncore.template.controller.FolderResource.getChildFoldersUnderParentFolder(java.lang.String)
+INFO  - 2016-04-14 13:17:33.124; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/admin/folders/{folderId}/reports/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.report.ReportResponse> com.oncore.template.controller.FolderResource.getReportsUnderFolder(java.lang.String)
+INFO  - 2016-04-14 13:17:33.124; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/admin/folders/{folderId}/reports/],methods=[POST],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<com.oncore.template.transfd.report.ReportResponse> com.oncore.template.controller.FolderResource.createReportsUnderFolder(java.lang.String,com.oncore.template.transfd.report.CreateReportRequest)
+INFO  - 2016-04-14 13:17:33.124; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/admin/folders/{id}/],methods=[PUT],produces=[application/json]}" onto public com.oncore.template.transfd.file_element.folder.FolderResponse com.oncore.template.controller.FolderResource.updateFolder(java.lang.String,com.oncore.template.transfd.file_element.folder.UpdateFolderRequest)
+INFO  - 2016-04-14 13:17:33.125; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/admin/folders/{id}/],methods=[DELETE],produces=[application/json]}" onto public org.springframework.http.ResponseEntity com.oncore.template.controller.FolderResource.deleteFolder(java.lang.String)
+INFO  - 2016-04-14 13:17:33.127; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/admin/modules/{id}/],methods=[GET],produces=[application/json]}" onto public com.oncore.template.transfd.module.ModuleResponse com.oncore.template.controller.ModuleResource.getModule(java.lang.String)
+INFO  - 2016-04-14 13:17:33.128; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/admin/modules/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.module.ModuleResponse> com.oncore.template.controller.ModuleResource.getModules()
+INFO  - 2016-04-14 13:17:33.129; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/admin/modules/],methods=[POST],produces=[application/json]}" onto public com.oncore.template.transfd.module.ModuleResponse com.oncore.template.controller.ModuleResource.createModule(com.oncore.template.transfd.module.CreateModuleRequest)
+INFO  - 2016-04-14 13:17:33.129; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/admin/modules/{id}/],methods=[PUT],produces=[application/json]}" onto public com.oncore.template.transfd.module.ModuleResponse com.oncore.template.controller.ModuleResource.updateModule(java.lang.String,com.oncore.template.transfd.module.CreateModuleRequest)
+INFO  - 2016-04-14 13:17:33.130; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/admin/modules/{id}/entities/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.entities.EntityResponse> com.oncore.template.controller.ModuleResource.getEntitiesOfModule(java.lang.String)
+INFO  - 2016-04-14 13:17:33.131; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/admin/modules/{id}/folders/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.file_element.folder.FolderResponse> com.oncore.template.controller.ModuleResource.getFoldersOfModule(java.lang.String)
+INFO  - 2016-04-14 13:17:33.132; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/admin/modules/{id}/folders/],methods=[POST],produces=[application/json]}" onto public com.oncore.template.transfd.file_element.folder.FolderResponse com.oncore.template.controller.ModuleResource.createFolderUnderModule(java.lang.String,com.oncore.template.transfd.file_element.folder.CreateRootFolderRequest)
+INFO  - 2016-04-14 13:17:33.132; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/admin/modules/{id}/entities/],methods=[POST],produces=[application/json]}" onto public com.oncore.template.transfd.entities.EntityResponse com.oncore.template.controller.ModuleResource.createEntityUnderModule(java.lang.String,com.oncore.template.transfd.entities.CreateEntityRequest)
+INFO  - 2016-04-14 13:17:33.133; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/admin/modules/{id}/tree/],methods=[GET],produces=[application/json]}" onto public com.oncore.template.transfd.module.ModuleTreeResponse com.oncore.template.controller.ModuleResource.getModuleTree(java.lang.String)
+INFO  - 2016-04-14 13:17:33.144; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/user/modules/{id}/tree/],methods=[GET],produces=[application/json]}" onto public com.oncore.template.transfd.user.UserModuleResponse com.oncore.template.controller.ModuleResource.getModuleTreeForUser(java.lang.String)
+INFO  - 2016-04-14 13:17:33.148; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/user/modules/trees/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.user.UserModuleResponse> com.oncore.template.controller.ModuleResource.getUserModules()
+INFO  - 2016-04-14 13:17:33.152; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/admin/reports/{id}/],methods=[DELETE],produces=[application/json]}" onto public org.springframework.http.ResponseEntity com.oncore.template.controller.ReportResource.delete(java.lang.String)
+INFO  - 2016-04-14 13:17:33.153; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/admin/reports/],methods=[GET],produces=[application/json]}" onto public java.util.List<com.oncore.template.transfd.report.ReportResponse> com.oncore.template.controller.ReportResource.getReports()
+INFO  - 2016-04-14 13:17:33.153; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/admin/reports/{id}/],methods=[GET],produces=[application/json]}" onto public com.oncore.template.transfd.report.ReportResponse com.oncore.template.controller.ReportResource.gerReport(java.lang.String)
+INFO  - 2016-04-14 13:17:33.154; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/admin/reports/{id}/],methods=[PUT],produces=[application/json]}" onto public org.springframework.http.ResponseEntity com.oncore.template.controller.ReportResource.updateReport(java.lang.String,com.oncore.template.transfd.report.CreateReportRequest)
+INFO  - 2016-04-14 13:17:33.157; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/user/entities/{entity_id}/],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity com.oncore.user.controller.UserEntityController.listEntities(java.lang.String) throws java.sql.SQLException
+INFO  - 2016-04-14 13:17:33.158; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/user/entities/{entity_id}/],methods=[POST],produces=[application/json]}" onto public org.springframework.http.ResponseEntity com.oncore.user.controller.UserEntityController.insertEntity(java.lang.String,java.util.Map) throws java.sql.SQLException
+INFO  - 2016-04-14 13:17:33.162; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/user/reports/{report_table_id}/record/{report_id}/]}" onto public org.springframework.http.ResponseEntity com.oncore.user.controller.UserReportController.getReport(java.lang.String,int) throws java.sql.SQLException
+INFO  - 2016-04-14 13:17:33.162; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/user/reports/{report_id}/record/]}" onto public org.springframework.http.ResponseEntity com.oncore.user.controller.UserReportController.listReport(java.lang.String) throws java.sql.SQLException
+INFO  - 2016-04-14 13:17:33.163; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/user/reports/{report_table_id}/desc/]}" onto public org.springframework.http.ResponseEntity com.oncore.user.controller.UserReportController.getReportDescription(java.lang.String)
+INFO  - 2016-04-14 13:17:33.176; org.springframework.web.servlet.handler.AbstractHandlerMethodMapping; Mapped "{[/user/reports/{report_id}/record/],methods=[POST]}" onto public org.springframework.http.ResponseEntity com.oncore.user.controller.UserReportController.insertReport(java.lang.String,java.util.Map) throws java.sql.SQLException
+INFO  - 2016-04-14 13:17:33.353; org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter; Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Thu Apr 14 13:17:27 EDT 2016]; root of context hierarchy
+INFO  - 2016-04-14 13:17:33.422; org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter; Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Thu Apr 14 13:17:27 EDT 2016]; root of context hierarchy
+INFO  - 2016-04-14 13:17:33.456; org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver; Detected @ExceptionHandler methods in commonExceptionHandler
+INFO  - 2016-04-14 13:17:33.518; org.springframework.web.context.ContextLoader; Root WebApplicationContext: initialization completed in 6232 ms
+INFO  - 2016-04-14 13:17:33.596; org.springframework.web.servlet.FrameworkServlet; FrameworkServlet 'spring-dispatcher': initialization started
+INFO  - 2016-04-14 13:17:33.598; org.springframework.context.support.AbstractApplicationContext; Refreshing WebApplicationContext for namespace 'spring-dispatcher-servlet': startup date [Thu Apr 14 13:17:33 EDT 2016]; parent: Root WebApplicationContext
+INFO  - 2016-04-14 13:17:33.600; org.springframework.beans.factory.xml.XmlBeanDefinitionReader; Loading XML bean definitions from ServletContext resource [/WEB-INF/spring-dispatcher-servlet.xml]
+INFO  - 2016-04-14 13:17:33.644; com.oncore.web.init.DynamicTableInitor; start init entity tables...
+INFO  - 2016-04-14 13:17:34.709; com.oncore.web.init.DynamicTableInitor; initing entity entity_Employee_1460184015908...
+INFO  - 2016-04-14 13:17:34.913; org.springframework.jms.connection.SingleConnectionFactory; Established shared JMS Connection: PooledConnection { ConnectionPool[ActiveMQConnection {id=ID:fuqiangs-MacBook-Pro.local-64955-1460654254754-1:1,clientId=null,started=false}] }
+INFO  - 2016-04-14 13:17:35.376; com.oncore.data.messagequeue.producer.ProducerService; sent message Entity{tableName='entity_Employee_1460184015908', hbmPath='Employee/entity_Employee_1460184015908', fields=[Field{ifNull=false, length=256, fieldType='string'} Element{id='2c9fbb0353f9bae60153f9bfe4250002', createTime=2016-04-09 06:40:16.0, updateTime=2016-04-09 06:40:16.0, deleted=false, name='First_Name', description=''}, Field{ifNull=false, length=256, fieldType='string'} Element{id='2c9fbb0353f9bae60153f9bfe4250003', createTime=2016-04-09 06:40:16.0, updateTime=2016-04-09 06:40:16.0, deleted=false, name='LastName', description=''}, Field{ifNull=false, length=256, fieldType='string'} Element{id='2c9fbb0353f9bae60153f9bfe4250004', createTime=2016-04-09 06:40:16.0, updateTime=2016-04-09 06:40:16.0, deleted=false, name='SexS', description=''}, Field{ifNull=false, length=256, fieldType='string'} Element{id='2c9fbb0353f9bae60153f9bfe4250005', createTime=2016-04-09 06:40:16.0, updateTime=2016-04-09 06:40:16.0, deleted=false, name='Address', description=''}, Field{ifNull=false, length=256, fieldType='string'} Element{id='2c9fbb0353f9bae60153fc215f650009', createTime=2016-04-09 17:45:59.0, updateTime=2016-04-09 17:45:59.0, deleted=false, name='TELP', description=''}, Field{ifNull=false, length=256, fieldType='string'} Element{id='2c9fbb035403a301015403a4007b0000', createTime=2016-04-11 04:46:00.0, updateTime=2016-04-11 04:46:00.0, deleted=false, name='SSNO', description=''}]} Element{id='2c9fbb0353f9bae60153f9bfe4250001', createTime=2016-04-09 06:40:16.0, updateTime=2016-04-11 05:11:44.0, deleted=false, name='Employee', description=''}
+INFO  - 2016-04-14 13:17:35.376; com.oncore.web.init.DynamicTableInitor; initing entity entity_Company_1460224183093...
+INFO  - 2016-04-14 13:17:35.462; com.oncore.data.messagequeue.producer.ProducerService; sent message Entity{tableName='entity_Company_1460224183093', hbmPath='Company/entity_Company_1460224183093', fields=[Field{ifNull=false, length=256, fieldType='string'} Element{id='2c9fbb0353f9bae60153fc24cb35000d', createTime=2016-04-09 17:49:43.0, updateTime=2016-04-09 17:49:43.0, deleted=false, name='Name', description=''}, Field{ifNull=false, length=256, fieldType='string'} Element{id='2c9fbb0353f9bae60153fc24cb35000e', createTime=2016-04-09 17:49:43.0, updateTime=2016-04-09 17:49:43.0, deleted=false, name='Address', description=''}]} Element{id='2c9fbb0353f9bae60153fc24cb35000c', createTime=2016-04-09 17:49:43.0, updateTime=2016-04-11 03:20:04.0, deleted=false, name='Company', description=''}
+INFO  - 2016-04-14 13:17:35.462; com.oncore.web.init.DynamicTableInitor; start init report tables...
+INFO  - 2016-04-14 13:17:36.288; com.oncore.data.messagequeue.producer.ProducerService; sent message Element{id='2c9fbb0353d2c4490153d2e61a770001', createTime=2016-04-01 17:36:49.0, updateTime=2016-04-06 00:07:40.0, deleted=false, name='Employee information', description=''}
+INFO  - 2016-04-14 13:17:36.329; com.oncore.data.messagequeue.producer.ProducerService; sent message Element{id='2c9fbb0353d2c4490153e8e6937c0032', createTime=2016-04-06 00:08:58.0, updateTime=2016-04-09 06:20:48.0, deleted=true, name='Employee Information', description=''}
+INFO  - 2016-04-14 13:17:36.381; com.oncore.data.messagequeue.producer.ProducerService; sent message Element{id='2c9fbb0353d2c4490153e8f00139003d', createTime=2016-04-06 00:19:16.0, updateTime=2016-04-06 00:21:41.0, deleted=true, name='User Resume2', description=''}
+INFO  - 2016-04-14 13:17:36.413; com.oncore.data.messagequeue.producer.ProducerService; sent message Element{id='2c9fbb0353d2c4490153e8f006730040', createTime=2016-04-06 00:19:18.0, updateTime=2016-04-06 00:19:18.0, deleted=true, name='User Resume2', description=''}
+INFO  - 2016-04-14 13:17:36.442; com.oncore.data.messagequeue.producer.ProducerService; sent message Element{id='2c9fbb0353d2c4490153ece77665005c', createTime=2016-04-06 18:48:25.0, updateTime=2016-04-09 06:01:46.0, deleted=true, name='New Employee Information', description=''}
+INFO  - 2016-04-14 13:17:36.471; com.oncore.data.messagequeue.producer.ProducerService; sent message Element{id='2c9fbb0353d2c4490153ed0d38900065', createTime=2016-04-06 19:29:40.0, updateTime=2016-04-09 05:57:56.0, deleted=true, name='NeeW', description=''}
+INFO  - 2016-04-14 13:17:36.503; com.oncore.data.messagequeue.producer.ProducerService; sent message Element{id='2c9fbb0353f996810153f99ef3130000', createTime=2016-04-09 06:04:17.0, updateTime=2016-04-09 06:04:17.0, deleted=true, name='xindemodule', description=''}
+INFO  - 2016-04-14 13:17:36.541; com.oncore.data.messagequeue.producer.ProducerService; sent message Element{id='2c9fbb0353f996810153f99ef7480001', createTime=2016-04-09 06:04:18.0, updateTime=2016-04-09 06:38:23.0, deleted=true, name='xindemodule', description=''}
+INFO  - 2016-04-14 13:17:36.570; com.oncore.data.messagequeue.producer.ProducerService; sent message Element{id='2c9fbb0353f9bae60153fc10191a0006', createTime=2016-04-09 17:27:07.0, updateTime=2016-04-09 17:47:48.0, deleted=false, name='Employee Information', description=''}
+INFO  - 2016-04-14 13:17:36.602; com.oncore.data.messagequeue.producer.ProducerService; sent message Element{id='2c9fbb0353f9bae60153fc261eb9000f', createTime=2016-04-09 17:51:10.0, updateTime=2016-04-11 02:31:45.0, deleted=false, name='Company Employee', description=''}
+INFO  - 2016-04-14 13:17:36.604; org.springframework.web.servlet.FrameworkServlet; FrameworkServlet 'spring-dispatcher': initialization completed in 3008 ms
+WARN  - 2016-04-14 13:18:28.054; org.springframework.web.servlet.DispatcherServlet; No mapping found for HTTP request with URI [/favicon.ico] in DispatcherServlet with name 'spring-dispatcher'
+ERROR - 2016-04-14 13:18:28.063; org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver; Failed to invoke @ExceptionHandler method: public org.springframework.http.ResponseEntity com.oncore.common.exception.handler.CommonExceptionHandler.handleNoHandlerFoundException(org.springframework.web.servlet.NoHandlerFoundException)
+org.springframework.web.HttpMediaTypeNotAcceptableException: Could not find acceptable representation
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:177)
+	at org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.handleReturnValue(HttpEntityMethodProcessor.java:146)
+	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:71)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:126)
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.doResolveHandlerMethodException(ExceptionHandlerExceptionResolver.java:362)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodExceptionResolver.doResolveException(AbstractHandlerMethodExceptionResolver.java:60)
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:138)
+	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1182)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1020)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:971)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:893)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:856)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:841)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:808)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1669)
+	at com.oncore.web.filter.CORSFilter.doFilter(CORSFilter.java:25)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1652)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:585)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:577)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:223)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1127)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:515)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1061)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:215)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:110)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:97)
+	at org.eclipse.jetty.server.Server.handle(Server.java:497)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:310)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:257)
+	at org.eclipse.jetty.io.AbstractConnection$2.run(AbstractConnection.java:540)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:635)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:555)
+	at java.lang.Thread.run(Thread.java:745)
+ERROR - 2016-04-14 13:21:10.467; com.oncore.template.service.ModuleServiceImpl; can't find module id=trees
+INFO  - 2016-04-14 14:01:39.411; org.springframework.context.support.AbstractApplicationContext; Closing WebApplicationContext for namespace 'spring-dispatcher-servlet': startup date [Thu Apr 14 13:17:33 EDT 2016]; parent: Root WebApplicationContext
+INFO  - 2016-04-14 14:01:39.421; org.springframework.context.support.AbstractApplicationContext; Closing Root WebApplicationContext: startup date [Thu Apr 14 13:17:27 EDT 2016]; root of context hierarchy

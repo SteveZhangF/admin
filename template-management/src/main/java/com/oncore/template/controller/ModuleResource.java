@@ -163,11 +163,11 @@ public class ModuleResource extends BaseController {
         List<FolderResponse> folderList = folderService.getRootFoldersUnderModule(id);
         List<EntityResponse> entityList = entityService.getEntitiesOfModule(id);
         return new ModuleTreeResponse(module, entityList, folderList);
+
     }
 
     /**
      * get module tree for user
-     *
      * */
     @RequestMapping(value = "/user/modules/{id}/tree/", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
 

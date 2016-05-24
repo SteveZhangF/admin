@@ -27,6 +27,19 @@ import java.util.List;
 public class Entity extends Element implements TableElement {
 
 
+    // if the entity is unique
+    private boolean unique_;
+
+    private int priority;
+
+    public int getPriority() {
+        return priority;
+    }
+
+    public void setPriority(int priority) {
+        this.priority = priority;
+    }
+
     private String tableName;
 
     private String hbmPath;
@@ -77,6 +90,17 @@ public class Entity extends Element implements TableElement {
                 fields.remove(field1);
             }
         }
+    }
+
+//
+
+
+    public boolean isUnique_() {
+        return unique_;
+    }
+
+    public void setUnique_(boolean unique_) {
+        this.unique_ = unique_;
     }
 
     @Override

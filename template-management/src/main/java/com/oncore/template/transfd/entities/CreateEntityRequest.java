@@ -19,6 +19,26 @@ public class CreateEntityRequest extends ElementRequest {
     @Size(min = 1,max = 16)
     List<FieldRequest> fields;
 
+    private boolean unique;
+
+    private int priority;
+
+    public int getPriority() {
+        return priority;
+    }
+
+    public void setPriority(int priority) {
+        this.priority = priority;
+    }
+
+    public boolean isUnique() {
+        return unique;
+    }
+
+    public void setUnique(boolean unique) {
+        this.unique = unique;
+    }
+
     public List<FieldRequest> getFields() {
         return fields;
     }

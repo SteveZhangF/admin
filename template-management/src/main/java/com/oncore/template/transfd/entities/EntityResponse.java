@@ -16,15 +16,36 @@ import java.util.List;
 public class EntityResponse extends ElementResponse {
 
 
+    private boolean unique;
+
+    private int priority;
+
+    public int getPriority() {
+        return priority;
+    }
+
+    public void setPriority(int priority) {
+        this.priority = priority;
+    }
+
+    public boolean isUnique() {
+        return unique;
+    }
+
+    public void setUnique(boolean unique) {
+        this.unique = unique;
+    }
+
     private List<FieldResponse> fields = new ArrayList<>();
 
     public EntityResponse(Entity entity){
         super(entity);
         this.setType("entity");
+        this.setUnique(entity.isUnique_());
+        this.setPriority(entity.getPriority());
         for (Field field: entity.getFields()){
             fields.add(new FieldResponse(field));
         }
-
     }
 
     public List<FieldResponse> getFields() {
