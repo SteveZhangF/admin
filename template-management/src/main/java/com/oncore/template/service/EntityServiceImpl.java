@@ -65,9 +65,15 @@ public class EntityServiceImpl extends BaseGenericServiceImpl<Entity, String> im
             field.setTableName(entity.getTableName());
             fieldDao.save(field);
         }
-        //TODO
         // iTableCreator.createTable(entity);
         try {
+
+            /**
+             *
+             * basically here we might use one proxy or filter to send message to generate the table
+             *
+             * should not write generator code here
+             */
             tableBuilder.sendMessage(entity);
         } catch (Exception e) {
             e.printStackTrace();
@@ -99,6 +105,10 @@ public class EntityServiceImpl extends BaseGenericServiceImpl<Entity, String> im
 
     /**
      * update one entity then regenerate or update the related files and table
+     *
+     * basically here we might use one proxy or filter to send message to generate the table
+     *
+     * should not write generator code here
      */
     @Override
     public EntityResponse updateEntity(Entity entity) throws ElementNotFoundException {

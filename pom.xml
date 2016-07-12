@@ -13,6 +13,7 @@
         <module>database-management</module>
         <module>user</module>
         <module>common</module>
+        <module>middleware</module>
         <!--<module>auth</module>-->
         <module>web</module>
     </modules>

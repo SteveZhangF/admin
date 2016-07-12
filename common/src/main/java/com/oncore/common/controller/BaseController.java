@@ -31,13 +31,16 @@ public class BaseController {
     /**
      * check user context
      * @throw AuthorizationException
+     *
+     * need to consider about how to implement a new oauth component
+     * I don't like the existing one
      * */
     protected void checkUserContext() {
-//        User user = loadUserFromSecurityContext(securityContext);
-//        if (user != null && (user.getId().equals(userId) || user.getEmailAddress().equals(userId.toLowerCase()))) {
-//            return user;
-//        }
-//        throw new AuthorizationException("User not permitted to access this resource");
+        User user = loadUserFromSecurityContext(securityContext);
+        if (user != null && (user.getId().equals(userId) || user.getEmailAddress().equals(userId.toLowerCase()))) {
+            return user;
+        }
+        throw new AuthorizationException("User not permitted to access this resource");
 
     }
 
